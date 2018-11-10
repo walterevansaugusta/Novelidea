@@ -3,17 +3,17 @@
     {
       "scale": "1x",
       "idiom": "universal",
-      "filename": "dog1.jpg"
+      "filename": "giraffe.jpg"
     },
     {
       "scale": "2x",
       "idiom": "universal",
-      "filename": "dog2.jpg"
+      "filename": "giraffe1.jpg"
     },
     {
       "scale": "3x",
       "idiom": "universal",
-      "filename": "dog3.jpg"
+      "filename": "giraffe2.jpg"
     },
     {
       "idiom": "universal"

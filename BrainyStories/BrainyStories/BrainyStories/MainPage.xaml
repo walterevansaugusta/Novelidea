@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.MainPage">
 
-    <Grid BackgroundColor="Aqua">
+    <Grid BackgroundColor="Aqua" Padding="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
@@ -12,47 +12,59 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
-            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Label Text="Brainy Stories"
                FontFamily="{StaticResource Curly}"
-               FontSize="40"
+               FontSize="48"
                VerticalOptions="Center"
                HorizontalOptions="Center"
                Grid.Row="0"
                Grid.Column="0"
-               Grid.ColumnSpan="3"/>
-        <Image Source="dog.jpg"
+               Grid.ColumnSpan="3"
+               Margin="5,0,0,0"/>
+        <Image Source="giraffe.jpg"
                VerticalOptions="CenterAndExpand"
                Grid.Row="1"
                Grid.Column="0"
                Grid.ColumnSpan="3"/>
         <Button Text="Stories"
-                BackgroundColor="White"
+                TextColor="White"
+                BackgroundColor="Purple"
                 VerticalOptions="Center"
                 Grid.Row="2"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"/>
+                Grid.ColumnSpan="3"
+                Margin="5, 0, 5, 0"/>
         <Button Text="Rewards"
-                BackgroundColor="White"
+                TextColor="White"
+                FontSize="Micro"
+                BackgroundColor="Purple"
                 VerticalOptions="StartAndExpand"
                 HorizontalOptions="StartAndExpand"
                 Grid.Row="3"
-                Grid.Column="0"/>
+                Grid.Column="0"
+                Margin="5, 0, 0, 5"/>
         <Button Text="Progress"
-                BackgroundColor="White"
+                TextColor="White"
+                FontSize="Micro"
+                BackgroundColor="Purple"
                 VerticalOptions="StartAndExpand"
                 HorizontalOptions="StartAndExpand"
                 Grid.Row="3"
-                Grid.Column="1"/>
+                Grid.Column="1"
+                Margin="0, 0, 0, 5"/>
         <Button Text="Quizzes"
-                BackgroundColor="White"
+                TextColor="White"
+                FontSize="Micro"
+                BackgroundColor="Purple"
                 VerticalOptions="StartAndExpand"
                 HorizontalOptions="StartAndExpand"
                 Grid.Row="3"
-                Grid.Column="2"/>
+                Grid.Column="2"
+                Margin="0, 0, 5, 5"/>
     </Grid>
 
 </ContentPage>

@@ -97,7 +97,7 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <BundleResource Include="Resources\Curly.ttf" />
+    <BundleResource Include="Resources\Curly.otf" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Icon1024.png">
@@ -142,13 +142,13 @@
     <ImageAsset Include="Assets.xcassets\Images.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Images.imageset\dog1.jpg">
+    <ImageAsset Include="Assets.xcassets\Images.imageset\giraffe.jpg">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Images.imageset\dog2.jpg">
+    <ImageAsset Include="Assets.xcassets\Images.imageset\giraffe1.jpg">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Assets.xcassets\Images.imageset\dog3.jpg">
+    <ImageAsset Include="Assets.xcassets\Images.imageset\giraffe2.jpg">
       <Visible>false</Visible>
     </ImageAsset>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
