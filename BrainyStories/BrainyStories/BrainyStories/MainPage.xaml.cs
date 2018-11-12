@@ -10,5 +10,10 @@ namespace BrainyStories {
         public MainPage() {
             InitializeComponent();
         }
+
+        async void StoriesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TableOfContents());
+        }
     }
 }

@@ -34,6 +34,7 @@
                 TextColor="White"
                 BackgroundColor="Purple"
                 VerticalOptions="Center"
+                Clicked="StoriesClicked"
                 Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="3"
