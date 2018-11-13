@@ -8,14 +8,14 @@
     </ContentPage.BindingContext>
     <ListView ItemsSource="{Binding Stories}"
               HasUnevenRows="True"
-              Margin="10,10">
+              ItemTapped="ListView_ItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout>
                         <Label Text= "{Binding Name}" />
-                        <Button Text="Details"
-                            IsVisible="False" />
+                        <Button Text="Read"
+                            IsVisible="{Binding CanRead}" />
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>

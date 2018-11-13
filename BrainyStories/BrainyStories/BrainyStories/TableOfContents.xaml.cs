@@ -17,5 +17,14 @@ namespace BrainyStories
 		{
 			InitializeComponent();
 		}
-	}
+
+        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var viewModel = BindingContext as TableOfContentsModel;
+
+            var story = e.Item as Story;
+
+            viewModel.HideShowRead(story);
+        }
+    }
 }
