@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="TableOfContents.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

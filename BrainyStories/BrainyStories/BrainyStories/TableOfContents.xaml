@@ -6,7 +6,8 @@
     <ContentPage.BindingContext>
         <local:TableOfContentsModel/>
     </ContentPage.BindingContext>
-    <ListView ItemsSource="{Binding Stories}"
+    <ListView x:Name="listView"
+              ItemsSource="{Binding Stories}"
               HasUnevenRows="True"
               ItemTapped="ListView_ItemTapped">
         <ListView.ItemTemplate>
@@ -14,8 +15,44 @@
                 <ViewCell>
                     <StackLayout>
                         <Label Text= "{Binding Name}" />
-                        <Button Text="Read"
-                            IsVisible="{Binding CanRead}" />
+                        <Grid x:Name="ButtonGrid"
+                              IsVisible="True">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Button Text="Read"
+                                    TextColor="White"
+                                    FontSize="Micro"
+                                    BackgroundColor="Purple"
+                                    VerticalOptions="StartAndExpand"
+                                    HorizontalOptions="StartAndExpand"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    Margin="5, 0, 0, 5"/>
+                            <Button Text="Quiz"
+                                    TextColor="White"
+                                    FontSize="Micro"
+                                    BackgroundColor="Purple"
+                                    VerticalOptions="StartAndExpand"
+                                    HorizontalOptions="StartAndExpand"
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    Margin="0, 0, 0, 5"/>
+                            <Button Text="Task"
+                                    TextColor="White"
+                                    FontSize="Micro"
+                                    BackgroundColor="Purple"
+                                    VerticalOptions="StartAndExpand"
+                                    HorizontalOptions="StartAndExpand"
+                                    Grid.Row="0"
+                                    Grid.Column="2"
+                                    Margin="0, 0, 5, 5"/>
+                        </Grid>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
