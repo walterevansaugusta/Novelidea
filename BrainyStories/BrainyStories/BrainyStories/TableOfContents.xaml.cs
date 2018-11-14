@@ -24,8 +24,7 @@ namespace BrainyStories
             var viewModel = BindingContext as TableOfContentsModel;
 
             var story = e.Item as Story;
-            var grid = this.FindByName("ButtonGrid");
-            Console.WriteLine(grid);
+
             viewModel.HideShowRead(story);
         }
     }
