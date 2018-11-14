@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.MainPage">
 
-    <Grid x:Name="pageGrid" BackgroundColor="Aqua" Padding="0,0,0,0">
+    <Grid x:Name="pageGrid" BackgroundColor="Turquoise" Padding="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>

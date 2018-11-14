@@ -27,6 +27,11 @@ namespace BrainyStories
 
             viewModel.HideShowRead(story);
         }
+
+        async void ReadClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StoryPage());
+        }
     }
 
     public class StatusToVisibilityConverter : IValueConverter
