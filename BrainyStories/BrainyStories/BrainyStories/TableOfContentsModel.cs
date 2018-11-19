@@ -17,20 +17,20 @@ namespace BrainyStories
             {
                 new Story
                 {
-                    Name = "Test Name",
+                    Name = "The Country Mouse and the City Mouse",
                     CanRead = false
           
                 },
 
                 new Story
                 {
-                    Name = "Test Name 2",
+                    Name = "The Dog and his Shadow",
                     CanRead = false
                 },
 
                 new Story
                 {
-                    Name = "Final Test Name",
+                    Name = "The Emperor's New Clothes",
                     CanRead = false
                 }
             };

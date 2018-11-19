@@ -10,7 +10,7 @@
               ItemsSource="{Binding Stories}"
               HasUnevenRows="True"
               ItemTapped="ListView_ItemTapped"
-              BackgroundColor="Turquoise">
+              BackgroundColor="Aqua">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
