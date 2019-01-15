@@ -6,9 +6,8 @@
     <Grid x:Name="pageGrid" BackgroundColor="Aqua" Padding="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -24,47 +23,56 @@
                Grid.Column="0"
                Grid.ColumnSpan="3"
                Margin="5,0,0,0"/>
-        <Image Source="giraffe.jpg"
+        <!--<Image Source="giraffe.jpg"
                VerticalOptions="CenterAndExpand"
                Grid.Row="1"
                Grid.Column="0"
-               Grid.ColumnSpan="3"/>
-        <Button Text="Stories"
+               Grid.ColumnSpan="3"/>-->
+        <Button Text="Imagines"
                 TextColor="White"
                 BackgroundColor="Purple"
                 VerticalOptions="Center"
                 Clicked="StoriesClicked"
-                Grid.Row="2"
+                Grid.Row="1"
                 Grid.Column="0"
-                Grid.ColumnSpan="3"
-                Margin="5, 0, 5, 0"/>
+                Grid.ColumnSpan="1"/>
+        <Button Text="Classic Stories"
+                TextColor="White"
+                BackgroundColor="Purple"
+                VerticalOptions="Center"
+                Clicked="StoriesClicked"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"/>
         <Button Text="Rewards"
                 TextColor="White"
-                FontSize="Micro"
                 BackgroundColor="Purple"
-                VerticalOptions="StartAndExpand"
-                HorizontalOptions="StartAndExpand"
-                Grid.Row="3"
+                VerticalOptions="Center"
+                Grid.Row="2"
                 Grid.Column="0"
-                Margin="5, 0, 0, 5"/>
+                Grid.ColumnSpan="1"/>
         <Button Text="Progress"
                 TextColor="White"
-                FontSize="Micro"
                 BackgroundColor="Purple"
-                VerticalOptions="StartAndExpand"
-                HorizontalOptions="StartAndExpand"
-                Grid.Row="3"
-                Grid.Column="1"
-                Margin="0, 0, 0, 5"/>
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"
+                Grid.ColumnSpan="1"/>
         <Button Text="Quizzes"
                 TextColor="White"
-                FontSize="Micro"
                 BackgroundColor="Purple"
-                VerticalOptions="StartAndExpand"
-                HorizontalOptions="StartAndExpand"
-                Grid.Row="3"
+                VerticalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"
+                Grid.ColumnSpan="1"/>
+        <Button Text="Think and Do"
+                TextColor="White"
+                BackgroundColor="Purple"
+                VerticalOptions="Center"
+                Clicked="StoriesClicked"
+                Grid.Row="1"
                 Grid.Column="2"
-                Margin="0, 0, 5, 5"/>
+                Grid.ColumnSpan="1"/>
     </Grid>
 
 </ContentPage>
