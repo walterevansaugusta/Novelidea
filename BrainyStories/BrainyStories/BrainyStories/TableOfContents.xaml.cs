@@ -14,48 +14,63 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TableOfContents : ContentPage
 	{
+        private List<Story> storyList;
         public TableOfContents ()
 		{
 			InitializeComponent();
-		}
+            
+            // TO-DO: 
+            // make these into their own class for better code
+            // add icons below title for quizes and home expierences
+            /// add clickability
+            storyList = new List<Story>();
+            storyList.Add(new Story { Name = "The Country Mouse and the City Mouse", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Country Mouse and the City Mouse", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
+            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
 
-        private void ListView_ItemTapped(object sender, ItemTappedEventArgs e)
-        {
-            var viewModel = BindingContext as TableOfContentsModel;
+            gridLayout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
 
-            var story = e.Item as Story;
-
-            viewModel.HideShowRead(story);
-        }
-
-        async void ReadClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new StoryPage());
-        }
-    }
-
-    public class StatusToVisibilityConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (Equals(value, null))
-                return new GridLength(0);
-
-            var story = value as Story;
-
-            if (story.CanRead)
+            var storyIndex = 0;
+            var rowNum = 0;
+            for (int storyNum = 0; storyNum < storyList.Count; storyNum+=3 )
             {
-                return new GridLength(0);
-            }
-            else
-            {
-                return new GridLength(1, GridUnitType.Auto);
-            }
-        }
+                for (int columnIndex = 0; columnIndex < 3; columnIndex++)
+                {
+                    if (storyIndex >= storyList.Count)
+                    {
+                        break;
+                    }
+                    var story = storyList[storyIndex];
+                    storyIndex += 1;
+                    var image = new Image { Source = story.Icon };
+                    var label = new Label
+                    {
+                        Text = story.Name,
+                        //VerticalOptions = LayoutOptions.Center,
+                        HorizontalOptions = LayoutOptions.Center
+                    };
 
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotSupportedException("Only one way bindings are supported with this converter");
+                    gridLayout.Children.Add(image, columnIndex, rowNum);
+                    Grid.SetRowSpan(image, 2);
+                    gridLayout.Children.Add(label, columnIndex, rowNum + 1);
+
+                    gridLayout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
+                    gridLayout.Children.Add(label, columnIndex, rowNum + 2);
+                }
+                rowNum += 3;
+            }
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace BrainyStories
 {
@@ -8,6 +9,6 @@ namespace BrainyStories
     {
         public String Name { get; set; }
 
-        public Boolean CanRead { get; set; }
+        public ImageSource Icon { get; set; }
     }
 }
