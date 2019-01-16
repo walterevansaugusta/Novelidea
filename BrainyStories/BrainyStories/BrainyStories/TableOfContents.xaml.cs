@@ -18,27 +18,14 @@ namespace BrainyStories
         public TableOfContents ()
 		{
 			InitializeComponent();
-            
+
             // TO-DO: 
             // make these into their own class for better code
             // add icons below title for quizes and home expierences
             /// add clickability
-            storyList = new List<Story>();
-            storyList.Add(new Story { Name = "The Country Mouse and the City Mouse", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Country Mouse and the City Mouse", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Country and the City Mouse", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Dog and his Shadow", Icon = "giraffe.jpg" });
-            storyList.Add(new Story { Name = "The Emperor's New Clothes", Icon = "giraffe.jpg" });
+
+            StoryFactory storyFact = new StoryFactory();
+            storyList = storyFact.generateStories();
 
             gridLayout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
 
@@ -48,10 +35,6 @@ namespace BrainyStories
             {
                 for (int columnIndex = 0; columnIndex < 3; columnIndex++)
                 {
-                    if (storyIndex >= storyList.Count)
-                    {
-                        break;
-                    }
                     var story = storyList[storyIndex];
                     storyIndex += 1;
                     var image = new Image { Source = story.Icon };
