@@ -7,8 +7,6 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using FormsVideoLibrary;
-
 namespace BrainyStories
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,9 +14,7 @@ namespace BrainyStories
 	{
 		public StoryPage ()
 		{
-			InitializeComponent ();
-
-            
+			InitializeComponent();
 		}
 	}
 }
