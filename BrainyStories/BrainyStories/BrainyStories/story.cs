@@ -25,6 +25,10 @@ namespace BrainyStories
         // Image clip for icon
         public ImageSource Icon { get; set; }
 
+        public TimeSpan Duration { get; set; }
+
+        public int WordCount { get; set; }
+
         // Appeal type for colored dots
         public AppealType Appeal { get; set; }
 

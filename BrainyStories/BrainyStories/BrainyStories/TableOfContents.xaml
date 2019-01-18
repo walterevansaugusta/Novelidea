@@ -8,7 +8,7 @@
                  Margin="10,0,10,20">
         <StackLayout x:Name="horizontalStackLayout">
         </StackLayout>
-        <ScrollView>
+        <ScrollView x:Name="scrollView">
             <Grid x:Name="gridLayout"
                   Padding="0,0,0,20">
                 <Grid.ColumnDefinitions>

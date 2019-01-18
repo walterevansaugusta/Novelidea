@@ -16,6 +16,16 @@ namespace BrainyStories
 	{
         private List<Story> storyList;
         private List<Story> imaginesList;
+
+        private Grid simpleLayout;
+        private Grid advancedLayout;
+
+        public enum UserLayout
+        {
+            Simple,
+            Advanced
+        };
+
         public TableOfContents ()
 		{
 			InitializeComponent();
@@ -26,21 +36,36 @@ namespace BrainyStories
             
             storyList = storyFact.generateStories();
             imaginesList = storyFact.generateImagines();
-            BuildGrid(storyList);           
+
+            simpleLayout = BuildSimpleLayout(storyList);
+            advancedLayout = BuildSimpleLayout(storyList);
+
+            SetLayout(UserLayout.Simple);
         }
 
-        void BuildGrid(List<Story> storyList)
+        private Grid BuildSimpleLayout(List<Story> stories)
         {
-            gridLayout.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+            Grid grid = new Grid
+            {
+                Padding = new Thickness(0, 10)
+            };
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+
             var storyIndex = 0;
             var rowNum = 0;
+
             for (int storyNum = 0; storyNum < storyList.Count; storyNum += 3)
             {
+                grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+
                 for (int columnIndex = 0; columnIndex < 3; columnIndex++)
                 {
                     var story = storyList[storyIndex];
                     storyIndex += 1;
                     var image = new Image { Source = story.Icon, HeightRequest = 150 };
+
                     var label = new Label
                     {
                         Text = story.Name,
@@ -61,10 +86,13 @@ namespace BrainyStories
                             horizontalStack
                         }
                     };
-                    gridLayout.Children.Add(verticalStack, columnIndex, rowNum);
+                    grid.Children.Add(verticalStack, columnIndex, rowNum);
                 }
+
                 rowNum += 1;
             }
+
+            return grid;
         }
 
         StackLayout CreateHorizontalStack(Story story)
@@ -152,6 +180,29 @@ namespace BrainyStories
             horizontalStackLayout.Children.Add(female);
             horizontalStackLayout.Children.Add(maleDot);
             horizontalStackLayout.Children.Add(male);
+        }
+
+        private void LayoutToggled(object sender, ToggledEventArgs e)
+        {
+            if (e.Value)
+            {
+                SetLayout(UserLayout.Advanced);
+            }
+            else
+                SetLayout(UserLayout.Simple);
+        }
+
+        public void SetLayout(UserLayout layout)
+        {
+            switch (layout)
+            {
+                case UserLayout.Simple:
+                    scrollView.Content = simpleLayout;
+                    break;
+                case UserLayout.Advanced:
+                    scrollView.Content = advancedLayout;
+                    break;
+            }
         }
     }
 }
