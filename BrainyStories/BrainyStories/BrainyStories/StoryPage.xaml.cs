@@ -15,6 +15,7 @@ namespace BrainyStories
 		public StoryPage ()
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 		}
 	}
 }

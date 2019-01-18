@@ -18,6 +18,7 @@ namespace BrainyStories
         public TableOfContents ()
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
             // TO-DO: 
             // make these into their own class for better code
