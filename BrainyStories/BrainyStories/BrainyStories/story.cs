@@ -10,5 +10,9 @@ namespace BrainyStories
         public String Name { get; set; }
 
         public ImageSource Icon { get; set; }
+
+        public TimeSpan Duration { get; set; }
+
+        public int WordCount { get; set; }
     }
 }
