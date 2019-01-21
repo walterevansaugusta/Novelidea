@@ -10,5 +10,6 @@ namespace BrainyStories
         public String Name { get; set; }
 
         public ImageSource Icon { get; set; }
+
     }
 }
