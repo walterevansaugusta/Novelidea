@@ -19,6 +19,7 @@ namespace BrainyStories
         public TableOfContents ()
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
 
             StoryFactory storyFact = new StoryFactory();
             storyList = storyFact.generateStories();

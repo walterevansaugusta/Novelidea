@@ -9,6 +9,7 @@ namespace BrainyStories {
     public partial class MainPage : ContentPage {
         public MainPage() {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         async void StoriesClicked(object sender, EventArgs e)
