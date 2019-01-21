@@ -3,29 +3,32 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.TableOfContents">
-    <ScrollView>
-        <Grid x:Name="gridLayout">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="50" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Image Source="GeneralAppeal.png"
+    <StackLayout Orientation="Vertical">
+        <StackLayout x:Name="horizontalStackLayout">
+        </StackLayout>
+        <ScrollView>
+            <Grid x:Name="gridLayout">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--<Image Source="GeneralAppeal.png"
                    Grid.Row="0"
                    Grid.Column="0"/>
-            <Image Source="AnimalAppeal.png"
+                    <Image Source="AnimalAppeal.png"
                    Grid.Row="0"
                    Grid.Column="1"/>
-            <Image Source="FemaleProtagonist.png"
+                    <Image Source="FemaleProtagonist.png"
                    Grid.Row="0"
                    Grid.Column="2" />
-            <Image Source="MaleProtagoist.png"
+                    <Image Source="MaleProtagoist.png"
                    Grid.Row="0"
-                   Grid.Column="3"/>
-            
-        </Grid>
-    </ScrollView>
+                   Grid.Column="3"/>-->
+            </Grid>
+        </ScrollView>
+    </StackLayout>
 </ContentPage>
