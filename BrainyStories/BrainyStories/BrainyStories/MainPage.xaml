@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.MainPage">
 
-    <Grid x:Name="pageGrid" BackgroundColor="Aqua" Padding="0,0,0,0">
+    <Grid x:Name="pageGrid" BackgroundColor="#95F9F6" Padding="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -31,65 +31,65 @@
         <Button Text="Imagines"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Clicked="StoriesClicked"
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="1"
-                Image = "Imagines.png"
+                Image = "imagines2.png"
                 ContentLayout="Left"/>
         <Button Text="Classic Stories"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Clicked="StoriesClicked"
                 Grid.Row="1"
                 Grid.Column="1"
                 Grid.ColumnSpan="1"
-                Image="ClassicStories.png"
+                Image="classicStories2.png"
                 ContentLayout="Left"/>
         <Button Text="Rewards"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="1"
-                Image="Rewards.png"
+                Image="rewards2.png"
                 ContentLayout="Left"/>
         <Button Text="Progress"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
-                Image="Progress.png"
+                Image="progress2.png"
                 ContentLayout="Left"/>
         <Button Text="Quizzes"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Grid.Row="2"
                 Grid.Column="1"
                 Grid.ColumnSpan="1"
-                Image="Quizzes.png"
+                Image="quizzes3.png"
                 ContentLayout="Left"/>
         <Button Text="Think and Do"
                 FontSize="12"
                 TextColor="White"
-                BackgroundColor="Purple"
+                BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
                 Clicked="StoriesClicked"
                 Grid.Row="1"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
-                Image="ThinkAndDo.png"
+                Image="thinkAndDos2.png"
                 ContentLayout="Left"/>
     </Grid>
 

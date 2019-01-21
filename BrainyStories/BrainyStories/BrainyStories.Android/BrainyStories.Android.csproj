@@ -115,31 +115,31 @@
     <AndroidResource Include="Resources\drawable\AnimalAppeal.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ClassicStories.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\FemaleProtagonist.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\GeneralAppeal.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Imagines.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\MaleProtagonist.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Progress.png" />
+    <AndroidResource Include="Resources\drawable\classicStories2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Quizzes.png" />
+    <AndroidResource Include="Resources\drawable\imagines2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\Rewards.png" />
+    <AndroidResource Include="Resources\drawable\progress2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ThinkAndDo.png" />
+    <AndroidResource Include="Resources\drawable\rewards2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\thinkAndDos2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\quizzes3.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

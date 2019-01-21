@@ -2367,7 +2367,7 @@ namespace BrainyStories.Droid
 			public const int avd_show_password_3 = 2130837824;
 			
 			// aapt resource value: 0x7f020056
-			public const int ClassicStories = 2130837590;
+			public const int classicStories2 = 2130837590;
 			
 			// aapt resource value: 0x7f020057
 			public const int design_bottom_navigation_item_background = 2130837591;
@@ -2931,7 +2931,7 @@ namespace BrainyStories.Droid
 			public const int ic_vol_type_tv_light = 2130837777;
 			
 			// aapt resource value: 0x7f020112
-			public const int Imagines = 2130837778;
+			public const int imagines2 = 2130837778;
 			
 			// aapt resource value: 0x7f020113
 			public const int MaleProtagonist = 2130837779;
@@ -3036,16 +3036,16 @@ namespace BrainyStories.Droid
 			public const int notify_panel_notification_icon_bg = 2130837810;
 			
 			// aapt resource value: 0x7f020133
-			public const int Progress = 2130837811;
+			public const int progress2 = 2130837811;
 			
 			// aapt resource value: 0x7f020134
-			public const int Quizzes = 2130837812;
+			public const int quizzes3 = 2130837812;
 			
 			// aapt resource value: 0x7f020135
-			public const int Rewards = 2130837813;
+			public const int rewards2 = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int ThinkAndDo = 2130837814;
+			public const int thinkAndDos2 = 2130837814;
 			
 			// aapt resource value: 0x7f020137
 			public const int tooltip_frame_dark = 2130837815;
