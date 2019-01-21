@@ -15,17 +15,14 @@ namespace BrainyStories
 	public partial class TableOfContents : ContentPage
 	{
         private List<Story> storyList;
+        private List<Story> imaginesList;
         public TableOfContents ()
 		{
 			InitializeComponent();
 
-            // TO-DO: 
-            // make these into their own class for better code
-            // add icons below title for quizes and home expierences
-            /// add clickability
-
             StoryFactory storyFact = new StoryFactory();
             storyList = storyFact.generateStories();
+            imaginesList = storyFact.generateImagines();
 
             gridLayout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
 
