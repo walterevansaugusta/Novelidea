@@ -22,15 +22,11 @@ namespace BrainyStories
             CreateAppealKey();
             NavigationPage.SetHasNavigationBar(this, false);
 
-            // TO-DO: 
-            // remove whitespace btw cols
-
             StoryFactory storyFact = new StoryFactory();
             storyList = storyFact.generateStories();
             imaginesList = storyFact.generateImagines();
 
-            //gridLayout.RowDefinitions.Add(new RowDefinition { Height = new GridLength(50) });
-            gridLayout.RowDefinitions.Add(new RowDefinition());
+            gridLayout.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             var storyIndex = 0;
             var rowNum = 0;
             for (int storyNum = 0; storyNum < storyList.Count; storyNum+=3 )
@@ -39,28 +35,29 @@ namespace BrainyStories
                 {
                     var story = storyList[storyIndex];
                     storyIndex += 1;
-                    var image = new Image { Source = story.Icon };
-                    var quiz = new Image { Source = "QuizzesIcon.png" };
-                    var think = new Image { Source = "ThinkAndDoIcon.png" };
+                    var image = new Image { Source = story.Icon, HeightRequest = 150 };
                     var label = new Label
                     {
                         Text = story.Name,
-                        //VerticalOptions = LayoutOptions.Center,
+                        HorizontalTextAlignment = TextAlignment.Center,
                         HorizontalOptions = LayoutOptions.Center
                     };
                     var horizontalStack = new StackLayout
                     {
                         Orientation = StackOrientation.Horizontal,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
+                        HorizontalOptions = LayoutOptions.Center,
+                        VerticalOptions = LayoutOptions.Fill,
                         Children = {
-                            quiz,
-                            think
-                        }
+                            new Image { Source = "QuizzesIcon.png" },
+                            new Image { Source = "ThinkAndDoIcon.png" },
+                            new Image { Source = "QuizzesIcon.png" }
+                }
                     };
                     var verticalStack = new StackLayout
                     {
                         Orientation = StackOrientation.Vertical,
                         HorizontalOptions = LayoutOptions.FillAndExpand,
+                        VerticalOptions = LayoutOptions.Fill,
                         Children =
                         {
                             image,
@@ -68,11 +65,9 @@ namespace BrainyStories
                             horizontalStack
                         }
                     };
-                    
                     gridLayout.Children.Add(verticalStack, columnIndex, rowNum);
-                    //gridLayout.RowDefinitions.Add(new RowDefinition());
                 }
-                rowNum += 2;
+                rowNum += 1;
             }
         }
 

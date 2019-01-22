@@ -3,14 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.TableOfContents">
-    <StackLayout Orientation="Vertical">
+    <StackLayout Orientation="Vertical"
+                 VerticalOptions="FillAndExpand"
+                 Margin="10,0,10,20">
         <StackLayout x:Name="horizontalStackLayout">
         </StackLayout>
         <ScrollView>
-            <Grid x:Name="gridLayout">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                </Grid.RowDefinitions>
+            <Grid x:Name="gridLayout"
+                  Padding="0,0,0,20">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
