@@ -48,11 +48,21 @@ namespace BrainyStories
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.Fill,
                         Children = {
-                            new Image { Source = "QuizzesIcon.png" },
-                            new Image { Source = "ThinkAndDoIcon.png" },
-                            new Image { Source = "QuizzesIcon.png" }
-                }
+                            new Image { Source = story.Appeal.Value},
+                        }
                     };
+                    // Adds Quizzes icon (pencil) for each quiz in stories
+                    for (int i = 0; i < story.QuizNum; i++)
+                    {
+                        horizontalStack.Children.Add(new Image { Source = "QuizzesIcon.png" });
+                    }
+
+                    // Adds Think and Do icon (star) for each Think and Do in stories
+                    for (int i = 0; i < story.ThinkDoNum; i++)
+                    {
+                        horizontalStack.Children.Add(new Image { Source = "ThinkAndDoIcon.png" });
+                    }
+
                     var verticalStack = new StackLayout
                     {
                         Orientation = StackOrientation.Vertical,
@@ -99,25 +109,25 @@ namespace BrainyStories
 
             var generalDot = new Image()
             {
-                Source = "GeneralAppeal.png",
+                Source = "General.png",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
             var maleDot = new Image()
             {
-                Source = "MaleProtagonist.png",
+                Source = "Male.png",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
             var femaleDot = new Image()
             {
-                Source = "FemaleProtagonist.png",
+                Source = "Female.png",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
             var animalDot = new Image()
             {
-                Source = "AnimalAppeal.png",
+                Source = "Animal.png",
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 

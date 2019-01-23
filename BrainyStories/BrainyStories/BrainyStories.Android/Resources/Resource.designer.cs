@@ -2340,7 +2340,7 @@ namespace BrainyStories.Droid
 			public const int abc_vector_test = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int AnimalAppeal = 2130837587;
+			public const int Animal = 2130837587;
 			
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
@@ -2391,10 +2391,10 @@ namespace BrainyStories.Droid
 			public const int dog = 2130837597;
 			
 			// aapt resource value: 0x7f02005e
-			public const int FemaleProtagonist = 2130837598;
+			public const int Female = 2130837598;
 			
 			// aapt resource value: 0x7f02005f
-			public const int GeneralAppeal = 2130837599;
+			public const int General = 2130837599;
 			
 			// aapt resource value: 0x7f020060
 			public const int giraffe = 2130837600;
@@ -2934,7 +2934,7 @@ namespace BrainyStories.Droid
 			public const int imagines2 = 2130837778;
 			
 			// aapt resource value: 0x7f020113
-			public const int MaleProtagonist = 2130837779;
+			public const int Male = 2130837779;
 			
 			// aapt resource value: 0x7f020114
 			public const int mr_button_connected_dark = 2130837780;
