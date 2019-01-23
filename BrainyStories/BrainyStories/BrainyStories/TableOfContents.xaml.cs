@@ -19,17 +19,22 @@ namespace BrainyStories
         public TableOfContents ()
 		{
 			InitializeComponent();
-            CreateAppealKey();
             NavigationPage.SetHasNavigationBar(this, false);
-
+            CreateAppealKey();
+           
             StoryFactory storyFact = new StoryFactory();
+            
             storyList = storyFact.generateStories();
             imaginesList = storyFact.generateImagines();
+            BuildGrid(storyList);           
+        }
 
+        void BuildGrid(List<Story> storyList)
+        {
             gridLayout.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
             var storyIndex = 0;
             var rowNum = 0;
-            for (int storyNum = 0; storyNum < storyList.Count; storyNum+=3 )
+            for (int storyNum = 0; storyNum < storyList.Count; storyNum += 3)
             {
                 for (int columnIndex = 0; columnIndex < 3; columnIndex++)
                 {
@@ -42,26 +47,7 @@ namespace BrainyStories
                         HorizontalTextAlignment = TextAlignment.Center,
                         HorizontalOptions = LayoutOptions.Center
                     };
-                    var horizontalStack = new StackLayout
-                    {
-                        Orientation = StackOrientation.Horizontal,
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.Fill,
-                        Children = {
-                            new Image { Source = story.Appeal.Value},
-                        }
-                    };
-                    // Adds Quizzes icon (pencil) for each quiz in stories
-                    for (int i = 0; i < story.QuizNum; i++)
-                    {
-                        horizontalStack.Children.Add(new Image { Source = "QuizzesIcon.png" });
-                    }
-
-                    // Adds Think and Do icon (star) for each Think and Do in stories
-                    for (int i = 0; i < story.ThinkDoNum; i++)
-                    {
-                        horizontalStack.Children.Add(new Image { Source = "ThinkAndDoIcon.png" });
-                    }
+                    var horizontalStack = CreateHorizontalStack(story);
 
                     var verticalStack = new StackLayout
                     {
@@ -79,6 +65,31 @@ namespace BrainyStories
                 }
                 rowNum += 1;
             }
+        }
+
+        StackLayout CreateHorizontalStack(Story story)
+        {
+            var horizontalStack = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Fill,
+                Children = {
+                            new Image { Source = story.Appeal.Value},
+                        }
+            };
+            // Adds Quizzes icon (pencil) for each quiz in stories
+            for (int i = 0; i < story.QuizNum; i++)
+            {
+                horizontalStack.Children.Add(new Image { Source = "QuizzesIcon.png" });
+            }
+
+            // Adds Think and Do icon (star) for each Think and Do in stories
+            for (int i = 0; i < story.ThinkDoNum; i++)
+            {
+                horizontalStack.Children.Add(new Image { Source = "ThinkAndDoIcon.png" });
+            }
+            return horizontalStack;
         }
 
         void CreateAppealKey()

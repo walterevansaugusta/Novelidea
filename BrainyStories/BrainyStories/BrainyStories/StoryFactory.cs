@@ -37,14 +37,14 @@ namespace BrainyStories
             storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
                 Icon = "giraffe.jpg",
                 Appeal = AppealType.Animal,
-                QuizNum = 4,
+                QuizNum = 2,
                 ThinkDoNum = 2
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
                 Icon = "giraffe.jpg",
                 Appeal = AppealType.Male,
-                QuizNum = 8,
+                QuizNum = 2,
                 ThinkDoNum = 1
             });
 
