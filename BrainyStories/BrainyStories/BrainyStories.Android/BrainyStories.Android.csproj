@@ -106,16 +106,16 @@
     <AndroidResource Include="Resources\raw\CountryMouseandCityMouse.mp4" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\AnimalAppeal.png" />
+    <AndroidResource Include="Resources\drawable\Animal.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\FemaleProtagonist.png" />
+    <AndroidResource Include="Resources\drawable\Female.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\GeneralAppeal.png" />
+    <AndroidResource Include="Resources\drawable\General.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\MaleProtagonist.png" />
+    <AndroidResource Include="Resources\drawable\Male.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ClassicStories.png" />

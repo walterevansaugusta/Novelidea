@@ -2367,7 +2367,7 @@ namespace BrainyStories.Droid
 			public const int avd_show_password_3 = 2130837824;
 			
 			// aapt resource value: 0x7f020056
-			public const int ClassicStories = 2130837590;
+			public const int classicStories2 = 2130837590;
 			
 			// aapt resource value: 0x7f020057
 			public const int design_bottom_navigation_item_background = 2130837591;
