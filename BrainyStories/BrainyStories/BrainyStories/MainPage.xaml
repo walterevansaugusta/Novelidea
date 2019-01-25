@@ -37,7 +37,7 @@
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="1"
-                Image = "imagines2.png"
+                Image = "Imagines.png"
                 ContentLayout="Left"/>
         <Button Text="Classic Stories"
                 FontSize="12"
@@ -48,7 +48,7 @@
                 Grid.Row="1"
                 Grid.Column="1"
                 Grid.ColumnSpan="1"
-                Image="classicStories2.png"
+                Image="ClassicStories.png"
                 ContentLayout="Left"/>
         <Button Text="Rewards"
                 FontSize="12"
@@ -58,7 +58,7 @@
                 Grid.Row="2"
                 Grid.Column="0"
                 Grid.ColumnSpan="1"
-                Image="rewards2.png"
+                Image="Rewards.png"
                 ContentLayout="Left"/>
         <Button Text="Progress"
                 FontSize="12"
@@ -68,7 +68,7 @@
                 Grid.Row="2"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
-                Image="progress2.png"
+                Image="Progress.png"
                 ContentLayout="Left"/>
         <Button Text="Quizzes"
                 FontSize="12"
@@ -78,7 +78,7 @@
                 Grid.Row="2"
                 Grid.Column="1"
                 Grid.ColumnSpan="1"
-                Image="quizzes3.png"
+                Image="Quizzes.png"
                 ContentLayout="Left"/>
         <Button Text="Think and Do"
                 FontSize="12"
@@ -89,7 +89,7 @@
                 Grid.Row="1"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
-                Image="thinkAndDos2.png"
+                Image="ThinkAndDo.png"
                 ContentLayout="Left"/>
     </Grid>
 
