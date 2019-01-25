@@ -37,6 +37,5 @@ namespace BrainyStories
 
         // Number of think and do exercises
         public int ThinkDoNum { get; set; }
-
     }
 }

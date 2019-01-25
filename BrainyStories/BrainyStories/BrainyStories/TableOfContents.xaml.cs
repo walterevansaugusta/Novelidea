@@ -64,6 +64,7 @@ namespace BrainyStories
                 {
                     var story = storyList[storyIndex];
                     storyIndex += 1;
+
                     var image = new Image { Source = story.Icon, HeightRequest = 150 };
 
                     var label = new Label
