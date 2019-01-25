@@ -19,7 +19,8 @@ namespace BrainyStories
                 QuizNum = 3,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 3, 44),
-                WordCount = 434
+                WordCount = 434,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
@@ -28,7 +29,8 @@ namespace BrainyStories
                 QuizNum = 2,
                 ThinkDoNum = 2,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
@@ -37,7 +39,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 3,
                 Duration = new TimeSpan(0, 13, 08),
-                WordCount = 2126
+                WordCount = 2126,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
@@ -46,7 +49,8 @@ namespace BrainyStories
                 QuizNum = 2,
                 ThinkDoNum = 2,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
@@ -55,7 +59,8 @@ namespace BrainyStories
                 QuizNum = 2,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
@@ -64,7 +69,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Country Mouse and the City Mouse",
@@ -73,7 +79,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
@@ -82,7 +89,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
@@ -91,7 +99,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
@@ -100,7 +109,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
@@ -109,7 +119,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
@@ -118,7 +129,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
@@ -127,7 +139,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
@@ -136,7 +149,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
@@ -145,7 +159,8 @@ namespace BrainyStories
                 QuizNum = 1,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
             });
 
             return storyListTemp;

@@ -38,7 +38,7 @@ namespace BrainyStories
             imaginesList = storyFact.generateImagines();
 
             simpleLayout = BuildSimpleLayout(storyList);
-            advancedLayout = BuildSimpleLayout(storyList);
+            advancedLayout = BuildAdvancedLayout(storyList);
 
             SetLayout(UserLayout.Simple);
         }
@@ -96,12 +96,83 @@ namespace BrainyStories
             return grid;
         }
 
+        private Layout<View> BuildAdvancedLayout(List<Story> storyList)
+        {
+            StackLayout stackLayout = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                Spacing = 10
+            };
+
+            foreach(Story story in storyList)
+            {
+                Image image = new Image { Source = story.Icon, HeightRequest = 150 };
+                StackLayout detailsStack = new StackLayout
+                {
+                    Orientation = StackOrientation.Horizontal,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = story.Duration.ToString(@"mm\:ss"),
+                            HorizontalTextAlignment = TextAlignment.Start,
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                        },
+                        CreateStoryActivitiesStack(story),
+                        new Label
+                        {
+                            Text = story.WordCount + " words",
+                            HorizontalTextAlignment = TextAlignment.End,
+                            HorizontalOptions = LayoutOptions.FillAndExpand,
+                        }
+                    }
+                };
+
+                StackLayout infoStack = new StackLayout
+                {
+                    Orientation = StackOrientation.Vertical,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    VerticalOptions = LayoutOptions.FillAndExpand,
+                    Children =
+                    {
+                        new Label
+                        {
+                            Text = story.Name,
+                            FontAttributes = FontAttributes.Bold
+                        },
+                        new Label
+                        {
+                            Text = story.Description,
+                            VerticalOptions = LayoutOptions.FillAndExpand,
+                        },
+                        detailsStack
+                    }
+                };
+
+                StackLayout storyStack = new StackLayout
+                {
+                    Orientation = StackOrientation.Horizontal,
+                    HorizontalOptions = LayoutOptions.FillAndExpand,
+                    Children =
+                    {
+                        image,
+                        infoStack
+                    },
+                };
+
+                stackLayout.Children.Add(storyStack);
+            }
+
+            return stackLayout;
+        }
+
         StackLayout CreateStoryActivitiesStack(Story story)
         {
             var horizontalStack = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.CenterAndExpand,
                 VerticalOptions = LayoutOptions.Fill,
                 Children = {
                             new Image { Source = story.Appeal.Value},
@@ -171,6 +242,9 @@ namespace BrainyStories
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
+            Switch advancedSwitch = new Switch();
+            advancedSwitch.Toggled += LayoutToggled;
+
             appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
             appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
             appealKeyStackLayout.Children.Add(generalDot);
@@ -181,6 +255,7 @@ namespace BrainyStories
             appealKeyStackLayout.Children.Add(female);
             appealKeyStackLayout.Children.Add(maleDot);
             appealKeyStackLayout.Children.Add(male);
+            appealKeyStackLayout.Children.Add(advancedSwitch);
         }
 
         private void LayoutToggled(object sender, ToggledEventArgs e)

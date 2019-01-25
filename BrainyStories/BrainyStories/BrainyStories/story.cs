@@ -29,6 +29,8 @@ namespace BrainyStories
 
         public int WordCount { get; set; }
 
+        public String Description { get; set; }
+
         // Appeal type for colored dots
         public AppealType Appeal { get; set; }
 
