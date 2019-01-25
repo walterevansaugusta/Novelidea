@@ -73,7 +73,7 @@ namespace BrainyStories
                         HorizontalTextAlignment = TextAlignment.Center,
                         HorizontalOptions = LayoutOptions.Center
                     };
-                    var horizontalStack = CreateHorizontalStack(story);
+                    var horizontalStack = CreateStoryActivitiesStack(story);
 
                     var verticalStack = new StackLayout
                     {
@@ -96,7 +96,7 @@ namespace BrainyStories
             return grid;
         }
 
-        StackLayout CreateHorizontalStack(Story story)
+        StackLayout CreateStoryActivitiesStack(Story story)
         {
             var horizontalStack = new StackLayout
             {
@@ -171,16 +171,16 @@ namespace BrainyStories
                 HorizontalOptions = LayoutOptions.FillAndExpand,
             };
 
-            horizontalStackLayout.Orientation = StackOrientation.Horizontal;
-            horizontalStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
-            horizontalStackLayout.Children.Add(generalDot);
-            horizontalStackLayout.Children.Add(general);
-            horizontalStackLayout.Children.Add(animalDot);
-            horizontalStackLayout.Children.Add(animal);
-            horizontalStackLayout.Children.Add(femaleDot);
-            horizontalStackLayout.Children.Add(female);
-            horizontalStackLayout.Children.Add(maleDot);
-            horizontalStackLayout.Children.Add(male);
+            appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
+            appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
+            appealKeyStackLayout.Children.Add(generalDot);
+            appealKeyStackLayout.Children.Add(general);
+            appealKeyStackLayout.Children.Add(animalDot);
+            appealKeyStackLayout.Children.Add(animal);
+            appealKeyStackLayout.Children.Add(femaleDot);
+            appealKeyStackLayout.Children.Add(female);
+            appealKeyStackLayout.Children.Add(maleDot);
+            appealKeyStackLayout.Children.Add(male);
         }
 
         private void LayoutToggled(object sender, ToggledEventArgs e)

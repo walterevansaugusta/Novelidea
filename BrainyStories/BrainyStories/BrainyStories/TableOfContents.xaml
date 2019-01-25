@@ -6,7 +6,7 @@
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
                  Margin="10,0,10,20">
-        <StackLayout x:Name="horizontalStackLayout">
+        <StackLayout x:Name="appealKeyStackLayout">
         </StackLayout>
         <ScrollView x:Name="scrollView">
         </ScrollView>
