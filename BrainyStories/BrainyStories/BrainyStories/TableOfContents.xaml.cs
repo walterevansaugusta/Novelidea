@@ -17,8 +17,8 @@ namespace BrainyStories
         private List<Story> storyList;
         private List<Story> imaginesList;
 
-        private Grid simpleLayout;
-        private Grid advancedLayout;
+        private Layout<View> simpleLayout;
+        private Layout<View> advancedLayout;
 
         public enum UserLayout
         {
@@ -43,7 +43,7 @@ namespace BrainyStories
             SetLayout(UserLayout.Simple);
         }
 
-        private Grid BuildSimpleLayout(List<Story> stories)
+        private Layout<View> BuildSimpleLayout(List<Story> stories)
         {
             Grid grid = new Grid
             {
