@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainyStories.Android", "Br
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainyStories.iOS", "BrainyStories\BrainyStories.iOS\BrainyStories.iOS.csproj", "{5B123EDB-93BE-48C0-93A8-FC5584C08DFA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BrainyStories", "BrainyStories\BrainyStories\BrainyStories.csproj", "{60D6702B-B187-4B3A-A5BC-A3FA16D9C4FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BrainyStories", "BrainyStories\BrainyStories\BrainyStories.csproj", "{60D6702B-B187-4B3A-A5BC-A3FA16D9C4FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

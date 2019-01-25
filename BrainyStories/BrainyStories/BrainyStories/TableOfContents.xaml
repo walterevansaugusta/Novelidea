@@ -6,29 +6,9 @@
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
                  Margin="10,0,10,20">
-        <StackLayout x:Name="horizontalStackLayout">
+        <StackLayout x:Name="appealKeyStackLayout">
         </StackLayout>
-        <ScrollView>
-            <Grid x:Name="gridLayout"
-                  Padding="0,0,0,20">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <!--<Image Source="GeneralAppeal.png"
-                   Grid.Row="0"
-                   Grid.Column="0"/>
-                    <Image Source="AnimalAppeal.png"
-                   Grid.Row="0"
-                   Grid.Column="1"/>
-                    <Image Source="FemaleProtagonist.png"
-                   Grid.Row="0"
-                   Grid.Column="2" />
-                    <Image Source="MaleProtagoist.png"
-                   Grid.Row="0"
-                   Grid.Column="3"/>-->
-            </Grid>
+        <ScrollView x:Name="scrollView">
         </ScrollView>
-    </StackLayout>
+        </StackLayout>
 </ContentPage>

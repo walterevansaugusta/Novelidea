@@ -25,6 +25,12 @@ namespace BrainyStories
         // Image clip for icon
         public ImageSource Icon { get; set; }
 
+        public TimeSpan Duration { get; set; }
+
+        public int WordCount { get; set; }
+
+        public String Description { get; set; }
+
         // Appeal type for colored dots
         public AppealType Appeal { get; set; }
 
@@ -33,6 +39,5 @@ namespace BrainyStories
 
         // Number of think and do exercises
         public int ThinkDoNum { get; set; }
-
     }
 }
