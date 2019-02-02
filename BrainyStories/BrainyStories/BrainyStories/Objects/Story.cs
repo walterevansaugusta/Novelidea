@@ -46,6 +46,8 @@ namespace BrainyStories
         // Dictionary of cues for picture transition to pictures
         public Dictionary<TimeSpan, StoryPictures> PictureCues { get; set; }
 
+        public ThinkAndDo[] ThinkAndDos { get; set; }
+
         //String for audio file
         public String AudioClip { get; set; }
     }
