@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
+using BrainyStories.Objects;
 
 namespace BrainyStories
 {
@@ -17,10 +18,9 @@ namespace BrainyStories
         public static AppealType Animal { get { return new AppealType("Animal.png"); } }
     }
 
-    public class Story
-    {
+    public class Story {
         // Name of story/imagine
-        public String Name { get; set; } 
+        public String Name { get; set; }
 
         // Image clip for icon
         public ImageSource Icon { get; set; }
@@ -39,5 +39,16 @@ namespace BrainyStories
 
         // Number of think and do exercises
         public int ThinkDoNum { get; set; }
+
+        // Dictionary of cues for quizzes to quizzes
+        public Dictionary<TimeSpan, Quiz> QuizCues { get; set; }
+
+        // Dictionary of cues for picture transition to pictures
+        public Dictionary<TimeSpan, StoryPictures> PictureCues { get; set; }
+
+        public ThinkAndDo[] ThinkAndDos { get; set; }
+
+        //String for audio file
+        public String AudioClip { get; set; }
     }
 }
