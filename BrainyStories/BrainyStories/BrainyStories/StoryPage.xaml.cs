@@ -15,7 +15,8 @@ namespace BrainyStories
 		public StoryPage (Story story)
 		{
 			InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            testLabel.Text = story.Name;
+
 		}
 	}
 }

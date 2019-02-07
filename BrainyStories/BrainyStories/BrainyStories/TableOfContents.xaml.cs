@@ -50,6 +50,7 @@ namespace BrainyStories
 
         private Layout<View> BuildSimpleLayout(List<Story> stories)
         {
+            ContentView view = new ContentView();
             Grid grid = new Grid
             {
                 Padding = new Thickness(0, 10)
@@ -94,22 +95,25 @@ namespace BrainyStories
                             horizontalStack
                         }
                     };
-                    grid.Children.Add(verticalStack, columnIndex, rowNum);
+                    view = new ContentView
+                    {
+                        Content = verticalStack
+                    };
+                    grid.Children.Add(view, columnIndex, rowNum);
                     if (storyIndex >= storyList.Count)
                     {
                         break;
                     }
+                    var tapGestureRecognizer = new TapGestureRecognizer();
+                    tapGestureRecognizer.Tapped += (s, e) =>
+                    {
+                        ContentView clickedView = s as ContentView;
+                        Navigation.PushModalAsync(new StoryPage(story));
+                    };
+                    view.GestureRecognizers.Add(tapGestureRecognizer);
                 }
-
                 rowNum += 1;
             }
-            var tapGestureRecognizer = new TapGestureRecognizer();
-            tapGestureRecognizer.Tapped += (s, e) =>
-            {
-                Story stor = null;
-                App.Current.MainPage = new NavigationPage(new StoryPage((Story)s));
-            };
-            grid.GestureRecognizers.Add(tapGestureRecognizer);
             return grid;
         }
 
