@@ -26,16 +26,21 @@ namespace BrainyStories
             Advanced
         };
 
-        public TableOfContents ()
+        public TableOfContents (bool imagines)
 		{
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             CreateAppealKey();
            
             StoryFactory storyFact = new StoryFactory();
-            
-            storyList = storyFact.generateStories();
-            imaginesList = storyFact.generateImagines();
+
+            if(imagines) 
+            {
+                storyList = storyFact.generateImagines();
+            } else 
+            {
+                storyList = storyFact.generateStories();
+            }
 
             simpleLayout = BuildSimpleLayout(storyList);
             advancedLayout = BuildAdvancedLayout(storyList);
@@ -49,6 +54,7 @@ namespace BrainyStories
             {
                 Padding = new Thickness(0, 10)
             };
+            
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
@@ -64,6 +70,7 @@ namespace BrainyStories
                 {
                     var story = storyList[storyIndex];
                     storyIndex += 1;
+                    
 
                     var image = new Image { Source = story.Icon, HeightRequest = 150 };
 
@@ -88,11 +95,21 @@ namespace BrainyStories
                         }
                     };
                     grid.Children.Add(verticalStack, columnIndex, rowNum);
+                    if (storyIndex >= storyList.Count)
+                    {
+                        break;
+                    }
                 }
 
                 rowNum += 1;
             }
-
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) =>
+            {
+                Story stor = null;
+                App.Current.MainPage = new NavigationPage(new StoryPage((Story)s));
+            };
+            grid.GestureRecognizers.Add(tapGestureRecognizer);
             return grid;
         }
 

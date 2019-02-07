@@ -12,7 +12,7 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StoryPage : ContentPage
 	{
-		public StoryPage ()
+		public StoryPage (Story story)
 		{
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
