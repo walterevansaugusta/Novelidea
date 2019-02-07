@@ -100,10 +100,6 @@ namespace BrainyStories
                         Content = verticalStack
                     };
                     grid.Children.Add(view, columnIndex, rowNum);
-                    if (storyIndex >= storyList.Count)
-                    {
-                        break;
-                    }
                     var tapGestureRecognizer = new TapGestureRecognizer();
                     tapGestureRecognizer.Tapped += (s, e) =>
                     {
@@ -111,6 +107,10 @@ namespace BrainyStories
                         Navigation.PushModalAsync(new StoryPage(story));
                     };
                     view.GestureRecognizers.Add(tapGestureRecognizer);
+                    if (storyIndex >= storyList.Count)
+                    {
+                        break;
+                    }  
                 }
                 rowNum += 1;
             }
@@ -124,8 +124,8 @@ namespace BrainyStories
                 Orientation = StackOrientation.Vertical,
                 Spacing = 10
             };
-
-            foreach(Story story in storyList)
+            ContentView view = new ContentView();
+            foreach (Story story in storyList)
             {
                 Image image = new Image { Source = story.Icon, HeightRequest = 150 };
                 StackLayout detailsStack = new StackLayout
@@ -181,8 +181,18 @@ namespace BrainyStories
                         infoStack
                     },
                 };
-
-                stackLayout.Children.Add(storyStack);
+                view = new ContentView
+                {
+                    Content = storyStack
+                };
+                stackLayout.Children.Add(view);
+                var tapGestureRecognizer = new TapGestureRecognizer();
+                tapGestureRecognizer.Tapped += (s, e) =>
+                {
+                    ContentView clickedView = s as ContentView;
+                    Navigation.PushModalAsync(new StoryPage(story));
+                };
+                view.GestureRecognizers.Add(tapGestureRecognizer);
             }
 
             return stackLayout;
