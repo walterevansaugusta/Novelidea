@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Reflection;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace BrainyStories
 {
@@ -8,6 +10,19 @@ namespace BrainyStories
 
     public class StoryFactory
     {
+        public List<Story> loadStories()
+        {
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(StoryFactory)).Assembly;
+            Stream stream = assembly.GetManifestResourceStream("BrainyStories.stories.json");
+            List<Story> stories;
+            using(var reader = new StreamReader(stream))
+            {
+                var json = reader.ReadToEnd();
+                stories = JsonConvert.DeserializeObject<List<Story>>(json);
+            }
+            stream.Close();
+            return stories;
+        }
         // MANUAL LIST OF STORIES
         public List<Story> generateStories()
         {

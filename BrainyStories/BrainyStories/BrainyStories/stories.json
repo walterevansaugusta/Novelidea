@@ -1,0 +1,22 @@
+﻿[
+  {
+    "name": "The Country Mouse and the City Mouse",
+    "icon": "giraffe.jpg",
+    "appeal": "male",
+    "quizNum": 3,
+    "thinkDoNum": 1,
+    "duration": "00:03:44",
+    "wordCount": "434",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  },
+  {
+    "name": "The Dog and his Shadow",
+    "icon": "giraffe.jpg",
+    "appeal": "female",
+    "quizNum": 2,
+    "thinkDoNum": 2,
+    "duration": "00:02:20",
+    "wordCount": "353",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  }
+]
