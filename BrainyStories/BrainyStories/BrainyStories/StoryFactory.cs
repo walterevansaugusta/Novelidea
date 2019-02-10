@@ -10,175 +10,19 @@ namespace BrainyStories
 
     public class StoryFactory
     {
-        public List<Story> loadStories()
+        public List<Story> generateStories()
         {
             var assembly = IntrospectionExtensions.GetTypeInfo(typeof(StoryFactory)).Assembly;
             Stream stream = assembly.GetManifestResourceStream("BrainyStories.stories.json");
-            List<Story> stories;
+            Story[] stories;
             using(var reader = new StreamReader(stream))
             {
                 var json = reader.ReadToEnd();
-                stories = JsonConvert.DeserializeObject<List<Story>>(json);
+                stories = JsonConvert.DeserializeObject<Story[]>(json);
+                //var test = JsonConvert.DeserializeObject(json);
             }
             stream.Close();
-            return stories;
-        }
-        // MANUAL LIST OF STORIES
-        public List<Story> generateStories()
-        {
-            List<Story> storyListTemp = new List<Story>();
-
-            storyListTemp.Add(new Story { Name = "The Country Mouse and the City Mouse",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 3,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 3, 44),
-                WordCount = 434,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Female,
-                QuizNum = 2,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 1,
-                ThinkDoNum = 3,
-                Duration = new TimeSpan(0, 13, 08),
-                WordCount = 2126,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 2,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 2,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Female,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Country Mouse and the City Mouse",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Female,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Country and the City Mouse",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Dog and his Shadow",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            storyListTemp.Add(new Story { Name = "The Emperor's New Clothes",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 1,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            });
-
-            return storyListTemp;
+            return new List<Story>();
         }
         
         //MANUAL LIST OF IMAGINES 

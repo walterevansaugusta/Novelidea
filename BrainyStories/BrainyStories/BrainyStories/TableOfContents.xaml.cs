@@ -33,8 +33,6 @@ namespace BrainyStories
             CreateAppealKey();
            
             StoryFactory storyFact = new StoryFactory();
-
-            var result = storyFact.loadStories();
             
             storyList = storyFact.generateStories();
             imaginesList = storyFact.generateImagines();

@@ -1,22 +1,329 @@
 ﻿[
   {
-    "name": "The Country Mouse and the City Mouse",
+    "name": "Lion and the Mouse",
+    "icon": "giraffe.jpg",
+    "appeal": "animal",
+    "quizNum": 3,
+    "thinkDoNum": 0,
+    "duration": "00:02:51",
+    "wordCount": "395",
+    "description": "A lion releases a mouse, believing it’s too small and weak ever to return the favor, but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
+    "quizzes": {
+      "00:00:01": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "After a big meal the lion felt drowsy and what?",
+            "CorrectAnswer": "lazy",
+            "OtherAnswers": [ "angry", "forgetful", "sick" ]
+          },
+          {
+            "Text": "What part of the mouse does the lion put his paw on to trap him?",
+            "CorrectAnswer": "tail",
+            "OtherAnswers": [ "nose", "ear", "foot" ]
+          },
+          {
+            "Text": "The lion said the mouse ruined his what?",
+            "CorrectAnswer": "nap",
+            "OtherAnswers": [ "work", "hunt", "dance" ]
+          },
+          {
+            "Text": "The lion told the mouse: Now you get to be my what?",
+            "CorrectAnswer": "dessert",
+            "OtherAnswers": [ "teacher", "toy", "pillow" ]
+          },
+          {
+            "Text": "How did the mouse feel when the huge lion’s eyes glared at him?",
+            "CorrectAnswer": "afraid",
+            "OtherAnswers": [ "sleepy", "happy", "sad" ]
+          }
+        ]
+      },
+      "00:00:02": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "The lion said he was the great what of beasts?",
+            "CorrectAnswer": "King",
+            "OtherAnswers": [ "Sillicat", "uncle", "Grumpybear" ]
+          },
+          {
+            "Test": "The lion said, You’re too small even for a good what?",
+            "CorrectAnswer": "snack",
+            "OtherAnswers": [ "kitten", "baby", "toy" ]
+          },
+          {
+            "Test": "Hunters trapped the lion in a big what?",
+            "CorrectAnswer": "net",
+            "OtherAnswers": [ "barn", "puddle", "sandbox" ]
+          },
+          {
+            "Test": "What did the hunters hang the lion from?",
+            "CorrectAnswer": "tree",
+            "OtherAnswers": [ "windmill", "bridge", "chimney" ]
+          },
+          {
+            "Test": "The lion asked how a tiny little nobody could do a what for him?",
+            "CorrectAnswer": "favor",
+            "OtherAnswers": [ "cartwheel", "dance", "juggle" ]
+          }
+        ]
+      },
+      "00:00:03": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "What did the mouse hear the lion do?",
+            "CorrectAnswer": "roar",
+            "OtherAnswers": [ "whistle", "sing", "burp" ]
+          },
+          {
+            "Test": "The mouse hopped onto what part of the lion?",
+            "CorrectAnswer": "head",
+            "OtherAnswers": [ "tail", "shoulder", "rump" ]
+          },
+          {
+            "Test": "The mouse chewed and nipped away until what snapped?",
+            "CorrectAnswer": "rope",
+            "OtherAnswers": [ "tail", "tent", "cobweb" ]
+          },
+          {
+            "Test": "Right after he helped the lion, how did the mouse probably feel?",
+            "CorrectAnswer": "proud",
+            "OtherAnswers": [ "sad", "sleepy", "bored" ]
+          },
+          {
+            "Test": "How did the mouse and the lion feel at the end of the story?",
+            "CorrectAnswer": "friendly",
+            "OtherAnswers": [ "angry", "afraid", "hungry" ]
+          }
+        ]
+      }
+    },
+    "picureCues": {
+
+    },
+    "thinkAndDos": [
+
+    ],
+    "audioClip": ""
+  },
+  {
+    "name": "The Little Red Hen",
+    "icon": "giraffe.jpg",
+    "appeal": "animal",
+    "quizNum": 3,
+    "thinkDoNum": 0,
+    "duration": "00:03:14",
+    "wordCount": "477",
+    "description": "Lazy animals refuse to help the hen plant the seed, harvest the grain, or bake the bread, so the hen refuses to share the baked bread with the lazy animals.",
+    "quizzes": {
+      "00:00:01": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "What kind of fat grain did the little red hen find when she scratched in the yard?",
+            "CorrectAnswer": "wheat",
+            "OtherAnswers": [ "popcorn", "wild rice", "oats" ]
+          },
+          {
+            "Text": "When the hen found the grain she thought, I won’t eat it—I’ll do what to it?",
+            "CorrectAnswer": "plant",
+            "OtherAnswers": [ "burn", "hug", "throw" ]
+          },
+          {
+            "Text": "What animal liked to swim?",
+            "CorrectAnswer": "duck",
+            "OtherAnswers": [ "cat", "dog", "hen" ]
+          },
+          {
+            "Text": "What animal liked to tease other animals?",
+            "CorrectAnswer": "cat",
+            "OtherAnswers": [ "dog", "duck", "hen" ]
+          },
+          {
+            "Text": "What animal liked to nap?",
+            "CorrectAnswer": "dog",
+            "OtherAnswers": [ "duck", "cat", "hen" ]
+          }
+        ]
+      },
+      "00:00:02": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "The grain of wheat grew into a green stalk that then turned what color?",
+            "CorrectAnswer": "yellow",
+            "OtherAnswers": [ "purple", "black", "blue" ]
+          },
+          {
+            "Text": "What did the hen first do to the grains when they grew fat and golden yellow?",
+            "CorrectAnswer": "harvest",
+            "OtherAnswers": [ "paint", "hide", "kiss" ]
+          },
+          {
+            "Text": "The cat wanted to tease the rat and also what birds?",
+            "CorrectAnswer": "sparrows",
+            "OtherAnswers": [ "ducks", "geese", "seagulls" ]
+          },
+          {
+            "Text": "Who helped the hen take the wheat grains to be ground into white powder called \tflour?",
+            "CorrectAnswer": "nobody",
+            "OtherAnswers": [ "cat", "dog", "duck" ]
+          },
+          {
+            "Text": "Where did the hen take the wheat grains to be ground into smooth white flour?",
+            "CorrectAnswer": "mill",
+            "OtherAnswers": [ "town", "throne", "moon" ]
+          }
+        ]
+      },
+      "00:00:03": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "Who helped the hen in the story?",
+            "CorrectAnswer": "nobody",
+            "OtherAnswers": [ "duck", "cat", "dog" ]
+          },
+          {
+            "Text": "Who ate the bread in the end?",
+            "CorrectAnswer": "hen",
+            "OtherAnswers": [ "duck", "cat", "dog" ]
+          },
+          {
+            "Text": "How did the hen probably feel about all that she had done?",
+            "CorrectAnswer": "proud",
+            "OtherAnswers": [ "sad", "sorry", "frightened" ]
+          },
+          {
+            "Text": "How did the duck, cat, and dog probably feel about what they had done?",
+            "CorrectAnswer": "sorry",
+            "OtherAnswers": [ "proud", "frightened", "happy" ]
+          },
+          {
+            "Text": "The hen got to eat the bread because she did what that the other animals didn’t do?",
+            "CorrectAnswer": "work",
+            "OtherAnswers": [ "nap", "dance", "juggle" ]
+          }
+        ]
+      }
+    },
+    "picureCues": {
+
+    },
+    "thinkAndDos": [
+
+    ],
+    "audioClip": ""
+  },
+  {
+    "name": "The Boy Who Cried Wolf",
     "icon": "giraffe.jpg",
     "appeal": "male",
     "quizNum": 3,
-    "thinkDoNum": 1,
-    "duration": "00:03:44",
-    "wordCount": "434",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-  },
-  {
-    "name": "The Dog and his Shadow",
-    "icon": "giraffe.jpg",
-    "appeal": "female",
-    "quizNum": 2,
-    "thinkDoNum": 2,
-    "duration": "00:02:20",
-    "wordCount": "353",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    "thinkDoNum": 0,
+    "duration": "00:04:37",
+    "wordCount": "722",
+    "description": "Bored watching over the sheep, a boy causes excitement by lying that a wolf threatens; when a real wolf attacks, the people think the boy’s lying and won’t come to help him.",
+    "quizzes": {
+      "00:00:01": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "What kind of animals did the boy watch over?",
+            "CorrectAnswer": "sheep",
+            "OtherAnswers": [ "pigs", "ducks", "horses" ]
+          },
+          {
+            "Text": "How did the boy feel when he was watching the sheep?",
+            "CorrectAnswer": "bored",
+            "OtherAnswers": [ "angry", "sad", "hungry" ]
+          },
+          {
+            "Text": "To get the people to come, the boy cried wolf and what did he blow?",
+            "CorrectAnswer": "horn",
+            "OtherAnswers": [ "balloon", "cobweb", "fire" ]
+          },
+          {
+            "Text": "How did the people feel the first time when they saw the wolf had not come?",
+            "CorrectAnswer": "angry",
+            "OtherAnswers": [ "bored", "frightened", "hungry" ]
+          },
+          {
+            "Text": "The boy felt embarrassed and what after the people saw the wolf had not come?",
+            "CorrectAnswer": "ashamed",
+            "OtherAnswers": [ "angry", "hungry", "afraid" ]
+          }
+        ]
+      },
+      "00:00:02": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "When the boy saw a shadow in the bushes, what did he hope it was?",
+            "CorrectAnswer": "wolf",
+            "OtherAnswers": [ "lamb", "bird", "dog" ]
+          },
+          {
+            "Text": "The second time the people saw that the wolf had not come they did some things, but what did they not do to the boy.",
+            "CorrectAnswer": "scold",
+            "OtherAnswers": [ "hide", "hug", "lick" ]
+          },
+          {
+            "Text": "When the wolf leapt from the rock what did he attack?",
+            "CorrectAnswer": "lamb",
+            "OtherAnswers": [ "boy", "piglet", "bunny" ]
+          },
+          {
+            "Text": "The wolf dragged a lamb into the what?",
+            "CorrectAnswer": "bushes",
+            "OtherAnswers": [ "haystack", "forest", "tent" ]
+          },
+          {
+            "Text": "When the boy called the people the third time who came?",
+            "CorrectAnswer": "nobody",
+            "OtherAnswers": [ "everyone", "men", "women" ]
+          }
+        ]
+      },
+      "00:00:03": {
+        "audioFiles": [],
+        "questions": [
+          {
+            "Text": "The third time he cried wolf, people didn’t come until they saw that the boy was what?",
+            "CorrectAnswer": "afraid",
+            "OtherAnswers": [ "angry", "happy", "hungry" ]
+          },
+          {
+            "Text": "Who tells the boy that the people wouldn’t believe him because he lied the first two times?",
+            "CorrectAnswer": "woman",
+            "OtherAnswers": [ "hunter", "king", "sheep" ]
+          },
+          {
+            "Text": "The boy learned it’s a bad idea to do what?",
+            "CorrectAnswer": "lie",
+            "OtherAnswers": [ "steal", "hit", "hide" ]
+          },
+          {
+            "Text": "When he grew older, because no one would believe him, the boy did what?",
+            "CorrectAnswer": "move",
+            "OtherAnswers": [ "fight", "cry", "yawn" ]
+          },
+          {
+            "Text": "How did the people probably feel about the boy?",
+            "CorrectAnswer": "disappointed",
+            "OtherAnswers": [ "proud", "happy", "afraid" ]
+          }
+        ]
+      }
+    },
+    "picureCues": {
+
+    },
+    "thinkAndDos": [
+
+    ],
+    "audioClip": ""
   }
 ]
