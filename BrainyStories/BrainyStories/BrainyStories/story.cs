@@ -15,6 +15,24 @@ namespace BrainyStories
         public static AppealType Female { get { return new AppealType("Female.png"); } }
         public static AppealType General { get { return new AppealType("General.png"); } }
         public static AppealType Animal { get { return new AppealType("Animal.png"); } }
+
+        public static explicit operator AppealType(string input)
+        {
+            input = input.ToLower();
+            switch(input)
+            {
+                case "male":
+                    return Male;
+                case "female":
+                    return Female;
+                case "general":
+                    return General;
+                case "animal":
+                    return Animal;
+                default:
+                    throw new InvalidCastException("Error converting value \"" + input + "\" to AppealType");
+            }
+        }
     }
 
     public class Story
