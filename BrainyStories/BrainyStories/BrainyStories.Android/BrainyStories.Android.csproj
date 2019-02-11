@@ -194,169 +194,142 @@
     <AndroidAsset Include="Assets\S6_BGG_Story.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_1.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_2.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_3.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_3.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_4.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_4.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_5.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_5.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_6.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_6.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_7.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_7.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_8.PNG" />
+    <AndroidResource Include="Resources\drawable\S1_LATM_8.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_9.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_10.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_11.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_3.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_12.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_4.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_13.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_5.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_14.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_6.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_15.PNG" />
+    <AndroidResource Include="Resources\drawable\S2_LRH_7.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_16.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_17.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_18.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_3.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_19.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_4.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_20.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_5.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_21.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_6.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_22.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_7.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_23.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_8.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_24.PNG" />
+    <AndroidResource Include="Resources\drawable\S3_TBWCW_9.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S7_PR_25.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_1.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_2.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_3.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_3.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_4.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_4.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_5.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_5.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_6.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_6.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_7.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_7.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_8.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_8.PNG" />
+    <AndroidResource Include="Resources\drawable\S4_TEATS_9.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_9.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_1.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_10.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_2.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_11.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_3.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_12.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_4.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_13.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_5.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_14.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_6.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_15.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_7.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_16.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_8.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_17.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_9.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_18.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_10.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S9_R_19.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_11.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_1.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_12.PNG" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_2.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_3.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_4.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_5.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_6.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_7.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_8.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_9.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_10.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\S8_TGM_11.PNG" />
+    <AndroidResource Include="Resources\drawable\S5_TLP_13.PNG" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\S1_TLATM_Story.mp3" />
