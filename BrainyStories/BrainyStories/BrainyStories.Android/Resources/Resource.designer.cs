@@ -2345,26 +2345,26 @@ namespace BrainyStories.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020178
-			public const int avd_hide_password_1 = 2130837880;
+			// aapt resource value: 0x7f0201af
+			public const int avd_hide_password_1 = 2130837935;
 			
-			// aapt resource value: 0x7f020179
-			public const int avd_hide_password_2 = 2130837881;
+			// aapt resource value: 0x7f0201b0
+			public const int avd_hide_password_2 = 2130837936;
 			
-			// aapt resource value: 0x7f02017a
-			public const int avd_hide_password_3 = 2130837882;
+			// aapt resource value: 0x7f0201b1
+			public const int avd_hide_password_3 = 2130837937;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02017b
-			public const int avd_show_password_1 = 2130837883;
+			// aapt resource value: 0x7f0201b2
+			public const int avd_show_password_1 = 2130837938;
 			
-			// aapt resource value: 0x7f02017c
-			public const int avd_show_password_2 = 2130837884;
+			// aapt resource value: 0x7f0201b3
+			public const int avd_show_password_2 = 2130837939;
 			
-			// aapt resource value: 0x7f02017d
-			public const int avd_show_password_3 = 2130837885;
+			// aapt resource value: 0x7f0201b4
+			public const int avd_show_password_3 = 2130837940;
 			
 			// aapt resource value: 0x7f020056
 			public const int ClassicStories = 2130837590;
@@ -3020,11 +3020,11 @@ namespace BrainyStories.Droid
 			// aapt resource value: 0x7f02012f
 			public const int notification_icon_background = 2130837807;
 			
-			// aapt resource value: 0x7f020176
-			public const int notification_template_icon_bg = 2130837878;
+			// aapt resource value: 0x7f0201ad
+			public const int notification_template_icon_bg = 2130837933;
 			
-			// aapt resource value: 0x7f020177
-			public const int notification_template_icon_low_bg = 2130837879;
+			// aapt resource value: 0x7f0201ae
+			public const int notification_template_icon_low_bg = 2130837934;
 			
 			// aapt resource value: 0x7f020130
 			public const int notification_tile_bg = 2130837808;
@@ -3225,16 +3225,181 @@ namespace BrainyStories.Droid
 			public const int S6_BGG_9 = 2130837873;
 			
 			// aapt resource value: 0x7f020172
-			public const int ThinkAndDo = 2130837874;
+			public const int S7_PR_1 = 2130837874;
 			
 			// aapt resource value: 0x7f020173
-			public const int ThinkAndDoIcon = 2130837875;
+			public const int S7_PR_10 = 2130837875;
 			
 			// aapt resource value: 0x7f020174
-			public const int tooltip_frame_dark = 2130837876;
+			public const int S7_PR_11 = 2130837876;
 			
 			// aapt resource value: 0x7f020175
-			public const int tooltip_frame_light = 2130837877;
+			public const int S7_PR_12 = 2130837877;
+			
+			// aapt resource value: 0x7f020176
+			public const int S7_PR_13 = 2130837878;
+			
+			// aapt resource value: 0x7f020177
+			public const int S7_PR_14 = 2130837879;
+			
+			// aapt resource value: 0x7f020178
+			public const int S7_PR_15 = 2130837880;
+			
+			// aapt resource value: 0x7f020179
+			public const int S7_PR_16 = 2130837881;
+			
+			// aapt resource value: 0x7f02017a
+			public const int S7_PR_17 = 2130837882;
+			
+			// aapt resource value: 0x7f02017b
+			public const int S7_PR_18 = 2130837883;
+			
+			// aapt resource value: 0x7f02017c
+			public const int S7_PR_19 = 2130837884;
+			
+			// aapt resource value: 0x7f02017d
+			public const int S7_PR_2 = 2130837885;
+			
+			// aapt resource value: 0x7f02017e
+			public const int S7_PR_20 = 2130837886;
+			
+			// aapt resource value: 0x7f02017f
+			public const int S7_PR_21 = 2130837887;
+			
+			// aapt resource value: 0x7f020180
+			public const int S7_PR_22 = 2130837888;
+			
+			// aapt resource value: 0x7f020181
+			public const int S7_PR_23 = 2130837889;
+			
+			// aapt resource value: 0x7f020182
+			public const int S7_PR_24 = 2130837890;
+			
+			// aapt resource value: 0x7f020183
+			public const int S7_PR_25 = 2130837891;
+			
+			// aapt resource value: 0x7f020184
+			public const int S7_PR_3 = 2130837892;
+			
+			// aapt resource value: 0x7f020185
+			public const int S7_PR_4 = 2130837893;
+			
+			// aapt resource value: 0x7f020186
+			public const int S7_PR_5 = 2130837894;
+			
+			// aapt resource value: 0x7f020187
+			public const int S7_PR_6 = 2130837895;
+			
+			// aapt resource value: 0x7f020188
+			public const int S7_PR_7 = 2130837896;
+			
+			// aapt resource value: 0x7f020189
+			public const int S7_PR_8 = 2130837897;
+			
+			// aapt resource value: 0x7f02018a
+			public const int S7_PR_9 = 2130837898;
+			
+			// aapt resource value: 0x7f02018b
+			public const int S8_TGM_1 = 2130837899;
+			
+			// aapt resource value: 0x7f02018c
+			public const int S8_TGM_10 = 2130837900;
+			
+			// aapt resource value: 0x7f02018d
+			public const int S8_TGM_11 = 2130837901;
+			
+			// aapt resource value: 0x7f02018e
+			public const int S8_TGM_2 = 2130837902;
+			
+			// aapt resource value: 0x7f02018f
+			public const int S8_TGM_3 = 2130837903;
+			
+			// aapt resource value: 0x7f020190
+			public const int S8_TGM_4 = 2130837904;
+			
+			// aapt resource value: 0x7f020191
+			public const int S8_TGM_5 = 2130837905;
+			
+			// aapt resource value: 0x7f020192
+			public const int S8_TGM_6 = 2130837906;
+			
+			// aapt resource value: 0x7f020193
+			public const int S8_TGM_7 = 2130837907;
+			
+			// aapt resource value: 0x7f020194
+			public const int S8_TGM_8 = 2130837908;
+			
+			// aapt resource value: 0x7f020195
+			public const int S8_TGM_9 = 2130837909;
+			
+			// aapt resource value: 0x7f020196
+			public const int S9_R_1 = 2130837910;
+			
+			// aapt resource value: 0x7f020197
+			public const int S9_R_10 = 2130837911;
+			
+			// aapt resource value: 0x7f020198
+			public const int S9_R_11 = 2130837912;
+			
+			// aapt resource value: 0x7f020199
+			public const int S9_R_12 = 2130837913;
+			
+			// aapt resource value: 0x7f02019a
+			public const int S9_R_13 = 2130837914;
+			
+			// aapt resource value: 0x7f02019b
+			public const int S9_R_14 = 2130837915;
+			
+			// aapt resource value: 0x7f02019c
+			public const int S9_R_15 = 2130837916;
+			
+			// aapt resource value: 0x7f02019d
+			public const int S9_R_16 = 2130837917;
+			
+			// aapt resource value: 0x7f02019e
+			public const int S9_R_17 = 2130837918;
+			
+			// aapt resource value: 0x7f02019f
+			public const int S9_R_18 = 2130837919;
+			
+			// aapt resource value: 0x7f0201a0
+			public const int S9_R_19 = 2130837920;
+			
+			// aapt resource value: 0x7f0201a1
+			public const int S9_R_2 = 2130837921;
+			
+			// aapt resource value: 0x7f0201a2
+			public const int S9_R_3 = 2130837922;
+			
+			// aapt resource value: 0x7f0201a3
+			public const int S9_R_4 = 2130837923;
+			
+			// aapt resource value: 0x7f0201a4
+			public const int S9_R_5 = 2130837924;
+			
+			// aapt resource value: 0x7f0201a5
+			public const int S9_R_6 = 2130837925;
+			
+			// aapt resource value: 0x7f0201a6
+			public const int S9_R_7 = 2130837926;
+			
+			// aapt resource value: 0x7f0201a7
+			public const int S9_R_8 = 2130837927;
+			
+			// aapt resource value: 0x7f0201a8
+			public const int S9_R_9 = 2130837928;
+			
+			// aapt resource value: 0x7f0201a9
+			public const int ThinkAndDo = 2130837929;
+			
+			// aapt resource value: 0x7f0201aa
+			public const int ThinkAndDoIcon = 2130837930;
+			
+			// aapt resource value: 0x7f0201ab
+			public const int tooltip_frame_dark = 2130837931;
+			
+			// aapt resource value: 0x7f0201ac
+			public const int tooltip_frame_light = 2130837932;
 			
 			static Drawable()
 			{
