@@ -2345,26 +2345,26 @@ namespace BrainyStories.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f02013c
-			public const int avd_hide_password_1 = 2130837820;
+			// aapt resource value: 0x7f020178
+			public const int avd_hide_password_1 = 2130837880;
 			
-			// aapt resource value: 0x7f02013d
-			public const int avd_hide_password_2 = 2130837821;
+			// aapt resource value: 0x7f020179
+			public const int avd_hide_password_2 = 2130837881;
 			
-			// aapt resource value: 0x7f02013e
-			public const int avd_hide_password_3 = 2130837822;
+			// aapt resource value: 0x7f02017a
+			public const int avd_hide_password_3 = 2130837882;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f02013f
-			public const int avd_show_password_1 = 2130837823;
+			// aapt resource value: 0x7f02017b
+			public const int avd_show_password_1 = 2130837883;
 			
-			// aapt resource value: 0x7f020140
-			public const int avd_show_password_2 = 2130837824;
+			// aapt resource value: 0x7f02017c
+			public const int avd_show_password_2 = 2130837884;
 			
-			// aapt resource value: 0x7f020141
-			public const int avd_show_password_3 = 2130837825;
+			// aapt resource value: 0x7f02017d
+			public const int avd_show_password_3 = 2130837885;
 			
 			// aapt resource value: 0x7f020056
 			public const int ClassicStories = 2130837590;
@@ -3020,11 +3020,11 @@ namespace BrainyStories.Droid
 			// aapt resource value: 0x7f02012f
 			public const int notification_icon_background = 2130837807;
 			
-			// aapt resource value: 0x7f02013a
-			public const int notification_template_icon_bg = 2130837818;
+			// aapt resource value: 0x7f020176
+			public const int notification_template_icon_bg = 2130837878;
 			
-			// aapt resource value: 0x7f02013b
-			public const int notification_template_icon_low_bg = 2130837819;
+			// aapt resource value: 0x7f020177
+			public const int notification_template_icon_low_bg = 2130837879;
 			
 			// aapt resource value: 0x7f020130
 			public const int notification_tile_bg = 2130837808;
@@ -3045,16 +3045,196 @@ namespace BrainyStories.Droid
 			public const int Rewards = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int ThinkAndDo = 2130837814;
+			public const int S1_LATM_1 = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int ThinkAndDoIcon = 2130837815;
+			public const int S1_LATM_2 = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int tooltip_frame_dark = 2130837816;
+			public const int S1_LATM_3 = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int tooltip_frame_light = 2130837817;
+			public const int S1_LATM_4 = 2130837817;
+			
+			// aapt resource value: 0x7f02013a
+			public const int S1_LATM_5 = 2130837818;
+			
+			// aapt resource value: 0x7f02013b
+			public const int S1_LATM_6 = 2130837819;
+			
+			// aapt resource value: 0x7f02013c
+			public const int S1_LATM_7 = 2130837820;
+			
+			// aapt resource value: 0x7f02013d
+			public const int S1_LATM_8 = 2130837821;
+			
+			// aapt resource value: 0x7f02013e
+			public const int S2_LRH_1 = 2130837822;
+			
+			// aapt resource value: 0x7f02013f
+			public const int S2_LRH_2 = 2130837823;
+			
+			// aapt resource value: 0x7f020140
+			public const int S2_LRH_3 = 2130837824;
+			
+			// aapt resource value: 0x7f020141
+			public const int S2_LRH_4 = 2130837825;
+			
+			// aapt resource value: 0x7f020142
+			public const int S2_LRH_5 = 2130837826;
+			
+			// aapt resource value: 0x7f020143
+			public const int S2_LRH_6 = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int S2_LRH_7 = 2130837828;
+			
+			// aapt resource value: 0x7f020145
+			public const int S3_TBWCW_1 = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int S3_TBWCW_2 = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int S3_TBWCW_3 = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int S3_TBWCW_4 = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int S3_TBWCW_5 = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int S3_TBWCW_6 = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int S3_TBWCW_7 = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int S3_TBWCW_8 = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int S3_TBWCW_9 = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int S4_TEATS_1 = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int S4_TEATS_2 = 2130837839;
+			
+			// aapt resource value: 0x7f020150
+			public const int S4_TEATS_3 = 2130837840;
+			
+			// aapt resource value: 0x7f020151
+			public const int S4_TEATS_4 = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int S4_TEATS_5 = 2130837842;
+			
+			// aapt resource value: 0x7f020153
+			public const int S4_TEATS_6 = 2130837843;
+			
+			// aapt resource value: 0x7f020154
+			public const int S4_TEATS_7 = 2130837844;
+			
+			// aapt resource value: 0x7f020155
+			public const int S4_TEATS_8 = 2130837845;
+			
+			// aapt resource value: 0x7f020156
+			public const int S4_TEATS_9 = 2130837846;
+			
+			// aapt resource value: 0x7f020157
+			public const int S5_TLP_1 = 2130837847;
+			
+			// aapt resource value: 0x7f020158
+			public const int S5_TLP_10 = 2130837848;
+			
+			// aapt resource value: 0x7f020159
+			public const int S5_TLP_11 = 2130837849;
+			
+			// aapt resource value: 0x7f02015a
+			public const int S5_TLP_12 = 2130837850;
+			
+			// aapt resource value: 0x7f02015b
+			public const int S5_TLP_13 = 2130837851;
+			
+			// aapt resource value: 0x7f02015c
+			public const int S5_TLP_2 = 2130837852;
+			
+			// aapt resource value: 0x7f02015d
+			public const int S5_TLP_3 = 2130837853;
+			
+			// aapt resource value: 0x7f02015e
+			public const int S5_TLP_4 = 2130837854;
+			
+			// aapt resource value: 0x7f02015f
+			public const int S5_TLP_5 = 2130837855;
+			
+			// aapt resource value: 0x7f020160
+			public const int S5_TLP_6 = 2130837856;
+			
+			// aapt resource value: 0x7f020161
+			public const int S5_TLP_7 = 2130837857;
+			
+			// aapt resource value: 0x7f020162
+			public const int S5_TLP_8 = 2130837858;
+			
+			// aapt resource value: 0x7f020163
+			public const int S5_TLP_9 = 2130837859;
+			
+			// aapt resource value: 0x7f020164
+			public const int S6_BGG_1 = 2130837860;
+			
+			// aapt resource value: 0x7f020165
+			public const int S6_BGG_10 = 2130837861;
+			
+			// aapt resource value: 0x7f020166
+			public const int S6_BGG_11 = 2130837862;
+			
+			// aapt resource value: 0x7f020167
+			public const int S6_BGG_12 = 2130837863;
+			
+			// aapt resource value: 0x7f020168
+			public const int S6_BGG_13 = 2130837864;
+			
+			// aapt resource value: 0x7f020169
+			public const int S6_BGG_14 = 2130837865;
+			
+			// aapt resource value: 0x7f02016a
+			public const int S6_BGG_2 = 2130837866;
+			
+			// aapt resource value: 0x7f02016b
+			public const int S6_BGG_3 = 2130837867;
+			
+			// aapt resource value: 0x7f02016c
+			public const int S6_BGG_4 = 2130837868;
+			
+			// aapt resource value: 0x7f02016d
+			public const int S6_BGG_5 = 2130837869;
+			
+			// aapt resource value: 0x7f02016e
+			public const int S6_BGG_6 = 2130837870;
+			
+			// aapt resource value: 0x7f02016f
+			public const int S6_BGG_7 = 2130837871;
+			
+			// aapt resource value: 0x7f020170
+			public const int S6_BGG_8 = 2130837872;
+			
+			// aapt resource value: 0x7f020171
+			public const int S6_BGG_9 = 2130837873;
+			
+			// aapt resource value: 0x7f020172
+			public const int ThinkAndDo = 2130837874;
+			
+			// aapt resource value: 0x7f020173
+			public const int ThinkAndDoIcon = 2130837875;
+			
+			// aapt resource value: 0x7f020174
+			public const int tooltip_frame_dark = 2130837876;
+			
+			// aapt resource value: 0x7f020175
+			public const int tooltip_frame_light = 2130837877;
 			
 			static Drawable()
 			{
