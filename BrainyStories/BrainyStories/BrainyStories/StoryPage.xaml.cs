@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
@@ -15,45 +16,112 @@ namespace BrainyStories
 		public StoryPage (Story story)
 		{
 			InitializeComponent();
-            testLabel.Text = story.Name;
-            Label rotationLabel = new Label
+            Button button = new Button()
             {
-                Text = "TEST",
-                FontSize = Device.GetNamedSize(NamedSize.Large, typeof(Label)),
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                Text = "Pause"
             };
-
+            Button button2 = new Button()
+            {
+                Text = "Play",
+                IsVisible = false
+            };
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)] };
             Label displayLabel = new Label
             {
-                Text = "0",
-                HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                Text = "0:00",
             };
-
             Slider slider = new Slider
             {
                 Maximum = story.Duration.Seconds + (story.Duration.Minutes * 60),
                 Minimum = 0,
-                Value = 0
+                Value = 0,
+                HorizontalOptions = LayoutOptions.FillAndExpand
+            };
+
+            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player.Load(story.AudioClip);
+            bool audioFromTimer = false;
+            bool playAudio = true;
+            player.Play();
+            Device.StartTimer(new TimeSpan(0,0,1), () =>
+            {
+                if (playAudio)
+                {
+                    audioFromTimer = true;
+                    slider.Value += 1;
+                }
+                return true;
+            });
+            button.Clicked += (sender, args) =>
+            {
+                player.Pause();
+                playAudio = false;
+                button.IsVisible = false;
+                button2.IsVisible = true;
+            };
+            button2.Clicked += (sender, args) =>
+            {
+                player.Play();
+                playAudio = true;
+                button.IsVisible = true;
+                button2.IsVisible = false;
             };
             slider.ValueChanged += (sender, args) =>
             {
-                rotationLabel.Rotation = slider.Value;
-                displayLabel.Text = String.Format("The Slider value is {0}", args.NewValue);
+                int minutes = (int) args.NewValue / 60;
+                int seconds = (int) args.NewValue - (minutes * 60);
+                Console.WriteLine(args.NewValue);
+                Console.WriteLine(player.CurrentPosition);
+                Console.WriteLine(args.NewValue);
+                if (!audioFromTimer)
+                {
+                    player.Seek(args.NewValue);
+                }
+                String second = seconds.ToString();
+                if (seconds < 10)
+                {
+                    second = '0' + seconds.ToString();
+                }
+                displayLabel.Text = String.Format("{0}:{1}", minutes, second);
+                var timeStamp = new TimeSpan(0, minutes, seconds);
+                var savedTime = new TimeSpan(0, 0, 0);
+                foreach (TimeSpan key in story.PictureCues.Keys) {
+                    if (key.TotalSeconds < args.NewValue)
+                    {
+                        savedTime = key;
+                    } else
+                    {
+                        break;
+                    }
+                }
+                storyImage.Source = story.PictureCues[savedTime];
+                audioFromTimer = false;
             };
+
+            
 
             Title = "Basic Slider Code";
             Padding = new Thickness(10, 10);
+            StackLayout audio = new StackLayout
+            {
+                Orientation = StackOrientation.Horizontal,
+                Children =
+                {
+                    button,
+                    button2,
+                    displayLabel
+                }
+            };
             Content = new StackLayout
             {
                 Children =
-            {
-                rotationLabel,
-                displayLabel,
-                slider
-            }
+                {
+                    storyImage,
+                    slider,
+                    audio
+                }
             };
+
         }
 	}
 }

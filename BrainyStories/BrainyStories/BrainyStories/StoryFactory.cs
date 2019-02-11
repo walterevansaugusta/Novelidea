@@ -180,7 +180,13 @@ namespace BrainyStories
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 2, 20),
                 WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                PictureCues = new Dictionary<TimeSpan, string> {
+                    { new TimeSpan(0, 0, 0), "General.png" },
+                    { new TimeSpan(0,0,10), "Male.png" },
+                    { new TimeSpan(0,0,20), "Female.png" }
+                },
+                AudioClip = "S6_BGG.mp3"
             });
 
             return imaginesListTemp;
