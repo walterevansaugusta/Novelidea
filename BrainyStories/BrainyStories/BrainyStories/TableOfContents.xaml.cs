@@ -26,16 +26,21 @@ namespace BrainyStories
             Advanced
         };
 
-        public TableOfContents ()
+        public TableOfContents (bool imagines)
 		{
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             CreateAppealKey();
            
             StoryFactory storyFact = new StoryFactory();
-            
-            storyList = storyFact.generateStories();
-            imaginesList = storyFact.generateImagines();
+
+            if(imagines) 
+            {
+                storyList = storyFact.generateImagines();
+            } else 
+            {
+                storyList = storyFact.generateStories();
+            }
 
             simpleLayout = BuildSimpleLayout(storyList);
             advancedLayout = BuildAdvancedLayout(storyList);
@@ -45,10 +50,12 @@ namespace BrainyStories
 
         private Layout<View> BuildSimpleLayout(List<Story> stories)
         {
+            ContentView view = new ContentView();
             Grid grid = new Grid
             {
                 Padding = new Thickness(0, 10)
             };
+            
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
@@ -64,6 +71,7 @@ namespace BrainyStories
                 {
                     var story = storyList[storyIndex];
                     storyIndex += 1;
+                    
 
                     var image = new Image { Source = story.Icon, HeightRequest = 150 };
 
@@ -87,12 +95,25 @@ namespace BrainyStories
                             horizontalStack
                         }
                     };
-                    grid.Children.Add(verticalStack, columnIndex, rowNum);
+                    view = new ContentView
+                    {
+                        Content = verticalStack
+                    };
+                    grid.Children.Add(view, columnIndex, rowNum);
+                    var tapGestureRecognizer = new TapGestureRecognizer();
+                    tapGestureRecognizer.Tapped += (s, e) =>
+                    {
+                        ContentView clickedView = s as ContentView;
+                        Navigation.PushModalAsync(new StoryPage(story));
+                    };
+                    view.GestureRecognizers.Add(tapGestureRecognizer);
+                    if (storyIndex >= storyList.Count)
+                    {
+                        break;
+                    }  
                 }
-
                 rowNum += 1;
             }
-
             return grid;
         }
 
@@ -103,8 +124,8 @@ namespace BrainyStories
                 Orientation = StackOrientation.Vertical,
                 Spacing = 10
             };
-
-            foreach(Story story in storyList)
+            ContentView view = new ContentView();
+            foreach (Story story in storyList)
             {
                 Image image = new Image { Source = story.Icon, HeightRequest = 150 };
                 StackLayout detailsStack = new StackLayout
@@ -160,8 +181,18 @@ namespace BrainyStories
                         infoStack
                     },
                 };
-
-                stackLayout.Children.Add(storyStack);
+                view = new ContentView
+                {
+                    Content = storyStack
+                };
+                stackLayout.Children.Add(view);
+                var tapGestureRecognizer = new TapGestureRecognizer();
+                tapGestureRecognizer.Tapped += (s, e) =>
+                {
+                    ContentView clickedView = s as ContentView;
+                    Navigation.PushModalAsync(new StoryPage(story));
+                };
+                view.GestureRecognizers.Add(tapGestureRecognizer);
             }
 
             return stackLayout;

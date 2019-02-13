@@ -33,7 +33,7 @@
                 TextColor="White"
                 BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
-                Clicked="StoriesClicked"
+                Clicked="ImaginesClicked"
                 Grid.Row="1"
                 Grid.Column="0"
                 Grid.ColumnSpan="1"

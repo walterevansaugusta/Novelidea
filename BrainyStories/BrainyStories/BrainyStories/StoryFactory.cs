@@ -171,74 +171,22 @@ namespace BrainyStories
         {
             List<Story> imaginesListTemp = new List<Story>();
 
-            imaginesListTemp.Add(new Story { Name = "Imagine 1",
+            imaginesListTemp.Add(new Story
+            {
+                Name = "I AM AN IMAGINE",
                 Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
+                Appeal = AppealType.Animal,
                 QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 2",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 3",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 4",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 5",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 6",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 7",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 8",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 9",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
-            });
-
-            imaginesListTemp.Add(new Story { Name = "Imagine 10",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 1,
-                ThinkDoNum = 1
+                ThinkDoNum = 1,
+                Duration = new TimeSpan(0, 2, 20),
+                WordCount = 353,
+                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                PictureCues = new Dictionary<TimeSpan, string> {
+                    { new TimeSpan(0, 0, 0), "General.png" },
+                    { new TimeSpan(0,0,10), "Male.png" },
+                    { new TimeSpan(0,0,20), "Female.png" }
+                },
+                AudioClip = "S6_BGG.mp3"
             });
 
             return imaginesListTemp;
