@@ -831,6 +831,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\I9_IFP_IG.mp3" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\S6_BGG.mp3" />
   </ItemGroup>
