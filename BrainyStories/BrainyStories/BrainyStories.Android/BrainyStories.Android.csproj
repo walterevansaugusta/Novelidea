@@ -350,9 +350,6 @@
     <AndroidAsset Include="Assets\S5_TLP_Story.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\S6_BGG.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\S7_PR_Story.mp3" />
   </ItemGroup>
   <ItemGroup>

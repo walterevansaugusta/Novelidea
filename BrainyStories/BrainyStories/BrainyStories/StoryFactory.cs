@@ -174,7 +174,7 @@ namespace BrainyStories
             imaginesListTemp.Add(new Story
             {
                 Name = "If a shoe wanted to be Car",
-                Icon = "I1_IASW_1.jpg",
+                Icon = "I1_IASW_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
@@ -182,10 +182,10 @@ namespace BrainyStories
                 WordCount = 212,
                 Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                    { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.jpg" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.jpg" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.jpg" }
+                    { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
+                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
+                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
+                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
                 },
                 AudioClip = "I1_IAS_IG.mp3"
             });
