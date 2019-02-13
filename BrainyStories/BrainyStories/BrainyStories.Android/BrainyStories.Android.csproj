@@ -350,6 +350,9 @@
     <AndroidAsset Include="Assets\S5_TLP_Story.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\S6_BGG.mp3" />
+  </ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="Assets\S7_PR_Story.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -831,9 +834,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\I9_IFP_IG.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\S6_BGG.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
