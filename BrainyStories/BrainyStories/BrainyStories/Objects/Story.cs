@@ -44,7 +44,7 @@ namespace BrainyStories
         public Dictionary<TimeSpan, Quiz> QuizCues { get; set; }
 
         // Dictionary of cues for picture transition to pictures
-        public Dictionary<TimeSpan, StoryPictures> PictureCues { get; set; }
+        public Dictionary<TimeSpan, String> PictureCues { get; set; }
 
         public ThinkAndDo[] ThinkAndDos { get; set; }
 

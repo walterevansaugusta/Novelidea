@@ -11,10 +11,19 @@ namespace BrainyStories {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
         }
+        
+        // Imagines TOC
+        // Argument: True = Imagines, False = Stories
+        async void ImaginesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new TableOfContents(true));
+        }
 
+        // Stories TOC
+        // Argument: True = Imagines, False = Stories
         async void StoriesClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new TableOfContents());
+            await Navigation.PushAsync(new TableOfContents(false));
         }
     }
 }
