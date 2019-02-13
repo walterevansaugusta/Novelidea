@@ -173,20 +173,21 @@ namespace BrainyStories
 
             imaginesListTemp.Add(new Story
             {
-                Name = "I AM AN IMAGINE",
-                Icon = "giraffe.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 1,
+                Name = "If a shoe wanted to be Car",
+                Icon = "I1_IASW_1.jpg",
+                Appeal = AppealType.General,
+                QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 2, 20),
-                WordCount = 353,
-                Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+                Duration = new TimeSpan(0, 1, 47),
+                WordCount = 212,
+                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                    { new TimeSpan(0, 0, 0), "General.png" },
-                    { new TimeSpan(0,0,10), "Male.png" },
-                    { new TimeSpan(0,0,20), "Female.png" }
+                    { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" },
+                   { new TimeSpan(0, 0, 8), "I1_IASW_2.jpg" },
+                   { new TimeSpan(0, 0, 43), "I1_IASW_3.jpg" },
+                   { new TimeSpan(0, 1, 7), "I1_IASW_4.jpg" }
                 },
-                AudioClip = "S6_BGG.mp3"
+                AudioClip = "I1_IAS_IG.mp3"
             });
 
             return imaginesListTemp;
