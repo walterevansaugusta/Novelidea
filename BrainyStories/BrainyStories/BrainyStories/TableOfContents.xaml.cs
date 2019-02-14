@@ -15,7 +15,6 @@ namespace BrainyStories
 	public partial class TableOfContents : ContentPage
 	{
         private List<Story> storyList;
-        private List<Story> imaginesList;
 
         private Layout<View> simpleLayout;
         private Layout<View> advancedLayout;

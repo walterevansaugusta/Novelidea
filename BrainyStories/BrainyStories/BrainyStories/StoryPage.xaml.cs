@@ -27,7 +27,7 @@ namespace BrainyStories
                 Text = "Play",
                 IsVisible = false
             };
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 225 };
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 200 };
             Label displayLabel = new Label
             {
                 Text = "0:00",
@@ -97,7 +97,7 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
-                storyImage.HeightRequest = 225;
+                storyImage.HeightRequest = 200;
                 audioFromTimer = false;
             };
 
