@@ -329,7 +329,8 @@ namespace BrainyStories
                    { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
                    { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
                    { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" },
+                   { new TimeSpan(0, 1, 26), "I1_IASW_5.png" }
                 },
                 AudioClip = "I1_IAS_IG.mp3"
             });
@@ -337,19 +338,22 @@ namespace BrainyStories
             //IMAGINE 2
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
-                Appeal = AppealType.General,
+                Name = "Do you pump your legs when you swing?",
+                Icon = "I2_DYPYL_1.png",
+                Appeal = AppealType.Male,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 1, 48),
+                WordCount = 206,
+                Description = "Imagine swinging as high as trees, birds, clouds, or even higher, what it might feel like, what you might see.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I2_DYPYL_1.png" },
+                   { new TimeSpan(0, 0, 4), "I2_DYPYL_2.png" },
+                   { new TimeSpan(0, 0, 31), "I2_DYPYL_3.png" },
+                   { new TimeSpan(0, 0, 55), "I2_DYPYL_4.png" },
+                   { new TimeSpan(0, 1, 6), "I2_DYPYL_5.png" },
+                   { new TimeSpan(0, 1, 11), "I2_DYPYL_6.png" },
+                   { new TimeSpan(0, 1, 38), "I2_DYPYL_7.png" },
                 },
                 AudioClip = "I2_DYPYL_IG.mp3"
             });
@@ -357,19 +361,21 @@ namespace BrainyStories
             //IMAGINE 3
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
-                Appeal = AppealType.General,
+                Name = "Upside Down Windows",
+                Icon = "I3_TUDW_1.png",
+                Appeal = AppealType.Female,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 1, 59),
+                WordCount = 248,
+                Description = "Imagine wandering into a world where everything is upside down and backwards.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I3_TUDW_1.png" },
+                   { new TimeSpan(0, 0, 5), "I3_TUDW_2.png" },
+                   { new TimeSpan(0, 0, 34), "I3_TUDW_3.png" },
+                   { new TimeSpan(0, 0, 59), "I3_TUDW_4.png" },
+                   { new TimeSpan(0, 1, 26), "I3_TUDW_5.png" },
+                   { new TimeSpan(0, 1, 48), "I3_TUDW_6.png" }
                 },
                 AudioClip = "I3_UW_IG.mp3"
             });
@@ -377,19 +383,22 @@ namespace BrainyStories
             //IMAGINE 4
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
-                Appeal = AppealType.General,
+                Name = "The Special One-Eye Blink",
+                Icon = "I4_TSOEB_1.png",
+                Appeal = AppealType.Female,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 06),
+                WordCount = 304,
+                Description = "Imagine blinking to become very tiny and what you might be able to do if you were very, very small.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I4_TSOEB_1.png" },
+                   { new TimeSpan(0, 0, 4), "I4_TSOEB_2.png" },
+                   { new TimeSpan(0, 0, 35), "I4_TSOEB_3.png" },
+                   { new TimeSpan(0, 0, 55), "I4_TSOEB_4.png" },
+                   { new TimeSpan(0, 1, 19), "I4_TSOEB_5.png" },
+                   { new TimeSpan(0, 1, 44), "I4_TSOEB_6.png" },
+                   { new TimeSpan(0, 2, 1), "I4_TSOEB_7.png" },
                 },
                 AudioClip = "I4_SOEB_IG.mp3"
             });
@@ -397,19 +406,21 @@ namespace BrainyStories
             //IMAGINE 5
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "If a Naughty Angel",
+                Icon = "I5_IANA_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 32),
+                WordCount = 399,
+                Description = "Imagine what you’d say if a little angel asked your advice on how to be a tiny bit mischievous.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I5_IANA_1.png" },
+                   { new TimeSpan(0, 0, 3), "I5_IANA_2.png" },
+                   { new TimeSpan(0, 0, 45), "I5_IANA_3.png" },
+                   { new TimeSpan(0, 1, 4), "I5_IANA_4.png" },
+                   { new TimeSpan(0, 1, 37), "I5_IANA_5.png" },
+                   { new TimeSpan(0, 2, 12), "I5_IANA_6.png" }
                 },
                 AudioClip = "I5_IANA_IG.mp3"
             });
@@ -417,19 +428,26 @@ namespace BrainyStories
             //IMAGINE 6
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "If You Decide to be a Kitten",
+                Icon = "I6_DTBAK_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 40),
+                WordCount = 326,
+                Description = "Imagine what it might be like to be a kitten.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I6_DTBAK_1.png" },
+                   { new TimeSpan(0, 0, 2), "I6_DTBAK_2.png" },
+                   { new TimeSpan(0, 0, 20), "I6_DTBAK_3.png" },
+                   { new TimeSpan(0, 0, 39), "I6_DTBAK_4.png" },
+                   { new TimeSpan(0, 0, 49), "I6_DTBAK_5.png" },
+                   { new TimeSpan(0, 1, 1), "I6_DTBAK_6.png" },
+                   { new TimeSpan(0, 1, 18), "I6_DTBAK_7.png" },
+                   { new TimeSpan(0, 1, 37), "I6_DTBAK_8.png" },
+                   { new TimeSpan(0, 1, 52), "I6_DTBAK_9.png" },
+                   { new TimeSpan(0, 2, 0), "I6_DTBAK_10.png" },
+                   { new TimeSpan(0, 2, 20), "I6_DTBAK_11.png" }
                 },
                 AudioClip = "I6_DTBK_IG.mp3"
             });
@@ -437,19 +455,29 @@ namespace BrainyStories
             //IMAGINE 7
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "Nobody's Better than You",
+                Icon = "I7_NBTY_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 40),
+                WordCount = 352,
+                Description = "Always remember, nobody’s better than you.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                 { new TimeSpan(0, 0, 0), "I7_NBTY_1.png" },
+                   { new TimeSpan(0, 0, 3), "I7_NBTY_2.png" },
+                   { new TimeSpan(0, 0, 12), "I7_NBTY_3.png" },
+                   { new TimeSpan(0, 0, 18), "I7_NBTY_4.png" },
+                   { new TimeSpan(0, 0, 31), "I7_NBTY_5.png" },
+                   { new TimeSpan(0, 0, 37), "I7_NBTY_6.png" },
+                   { new TimeSpan(0, 0, 46), "I7_NBTY_7.png" },
+                   { new TimeSpan(0, 0, 50), "I7_NBTY_8.png" },
+                   { new TimeSpan(0, 0, 57), "I7_NBTY_9.png" },
+                   { new TimeSpan(0, 1, 18), "I7_NBTY_10.png" },
+                   { new TimeSpan(0, 1, 28), "I7_NBTY_11.png" },
+                   { new TimeSpan(0, 1, 46), "I7_NBTY_12.png" },
+                   { new TimeSpan(0, 1, 56), "I7_NBTY_13.png" },
+                   { new TimeSpan(0, 2, 20), "I7_NBTY_14.png" }
                 },
                 AudioClip = "I7_NBTY_IG.mp3"
             });
@@ -457,19 +485,22 @@ namespace BrainyStories
             //IMAGINE 8
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "If a Piece of Dirt...",
+                Icon = "I8_IAPOD_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 45),
+                WordCount = 350,
+                Description = "Imagine some of the things you might help a sad, lonely, bored piece of dirt become.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I8_IAPOD_1.png" },
+                   { new TimeSpan(0, 0, 5), "I8_IAPOD_2.png" },
+                   { new TimeSpan(0, 0, 25), "I8_IAPOD_3.png" },
+                   { new TimeSpan(0, 0, 50), "I8_IAPOD_4.png" },
+                   { new TimeSpan(0, 1, 5), "I8_IAPOD_5.png" },
+                   { new TimeSpan(0, 1, 35), "I8_IAPOD_6.png" },
+                   { new TimeSpan(0, 2, 16), "I8_IAPOD_7.png" }
                 },
                 AudioClip = "I8_IAPOD_IG.mp3"
             });
@@ -477,19 +508,23 @@ namespace BrainyStories
             //IMAGINE 9
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "The Imaginary Fairy Palace",
+                Icon = "I9_IFP_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 3, 44),
+                WordCount = 396,
+                Description = "Imagine the kind of home fairies might create for themselves if they wanted.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I9_IFP_1.png" },
+                   { new TimeSpan(0, 0, 6), "I9_IFP_2.png" },
+                   { new TimeSpan(0, 0, 47), "I9_IFP_3.png" },
+                   { new TimeSpan(0, 1, 32), "I9_IFP_4.png" },
+                   { new TimeSpan(0, 1, 53), "I9_IFP_5.png" },
+                   { new TimeSpan(0, 2, 30), "I9_IFP_6.png" },
+                   { new TimeSpan(0, 3, 9), "I9_IFP_1.png" },
+                   { new TimeSpan(0, 3, 32), "I9_IFP_1.png" } //TODO: check images for imagine 9
                 },
                 AudioClip = "I9_IFP_IG.mp3"
             });
@@ -497,19 +532,24 @@ namespace BrainyStories
             //IMAGINE 10
             imaginesListTemp.Add(new Story
             {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.png",
+                Name = "Do You Like Bubbles",
+                Icon = "I10_DYLB_1.png",
                 Appeal = AppealType.General,
                 QuizNum = 0,
                 ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
+                Duration = new TimeSpan(0, 2, 30),
+                WordCount = 344,
+                Description = "Imagine blowing bubbles in a sink or bathtub.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.png" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.png" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.png" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.png" }
+                   { new TimeSpan(0, 0, 0), "I10_DYLB_1.png" },
+                   { new TimeSpan(0, 0, 2), "I10_DYLB_2.png" },
+                   { new TimeSpan(0, 0, 12), "I10_DYLB_3.png" },
+                   { new TimeSpan(0, 0, 39), "I10_DYLB_4.png" },
+                   { new TimeSpan(0, 1, 5), "I10_DYLB_5.png" },
+                   { new TimeSpan(0, 1, 42), "I10_DYLB_6.png" },
+                   { new TimeSpan(0, 2, 1), "I10_DYLB_7.png" },
+                   { new TimeSpan(0, 2, 10), "I10_DYLB_8.png" },
+                   { new TimeSpan(0, 2, 20), "I10_DYLB_9.png" }  //TODO: not enough images
                 },
                 AudioClip = "I1_IAS_IG.mp3" //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
             });
