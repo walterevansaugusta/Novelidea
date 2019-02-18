@@ -293,6 +293,61 @@ namespace BrainyStories
 
             return imaginesListTemp;
         }
+
+        public Story playedStory(String storyName)
+        {
+            if (storyName.Equals("The Lion and the Mouse"))
+            {
+                new Story
+                {
+                    Name = "The Lion and the Mouse",
+                    Icon = "S1_LATM_1.jpg",
+                    Appeal = AppealType.Animal,
+                    QuizNum = 3,
+                    ThinkDoNum = 1,
+                    Duration = new TimeSpan(0, 2, 51),
+                    WordCount = 395,
+                    Description = "A lion releases a mouse, believing it’s too small and weak ever to return the favor, " +
+                    "but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
+                    PictureCues = new Dictionary<TimeSpan, string> {
+                   { new TimeSpan(0, 0, 0), "S1_LATM_1.jpg" },
+                   { new TimeSpan(0, 0, 5), "S1_LATM_2.jpg" },
+                   { new TimeSpan(0, 0, 32), "S1_LATM_3.jpg" },
+                   { new TimeSpan(0, 0, 49), "S1_LATM_4.jpg" },
+                   { new TimeSpan(0, 1, 02), "S1_LATM_5.jpg" },
+                   { new TimeSpan(0, 1, 35), "S1_LATM_6.jpg" },
+                   { new TimeSpan(0, 1, 56), "S1_LATM_7.jpg" },
+                   { new TimeSpan(0, 2, 30), "S1_LATM_8.jpg" }
+                },
+                    AudioClip = "S1_TLATM_Story.mp3"
+                };
+            } else if (storyName.Equals("The Little Red Hen"))
+            {
+                new Story
+                {
+                    Name = "The Little Red Hen",
+                    Icon = "S2_LRH_1.jpg",
+                    Appeal = AppealType.Animal,
+                    QuizNum = 4,
+                    ThinkDoNum = 1,
+                    Duration = new TimeSpan(0, 3, 14),
+                    WordCount = 477,
+                    Description = "Lazy animals refuse to help the hen plant the seed, harvest the grain, or bake the " +
+                    "bread, so the hen refuses to share the baked bread with the lazy animals.",
+                    PictureCues = new Dictionary<TimeSpan, string> {
+                   { new TimeSpan(0, 0, 0), "S2_LRH_1.jpg" },
+                   { new TimeSpan(0, 0, 5), "S2_LRH_2.jpg" },
+                   { new TimeSpan(0, 0, 32), "S2_LRH_3.jpg" },
+                   { new TimeSpan(0, 0, 49), "S2_LRH_4.jpg" },
+                   { new TimeSpan(0, 1, 02), "S2_LRH_5.jpg" },
+                   { new TimeSpan(0, 1, 35), "S2_LRH_6.jpg" },
+                   { new TimeSpan(0, 1, 56), "S2_LRH_7.jpg" }
+                },
+                    AudioClip = "S2_LRH_Story.mp3"
+                };
+            }
+            return null;
+        }
     }
     //END OF IMAGINES
 }
