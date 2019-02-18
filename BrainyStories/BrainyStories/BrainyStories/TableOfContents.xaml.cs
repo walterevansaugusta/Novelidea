@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLToolkit.Forms.Controls;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Globalization;
@@ -15,6 +16,7 @@ namespace BrainyStories
 	public partial class TableOfContents : ContentPage
 	{
         private List<Story> storyList;
+        private List<Image> imagesList;
 
         private Layout<View> simpleLayout;
         private Layout<View> advancedLayout;
@@ -32,8 +34,8 @@ namespace BrainyStories
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
             //CreateAppealKey();
-
-            if(imagines) 
+            
+            if (imagines) 
             {
                 storyList = storyFact.generateImagines();
             } else 
@@ -41,80 +43,82 @@ namespace BrainyStories
                 storyList = storyFact.generateStories();
             }
 
-            simpleLayout = BuildSimpleLayout(storyList);
-            advancedLayout = BuildAdvancedLayout(storyList);
+            fastList.FlowItemsSource = storyList;
+            //BuildSimpleLayout(storyList);
+            //BuildAdvancedLayout(storyList);
 
-            SetLayout(UserLayout.Simple);
+            //SetLayout(UserLayout.Simple);
         }
 
-        private Layout<View> BuildSimpleLayout(List<Story> stories)
+        private void BuildSimpleLayout(List<Story> stories)
         {
-            ContentView view = new ContentView();
-            Grid grid = new Grid
-            {
-                Padding = new Thickness(0, 10)
-            };
-            
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
-            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+            //ContentView view = new ContentView();
+            //fastList.FlowItemsSource = stories;
+            //Grid grid = new Grid
+            //{
+            //    Padding = new Thickness(0, 10)
+            //};
 
-            var storyIndex = 0;
-            var rowNum = 0;
+            //grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+            //grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
+            //grid.ColumnDefinitions.Add(new ColumnDefinition { Width = GridLength.Star });
 
-            for (int storyNum = 0; storyNum < storyList.Count; storyNum += 3)
-            {
-                grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+            //var storyIndex = 0;
+            //var rowNum = 0;
 
-                for (int columnIndex = 0; columnIndex < 3; columnIndex++)
-                {
-                    var story = storyList[storyIndex];
-                    storyIndex += 1;
-                    
+            //for (int storyNum = 0; storyNum < storyList.Count; storyNum += 3)
+            //{
+            //    grid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
 
-                    var image = new Image { Source = story.Icon, HeightRequest = 150 };
+            //    for (int columnIndex = 0; columnIndex < 3; columnIndex++)
+            //    {
+            //        var story = storyList[storyIndex];
+            //        storyIndex += 1;
 
-                    var label = new Label
-                    {
-                        Text = story.Name,
-                        HorizontalTextAlignment = TextAlignment.Center,
-                        HorizontalOptions = LayoutOptions.Center
-                    };
-                    var horizontalStack = CreateStoryActivitiesStack(story);
 
-                    var verticalStack = new StackLayout
-                    {
-                        Orientation = StackOrientation.Vertical,
-                        HorizontalOptions = LayoutOptions.FillAndExpand,
-                        VerticalOptions = LayoutOptions.Fill,
-                        Children =
-                        {
-                            image,
-                            label,
-                            horizontalStack
-                        }
-                    };
-                    view = new ContentView
-                    {
-                        Content = verticalStack
-                    };
-                    grid.Children.Add(view, columnIndex, rowNum);
-                    var tapGestureRecognizer = new TapGestureRecognizer();
-                    tapGestureRecognizer.Tapped += (s, e) =>
-                    {
-                        ContentView clickedView = s as ContentView;
-                        //var lazyStory = new Lazy<Story>(() => storyFact.playedStory(story.Name));
-                        Navigation.PushModalAsync(new StoryPage(storyFact.playedStory(story.Name)));
-                    };
-                    view.GestureRecognizers.Add(tapGestureRecognizer);
-                    if (storyIndex >= storyList.Count)
-                    {
-                        break;
-                    }  
-                }
-                rowNum += 1;
-            }
-            return grid;
+            //        var image = new Image { Source = story.Icon, HeightRequest = 150 };
+
+            //        var label = new Label
+            //        {
+            //            Text = story.Name,
+            //            HorizontalTextAlignment = TextAlignment.Center,
+            //            HorizontalOptions = LayoutOptions.Center
+            //        };
+            //        var horizontalStack = CreateStoryActivitiesStack(story);
+
+            //        var verticalStack = new StackLayout
+            //        {
+                        //Orientation = StackOrientation.Vertical,
+                        //HorizontalOptions = LayoutOptions.FillAndExpand,
+                        //VerticalOptions = LayoutOptions.Fill,
+                        //Children =
+                        //{
+                        //    image,
+                        //    label,
+                        //    horizontalStack
+                        //}
+            //        };
+            //        view = new ContentView
+            //        {
+            //            Content = verticalStack
+            //        };
+            //        grid.Children.Add(view, columnIndex, rowNum);
+            //        var tapGestureRecognizer = new TapGestureRecognizer();
+            //        tapGestureRecognizer.Tapped += (s, e) =>
+            //        {
+            //            ContentView clickedView = s as ContentView;
+            //            //var lazyStory = new Lazy<Story>(() => storyFact.playedStory(story.Name));
+            //            Navigation.PushModalAsync(new StoryPage(storyFact.playedStory(story.Name)));
+            //        };
+            //        view.GestureRecognizers.Add(tapGestureRecognizer);
+            //        if (storyIndex >= storyList.Count)
+            //        {
+            //            break;
+            //        }  
+            //    }
+            //    rowNum += 1;
+            //}
+            //return grid;
         }
 
         private Layout<View> BuildAdvancedLayout(List<Story> storyList)
@@ -200,6 +204,12 @@ namespace BrainyStories
 
         StackLayout CreateStoryActivitiesStack(Story story)
         {
+            var verticalStack = new StackLayout
+            {
+                Orientation = StackOrientation.Vertical,
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                VerticalOptions = LayoutOptions.Fill
+            };
             var horizontalStack = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
@@ -220,7 +230,23 @@ namespace BrainyStories
             {
                 horizontalStack.Children.Add(new Image { Source = "ThinkAndDoIcon.png" });
             }
-            return horizontalStack;
+            verticalStack.Children.Add(horizontalStack);
+            
+            return verticalStack;
+        }
+
+        private List<Image> ListOfImages(Story story)
+        {
+            imagesList = new List<Image>();
+            for (int i = 0; i < story.QuizNum; i++)
+            {
+                imagesList.Add(new Image { Source = "QuizzesIcon.png" });
+            }
+            for (int i = 0; i < story.ThinkDoNum; i++)
+            {
+                imagesList.Add(new Image { Source = "ThinkAndDoIcon.png" });
+            }
+            return imagesList;
         }
 
         //void CreateAppealKey()
@@ -289,27 +315,29 @@ namespace BrainyStories
         //    appealKeyStackLayout.Children.Add(advancedSwitch);
         //}
 
-        private void LayoutToggled(object sender, ToggledEventArgs e)
-        {
-            if (e.Value)
-            {
-                SetLayout(UserLayout.Advanced);
-            }
-            else
-                SetLayout(UserLayout.Simple);
-        }
+        //private void LayoutToggled(object sender, ToggledEventArgs e)
+        //{
+        //    if (e.Value)
+        //    {
+        //        SetLayout(UserLayout.Advanced);
+        //    }
+        //    else
+        //        SetLayout(UserLayout.Simple);
+        //}
 
-        public void SetLayout(UserLayout layout)
-        {
-            switch (layout)
-            {
-                case UserLayout.Simple:
-                    scrollView.Content = simpleLayout;
-                    break;
-                case UserLayout.Advanced:
-                    scrollView.Content = advancedLayout;
-                    break;
-            }
-        }
+        //public void SetLayout(UserLayout layout)
+        //{
+        //    switch (layout)
+        //    {
+        //        case UserLayout.Simple:
+        //            scrollView.IsVisible = true;
+        //            //scrollViewAdvanced.IsVisible = false;
+        //            break;
+        //        case UserLayout.Advanced:
+        //            scrollView.IsVisible = false;
+        //            //scrollViewAdvanced.IsVisible = true;
+        //            break;
+        //    }
+        //}
     }
 }

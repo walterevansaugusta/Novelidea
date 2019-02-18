@@ -2,31 +2,61 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="BrainyStories.TableOfContents">
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
                  Margin="10,0,10,20">
         <StackLayout x:Name="appealKeyStackLayout"
-            Orientation ="Horizontal"
+                     Orientation ="Horizontal"
                      HorizontalOptions="FillAndExpand">
-            <Label Text= "General"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="General.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Animal"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Animall.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Female"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Female.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Male"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Male.png"
-                   HorizontalOptions="FillAndExpand"/>
+          <Label Text= "General"
+                  HorizontalOptions="FillAndExpand"/>
+          <Image Source="General.png"
+                  HorizontalOptions="FillAndExpand"/>
+          <Label Text= "Animal"
+                  HorizontalOptions="FillAndExpand"/>
+          <Image Source="Animal.png"
+                  HorizontalOptions="FillAndExpand"/>
+          <Label Text= "Female"
+                  HorizontalOptions="FillAndExpand"/>
+          <Image Source="Female.png"
+                  HorizontalOptions="FillAndExpand"/>
+          <Label Text= "Male"
+                  HorizontalOptions="FillAndExpand"/>
+          <Image Source="Male.png"
+                  HorizontalOptions="FillAndExpand"/>
+          <!--<Switch Toggled="LayoutToggled"/>-->
         </StackLayout>
-        <ScrollView x:Name="scrollView">
+        <ScrollView x:Name="scrollView"
+                    IsVisible="True">
+            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" x:Name="fastList"
+	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Items}">
+
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                      <Label Text="{Binding Title}"/>
+                      <Image Source="{Binding Icon}"
+                             HeightRequest ="150"/>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+
+            </flv:FlowListView>
         </ScrollView>
-        </StackLayout>
+        <!--<ScrollView x:Name="scrollViewAdvanced"
+                    IsVisible="False">
+            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" x:Name="fastListAdvanced"
+	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
+	        FlowItemsSource="{Binding Items}" IsVisible="True" >
+
+                --><!--<flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Label HorizontalOptions="Fill" VerticalOptions="Fill" 
+				            XAlign="Center" YAlign="Center" Text="{Binding Title}"/>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>--><!--
+
+            </flv:FlowListView>
+        </ScrollView>-->
+    </StackLayout>
 </ContentPage>

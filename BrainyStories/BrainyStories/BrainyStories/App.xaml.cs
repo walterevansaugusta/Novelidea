@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DLToolkit.Forms.Controls;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -7,7 +8,7 @@ namespace BrainyStories {
     public partial class App : Application {
         public App() {
             InitializeComponent();
-
+            FlowListView.Init();
             MainPage = new NavigationPage(new MainPage());
         }
 
