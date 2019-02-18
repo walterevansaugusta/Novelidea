@@ -29,7 +29,6 @@ namespace BrainyStories
 		{
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-            CreateAppealKey();
            
             StoryFactory storyFact = new StoryFactory();
 
@@ -204,10 +203,7 @@ namespace BrainyStories
                 Orientation = StackOrientation.Horizontal,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 VerticalOptions = LayoutOptions.Fill,
-                Children = {
-                            new Image { Source = story.Appeal.Value},
-                        }
-            };
+                Children = { new Image { Source = story.Appeal.Value} } };
             // Adds Quizzes icon (pencil) for each quiz in stories
             for (int i = 0; i < story.QuizNum; i++)
             {
@@ -222,71 +218,71 @@ namespace BrainyStories
             return horizontalStack;
         }
 
-        void CreateAppealKey()
-        {
-            var general = new Label()
-            {
-                Text = "General",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //void CreateAppealKey()
+        //{
+        //    var general = new Label()
+        //    {
+        //        Text = "General",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var male = new Label()
-            {
-                Text = "Male",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var male = new Label()
+        //    {
+        //        Text = "Male",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var female = new Label()
-            {
-                Text = "Female",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var female = new Label()
+        //    {
+        //        Text = "Female",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var animal = new Label()
-            {
-                Text = "Animals",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var animal = new Label()
+        //    {
+        //        Text = "Animals",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var generalDot = new Image()
-            {
-                Source = "General.png",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var generalDot = new Image()
+        //    {
+        //        Source = "General.png",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var maleDot = new Image()
-            {
-                Source = "Male.png",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var maleDot = new Image()
+        //    {
+        //        Source = "Male.png",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var femaleDot = new Image()
-            {
-                Source = "Female.png",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var femaleDot = new Image()
+        //    {
+        //        Source = "Female.png",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            var animalDot = new Image()
-            {
-                Source = "Animal.png",
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-            };
+        //    var animalDot = new Image()
+        //    {
+        //        Source = "Animal.png",
+        //        HorizontalOptions = LayoutOptions.FillAndExpand,
+        //    };
 
-            Switch advancedSwitch = new Switch();
-            advancedSwitch.Toggled += LayoutToggled;
+        //    //Switch advancedSwitch = new Switch();
+        //    //advancedSwitch.Toggled += LayoutToggled;
 
-            appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
-            appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
-            appealKeyStackLayout.Children.Add(generalDot);
-            appealKeyStackLayout.Children.Add(general);
-            appealKeyStackLayout.Children.Add(animalDot);
-            appealKeyStackLayout.Children.Add(animal);
-            appealKeyStackLayout.Children.Add(femaleDot);
-            appealKeyStackLayout.Children.Add(female);
-            appealKeyStackLayout.Children.Add(maleDot);
-            appealKeyStackLayout.Children.Add(male);
-            appealKeyStackLayout.Children.Add(advancedSwitch);
-        }
+        //    //appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
+        //    //appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
+        //    //appealKeyStackLayout.Children.Add(generalDot);
+        //    //appealKeyStackLayout.Children.Add(general);
+        //    //appealKeyStackLayout.Children.Add(animalDot);
+        //    //appealKeyStackLayout.Children.Add(animal);
+        //    //appealKeyStackLayout.Children.Add(femaleDot);
+        //    //appealKeyStackLayout.Children.Add(female);
+        //    //appealKeyStackLayout.Children.Add(maleDot);
+        //    //appealKeyStackLayout.Children.Add(male);
+        //    //appealKeyStackLayout.Children.Add(advancedSwitch);
+        //}
 
         private void LayoutToggled(object sender, ToggledEventArgs e)
         {

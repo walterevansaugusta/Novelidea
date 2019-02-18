@@ -85,7 +85,6 @@
                 TextColor="White"
                 BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
-                Clicked="StoriesClicked"
                 Grid.Row="1"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"
