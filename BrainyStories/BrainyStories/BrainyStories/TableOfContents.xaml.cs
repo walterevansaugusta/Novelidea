@@ -19,6 +19,8 @@ namespace BrainyStories
         private Layout<View> simpleLayout;
         private Layout<View> advancedLayout;
 
+        private StoryFactory storyFact = new StoryFactory();
+
         public enum UserLayout
         {
             Simple,
@@ -29,8 +31,7 @@ namespace BrainyStories
 		{
 			InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);
-           
-            StoryFactory storyFact = new StoryFactory();
+            //CreateAppealKey();
 
             if(imagines) 
             {
@@ -102,7 +103,8 @@ namespace BrainyStories
                     tapGestureRecognizer.Tapped += (s, e) =>
                     {
                         ContentView clickedView = s as ContentView;
-                        Navigation.PushModalAsync(new StoryPage(story));
+                        //var lazyStory = new Lazy<Story>(() => storyFact.playedStory(story.Name));
+                        Navigation.PushModalAsync(new StoryPage(storyFact.playedStory(story.Name)));
                     };
                     view.GestureRecognizers.Add(tapGestureRecognizer);
                     if (storyIndex >= storyList.Count)
@@ -203,7 +205,10 @@ namespace BrainyStories
                 Orientation = StackOrientation.Horizontal,
                 HorizontalOptions = LayoutOptions.CenterAndExpand,
                 VerticalOptions = LayoutOptions.Fill,
-                Children = { new Image { Source = story.Appeal.Value} } };
+                Children = {
+                            new Image { Source = story.Appeal.Value},
+                        }
+            };
             // Adds Quizzes icon (pencil) for each quiz in stories
             for (int i = 0; i < story.QuizNum; i++)
             {
@@ -268,20 +273,20 @@ namespace BrainyStories
         //        HorizontalOptions = LayoutOptions.FillAndExpand,
         //    };
 
-        //    //Switch advancedSwitch = new Switch();
-        //    //advancedSwitch.Toggled += LayoutToggled;
+        //    Switch advancedSwitch = new Switch();
+        //    advancedSwitch.Toggled += LayoutToggled;
 
-        //    //appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
-        //    //appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
-        //    //appealKeyStackLayout.Children.Add(generalDot);
-        //    //appealKeyStackLayout.Children.Add(general);
-        //    //appealKeyStackLayout.Children.Add(animalDot);
-        //    //appealKeyStackLayout.Children.Add(animal);
-        //    //appealKeyStackLayout.Children.Add(femaleDot);
-        //    //appealKeyStackLayout.Children.Add(female);
-        //    //appealKeyStackLayout.Children.Add(maleDot);
-        //    //appealKeyStackLayout.Children.Add(male);
-        //    //appealKeyStackLayout.Children.Add(advancedSwitch);
+        //    appealKeyStackLayout.Orientation = StackOrientation.Horizontal;
+        //    appealKeyStackLayout.HorizontalOptions = LayoutOptions.FillAndExpand;
+        //    appealKeyStackLayout.Children.Add(generalDot);
+        //    appealKeyStackLayout.Children.Add(general);
+        //    appealKeyStackLayout.Children.Add(animalDot);
+        //    appealKeyStackLayout.Children.Add(animal);
+        //    appealKeyStackLayout.Children.Add(femaleDot);
+        //    appealKeyStackLayout.Children.Add(female);
+        //    appealKeyStackLayout.Children.Add(maleDot);
+        //    appealKeyStackLayout.Children.Add(male);
+        //    appealKeyStackLayout.Children.Add(advancedSwitch);
         //}
 
         private void LayoutToggled(object sender, ToggledEventArgs e)
