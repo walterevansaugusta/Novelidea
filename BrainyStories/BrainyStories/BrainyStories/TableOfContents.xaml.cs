@@ -223,6 +223,29 @@ namespace BrainyStories
             return horizontalStack;
         }
 
+        private void LayoutToggled(object sender, ToggledEventArgs e)
+        {
+            if (e.Value)
+            {
+                SetLayout(UserLayout.Advanced);
+            }
+            else
+                SetLayout(UserLayout.Simple);
+        }
+
+        public void SetLayout(UserLayout layout)
+        {
+            switch (layout)
+            {
+                case UserLayout.Simple:
+                    scrollView.Content = simpleLayout;
+                    break;
+                case UserLayout.Advanced:
+                    scrollView.Content = advancedLayout;
+                    break;
+            }
+        }
+
         //void CreateAppealKey()
         //{
         //    var general = new Label()
@@ -288,28 +311,5 @@ namespace BrainyStories
         //    appealKeyStackLayout.Children.Add(male);
         //    appealKeyStackLayout.Children.Add(advancedSwitch);
         //}
-
-        private void LayoutToggled(object sender, ToggledEventArgs e)
-        {
-            if (e.Value)
-            {
-                SetLayout(UserLayout.Advanced);
-            }
-            else
-                SetLayout(UserLayout.Simple);
-        }
-
-        public void SetLayout(UserLayout layout)
-        {
-            switch (layout)
-            {
-                case UserLayout.Simple:
-                    scrollView.Content = simpleLayout;
-                    break;
-                case UserLayout.Advanced:
-                    scrollView.Content = advancedLayout;
-                    break;
-            }
-        }
     }
 }

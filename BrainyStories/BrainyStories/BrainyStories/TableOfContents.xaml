@@ -15,7 +15,7 @@
                    HorizontalOptions="FillAndExpand"/>
             <Label Text= "Animal"
                    HorizontalOptions="FillAndExpand"/>
-            <Image Source="Animall.png"
+            <Image Source="Animal.png"
                    HorizontalOptions="FillAndExpand"/>
             <Label Text= "Female"
                    HorizontalOptions="FillAndExpand"/>
@@ -25,6 +25,7 @@
                    HorizontalOptions="FillAndExpand"/>
             <Image Source="Male.png"
                    HorizontalOptions="FillAndExpand"/>
+          <Switch Toggled="LayoutToggled"/>
         </StackLayout>
         <ScrollView x:Name="scrollView">
         </ScrollView>
