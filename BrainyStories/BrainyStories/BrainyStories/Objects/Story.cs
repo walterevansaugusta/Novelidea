@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using BrainyStories.Objects;
+using System.Collections.ObjectModel;
 
 namespace BrainyStories
 {
@@ -50,5 +51,8 @@ namespace BrainyStories
 
         //String for audio file
         public String AudioClip { get; set; }
+
+        //List of Stories
+        public static List<Story> ListOfStories { get; set; }
     }
 }

@@ -28,35 +28,47 @@
                   HorizontalOptions="FillAndExpand"/>
           <!--<Switch Toggled="LayoutToggled"/>-->
         </StackLayout>
-        <ScrollView x:Name="scrollView"
+        <!--<ScrollView x:Name="scrollView"
                     IsVisible="True">
-            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" x:Name="fastList"
-	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowItemsSource="{Binding Items}">
-
+            <flv:FlowListView FlowColumnCount="3"
+                              HasUnevenRows="false" 
+                              x:Name="fastList"
+                              FlowItemsSource="{Binding storyList}">
                 <flv:FlowListView.FlowColumnTemplate>
                     <DataTemplate>
-                      <Label Text="{Binding Title}"/>
-                      <Image Source="{Binding Icon}"
-                             HeightRequest ="150"/>
+                        <StackLayout Orientation="Vertical">
+                            <Image Source="{Binding Icon}"
+                                   HeightRequest ="150"/>
+                            <Label Text="{Binding Name}"/>
+                        </StackLayout>
                     </DataTemplate>
                 </flv:FlowListView.FlowColumnTemplate>
 
             </flv:FlowListView>
-        </ScrollView>
-        <!--<ScrollView x:Name="scrollViewAdvanced"
-                    IsVisible="False">
-            <flv:FlowListView FlowColumnCount="3" SeparatorVisibility="None" HasUnevenRows="false" x:Name="fastListAdvanced"
-	        FlowItemTappedCommand="{Binding ItemTappedCommand}" FlowLastTappedItem="{Binding LastTappedItem}"
-	        FlowItemsSource="{Binding Items}" IsVisible="True" >
-
-                --><!--<flv:FlowListView.FlowColumnTemplate>
-                    <DataTemplate>
-                        <Label HorizontalOptions="Fill" VerticalOptions="Fill" 
-				            XAlign="Center" YAlign="Center" Text="{Binding Title}"/>
-                    </DataTemplate>
-                </flv:FlowListView.FlowColumnTemplate>--><!--
-
-            </flv:FlowListView>
         </ScrollView>-->
+        <ListView ItemsSource="{Binding storyList}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Orientation="Horizontal">
+                        <Image Source="{Binding Icon}"
+                                   HeightRequest="150"/>
+                        <!--<StackLayout Orientation="Vertical">
+                                <Label Text="{Binding Name}"
+                                       FontAttributes="Bold"/>
+                                <Label Text="{Binding Description}"
+                                       VerticalOptions="FillAndExpand"/>
+                                <StackLayout Orientation="Horizontal">
+                                    <Label Text="{Binding Duration, StringFormat='mm:ss'}"
+                                           HorizontalTextAlignment="Start"
+                                           HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="{Binding WordCount, StringFormat='{0} words'}"
+                                           HorizontalTextAlignment="End"
+                                           HorizontalOptions="FillAndExpand"/>
+                                </StackLayout>
+                            </StackLayout>-->
+                    </StackLayout>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout>
 </ContentPage>
