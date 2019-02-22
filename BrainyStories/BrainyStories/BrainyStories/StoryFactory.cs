@@ -160,7 +160,7 @@ namespace BrainyStories
                 Icon = "I1_IASW_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 1, 47),
                 WordCount = 212,
                 Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help."
@@ -173,7 +173,7 @@ namespace BrainyStories
                 Icon = "I2_DYPYL_1.jpg",
                 Appeal = AppealType.Male,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 1, 48),
                 WordCount = 206,
                 Description = "Imagine swinging as high as trees, birds, clouds, or even higher, what it might feel like, what you might see."
@@ -186,7 +186,7 @@ namespace BrainyStories
                 Icon = "I3_TUDW_1.jpg",
                 Appeal = AppealType.Female,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 1, 59),
                 WordCount = 248,
                 Description = "Imagine wandering into a world where everything is upside down and backwards."
@@ -199,7 +199,7 @@ namespace BrainyStories
                 Icon = "I4_TSOEB_1.jpg",
                 Appeal = AppealType.Female,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 06),
                 WordCount = 304,
                 Description = "Imagine blinking to become very tiny and what you might be able to do if you were very, very small."
@@ -212,7 +212,7 @@ namespace BrainyStories
                 Icon = "I5_IANA_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 32),
                 WordCount = 399,
                 Description = "Imagine what you’d say if a little angel asked your advice on how to be a tiny bit mischievous."
@@ -225,7 +225,7 @@ namespace BrainyStories
                 Icon = "I6_DTBAK_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 40),
                 WordCount = 326,
                 Description = "Imagine what it might be like to be a kitten."
@@ -238,7 +238,7 @@ namespace BrainyStories
                 Icon = "I7_NBTY_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 40),
                 WordCount = 352,
                 Description = "Always remember, nobody’s better than you."
@@ -251,7 +251,7 @@ namespace BrainyStories
                 Icon = "I8_IAPOD_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 45),
                 WordCount = 350,
                 Description = "Imagine some of the things you might help a sad, lonely, bored piece of dirt become."
@@ -264,7 +264,7 @@ namespace BrainyStories
                 Icon = "I9_IFP_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 3, 44),
                 WordCount = 396,
                 Description = "Imagine the kind of home fairies might create for themselves if they wanted."
@@ -277,7 +277,7 @@ namespace BrainyStories
                 Icon = "I10_DYLB_1.jpg",
                 Appeal = AppealType.General,
                 QuizNum = 0,
-                ThinkDoNum = 1,
+                ThinkDoNum = 0,
                 Duration = new TimeSpan(0, 2, 30),
                 WordCount = 344,
                 Description = "Imagine blowing bubbles in a sink or bathtub."
