@@ -4,6 +4,7 @@ using System.Text;
 using Xamarin.Forms;
 using BrainyStories.Objects;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace BrainyStories
 {
@@ -19,12 +20,30 @@ namespace BrainyStories
         public static AppealType Animal { get { return new AppealType("Animal.png"); } }
     }
 
-    public class Story {
+    public class Story:INotifyPropertyChanged {
         // Name of story/imagine
-        public String Name { get; set; }
+        private String _Name;
+        private ImageSource _Icon;
+        public String Name {
+            get {
+                return _Name;
+            }
+            set {
+                _Name = value;
+                NotifyPropertyChanged("Name");
+            } }
+
 
         // Image clip for icon
-        public ImageSource Icon { get; set; }
+        public ImageSource Icon {
+            get {
+                return _Icon;
+            }
+            set {
+                _Icon = value;
+                NotifyPropertyChanged("Icon");
+            }
+        }
 
         public TimeSpan Duration { get; set; }
 
@@ -54,5 +73,15 @@ namespace BrainyStories
 
         //List of Stories
         public static List<Story> ListOfStories { get; set; }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void NotifyPropertyChanged(string Obj)
+        {
+            if (PropertyChanged != null)
+            {
+                this.PropertyChanged(this, new PropertyChangedEventArgs(Obj));
+            }
+        }
     }
 }

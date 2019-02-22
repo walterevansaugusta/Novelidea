@@ -15,12 +15,10 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TableOfContents : ContentPage
 	{
-        private List<Story> storyList { get; set; }
+        ObservableCollection<Story> storyList { get; set; }
 
         //private Layout<View> simpleLayout;
         //private Layout<View> advancedLayout;
-
-        private StoryFactory storyFact = new StoryFactory();
 
         public enum UserLayout
         {
@@ -30,8 +28,6 @@ namespace BrainyStories
 
         public TableOfContents (bool imagines)
 		{
-			InitializeComponent();
-            ObservableCollection<Story> storyList = new ObservableCollection<Story>();
             NavigationPage.SetHasNavigationBar(this, false);
             //CreateAppealKey();
             //if (imagines)
@@ -41,47 +37,9 @@ namespace BrainyStories
             //{
             //    storyList = storyFact.generateStories();
             //}
-            Story story1 = new Story
-            {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 0,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
-                PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.jpg" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.jpg" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.jpg" },
-                   { new TimeSpan(0, 1, 26), "I1_IASW_5.jpg" }
-                },
-                AudioClip = "I1_IAS_IG.mp3"
-            };
-            Story story2 = new Story
-            {
-                Name = "If A Shoe Wanted to be Car 2",
-                Icon = "I1_IASW_1.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 0,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
-                PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" },
-                   { new TimeSpan(0, 0, 8), "I1_IASW_2.jpg" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.jpg" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.jpg" },
-                   { new TimeSpan(0, 1, 26), "I1_IASW_5.jpg" }
-                },
-                AudioClip = "I1_IAS_IG.mp3"
-            };
-            storyList.Add(story1);
-            storyList.Add(story2);
-            BindingContext = this;
+            StoryFactory factory = new StoryFactory(imagines);
+            storyList = factory.storyList;
+			InitializeComponent();
             //BuildSimpleLayout(storyList);
             //BuildAdvancedLayout(storyList);
 

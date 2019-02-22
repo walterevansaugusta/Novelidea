@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
-             x:Class="BrainyStories.TableOfContents">
+             x:Class="BrainyStories.TableOfContents"
+             x:Name="MyPage">
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
                  Margin="10,0,10,20">
@@ -46,13 +47,17 @@
 
             </flv:FlowListView>
         </ScrollView>-->
-        <ListView ItemsSource="{Binding storyList}">
+        <ListView x:Name="listView"
+                  ItemsSource="{Binding storyList, Source={x:Reference MyPage}}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Orientation="Horizontal">
-                        <Image Source="{Binding Icon}"
-                                   HeightRequest="150"/>
-                        <!--<StackLayout Orientation="Vertical">
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <!--<Image Source="{Binding Icon}"
+                                   HeightRequest="150"/>-->
+                                <Label Text="{Binding Name}"/>
+                                <!--<StackLayout Orientation="Vertical">
                                 <Label Text="{Binding Name}"
                                        FontAttributes="Bold"/>
                                 <Label Text="{Binding Description}"
@@ -65,8 +70,10 @@
                                            HorizontalTextAlignment="End"
                                            HorizontalOptions="FillAndExpand"/>
                                 </StackLayout>
-                            </StackLayout>-->
-                    </StackLayout>
+                                </StackLayout>-->
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
