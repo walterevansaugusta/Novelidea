@@ -4,16 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-
+using Plugin.SimpleAudioPlayer;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace BrainyStories
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class StoryPage : ContentPage
 	{
-		public StoryPage (Story story)
+        private ISimpleAudioPlayer player;
+
+        public StoryPage (Story story)
 		{
 			InitializeComponent();
             Button button = new Button()
@@ -25,7 +27,7 @@ namespace BrainyStories
                 Text = "Play",
                 IsVisible = false
             };
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)] };
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 200 };
             Label displayLabel = new Label
             {
                 Text = "0:00",
@@ -38,7 +40,7 @@ namespace BrainyStories
                 HorizontalOptions = LayoutOptions.FillAndExpand
             };
 
-            var player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+            player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load(story.AudioClip);
             bool audioFromTimer = false;
             bool playAudio = true;
@@ -95,6 +97,7 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
+                storyImage.HeightRequest = 200;
                 audioFromTimer = false;
             };
 
@@ -121,7 +124,11 @@ namespace BrainyStories
                     audio
                 }
             };
-
         }
-	}
+        protected override bool OnBackButtonPressed()
+        {
+            player.Stop();
+            return base.OnBackButtonPressed();
+        }
+    }
 }

@@ -6,7 +6,26 @@
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
                  Margin="10,0,10,20">
-        <StackLayout x:Name="appealKeyStackLayout">
+        <StackLayout x:Name="appealKeyStackLayout"
+            Orientation ="Horizontal"
+                     HorizontalOptions="FillAndExpand">
+            <Label Text= "General"
+                   HorizontalOptions="FillAndExpand"/>
+            <Image Source="General.png"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text= "Animal"
+                   HorizontalOptions="FillAndExpand"/>
+            <Image Source="Animal.png"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text= "Female"
+                   HorizontalOptions="FillAndExpand"/>
+            <Image Source="Female.png"
+                   HorizontalOptions="FillAndExpand"/>
+            <Label Text= "Male"
+                   HorizontalOptions="FillAndExpand"/>
+            <Image Source="Male.png"
+                   HorizontalOptions="FillAndExpand"/>
+          <Switch Toggled="LayoutToggled"/>
         </StackLayout>
         <ScrollView x:Name="scrollView">
         </ScrollView>
