@@ -40,6 +40,9 @@
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
                                                HorizontalTextAlignment="End"/>
                                     </StackLayout>
+                                  <StackLayout x:Name ="activityStack"
+                                               Orientation="Horizontal">
+                                  </StackLayout>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell.View>
