@@ -1,7 +1,7 @@
-﻿using DLToolkit.Forms.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -16,6 +16,7 @@ namespace BrainyStories
 	public partial class TableOfContents : ContentPage
 	{
         StoryFactory storyFact = new StoryFactory();
+        public ObservableCollection<Image> images = new ObservableCollection<Image>();
 
         //private Layout<View> simpleLayout;
         //private Layout<View> advancedLayout;
@@ -37,7 +38,11 @@ namespace BrainyStories
             {
                 Story.ListOfStories = storyFact.generateStories();
             }
-            BindingContext = new Story();
+            //BindingContext = new Story();
+            foreach(Story story in Story.ListOfStories)
+            {
+                CreateStoryActivitiesStack(story);
+            }
             InitializeComponent();
             //BuildSimpleLayout(storyList);
             //BuildAdvancedLayout(storyList);
@@ -214,17 +219,19 @@ namespace BrainyStories
             //                new Image { Source = story.Appeal.Value},
             //            }
             //};
-            // Adds Quizzes icon (pencil) for each quiz in stories
+            // Adds Quizzes icon (pencil) for each quiz in storiesx
+            images = new ObservableCollection<Image>();
             for (int i = 0; i < story.QuizNum; i++)
             {
-                this.FindByName<StackLayout>("activityStack").Children.Add(new Image { Source = "QuizzesIcon.png" });
+                images.Add(new Image { Source = "QuizIcon.png" });
             }
 
             // Adds Think and Do icon (star) for each Think and Do in stories
             for (int i = 0; i < story.ThinkDoNum; i++)
             {
-                this.FindByName<StackLayout>("activityStack").Children.Add(new Image { Source = "ThinkAndDoIcon.png" });
+                images.Add(new Image { Source = "ThinkAndDoIcon.png" });
             }
+            Story.ListOfIcons = images;
             //verticalStack.Children.Add(horizontalStack);
 
             //return verticalStack;

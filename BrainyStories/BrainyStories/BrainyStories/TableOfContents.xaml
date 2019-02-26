@@ -2,7 +2,6 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
-             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              x:Class="BrainyStories.TableOfContents"
              x:Name="MyPage">
     <StackLayout Orientation="Vertical"
@@ -31,7 +30,8 @@
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="{Binding Icon, Mode=OneWay}"
                                    HeightRequest="150"/>
-                                <StackLayout Orientation="Vertical">
+                                <StackLayout Orientation="Vertical"
+                                             x:Name="verticalStackLayout">
                                     <Label Text="{Binding Name, Mode=OneWay}"
                                        FontAttributes="Bold"/>
                                     <Label Text="{Binding Description, Mode=OneWay}"/>
@@ -40,10 +40,13 @@
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
                                                HorizontalTextAlignment="End"/>
                                     </StackLayout>
-                                  <StackLayout x:Name ="activityStack"
-                                               Orientation="Horizontal">
-                                  </StackLayout>
-                                </StackLayout>
+                                    <!--<ListView ItemsSource="{x:Static local:Story.ListOfIcons}"
+                                                  Rotation="270">
+                                    </ListView>-->
+                                    <StackLayout Orientation="Horizontal">
+                                        
+                                    </StackLayout>
+                                    </StackLayout>
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
