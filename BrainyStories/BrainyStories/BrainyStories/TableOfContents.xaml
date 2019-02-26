@@ -7,70 +7,40 @@
              x:Name="MyPage">
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
-                 Margin="10,0,10,20">
+                 Margin="10,0,10,20"
+                 CompressedLayout.IsHeadless="True">
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
                      HorizontalOptions="FillAndExpand">
-          <Label Text= "General"
-                  HorizontalOptions="FillAndExpand"/>
-          <Image Source="General.png"
-                  HorizontalOptions="FillAndExpand"/>
-          <Label Text= "Animal"
-                  HorizontalOptions="FillAndExpand"/>
-          <Image Source="Animal.png"
-                  HorizontalOptions="FillAndExpand"/>
-          <Label Text= "Female"
-                  HorizontalOptions="FillAndExpand"/>
-          <Image Source="Female.png"
-                  HorizontalOptions="FillAndExpand"/>
-          <Label Text= "Male"
-                  HorizontalOptions="FillAndExpand"/>
-          <Image Source="Male.png"
-                  HorizontalOptions="FillAndExpand"/>
-          <!--<Switch Toggled="LayoutToggled"/>-->
+            <Label Text= "General"/>
+            <Image Source="General.png"/>
+            <Label Text= "Animal"/>
+            <Image Source="Animal.png"/>
+            <Label Text= "Female"/>
+            <Image Source="Female.png"/>
+            <Label Text= "Male"/>
+            <Image Source="Male.png"/>
         </StackLayout>
-        <!--<ScrollView x:Name="scrollView"
-                    IsVisible="True">
-            <flv:FlowListView FlowColumnCount="3"
-                              HasUnevenRows="false" 
-                              x:Name="fastList"
-                              FlowItemsSource="{Binding storyList}">
-                <flv:FlowListView.FlowColumnTemplate>
-                    <DataTemplate>
-                        <StackLayout Orientation="Vertical">
-                            <Image Source="{Binding Icon}"
-                                   HeightRequest ="150"/>
-                            <Label Text="{Binding Name}"/>
-                        </StackLayout>
-                    </DataTemplate>
-                </flv:FlowListView.FlowColumnTemplate>
-
-            </flv:FlowListView>
-        </ScrollView>-->
         <ListView x:Name="listView"
-                  ItemsSource="{Binding storyList, Source={x:Reference MyPage}}">
+                  ItemsSource="{x:Static local:Story.ListOfStories}"
+                  HasUnevenRows="True">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
                             <StackLayout Orientation="Horizontal">
-                                <!--<Image Source="{Binding Icon}"
-                                   HeightRequest="150"/>-->
-                                <Label Text="{Binding Name}"/>
-                                <!--<StackLayout Orientation="Vertical">
-                                <Label Text="{Binding Name}"
+                                <Image Source="{Binding Icon, Mode=OneWay}"
+                                   HeightRequest="150"/>
+                                <StackLayout Orientation="Vertical">
+                                    <Label Text="{Binding Name, Mode=OneWay}"
                                        FontAttributes="Bold"/>
-                                <Label Text="{Binding Description}"
-                                       VerticalOptions="FillAndExpand"/>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="{Binding Duration, StringFormat='mm:ss'}"
-                                           HorizontalTextAlignment="Start"
-                                           HorizontalOptions="FillAndExpand"/>
-                                    <Label Text="{Binding WordCount, StringFormat='{0} words'}"
-                                           HorizontalTextAlignment="End"
-                                           HorizontalOptions="FillAndExpand"/>
+                                    <Label Text="{Binding Description, Mode=OneWay}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Duration, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}"/>
+                                        <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
+                                               HorizontalTextAlignment="End"/>
+                                    </StackLayout>
                                 </StackLayout>
-                                </StackLayout>-->
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>

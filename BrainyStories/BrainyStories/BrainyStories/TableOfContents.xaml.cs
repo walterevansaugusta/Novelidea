@@ -15,7 +15,7 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TableOfContents : ContentPage
 	{
-        ObservableCollection<Story> storyList { get; set; }
+        StoryFactory storyFact = new StoryFactory();
 
         //private Layout<View> simpleLayout;
         //private Layout<View> advancedLayout;
@@ -29,17 +29,16 @@ namespace BrainyStories
         public TableOfContents (bool imagines)
 		{
             NavigationPage.SetHasNavigationBar(this, false);
-            //CreateAppealKey();
-            //if (imagines)
-            //{
-            //    storyList = storyFact.generateImagines();
-            //} else 
-            //{
-            //    storyList = storyFact.generateStories();
-            //}
-            StoryFactory factory = new StoryFactory(imagines);
-            storyList = factory.storyList;
-			InitializeComponent();
+            if (imagines)
+            {
+                Story.ListOfStories = storyFact.generateImagines();
+            }
+            else
+            {
+                Story.ListOfStories = storyFact.generateStories();
+            }
+            BindingContext = new Story();
+            InitializeComponent();
             //BuildSimpleLayout(storyList);
             //BuildAdvancedLayout(storyList);
 

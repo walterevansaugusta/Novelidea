@@ -20,30 +20,13 @@ namespace BrainyStories
         public static AppealType Animal { get { return new AppealType("Animal.png"); } }
     }
 
-    public class Story:INotifyPropertyChanged {
+    public class Story {
         // Name of story/imagine
-        private String _Name;
-        private ImageSource _Icon;
-        public String Name {
-            get {
-                return _Name;
-            }
-            set {
-                _Name = value;
-                NotifyPropertyChanged("Name");
-            } }
 
+        public String Name { get; set; }
 
         // Image clip for icon
-        public ImageSource Icon {
-            get {
-                return _Icon;
-            }
-            set {
-                _Icon = value;
-                NotifyPropertyChanged("Icon");
-            }
-        }
+        public ImageSource Icon { get; set; }
 
         public TimeSpan Duration { get; set; }
 
@@ -55,10 +38,10 @@ namespace BrainyStories
         public AppealType Appeal { get; set; }
 
         // Number of quizzes for story/imagine
-        public int QuizNum { get; set; }
+        public int QuizNum { get; set; } = 0;
 
         // Number of think and do exercises
-        public int ThinkDoNum { get; set; }
+        public int ThinkDoNum { get; set; } = 0;
 
         // Dictionary of cues for quizzes to quizzes
         public Dictionary<TimeSpan, Quiz> QuizCues { get; set; }
@@ -72,16 +55,6 @@ namespace BrainyStories
         public String AudioClip { get; set; }
 
         //List of Stories
-        public static List<Story> ListOfStories { get; set; }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        private void NotifyPropertyChanged(string Obj)
-        {
-            if (PropertyChanged != null)
-            {
-                this.PropertyChanged(this, new PropertyChangedEventArgs(Obj));
-            }
-        }
+        public static ObservableCollection<Story> ListOfStories { get; set; }
     }
 }
