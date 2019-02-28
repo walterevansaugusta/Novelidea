@@ -22,7 +22,8 @@
         </StackLayout>
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
-                  HasUnevenRows="True">
+                  HasUnevenRows="True"
+                  ItemTapped="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -40,18 +41,30 @@
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
                                                HorizontalTextAlignment="End"/>
                                     </StackLayout>
-                                    <!--<ListView ItemsSource="{x:Static local:Story.ListOfIcons}"
-                                                  Rotation="270">
-                                    </ListView>-->
-                                    <StackLayout Orientation="Horizontal">
-                                        
-                                    </StackLayout>
-                                    </StackLayout>
+                                    <ListView ItemsSource="{Binding ListOfIcons}"
+                                              Rotation="270"
+                                              SeparatorVisibility="None"
+                                              RowHeight="20">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <ViewCell.View>
+                                                        <StackLayout>
+                                                            <Image Source ="{Binding .}"
+                                                                   Rotation="90"/>
+                                                        </StackLayout>
+                                                    </ViewCell.View>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
                             </StackLayout>
                         </ViewCell.View>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
     </StackLayout>
 </ContentPage>
