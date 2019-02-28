@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 using BrainyStories.Objects;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace BrainyStories
 {
@@ -20,6 +22,7 @@ namespace BrainyStories
 
     public class Story {
         // Name of story/imagine
+
         public String Name { get; set; }
 
         // Image clip for icon
@@ -35,10 +38,10 @@ namespace BrainyStories
         public AppealType Appeal { get; set; }
 
         // Number of quizzes for story/imagine
-        public int QuizNum { get; set; }
+        public int QuizNum { get; set; } = 0;
 
         // Number of think and do exercises
-        public int ThinkDoNum { get; set; }
+        public int ThinkDoNum { get; set; } = 0;
 
         // Dictionary of cues for quizzes to quizzes
         public Dictionary<TimeSpan, Quiz> QuizCues { get; set; }
@@ -50,5 +53,11 @@ namespace BrainyStories
 
         //String for audio file
         public String AudioClip { get; set; }
+
+        //List of Stories
+        public static ObservableCollection<Story> ListOfStories { get; set; }
+
+        //List of Icon Images
+        public ObservableCollection<String> ListOfIcons { get; set; }
     }
 }

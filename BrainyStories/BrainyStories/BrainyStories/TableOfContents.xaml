@@ -2,32 +2,69 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
-             x:Class="BrainyStories.TableOfContents">
+             x:Class="BrainyStories.TableOfContents"
+             x:Name="MyPage">
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
-                 Margin="10,0,10,20">
+                 Margin="10,0,10,20"
+                 CompressedLayout.IsHeadless="True">
         <StackLayout x:Name="appealKeyStackLayout"
-            Orientation ="Horizontal"
+                     Orientation ="Horizontal"
                      HorizontalOptions="FillAndExpand">
-            <Label Text= "General"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="General.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Animal"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Animal.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Female"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Female.png"
-                   HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Male"
-                   HorizontalOptions="FillAndExpand"/>
-            <Image Source="Male.png"
-                   HorizontalOptions="FillAndExpand"/>
-          <Switch Toggled="LayoutToggled"/>
+            <Label Text= "General"/>
+            <Image Source="General.png"/>
+            <Label Text= "Animal"/>
+            <Image Source="Animal.png"/>
+            <Label Text= "Female"/>
+            <Image Source="Female.png"/>
+            <Label Text= "Male"/>
+            <Image Source="Male.png"/>
         </StackLayout>
-        <ScrollView x:Name="scrollView">
-        </ScrollView>
-        </StackLayout>
+        <ListView x:Name="listView"
+                  ItemsSource="{x:Static local:Story.ListOfStories}"
+                  HasUnevenRows="True"
+                  ItemTapped="OnItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding Icon, Mode=OneWay}"
+                                   HeightRequest="150"/>
+                                <StackLayout Orientation="Vertical"
+                                             x:Name="verticalStackLayout">
+                                    <Label Text="{Binding Name, Mode=OneWay}"
+                                       FontAttributes="Bold"/>
+                                    <Label Text="{Binding Description, Mode=OneWay}"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="{Binding Duration, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}"/>
+                                        <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
+                                               HorizontalTextAlignment="End"/>
+                                    </StackLayout>
+                                    <ListView ItemsSource="{Binding ListOfIcons}"
+                                              Rotation="270"
+                                              SeparatorVisibility="None"
+                                              RowHeight="20">
+                                        <ListView.ItemTemplate>
+                                            <DataTemplate>
+                                                <ViewCell>
+                                                    <ViewCell.View>
+                                                        <StackLayout>
+                                                            <Image Source ="{Binding .}"
+                                                                   Rotation="90"/>
+                                                        </StackLayout>
+                                                    </ViewCell.View>
+                                                </ViewCell>
+                                            </DataTemplate>
+                                        </ListView.ItemTemplate>
+                                    </ListView>
+                                </StackLayout>
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+    </StackLayout>
 </ContentPage>
