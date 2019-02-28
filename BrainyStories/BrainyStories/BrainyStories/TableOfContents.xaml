@@ -3,34 +3,56 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.TableOfContents"
-             x:Name="MyPage">
+             x:Name="MyPage"
+             NavigationPage.HasNavigationBar="false">
     <StackLayout Orientation="Vertical"
                  VerticalOptions="FillAndExpand"
-                 Margin="10,0,10,20"
                  CompressedLayout.IsHeadless="True">
+        <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="Blue">
+          <ImageButton HorizontalOptions="Start"
+                       Source="Animal.png"
+                       Clicked ="BackClicked"/>
+          <ImageButton HorizontalOptions="Start"
+                       Source="Female.png"
+                       Clicked ="HomeClicked"/>
+          <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                       Source="Male.png"
+                       Clicked ="SettingsClicked"/>
+        </StackLayout>
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
-                     HorizontalOptions="FillAndExpand">
+                     HorizontalOptions="StartAndExpand"
+                     Margin="10,0,10,5">
+            <Image Source="General.png"
+                   HorizontalOptions="StartAndExpand"/>
             <Label Text= "General"/>
-            <Image Source="General.png"/>
+            <Image Source="Animal.png"
+                   HorizontalOptions="StartAndExpand"/>
             <Label Text= "Animal"/>
-            <Image Source="Animal.png"/>
+            <Image Source="Female.png"
+                   HorizontalOptions="StartAndExpand"/>
             <Label Text= "Female"/>
-            <Image Source="Female.png"/>
+            <Image Source="Male.png"
+                   HorizontalOptions="StartAndExpand"/>
             <Label Text= "Male"/>
-            <Image Source="Male.png"/>
         </StackLayout>
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
                   HasUnevenRows="True"
+                  Margin="10,0,10,20"
                   ItemTapped="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="0,0,0,10">
                                 <Image Source="{Binding Icon, Mode=OneWay}"
-                                   HeightRequest="150"/>
+                                       HeightRequest="150"
+                                       VerticalOptions ="Start"/>
                                 <StackLayout Orientation="Vertical"
                                              x:Name="verticalStackLayout">
                                     <Label Text="{Binding Name, Mode=OneWay}"
@@ -44,7 +66,9 @@
                                     <ListView ItemsSource="{Binding ListOfIcons}"
                                               Rotation="270"
                                               SeparatorVisibility="None"
-                                              RowHeight="20">
+                                              RowHeight="20"
+                                              VerticalOptions ="Start"
+                                              SelectionMode="None">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <ViewCell>

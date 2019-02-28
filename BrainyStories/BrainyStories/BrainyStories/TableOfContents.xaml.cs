@@ -1,3 +1,4 @@
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,6 +18,8 @@ namespace BrainyStories
 	{
         StoryFactory storyFact = new StoryFactory();
 
+        private Settings settingsPage;
+
         public TableOfContents (bool imagines)
 		{
             NavigationPage.SetHasNavigationBar(this, false);
@@ -29,13 +32,33 @@ namespace BrainyStories
                 Story.ListOfStories = storyFact.generateStories();
             }
             InitializeComponent();
+
+            settingsPage = new Settings();
         }
 
         void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
-            var story = view.SelectedItem;
-            Navigation.PushAsync(new StoryPage((Story)story));
+            var story = (Story)view.SelectedItem;
+            story = storyFact.playedStory(story.Name);
+            Navigation.PushAsync(new StoryPage(story));
+        }
+
+        // Navbar methods
+        async void BackClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
+
+        async void HomeClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+        }
+
+        async void SettingsClicked(object sender, EventArgs e)
+        {
+
+            await PopupNavigation.Instance.PushAsync(settingsPage);
         }
     }
 }
