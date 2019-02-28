@@ -5,45 +5,51 @@
              x:Class="BrainyStories.TableOfContents"
              x:Name="MyPage"
              NavigationPage.HasNavigationBar="false">
-    <StackLayout Orientation="Vertical"
-                 VerticalOptions="FillAndExpand"
-                 CompressedLayout.IsHeadless="True">
+      <StackLayout Orientation="Vertical"
+                   VerticalOptions="FillAndExpand"
+                   CompressedLayout.IsHeadless="True">
         <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
                   BackgroundColor ="Blue">
           <ImageButton HorizontalOptions="Start"
-                       Source="Animal.png"
-                       Clicked ="BackClicked"/>
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
           <ImageButton HorizontalOptions="Start"
-                       Source="Female.png"
-                       Clicked ="HomeClicked"/>
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
           <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
-                       Source="Male.png"
-                       Clicked ="SettingsClicked"/>
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
         </StackLayout>
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
                      HorizontalOptions="StartAndExpand"
                      Margin="10,0,10,5">
             <Image Source="General.png"
-                   HorizontalOptions="StartAndExpand"/>
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "General"/>
             <Image Source="Animal.png"
-                   HorizontalOptions="StartAndExpand"/>
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Animal"/>
             <Image Source="Female.png"
-                   HorizontalOptions="StartAndExpand"/>
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Female"/>
             <Image Source="Male.png"
-                   HorizontalOptions="StartAndExpand"/>
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Male"/>
         </StackLayout>
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
                   HasUnevenRows="True"
                   Margin="10,0,10,20"
-                  ItemTapped="OnItemTapped">
+                  ItemSelected="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

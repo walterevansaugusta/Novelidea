@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Plugin.SimpleAudioPlayer;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,10 +15,12 @@ namespace BrainyStories
 	public partial class StoryPage : ContentPage
 	{
         private ISimpleAudioPlayer player;
+        private Settings settingsPage;
 
         public StoryPage (Story story)
 		{
 			InitializeComponent();
+            settingsPage = new Settings();
             Button button = new Button()
             {
                 Text = "Pause"
@@ -104,7 +107,7 @@ namespace BrainyStories
             
 
             Title = "Basic Slider Code";
-            Padding = new Thickness(10, 10);
+            //Padding = new Thickness(10, 10);
             StackLayout audio = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
@@ -115,20 +118,43 @@ namespace BrainyStories
                     displayLabel
                 }
             };
-            Content = new StackLayout
-            {
-                Children =
-                {
-                    storyImage,
-                    slider,
-                    audio
-                }
-            };
+
+            TopStack.Children.Add(storyImage);
+            TopStack.Children.Add(slider);
+            TopStack.Children.Add(audio);
+            //Content = new StackLayout
+            //{
+            //    Children =
+            //    {
+            //        storyImage,
+            //        slider,
+            //        audio
+            //    }
+            //};
         }
         protected override bool OnBackButtonPressed()
         {
             player.Stop();
             return base.OnBackButtonPressed();
+        }
+
+        // Navbar methods
+        async void BackClicked(object sender, EventArgs e)
+        {
+            player.Stop();
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
+
+        async void HomeClicked(object sender, EventArgs e)
+        {
+            player.Stop();
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+        }
+
+        async void SettingsClicked(object sender, EventArgs e)
+        {
+
+            await PopupNavigation.Instance.PushAsync(settingsPage);
         }
     }
 }

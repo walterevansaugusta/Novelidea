@@ -1,9 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BrainyStories.MainPage">
+             x:Class="BrainyStories.MainPage"
+             NavigationPage.HasNavigationBar="false">
 
-    <Grid x:Name="pageGrid" BackgroundColor="#9FDFBB" Padding="0,0,0,0">
+    <StackLayout Orientation="Vertical"
+                   VerticalOptions="FillAndExpand"
+                   CompressedLayout.IsHeadless="True">
+        <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="Blue">
+            <ImageButton HorizontalOptions="Start"
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"
+                         IsVisible="False"/>
+            <ImageButton HorizontalOptions="Start"
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"
+                        IsVisible="False"/>
+            <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+        </StackLayout>
+        <Grid x:Name="pageGrid" BackgroundColor="#9FDFBB" Padding="0,0,0,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -90,6 +116,6 @@
                 Grid.ColumnSpan="1"
                 Image="ThinkAndDo.png"
                 ContentLayout="Left"/>
-    </Grid>
-
+        </Grid>
+    </StackLayout>
 </ContentPage>
