@@ -6,7 +6,8 @@
 
     <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
-                   CompressedLayout.IsHeadless="True">
+                  
+                   BackgroundColor="#9FDFBB">
         <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -111,6 +112,7 @@
                 TextColor="White"
                 BackgroundColor="#6F2DBD"
                 VerticalOptions="Center"
+                Clicked="ThinkAndDoClicked"
                 Grid.Row="1"
                 Grid.Column="2"
                 Grid.ColumnSpan="1"

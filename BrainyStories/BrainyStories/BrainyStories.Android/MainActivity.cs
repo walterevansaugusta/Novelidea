@@ -25,7 +25,15 @@ namespace BrainyStories.Droid
 
         public override void OnBackPressed()
         {
-            base.OnBackPressed();
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+            
         }
     }
 }

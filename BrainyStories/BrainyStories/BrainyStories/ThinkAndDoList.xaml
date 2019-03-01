@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainyStories.ThinkAndDoList"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                   VerticalOptions="FillAndExpand"
+                   CompressedLayout.IsHeadless="True">
+            <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="Blue">
+                <ImageButton HorizontalOptions="Start"
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="Start"
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
+            <ListView SeparatorVisibility="None"
+                      VerticalOptions ="Start"
+                      ItemTapped="OnItemTapped"
+                      x:Name="BindList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <StackLayout>
+                                    <Label Text ="{Binding ThinkAndDoName}"/>
+                                    <Label Text ="{Binding AssociatedStory}"/>
+                                    <Label Text="{Binding Length, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}"/>
+                                </StackLayout>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

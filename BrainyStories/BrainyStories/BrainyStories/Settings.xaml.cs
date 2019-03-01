@@ -16,8 +16,14 @@ namespace BrainyStories
 	{
 		public Settings ()
 		{
-			InitializeComponent();
+            NavigationPage.SetHasBackButton(this, false);
+            InitializeComponent();
 		}
+
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
 
         private async void OnClose(object sender, EventArgs e)
         {

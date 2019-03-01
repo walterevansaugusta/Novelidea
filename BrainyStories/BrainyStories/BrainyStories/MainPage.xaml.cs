@@ -31,7 +31,11 @@ namespace BrainyStories {
         {
             await Navigation.PushAsync(new TableOfContents(false));
         }
-
+        
+        async void ThinkAndDoClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ThinkAndDoList());
+        }
         // Navbar methods
         async void BackClicked(object sender, EventArgs e)
         {
