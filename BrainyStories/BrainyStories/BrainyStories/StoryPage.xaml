@@ -4,8 +4,8 @@
              x:Class="BrainyStories.StoryPage"
              NavigationPage.HasNavigationBar="false">
     <StackLayout Orientation="Vertical"
-                   VerticalOptions="FillAndExpand"
-                   CompressedLayout.IsHeadless="True"
+                 VerticalOptions="StartAndExpand"
+                 CompressedLayout.IsHeadless="True"
                  x:Name="TopStack">
         <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"

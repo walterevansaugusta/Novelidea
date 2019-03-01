@@ -30,7 +30,7 @@ namespace BrainyStories
                 Text = "Play",
                 IsVisible = false
             };
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 200 };
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 150, Aspect = 0};
             Label displayLabel = new Label
             {
                 Text = "0:00",
@@ -55,6 +55,13 @@ namespace BrainyStories
                     audioFromTimer = true;
                     slider.Value += 1;
                 }
+                if (slider.Value == story.Duration.Seconds + (story.Duration.Minutes * 60))
+                {
+                    player.Stop();
+                    ChangePage(story); 
+                    return false;
+                }
+
                 return true;
             });
             button.Clicked += (sender, args) =>
@@ -132,6 +139,12 @@ namespace BrainyStories
             //    }
             //};
         }
+
+       protected void ChangePage(Story story)
+        {
+            Navigation.PushAsync(new EndOfStory(story));
+        }
+  
         protected override bool OnBackButtonPressed()
         {
             player.Stop();

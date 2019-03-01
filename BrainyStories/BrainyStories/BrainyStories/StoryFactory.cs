@@ -1,3 +1,4 @@
+using BrainyStories.Objects;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -8,6 +9,8 @@ namespace BrainyStories {
 
 
     public class StoryFactory {
+
+        private ThinkAndDoFactory factory = new ThinkAndDoFactory();
 
         //MANUAL LIST OF STORIES
         public ObservableCollection<Story> generateStories()
@@ -26,7 +29,7 @@ namespace BrainyStories {
                 WordCount = 395,
                 Description = "A lion releases a mouse, believing it’s too small and weak ever to return the favor, " +
                     "but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
-                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal)
+                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal),
             });
 
             //STORY 2
@@ -317,6 +320,9 @@ namespace BrainyStories {
         public Story playedStory(String storyName)
         {
             Story chosen = new Story();
+            ObservableCollection<ThinkAndDo> ThinkAndDoTemp = new ObservableCollection<ThinkAndDo>();
+            ThinkAndDoTemp = factory.generateThinkAndDos();
+
             if (storyName.Equals("The Lion and the Mouse"))
             {
                 chosen = new Story
@@ -341,7 +347,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 56), "S1_LATM_7.jpg" },
                    { new TimeSpan(0, 2, 30), "S1_LATM_8.jpg" }
                 },
-                    AudioClip = "S1_TLATM_Story.mp3"
+                    AudioClip = "S1_TLATM_Story.mp3",
+                    ThinkAndDos = factory.StoryThinkAndDos("The Lion and the Mouse")
                 };
             }
             else if (storyName.Equals("The Little Red Hen"))
@@ -427,7 +434,7 @@ namespace BrainyStories {
             }
             else if (storyName.Equals("The Three Little Pigs"))
             {
-               chosen = new Story
+                chosen = new Story
                 {
                     Name = "The Three Little Pigs",
                     Icon = "S5_TLP_1.jpg",
@@ -437,9 +444,9 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 6, 34),
                     WordCount = 986,
                     Description = "Two pigs squander their money and build shabby houses; their smarter brother " +
-                    "saves and works hard to build a brick house which protects them all from the big bad wolf.",
-                   ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal),
-                   PictureCues = new Dictionary<TimeSpan, string> {
+                     "saves and works hard to build a brick house which protects them all from the big bad wolf.",
+                    ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal),
+                    PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S5_TLP_1.jpg" }, //TODO: TRANSITIONS ARE WRONG FOR STORY 5
                    { new TimeSpan(0, 0, 27), "S5_TLP_2.jpg" },
                    { new TimeSpan(0, 1, 05), "S5_TLP_3.jpg" },
@@ -707,6 +714,28 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 48), "I3_TUDW_6.jpg" }
                 },
                     AudioClip = "I3_UW_IG.mp3"
+                };
+            }
+            else if (storyName.Equals("The Special One-Eye Blink"))
+            {
+                chosen = new Story
+                {
+                    Name = "The Special One-Eye Blink",
+                    Icon = "I4_TSOEB_1.jpg",
+                    Appeal = AppealType.Female,
+                    Duration = new TimeSpan(0, 2, 06),
+                    WordCount = 304,
+                    Description = "Imagine blinking to become very tiny and what you might be able to do if you were very, very small.",
+                    ListOfIcons = CreateStoryActivitiesStack(0, 0, null),
+                    PictureCues = new Dictionary<TimeSpan, string> {
+                   { new TimeSpan(0, 0, 0), "I5_IANA_1.jpg" },
+                   { new TimeSpan(0, 0, 3), "I5_IANA_2.jpg" },
+                   { new TimeSpan(0, 0, 45), "I5_IANA_3.jpg" },
+                   { new TimeSpan(0, 1, 4), "I5_IANA_4.jpg" },
+                   { new TimeSpan(0, 1, 37), "I5_IANA_5.jpg" },
+                   { new TimeSpan(0, 2, 12), "I5_IANA_6.jpg" }
+                    },
+                    AudioClip = "I5_IANA_IG.mp3",
                 };
             }
             else if (storyName.Equals("If a Naughty Angel"))
