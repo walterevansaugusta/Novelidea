@@ -157,7 +157,7 @@ namespace BrainyStories {
                 Name = "The Three Billy Goats Gruff",
                 Icon = "S6_BGG_1.jpg",
                 Appeal = AppealType.Animal,
-                QuizNum = 3, //TODO: DON'T KNOW HOW MANY QUIZZES
+                QuizNum = 5,
                 ThinkDoNum = 1,
                 Duration = new TimeSpan(0, 6, 38),
                 WordCount = 891,
@@ -561,7 +561,7 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 42), "I10_DYLB_6.jpg" },
                    { new TimeSpan(0, 2, 1), "I10_DYLB_7.jpg" },
                    { new TimeSpan(0, 2, 10), "I10_DYLB_8.jpg" },
-                   { new TimeSpan(0, 2, 20), "I10_DYLB_9.jpg" }  //TODO: not enough images
+                   { new TimeSpan(0, 2, 20), "I10_DYLB_9.jpg" }  
                 },
                 AudioClip = "I1_IAS_IG.mp3", //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
                 ListOfIcons = CreateStoryActivitiesStack(0, 0)
