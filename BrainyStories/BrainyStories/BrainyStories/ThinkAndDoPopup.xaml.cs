@@ -17,6 +17,7 @@ namespace BrainyStories
         public ThinkAndDoPopup (ThinkAndDo thinkAndDo)
         {
             InitializeComponent();
+            ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
             Button button = new Button()
             {
                 Text = "Pause"

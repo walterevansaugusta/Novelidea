@@ -9,7 +9,7 @@ namespace BrainyStories.Objects {
         public String ThinkAndDoName { get; set; }
 
         //String for Associated Story
-        public String AssociatedStory { get; set; }
+        public String AssociatedImage { get; set; }
 
         //String for audio file
         public String ThinkAndDoAudioClip { get; set; }

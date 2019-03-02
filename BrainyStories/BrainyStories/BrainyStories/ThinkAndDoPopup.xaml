@@ -10,7 +10,7 @@
                  Padding="20, 20, 20, 20"
                  x:Name ="TopStack">
         <StackLayout BackgroundColor="White" Padding="0, 10, 0, 0">
-            <Label Text="First Popup Page" TextColor="Gray" FontSize="20" HorizontalOptions="Center"></Label>
+            <Label x:Name="ThinkAndDoTitle" TextColor="Gray" FontSize="20" HorizontalOptions="Center"></Label>
         </StackLayout>
     </StackLayout>
 </pages:PopupPage>
