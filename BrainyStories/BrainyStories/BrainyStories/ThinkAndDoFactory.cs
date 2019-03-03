@@ -163,7 +163,7 @@ namespace BrainyStories
             ObservableCollection<ThinkAndDo> temp = new ObservableCollection<ThinkAndDo>();
             foreach (ThinkAndDo think in ThinkAndDoListTemp)
             {
-                if (think.AssociatedImage.Equals(story))
+                if (think.ThinkAndDoName.ToLower().Contains(story.ToLower()))
                 {
                     temp.Add(think);
                 }

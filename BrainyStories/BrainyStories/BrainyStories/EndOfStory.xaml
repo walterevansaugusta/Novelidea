@@ -27,8 +27,12 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
-            <Label Text ="You've Completed the Story!!"/>
-            <ListView SeparatorVisibility="None"
+            <Label Text ="You've Completed the Story!!"
+                   FontSize="32"
+                   HorizontalTextAlignment="Center"
+                   TextColor="BlueViolet"
+                   FontAttributes="Bold"/>
+            <!--<ListView SeparatorVisibility="None"
                       ItemTapped="OnQuizTapped"
                       x:Name="BindQuizList">
                 <ListView.ItemTemplate>
@@ -42,19 +46,26 @@
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>
+            </ListView>-->
+            <!--<Button Text="Back To Table of Contents"
+                    Clicked="BackToTOC"/>-->
             <ListView SeparatorVisibility="None"
                       VerticalOptions ="Start"
+                      HasUnevenRows="True"
                       ItemTapped="OnTaskTapped"
                       x:Name="BindThinkAndDoList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout>
-                                    <Label Text ="{Binding ThinkAndDoName}"/>
-                                    <Label Text ="{Binding AssociatedStory}"/>
-                                    <Label Text="{Binding Length, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}"/>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source ="ThinkAndDo.png"
+                                               HeightRequest="100"/>
+                                        <Label Text ="{Binding ThinkAndDoName}"
+                                               VerticalOptions="Center"
+                                               FontSize="20"/>
+                                    </StackLayout>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>

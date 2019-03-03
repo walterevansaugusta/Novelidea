@@ -374,7 +374,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 35), "S2_LRH_6.jpg" },
                    { new TimeSpan(0, 1, 56), "S2_LRH_7.jpg" }
                 },
-                    AudioClip = "S2_LRH_Story.mp3"
+                    AudioClip = "S2_LRH_Story.mp3",
+                    ThinkAndDos = factory.StoryThinkAndDos("Little Red Hen")
                 };
             }
             else if (storyName.Equals("The Boy Who Cried Wolf"))
@@ -402,7 +403,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 29), "S3_TBWCW_8.jpg" },
                    { new TimeSpan(0, 3, 43), "S3_TBWCW_9.jpg" }
                 },
-                    AudioClip = "S3_BWCW_Story.mp3"
+                    AudioClip = "S3_BWCW_Story.mp3",
+                    ThinkAndDos = factory.StoryThinkAndDos("Boy Who Cried Wolf")
                 };
             }
             else if (storyName.Equals("The Elves and Shoemaker"))

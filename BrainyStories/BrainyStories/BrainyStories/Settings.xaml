@@ -7,7 +7,17 @@
     
     <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
         <StackLayout BackgroundColor="White" Padding="0, 10, 0, 0">
-            <Label Text="First Popup Page" TextColor="Gray" FontSize="20" HorizontalOptions="Center"></Label>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="General.png"/>
+                <Label Text="General"/>
+                <Image Source="Animal.png"/>
+                <Label Text="Animal"/>
+                <Image Source="Female.png"/>
+                <Label Text="Female"/>
+                <Image Source="Male.png"/>
+                <Label Text="Male"/>
+            </StackLayout>
+            <Label Text="Bippity Boppity Get Off My Property" TextColor="Gray" FontSize="20" HorizontalOptions="Center"></Label>
         </StackLayout>
     </StackLayout>
 </pages:PopupPage>

@@ -26,7 +26,7 @@ namespace BrainyStories
             ListOfQuizzes = story.Quizzes;
             InitializeComponent ();
             BindThinkAndDoList.ItemsSource = ListOfThinkAndDos;
-            BindQuizList.ItemsSource = ListOfQuizzes;
+            //BindQuizList.ItemsSource = ListOfQuizzes;
             settingsPage = new Settings();
         }
 
@@ -59,6 +59,11 @@ namespace BrainyStories
 
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
+
+        //async void BackToTOC(object sender, EventArgs e)
+        //{
+
+        //}
 
     }
 }
