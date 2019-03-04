@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +11,11 @@ namespace BrainyStories {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage {
+        private Settings settingsPage;
+
         public MainPage() {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);
+            settingsPage = new Settings();
         }
         
         // Imagines TOC
@@ -27,6 +30,27 @@ namespace BrainyStories {
         async void StoriesClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TableOfContents(false));
+        }
+        
+        async void ThinkAndDoClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ThinkAndDoList());
+        }
+        // Navbar methods
+        async void BackClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
+
+        async void HomeClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+        }
+
+        async void SettingsClicked(object sender, EventArgs e)
+        {
+
+            await PopupNavigation.Instance.PushAsync(settingsPage);
         }
     }
 }

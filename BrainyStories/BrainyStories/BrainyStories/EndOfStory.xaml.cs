@@ -1,9 +1,8 @@
+﻿using BrainyStories.Objects;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,34 +13,34 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TableOfContents : ContentPage
+	public partial class EndOfStory : ContentPage
 	{
-        StoryFactory storyFact = new StoryFactory();
-
         private Settings settingsPage;
 
-        public TableOfContents (bool imagines)
-		{
-            NavigationPage.SetHasNavigationBar(this, false);
-            if (imagines)
-            {
-                Story.ListOfStories = storyFact.generateImagines();
-            }
-            else
-            {
-                Story.ListOfStories = storyFact.generateStories();
-            }
-            InitializeComponent();
+        public ObservableCollection<ThinkAndDo> ListOfThinkAndDos;
+        public ObservableCollection<Quiz> ListOfQuizzes;
 
+        public EndOfStory (Story story)
+		{
+            ListOfThinkAndDos = story.ThinkAndDos;
+            ListOfQuizzes = story.Quizzes;
+            InitializeComponent ();
+            BindThinkAndDoList.ItemsSource = ListOfThinkAndDos;
+            //BindQuizList.ItemsSource = ListOfQuizzes;
             settingsPage = new Settings();
         }
 
-        void OnItemTapped(object sender, ItemTappedEventArgs e)
+        async void OnTaskTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
-            var story = (Story)view.SelectedItem;
-            story = storyFact.playedStory(story.Name);
-            Navigation.PushAsync(new StoryPage(story));
+            var think = (ThinkAndDo)view.SelectedItem;
+            ThinkAndDoPopup pop = new ThinkAndDoPopup(think);
+            await PopupNavigation.Instance.PushAsync(pop);
+        }
+
+        async void OnQuizTapped(object sender, ItemTappedEventArgs e)
+        {
+            //TO-DO in sprint 4
         }
 
         // Navbar methods
@@ -60,5 +59,11 @@ namespace BrainyStories
 
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
+
+        //async void BackToTOC(object sender, EventArgs e)
+        //{
+
+        //}
+
     }
 }

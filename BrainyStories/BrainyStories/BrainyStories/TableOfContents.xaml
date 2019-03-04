@@ -3,34 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.TableOfContents"
-             x:Name="MyPage">
-    <StackLayout Orientation="Vertical"
-                 VerticalOptions="FillAndExpand"
-                 Margin="10,0,10,20"
-                 CompressedLayout.IsHeadless="True">
+             x:Name="MyPage"
+             NavigationPage.HasNavigationBar="false">
+      <StackLayout Orientation="Vertical"
+                   VerticalOptions="FillAndExpand"
+                   CompressedLayout.IsHeadless="True">
+        <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="Blue">
+          <ImageButton HorizontalOptions="Start"
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+          <ImageButton HorizontalOptions="Start"
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+          <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+        </StackLayout>
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
-                     HorizontalOptions="FillAndExpand">
+                     HorizontalOptions="StartAndExpand"
+                     Margin="10,0,10,5">
+            <Image Source="General.png"
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "General"/>
-            <Image Source="General.png"/>
+            <Image Source="Animal.png"
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Animal"/>
-            <Image Source="Animal.png"/>
+            <Image Source="Female.png"
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Female"/>
-            <Image Source="Female.png"/>
+            <Image Source="Male.png"
+                   HorizontalOptions="FillAndExpand"/>
             <Label Text= "Male"/>
-            <Image Source="Male.png"/>
         </StackLayout>
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
                   HasUnevenRows="True"
-                  ItemTapped="OnItemTapped">
+                  ItemSelected="OnItemTapped">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
                         <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal"
+                                         Padding="0,0,0,10">
                                 <Image Source="{Binding Icon, Mode=OneWay}"
-                                   HeightRequest="150"/>
+                                       HeightRequest="150"
+                                       VerticalOptions ="Start"/>
                                 <StackLayout Orientation="Vertical"
                                              x:Name="verticalStackLayout">
                                     <Label Text="{Binding Name, Mode=OneWay}"
@@ -42,17 +69,16 @@
                                                HorizontalTextAlignment="End"/>
                                     </StackLayout>
                                     <ListView ItemsSource="{Binding ListOfIcons}"
-                                              Rotation="270"
-                                              SeparatorVisibility="None"
-                                              RowHeight="20">
+                                                Rotation="270"
+                                                SeparatorVisibility="None"
+                                                RowHeight="20"
+                                                SelectionMode="None">
                                         <ListView.ItemTemplate>
                                             <DataTemplate>
                                                 <ViewCell>
                                                     <ViewCell.View>
-                                                        <StackLayout>
-                                                            <Image Source ="{Binding .}"
-                                                                   Rotation="90"/>
-                                                        </StackLayout>
+                                                        <Image Source ="{Binding .}"
+                                                                Rotation="90"/>
                                                     </ViewCell.View>
                                                 </ViewCell>
                                             </DataTemplate>

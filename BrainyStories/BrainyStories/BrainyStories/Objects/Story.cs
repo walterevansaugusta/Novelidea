@@ -49,7 +49,11 @@ namespace BrainyStories
         // Dictionary of cues for picture transition to pictures
         public Dictionary<TimeSpan, String> PictureCues { get; set; }
 
-        public ThinkAndDo[] ThinkAndDos { get; set; }
+        //Think and do list
+        public ObservableCollection<ThinkAndDo> ThinkAndDos { get; set; }
+
+        //Quiz list
+        public ObservableCollection<Quiz> Quizzes { get; set; }
 
         //String for audio file
         public String AudioClip { get; set; }
