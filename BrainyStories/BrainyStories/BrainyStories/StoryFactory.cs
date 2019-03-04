@@ -164,7 +164,7 @@ namespace BrainyStories {
                 Description = "Two billy goats trick a mean troll into waiting for their brother; " +
                     "with his horns the big brother knocks the troll off the bridge.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "S6_BGG_1.jpg" }, //TODO: FIX AUDIO AND THEN TRANSITIONS
+                   { new TimeSpan(0, 0, 0), "S6_BGG_1.jpg" }, //TODO: DO TRANSITIONS WITH NEW AUDIO
                    { new TimeSpan(0, 0, 3), "S6_BGG_2.jpg" },
                    { new TimeSpan(0, 0, 40), "S6_BGG_3.jpg" },
                    { new TimeSpan(0, 0, 56), "S6_BGG_4.jpg" },
@@ -197,7 +197,7 @@ namespace BrainyStories {
                     "captured and put into a pie; Peter escapes and returns to his mother who scolds him.",
                 PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S7_PR_1.jpg" },
-                   //{ new TimeSpan(0, 0, 2), "S7_PR_1.jpg" }, //TODO: FIX AUDIO AND THEN TRANSITIONS
+                   //{ new TimeSpan(0, 0, 2), "S7_PR_1.jpg" }, //TODO: DO TRANSITIONS WITH NEW AUDIO
                    { new TimeSpan(0, 0, 22), "S7_PR_2.jpg" },
                    { new TimeSpan(0, 0, 48), "S7_PR_3.jpg" },
                    { new TimeSpan(0, 0, 53), "S7_PR_4.jpg" },
@@ -563,7 +563,7 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 10), "I10_DYLB_8.jpg" },
                    { new TimeSpan(0, 2, 20), "I10_DYLB_9.jpg" }  
                 },
-                AudioClip = "I1_IAS_IG.mp3", //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
+                AudioClip = "I10_DYLB_IG.mp3", //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
                 ListOfIcons = CreateStoryActivitiesStack(0, 0)
             });
 
