@@ -167,9 +167,6 @@
     <AndroidResource Include="Resources\drawable\I1_IASW_1.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\I1_IASW_2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\I1_IASW_3.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -840,6 +837,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\I1_IAS_IG.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\I1_IASW_2.JPG" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
