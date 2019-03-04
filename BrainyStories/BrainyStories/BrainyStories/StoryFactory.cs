@@ -164,20 +164,20 @@ namespace BrainyStories {
                 Description = "Two billy goats trick a mean troll into waiting for their brother; " +
                     "with his horns the big brother knocks the troll off the bridge.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "S6_BGG_1.jpg" }, //TODO: DO TRANSITIONS WITH NEW AUDIO
+                   { new TimeSpan(0, 0, 0), "S6_BGG_1.jpg" }, 
                    { new TimeSpan(0, 0, 3), "S6_BGG_2.jpg" },
                    { new TimeSpan(0, 0, 40), "S6_BGG_3.jpg" },
-                   { new TimeSpan(0, 0, 56), "S6_BGG_4.jpg" },
-                   { new TimeSpan(0, 1, 16), "S6_BGG_5.jpg" },
+                   { new TimeSpan(0, 0, 58), "S6_BGG_4.jpg" },
+                   { new TimeSpan(0, 1, 19), "S6_BGG_5.jpg" },
                    { new TimeSpan(0, 1, 34), "S6_BGG_6.jpg" },
-                   { new TimeSpan(0, 1, 55), "S6_BGG_7.jpg" },
-                   { new TimeSpan(0, 1, 50), "S6_BGG_8.jpg" },
-                   { new TimeSpan(0, 2, 00), "S6_BGG_9.jpg" },
-                   { new TimeSpan(0, 2, 30), "S6_BGG_10.jpg" },
-                   { new TimeSpan(0, 2, 40), "S6_BGG_11.jpg" },
-                   { new TimeSpan(0, 2, 50), "S6_BGG_12.jpg" },
-                   { new TimeSpan(0, 3, 00), "S6_BGG_13.jpg" },
-                   { new TimeSpan(0, 3, 30), "S6_BGG_14.jpg" }
+                   { new TimeSpan(0, 1, 58), "S6_BGG_12.jpg" }, //TODO: Remove "So Little Billy" paragraph from image 12
+                   { new TimeSpan(0, 2, 53), "S6_BGG_13.jpg" }, 
+                   { new TimeSpan(0, 3, 31), "S6_BGG_14.jpg" },
+                   { new TimeSpan(0, 4, 21), "S6_BGG_7.jpg" },
+                   { new TimeSpan(0, 4, 40), "S6_BGG_8.jpg" },
+                   { new TimeSpan(0, 5, 14), "S6_BGG_9.jpg" },
+                   { new TimeSpan(0, 6, 4), "S6_BGG_10.jpg" },
+                   { new TimeSpan(0, 6, 27), "S6_BGG_11.jpg" }
                 },
                 AudioClip = "S6_BGG_Story.mp3",
                 ListOfIcons = CreateStoryActivitiesStack(3, 1)
@@ -197,31 +197,31 @@ namespace BrainyStories {
                     "captured and put into a pie; Peter escapes and returns to his mother who scolds him.",
                 PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S7_PR_1.jpg" },
-                   //{ new TimeSpan(0, 0, 2), "S7_PR_1.jpg" }, //TODO: DO TRANSITIONS WITH NEW AUDIO
+                   //{ new TimeSpan(0, 0, 2), "S7_PR_1.jpg" }, //TODO: MAKE TITLE PAGE
                    { new TimeSpan(0, 0, 22), "S7_PR_2.jpg" },
                    { new TimeSpan(0, 0, 48), "S7_PR_3.jpg" },
-                   { new TimeSpan(0, 0, 53), "S7_PR_4.jpg" },
-                   { new TimeSpan(0, 1, 01), "S7_PR_5.jpg" },
-                   { new TimeSpan(0, 1, 09), "S7_PR_6.jpg" },
-                   { new TimeSpan(0, 1, 20), "S7_PR_7.jpg" },
-                   { new TimeSpan(0, 1, 27), "S7_PR_8.jpg" },
-                   { new TimeSpan(0, 1, 34), "S7_PR_9.jpg" },
-                   { new TimeSpan(0, 1, 45), "S7_PR_10.jpg" },
-                   { new TimeSpan(0, 1, 58), "S7_PR_11.jpg" },
-                   { new TimeSpan(0, 2, 18), "S7_PR_12.jpg" },
-                   { new TimeSpan(0, 2, 32), "S7_PR_13.jpg" },
-                   { new TimeSpan(0, 2, 40), "S7_PR_14.jpg" },
-                   { new TimeSpan(0, 2, 52), "S7_PR_15.jpg" },
-                   { new TimeSpan(0, 3, 05), "S7_PR_16.jpg" },
-                   { new TimeSpan(0, 3, 17), "S7_PR_17.jpg" },
-                   { new TimeSpan(0, 3, 32), "S7_PR_18.jpg" },
-                   { new TimeSpan(0, 4, 10), "S7_PR_19.jpg" },
-                   { new TimeSpan(0, 4, 42), "S7_PR_20.jpg" },
-                   { new TimeSpan(0, 5, 12), "S7_PR_21.jpg" },
-                   { new TimeSpan(0, 5, 35), "S7_PR_22.jpg" },
-                   { new TimeSpan(0, 5, 41), "S7_PR_23.jpg" },
-                   { new TimeSpan(0, 6, 09), "S7_PR_24.jpg" },
-                   { new TimeSpan(0, 6, 25), "S7_PR_25.jpg" }
+                   { new TimeSpan(0, 1, 02), "S7_PR_4.jpg" },
+                   { new TimeSpan(0, 1, 10), "S7_PR_5.jpg" },
+                   { new TimeSpan(0, 1, 21), "S7_PR_6.jpg" },
+                   { new TimeSpan(0, 1, 33), "S7_PR_7.jpg" },
+                   { new TimeSpan(0, 1, 39), "S7_PR_8.jpg" },
+                   { new TimeSpan(0, 1, 47), "S7_PR_9.jpg" },
+                   { new TimeSpan(0, 1, 59), "S7_PR_10.jpg" },
+                   { new TimeSpan(0, 2, 12), "S7_PR_11.jpg" },
+                   { new TimeSpan(0, 2, 32), "S7_PR_12.jpg" },
+                   { new TimeSpan(0, 2, 48), "S7_PR_13.jpg" },
+                   { new TimeSpan(0, 2, 56), "S7_PR_14.jpg" },
+                   { new TimeSpan(0, 3, 10), "S7_PR_15.jpg" },
+                   { new TimeSpan(0, 3, 26), "S7_PR_16.jpg" },
+                   { new TimeSpan(0, 3, 38), "S7_PR_17.jpg" },
+                   { new TimeSpan(0, 3, 53), "S7_PR_18.jpg" },
+                   { new TimeSpan(0, 4, 37), "S7_PR_19.jpg" },
+                   { new TimeSpan(0, 5, 17), "S7_PR_20.jpg" },
+                   { new TimeSpan(0, 5, 55), "S7_PR_21.jpg" },
+                   { new TimeSpan(0, 6, 15), "S7_PR_22.jpg" },
+                   { new TimeSpan(0, 6, 23), "S7_PR_23.jpg" },
+                   { new TimeSpan(0, 6, 56), "S7_PR_24.jpg" },
+                   { new TimeSpan(0, 7, 15), "S7_PR_25.jpg" }
                 },
                 AudioClip = "S7_PR_Story.mp3",
                 ListOfIcons = CreateStoryActivitiesStack(5, 1)
@@ -240,17 +240,17 @@ namespace BrainyStories {
                 Description = "The Gingerbread Man speaks rudely, brags, and outruns all the people " +
                     "and animals until the fox’s help, is tricked and swallowed.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "S8_TGM_1.jpg" }, //TODO: FIX AUDIO AND THEN TRANSITIONS
+                   { new TimeSpan(0, 0, 0), "S8_TGM_1.jpg" },
                    { new TimeSpan(0, 0, 2), "S8_TGM_2.jpg" },
-                   { new TimeSpan(0, 1, 07), "S8_TGM_3.jpg" },
+                   { new TimeSpan(0, 1, 05), "S8_TGM_3.jpg" },
                    { new TimeSpan(0, 1, 47), "S8_TGM_4.jpg" },
-                   { new TimeSpan(0, 2, 26), "S8_TGM_5.jpg" },
-                   { new TimeSpan(0, 3, 27), "S8_TGM_6.jpg" },
+                   { new TimeSpan(0, 2, 25), "S8_TGM_5.jpg" },
+                   { new TimeSpan(0, 3, 26), "S8_TGM_6.jpg" },
                    { new TimeSpan(0, 4, 15), "S8_TGM_7.jpg" },
-                   { new TimeSpan(0, 4, 55), "S8_TGM_8.jpg" },
-                   { new TimeSpan(0, 5, 30), "S8_TGM_9.jpg" },
-                   { new TimeSpan(0, 6, 25), "S8_TGM_10.jpg" },
-                   { new TimeSpan(0, 7, 23), "S8_TGM_11.jpg" }
+                   { new TimeSpan(0, 4, 53), "S8_TGM_8.jpg" },
+                   { new TimeSpan(0, 5, 29), "S8_TGM_9.jpg" },
+                   { new TimeSpan(0, 6, 26), "S8_TGM_10.jpg" },
+                   { new TimeSpan(0, 7, 24), "S8_TGM_11.jpg" }
                 },
                 AudioClip = "S8_TGM_Story.mp3",
                 ListOfIcons = CreateStoryActivitiesStack(5, 1)
@@ -306,7 +306,7 @@ namespace BrainyStories {
                 Description = "A girl speaks to a wolf and leaves the proper path; the wolf swallows the grandmother" +
                               " and girl, but a huntsman kills the wolf, opens the wolf’s belly, and rescues both of them.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "S10_LRRH_1.jpg" },
+                   { new TimeSpan(0, 0, 0), "S10_LRRH_1.jpg" }, //TODO: FIX TRANSITIONS WITH NEW AUDIO
                    { new TimeSpan(0, 0, 05), "S10_LRRH_2.jpg" },
                    { new TimeSpan(0, 0, 32), "S10_LRRH_3.jpg" },
                    { new TimeSpan(0, 1, 07), "S10_LRRH_4.jpg" },
@@ -347,13 +347,13 @@ namespace BrainyStories {
                 WordCount = 212,
                 Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" }, //TODO: FIX AUDIO AND THEN TRANSITIONS
+                   { new TimeSpan(0, 0, 0), "I1_IASW_1.jpg" }, //TODO: Remove “And two more shiny coins” paragraph
                    { new TimeSpan(0, 0, 4), "I1_IASW_2.jpg" },
-                   { new TimeSpan(0, 0, 43), "I1_IASW_3.jpg" },
-                   { new TimeSpan(0, 1, 7), "I1_IASW_4.jpg" },
-                   { new TimeSpan(0, 1, 26), "I1_IASW_5.jpg" }
+                   { new TimeSpan(0, 0, 41), "I1_IASW_3.jpg" },
+                   { new TimeSpan(0, 1, 6), "I1_IASW_4.jpg" },
+                   { new TimeSpan(0, 1, 24), "I1_IASW_5.jpg" }
                 },
-                AudioClip = "I1_IAS_IG.mp3",
+                AudioClip = "I1_IAS_IG.mp3", //TODO: Trim audio to 1:38
                 ListOfIcons = CreateStoryActivitiesStack(0, 0)
             });
 
@@ -553,17 +553,17 @@ namespace BrainyStories {
                 WordCount = 344,
                 Description = "Imagine blowing bubbles in a sink or bathtub.",
                 PictureCues = new Dictionary<TimeSpan, string> {
-                   { new TimeSpan(0, 0, 0), "I10_DYLB_1.jpg" },
-                   { new TimeSpan(0, 0, 2), "I10_DYLB_2.jpg" },
+                   { new TimeSpan(0, 0, 0), "I10_DYLB_1.jpg" }, //TODO: FIX TRANSITIONS
+                   { new TimeSpan(0, 0, 1), "I10_DYLB_2.jpg" },
                    { new TimeSpan(0, 0, 12), "I10_DYLB_3.jpg" },
-                   { new TimeSpan(0, 0, 39), "I10_DYLB_4.jpg" },
-                   { new TimeSpan(0, 1, 5), "I10_DYLB_5.jpg" },
-                   { new TimeSpan(0, 1, 42), "I10_DYLB_6.jpg" },
+                   { new TimeSpan(0, 0, 40), "I10_DYLB_4.jpg" },
+                   { new TimeSpan(0, 1, 4), "I10_DYLB_5.jpg" },
+                   { new TimeSpan(0, 1, 9), "I10_DYLB_6.jpg" },
                    { new TimeSpan(0, 2, 1), "I10_DYLB_7.jpg" },
                    { new TimeSpan(0, 2, 10), "I10_DYLB_8.jpg" },
                    { new TimeSpan(0, 2, 20), "I10_DYLB_9.jpg" }  
                 },
-                AudioClip = "I10_DYLB_IG.mp3", //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
+                AudioClip = "I10_DYLB_IG.mp3",
                 ListOfIcons = CreateStoryActivitiesStack(0, 0)
             });
 
