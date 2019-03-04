@@ -10,7 +10,7 @@ namespace BrainyStories {
 
     public class StoryFactory {
 
-        private ThinkAndDoFactory factory = new ThinkAndDoFactory();
+        private ThinkAndDoFactory thinkAndDoFactory = new ThinkAndDoFactory();
 
         //MANUAL LIST OF STORIES
         public ObservableCollection<Story> generateStories()
@@ -321,7 +321,7 @@ namespace BrainyStories {
         {
             Story chosen = new Story();
             ObservableCollection<ThinkAndDo> ThinkAndDoTemp = new ObservableCollection<ThinkAndDo>();
-            ThinkAndDoTemp = factory.generateThinkAndDos();
+            ThinkAndDoTemp = thinkAndDoFactory.generateThinkAndDos();
 
             if (storyName.Equals("The Lion and the Mouse"))
             {
@@ -348,7 +348,7 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 30), "S1_LATM_8.jpg" }
                 },
                     AudioClip = "S1_TLATM_Story.mp3",
-                    ThinkAndDos = factory.StoryThinkAndDos("The Lion and the Mouse")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse")
                 };
             }
             else if (storyName.Equals("The Little Red Hen"))
@@ -375,7 +375,7 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 56), "S2_LRH_7.jpg" }
                 },
                     AudioClip = "S2_LRH_Story.mp3",
-                    ThinkAndDos = factory.StoryThinkAndDos("Little Red Hen")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen")
                 };
             }
             else if (storyName.Equals("The Boy Who Cried Wolf"))
@@ -404,7 +404,7 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 43), "S3_TBWCW_9.jpg" }
                 },
                     AudioClip = "S3_BWCW_Story.mp3",
-                    ThinkAndDos = factory.StoryThinkAndDos("Boy Who Cried Wolf")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Boy Who Cried Wolf")
                 };
             }
             else if (storyName.Equals("The Elves and Shoemaker"))
@@ -431,7 +431,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 33), "S4_TEATS_7.jpg" },
                    { new TimeSpan(0, 4, 57), "S4_TEATS_8.jpg" }
                 },
-                    AudioClip = "S4_TEATS_Story.mp3"
+                    AudioClip = "S4_TEATS_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Elves and the Shoemaker")
                 };
             }
             else if (storyName.Equals("The Three Little Pigs"))
@@ -463,7 +464,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 30), "S5_TLP_12.jpg" },
                    { new TimeSpan(0, 6, 31), "S5_TLP_13.jpg" }
                 },
-                    AudioClip = "S5_TLP_Story.mp3"
+                    AudioClip = "S5_TLP_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Little Pigs")
                 };
             }
             else if (storyName.Equals("The Three Billy Goats Gruff"))
@@ -496,7 +498,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 00), "S6_BGG_13.jpg" },
                    { new TimeSpan(0, 3, 30), "S6_BGG_14.jpg" }
                 },
-                    AudioClip = "S6_BGG_Story.mp3"
+                    AudioClip = "S6_BGG_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Billy Goats Gruff")
                 };
             }
             else if (storyName.Equals("The Tale of Peter Rabbit"))
@@ -540,7 +543,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 09), "S7_PR_24.jpg" },
                    { new TimeSpan(0, 6, 25), "S7_PR_25.jpg" }
                 },
-                    AudioClip = "S7_PR_Story.mp3"
+                    AudioClip = "S7_PR_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Tale of Peter Rabbit")
                 };
             }
             else if (storyName.Equals("The Gingerbread Man"))
@@ -570,7 +574,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 25), "S8_TGM_10.jpg" },
                    { new TimeSpan(0, 7, 23), "S8_TGM_11.jpg" }
                 },
-                    AudioClip = "S8_TGM_Story.mp3"
+                    AudioClip = "S8_TGM_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man")
                 };
             }
             else if (storyName.Equals("Rumplestiltskin"))
@@ -608,7 +613,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 7, 34), "S9_R_18.jpg" },
                    { new TimeSpan(0, 8, 06), "S9_R_19.jpg" }
                 },
-                    AudioClip = "S9_R_Story.mp3"
+                    AudioClip = "S9_R_Story.mp3",
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin")
                 };
             }
             else if (storyName.Equals("Little Red Riding Hood"))
@@ -643,7 +649,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 7, 55), "S10_LRRH_15.jpg" },
                    { new TimeSpan(0, 8, 34), "S10_LRRH_16.jpg" }
                 },
-                    AudioClip = "S9_R_Story.mp3" //TODO: NEED TO GET STORY 10 (LRRH) AUDIO
+                    AudioClip = "S9_R_Story.mp3", //TODO: NEED TO GET STORY 10 (LRRH) AUDIO
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood")
                 };
             }
             else if (storyName.Equals("If A Shoe Wanted to be Car"))
