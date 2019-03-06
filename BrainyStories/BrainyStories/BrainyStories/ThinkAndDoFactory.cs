@@ -97,14 +97,14 @@ namespace BrainyStories
 
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
-                ThinkAndDoName = "The Tales of Peter Rabbit Think And Do 1",
+                ThinkAndDoName = "The Tale of Peter Rabbit Think And Do 1",
                 AssociatedImage = "S7_PR_1.jpg",
                 ThinkAndDoAudioClip = "S7_PR_TAD1.mp3",
                 Length = new TimeSpan(0, 2, 2)
             });
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
-                ThinkAndDoName = "The Tales of Peter Rabbit Think And Do 2",
+                ThinkAndDoName = "The Tale of Peter Rabbit Think And Do 2",
                 AssociatedImage = "S7_PR_1.jpg",
                 ThinkAndDoAudioClip = "S7_PR_TAD2.mp3",
                 Length = new TimeSpan(0, 2, 2)
