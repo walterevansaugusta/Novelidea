@@ -841,5 +841,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\I1_IASW_2.JPG" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\I9_IFP_7.JPG" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

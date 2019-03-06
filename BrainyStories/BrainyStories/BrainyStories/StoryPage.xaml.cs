@@ -18,6 +18,7 @@ namespace BrainyStories
         public StoryPage (Story story)
 		{
 			InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             Button button = new Button()
             {
                 Text = "Pause"
