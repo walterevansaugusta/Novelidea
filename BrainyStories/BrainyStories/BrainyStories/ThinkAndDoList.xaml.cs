@@ -1,9 +1,8 @@
+﻿using BrainyStories.Objects;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,34 +13,27 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TableOfContents : ContentPage
+	public partial class ThinkAndDoList : ContentPage
 	{
-        StoryFactory storyFact = new StoryFactory();
-
         private Settings settingsPage;
+        private ThinkAndDoFactory factory = new ThinkAndDoFactory();
 
-        public TableOfContents (bool imagines)
-		{
-            NavigationPage.SetHasNavigationBar(this, false);
-            if (imagines)
-            {
-                Story.ListOfStories = storyFact.generateImagines();
-            }
-            else
-            {
-                Story.ListOfStories = storyFact.generateStories();
-            }
+        public ObservableCollection<ThinkAndDo> ListOfThinkAndDos;
+        public ThinkAndDoList ()
+		{ 
+            ListOfThinkAndDos = factory.generateThinkAndDos();
             InitializeComponent();
-
+            BindList.ItemsSource = ListOfThinkAndDos;
             settingsPage = new Settings();
+           
         }
 
-        void OnItemTapped(object sender, ItemTappedEventArgs e)
+        async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
-            var story = (Story)view.SelectedItem;
-            story = storyFact.playedStory(story.Name);
-            Navigation.PushAsync(new StoryPage(story));
+            var think = (ThinkAndDo)view.SelectedItem;
+            ThinkAndDoPopup pop = new ThinkAndDoPopup(think);
+            await PopupNavigation.Instance.PushAsync(pop);     
         }
 
         // Navbar methods

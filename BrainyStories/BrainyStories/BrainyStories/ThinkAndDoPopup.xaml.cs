@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
+using BrainyStories.Objects;
 using Plugin.SimpleAudioPlayer;
+using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,15 +10,14 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class StoryPage : ContentPage
-	{
+    public partial class ThinkAndDoPopup : PopupPage
+    {
         private ISimpleAudioPlayer player;
-        private Settings settingsPage;
 
-        public StoryPage (Story story)
-		{
-			InitializeComponent();
-            settingsPage = new Settings();
+        public ThinkAndDoPopup (ThinkAndDo thinkAndDo)
+        {
+            InitializeComponent();
+            ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
             Button button = new Button()
             {
                 Text = "Pause"
@@ -30,40 +27,23 @@ namespace BrainyStories
                 Text = "Play",
                 IsVisible = false
             };
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 150, Aspect = 0};
             Label displayLabel = new Label
             {
                 Text = "0:00",
             };
             Slider slider = new Slider
             {
-                Maximum = story.Duration.Seconds + (story.Duration.Minutes * 60),
+                Maximum = thinkAndDo.Length.Seconds + (thinkAndDo.Length.Minutes * 60),
                 Minimum = 0,
                 Value = 0,
                 HorizontalOptions = LayoutOptions.FillAndExpand
             };
-
+           
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
-            player.Load(story.AudioClip);
+            player.Load(thinkAndDo.ThinkAndDoAudioClip);
             bool audioFromTimer = false;
             bool playAudio = true;
             player.Play();
-            Device.StartTimer(new TimeSpan(0,0,1), () =>
-            {
-                if (playAudio)
-                {
-                    audioFromTimer = true;
-                    slider.Value += 1;
-                }
-                if (slider.Value == story.Duration.Seconds + (story.Duration.Minutes * 60))
-                {
-                    player.Stop();
-                    ChangePage(story); 
-                    return false;
-                }
-
-                return true;
-            });
             button.Clicked += (sender, args) =>
             {
                 player.Pause();
@@ -78,10 +58,19 @@ namespace BrainyStories
                 button.IsVisible = true;
                 button2.IsVisible = false;
             };
+            Device.StartTimer(new TimeSpan(0, 0, 1), () =>
+            {
+                if (playAudio)
+                {
+                    audioFromTimer = true;
+                    slider.Value += 1;
+                }
+                return true;
+            });
             slider.ValueChanged += (sender, args) =>
             {
-                int minutes = (int) args.NewValue / 60;
-                int seconds = (int) args.NewValue - (minutes * 60);
+                int minutes = (int)args.NewValue / 60;
+                int seconds = (int)args.NewValue - (minutes * 60);
                 Console.WriteLine(args.NewValue);
                 Console.WriteLine(player.CurrentPosition);
                 Console.WriteLine(args.NewValue);
@@ -96,25 +85,8 @@ namespace BrainyStories
                 }
                 displayLabel.Text = String.Format("{0}:{1}", minutes, second);
                 var timeStamp = new TimeSpan(0, minutes, seconds);
-                var savedTime = new TimeSpan(0, 0, 0);
-                foreach (TimeSpan key in story.PictureCues.Keys) {
-                    if (key.TotalSeconds < args.NewValue)
-                    {
-                        savedTime = key;
-                    } else
-                    {
-                        break;
-                    }
-                }
-                storyImage.Source = story.PictureCues[savedTime];
-                storyImage.HeightRequest = 200;
                 audioFromTimer = false;
             };
-
-            
-
-            Title = "Basic Slider Code";
-            //Padding = new Thickness(10, 10);
             StackLayout audio = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
@@ -125,48 +97,32 @@ namespace BrainyStories
                     displayLabel
                 }
             };
-
-            TopStack.Children.Add(storyImage);
             TopStack.Children.Add(slider);
             TopStack.Children.Add(audio);
-            //Content = new StackLayout
-            //{
-            //    Children =
-            //    {
-            //        storyImage,
-            //        slider,
-            //        audio
-            //    }
-            //};
         }
 
-       protected void ChangePage(Story story)
-        {
-            Navigation.PushAsync(new EndOfStory(story));
-        }
-  
         protected override bool OnBackButtonPressed()
         {
             player.Stop();
-            return base.OnBackButtonPressed();
+            return false;
         }
 
-        // Navbar methods
-        async void BackClicked(object sender, EventArgs e)
+        private void OnCloseButtonTapped(object sender, EventArgs e)
         {
             player.Stop();
-            await App.Current.MainPage.Navigation.PopAsync();
+            CloseAllPopup();
         }
 
-        async void HomeClicked(object sender, EventArgs e)
+        protected override bool OnBackgroundClicked()
         {
             player.Stop();
-            await App.Current.MainPage.Navigation.PopToRootAsync();
+            CloseAllPopup();
+            return false;
         }
 
-        async void SettingsClicked(object sender, EventArgs e)
+        private async void CloseAllPopup()
         {
-            await PopupNavigation.Instance.PushAsync(settingsPage);
+            await PopupNavigation.Instance.PopAsync();
         }
     }
 }

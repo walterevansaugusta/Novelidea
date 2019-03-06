@@ -17,7 +17,7 @@ namespace BrainyStories.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
@@ -25,7 +25,15 @@ namespace BrainyStories.Droid
 
         public override void OnBackPressed()
         {
-            base.OnBackPressed();
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+            
         }
     }
 }
