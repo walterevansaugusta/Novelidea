@@ -28,5 +28,10 @@ namespace BrainyStories {
         {
             await Navigation.PushAsync(new TableOfContents(false));
         }
+
+        async void ProgressClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProgressPage());
+        }
     }
 }
