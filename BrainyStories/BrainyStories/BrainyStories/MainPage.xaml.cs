@@ -52,5 +52,10 @@ namespace BrainyStories {
 
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
+
+        async void ProgressClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProgressPage());
+        }
     }
 }
