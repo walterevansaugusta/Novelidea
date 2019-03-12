@@ -12,15 +12,21 @@ namespace BrainyStories.Objects {
         public string[] AnswerArray { get; set; }
 
         //the index of the correct answer in the array
-        public int CorrectAnswer { get; set; }
+        public String CorrectAnswer { get; set; }
 
     }
     public class Quiz {
+
+        // The name of th quiz
+        public string QuizName { get; set; }
 
         // the score for the quiz
         public int Score { get; set; }
 
         // the list of questions
         public Question[] Questions { get; set; }
+
+        // the time the quiz should be played
+        public TimeSpan PlayTime { get; set; }
     }
 }

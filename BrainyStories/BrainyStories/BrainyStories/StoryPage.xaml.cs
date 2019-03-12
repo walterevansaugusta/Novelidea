@@ -16,6 +16,7 @@ namespace BrainyStories
 	{
         private ISimpleAudioPlayer player;
         private Settings settingsPage;
+        private int quizNum = -1;
 
         public StoryPage (Story story)
 		{
@@ -28,6 +29,12 @@ namespace BrainyStories
             Button button2 = new Button()
             {
                 Text = "Play",
+                IsVisible = false
+            };
+            Button QuizButton = new Button()
+            {
+                Text = "Quiz",
+                BackgroundColor = Color.Green,
                 IsVisible = false
             };
             Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 150, Aspect = 0};
@@ -78,6 +85,13 @@ namespace BrainyStories
                 button.IsVisible = true;
                 button2.IsVisible = false;
             };
+            QuizButton.Clicked += (sender, args) =>
+            {
+                Navigation.PushAsync(new QuizPage(story.Quizzes[quizNum]));
+                QuizButton.IsVisible = false;
+                button.IsVisible = false;
+                button2.IsVisible = true;
+            };
             slider.ValueChanged += (sender, args) =>
             {
                 int minutes = (int) args.NewValue / 60;
@@ -108,6 +122,16 @@ namespace BrainyStories
                 }
                 storyImage.Source = story.PictureCues[savedTime];
                 storyImage.HeightRequest = 200;
+                for (int i = 0; i < 1; i++)
+                {
+                    if (timeStamp.Equals(story.Quizzes[i].PlayTime))
+                    {
+                        player.Pause();
+                        QuizButton.IsVisible = true;
+                        playAudio = false;
+                        quizNum++;
+                    }
+                }
                 audioFromTimer = false;
             };
 
@@ -122,7 +146,8 @@ namespace BrainyStories
                 {
                     button,
                     button2,
-                    displayLabel
+                    displayLabel,
+                    QuizButton
                 }
             };
 

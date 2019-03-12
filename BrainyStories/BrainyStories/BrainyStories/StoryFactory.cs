@@ -11,6 +11,7 @@ namespace BrainyStories {
     public class StoryFactory {
 
         private ThinkAndDoFactory thinkAndDoFactory = new ThinkAndDoFactory();
+        private QuizFactory quizFactory = new QuizFactory();
 
         //MANUAL LIST OF STORIES
         public ObservableCollection<Story> generateStories()
@@ -348,7 +349,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 30), "S1_LATM_8.jpg" }
                 },
                     AudioClip = "S1_TLATM_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse")
                 };
             }
             else if (storyName.Equals("The Little Red Hen"))
