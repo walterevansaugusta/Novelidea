@@ -31,7 +31,12 @@ namespace BrainyStories
         async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
+            if (view.SelectedItem == null)
+            {
+                return;
+            }
             var think = (ThinkAndDo)view.SelectedItem;
+            view.SelectedItem = null;
             ThinkAndDoPopup pop = new ThinkAndDoPopup(think);
             await PopupNavigation.Instance.PushAsync(pop);     
         }

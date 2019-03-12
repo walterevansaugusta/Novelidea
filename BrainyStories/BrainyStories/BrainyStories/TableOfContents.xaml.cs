@@ -32,16 +32,21 @@ namespace BrainyStories
                 Story.ListOfStories = storyFact.generateStories();
             }
             InitializeComponent();
-
+            listView.SelectedItem = null;
             settingsPage = new Settings();
         }
 
-        void OnItemTapped(object sender, ItemTappedEventArgs e)
+        async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
+            if (view.SelectedItem == null)
+            {
+                return;
+            }
             var story = (Story)view.SelectedItem;
+            view.SelectedItem = null;
             story = storyFact.playedStory(story.Name);
-            Navigation.PushAsync(new StoryPage(story));
+            await Navigation.PushAsync(new StoryPage(story));  
         }
 
         // Navbar methods
