@@ -148,8 +148,15 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
-                //storyImage.HeightRequest = 150;
+                quizNum = 0;
                 for (int i = 0; i < 1; i++)
+                {
+                    if (timeStamp.CompareTo(story.Quizzes[i].PlayTime) >= 0)
+                    {
+                        quizNum++;
+                    }
+                } 
+                for (int i = 0; i < 1; i++) // CHANGE NUM OF QUIZZES
                 {
                     if (timeStamp.Equals(story.Quizzes[i].PlayTime))
                     {
@@ -161,7 +168,6 @@ namespace BrainyStories
                         Content = oldContent;
                         storyImage.HeightRequest = 150;
                         fullScreen = false;
-                        quizNum++;
                     }
                 }
                 audioFromTimer = false;
