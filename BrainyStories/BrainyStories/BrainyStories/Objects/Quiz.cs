@@ -9,9 +9,11 @@ namespace BrainyStories.Objects {
         // The text of the question
         public string QuestionText { get; set; }
 
-        // the array of answers
-        public ObservableCollection<String> AnswerArray { get; set; }
+        // the array of answers 
+        public ObservableCollection <String> AnswerArray { get; set; }
 
+        // the dictonary of which number of answer and if the child has slected it (keys same as answer array)
+        public Dictionary<String, bool> AnswerSelected { get; set; }
 
         //the index of the correct answer in the array
         public String CorrectAnswer { get; set; }

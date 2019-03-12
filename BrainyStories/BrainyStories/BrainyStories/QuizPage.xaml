@@ -39,52 +39,93 @@
             <Label x:Name="QuestionTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button x:Name="One"
+            <Grid x:Name="pageGrid" Padding="0,0,0,0" Margin="20,0,20,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="One"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
                     Clicked="CheckAnswer"/>
-            <Button  x:Name="Two"
+                <Button x:Name="Two"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
                     Clicked="CheckAnswer"/>
-            <Button  x:Name="Three"
+                <Button x:Name="Three"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
                     Clicked="CheckAnswer"/>
-            <Button  x:Name="Four"
+                <Button x:Name="Four"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="2"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
                     Clicked="CheckAnswer"/>
-            <StackLayout Orientation="Horizontal">
                 <Button x:Name ="PreviousButton"
                     Text= "Previous"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="1"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
                     Clicked="PreviousQuestion"/>
                 <Button x:Name ="NextButton"
                     Text= "Next"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="1"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
                     Clicked="NextQuestion"/>
-            </StackLayout>
+                <Button x:Name ="BackToStory"
+                    Text= "Back To Story"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    Grid.Row="3"
+                    Grid.Column="3"
+                    Grid.ColumnSpan="1"
+                    IsVisible="false"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="BackClicked"/>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

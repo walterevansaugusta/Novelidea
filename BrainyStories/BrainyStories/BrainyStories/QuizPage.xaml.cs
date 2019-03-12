@@ -45,12 +45,32 @@ namespace BrainyStories
                 Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
                 Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
                 Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
+                ColorChange();
             }
+            if (QuestionNum > 0)
+            {
+                PreviousButton.IsVisible = true;
+            }
+            else
+            {
+                PreviousButton.IsVisible = false;
+            }
+            if (QuestionNum == quiz.NumQuestions - 1)
+            {
+                NextButton.IsVisible = false;
+                BackToStory.IsVisible = true;
+            }
+            else
+            {
+                NextButton.IsVisible = true;
+                BackToStory.IsVisible = false;
+            }
+
         }
 
         private void NextQuestion(object sender, EventArgs e)
         {
-            if (QuestionNum < quiz.NumQuestions)
+            if (QuestionNum < quiz.NumQuestions - 1)
             {
                 QuestionNum++;
                 QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
@@ -58,14 +78,23 @@ namespace BrainyStories
                 Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
                 Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
                 Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
+                ColorChange();
             }
             if (QuestionNum > 0)
             {
                 PreviousButton.IsVisible = true;
-            }
-            if (QuestionNum == quiz.NumQuestions)
+            } else
             {
-                // call end of quiz
+                PreviousButton.IsVisible = false;
+            }
+            if (QuestionNum == quiz.NumQuestions - 1)
+            {
+                NextButton.IsVisible = false;
+                BackToStory.IsVisible = true;
+            } else
+            {
+                NextButton.IsVisible = true;
+                BackToStory.IsVisible = false;
             }
         }
 
@@ -75,13 +104,38 @@ namespace BrainyStories
             if (clicked.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
                 clicked.BackgroundColor = Color.Green;
                 QuestionsCorrect++;
+                quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
                 // something with rewards / score
             } else
             {
                 clicked.BackgroundColor = Color.Red;
+                quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
             }
             quiz.NumAttempts[QuestionNum]++;
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
+        }
+
+        private void ColorChange()
+        {
+            Button[] buttonArray = { One, Two, Three, Four };
+            for (int i = 0; i < buttonArray.Length; i++)
+            {
+                if (quiz.Questions[QuestionNum].AnswerSelected[buttonArray[i].Text] == true)
+                {
+                    if (buttonArray[i].Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer))
+                    {
+                        buttonArray[i].BackgroundColor = Color.Green;
+                    }
+                    else
+                    {
+                        buttonArray[i].BackgroundColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    buttonArray[i].BackgroundColor = Color.FromHex("#6F2DBD");
+                }
+            }  
         }
 
         // Navbar methods

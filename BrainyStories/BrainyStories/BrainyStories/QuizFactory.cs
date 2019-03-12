@@ -24,18 +24,21 @@ namespace BrainyStories
                         {
                             QuestionText = "This is a test question! Number 1:",
                             AnswerArray = new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "One", false }, { "Two", false }, { "Three", false }, {"Four", false} },
                             CorrectAnswer = "One"
                         },
                         new Question()
                         {
                             QuestionText = "This is a test question! Number 2:",
                             AnswerArray =  new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "One", false }, { "Two", false }, { "Three", false }, {"Four", false} },
                             CorrectAnswer = "Two"
                         },
                         new Question()
                         {
                             QuestionText = "This is a test question! Number 3:",
                             AnswerArray =  new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "One", false }, { "Two", false }, { "Three", false }, {"Four", false} },
                             CorrectAnswer = "Three"
                         }
                     },

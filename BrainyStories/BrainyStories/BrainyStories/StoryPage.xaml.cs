@@ -37,7 +37,8 @@ namespace BrainyStories
                 BackgroundColor = Color.Green,
                 IsVisible = false
             };
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0,0,0)], HeightRequest = 150, Aspect = 0};
+            SizeRequest HRequest = Measure(100,100);
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0, 0, 0)], HeightRequest = 150, Aspect = Aspect.AspectFit };
             Label displayLabel = new Label
             {
                 Text = "0:00",
@@ -122,7 +123,7 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
-                storyImage.HeightRequest = 200;
+                //storyImage.HeightRequest = 200;
                 for (int i = 0; i < 1; i++)
                 {
                     if (timeStamp.Equals(story.Quizzes[i].PlayTime))
