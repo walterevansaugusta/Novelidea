@@ -55,7 +55,7 @@ namespace BrainyStories
                 Minimum = 0,
                 Value = 0,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
-                MinimumHeightRequest = 80
+                HeightRequest = 50 // Controls size of area that can grab the slider
             };
             Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0, 0, 0)], HeightRequest = 150 };
             var tapGestureRecognizer = new TapGestureRecognizer();
@@ -149,7 +149,7 @@ namespace BrainyStories
                 }
                 storyImage.Source = story.PictureCues[savedTime];
                 quizNum = 0;
-                for (int i = 0; i < 1; i++)
+                for (int i = 0; i < 1; i++) // CHANGE TO NUM OF QUIZZES
                 {
                     if (timeStamp.CompareTo(story.Quizzes[i].PlayTime) >= 0)
                     {
