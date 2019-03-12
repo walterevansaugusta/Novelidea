@@ -22,7 +22,7 @@ namespace BrainyStories
             InitializeComponent();
             settingsPage = new Settings();
             QuizTitle.Text = quiz.QuizName;
-            QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
+            //QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
         }
     
         async void CheckAnswer(object sender, EventArgs e)
