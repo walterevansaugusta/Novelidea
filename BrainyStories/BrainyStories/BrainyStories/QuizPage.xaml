@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainyStories.QuizPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical"
+                 VerticalOptions="StartAndExpand"
+                 CompressedLayout.IsHeadless="True"
+                 x:Name="TopStack">
+            <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="Blue">
+                <ImageButton HorizontalOptions="Start"
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="Start"
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
+            <Label x:Name="QuizTitle"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="QuestionTitle"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Button Text="Question 1"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="Center"
+                    Clicked="CheckAnswer"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
