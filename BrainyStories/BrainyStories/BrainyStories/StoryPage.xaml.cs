@@ -94,6 +94,7 @@ namespace BrainyStories
             };
             slider.ValueChanged += (sender, args) =>
             {
+                QuizButton.IsVisible = false;
                 int minutes = (int) args.NewValue / 60;
                 int seconds = (int) args.NewValue - (minutes * 60);
                 Console.WriteLine(args.NewValue);

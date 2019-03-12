@@ -14,12 +14,36 @@ namespace BrainyStories
 
             if (storyName.Equals("The Lion and the Mouse"))
             {
-                QuizTemp.Add(new Quiz
+               QuizTemp.Add( new Quiz()
                 {
                     QuizName = "The Lion and the Mouse Quiz 1",
                     Score = 0,
-                    Questions = null,
-                    PlayTime = new TimeSpan(0,0,5)
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "This is a test question! Number 1:",
+                            AnswerArray = new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            CorrectAnswer = "One"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "This is a test question! Number 2:",
+                            AnswerArray =  new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            CorrectAnswer = "Two"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "This is a test question! Number 3:",
+                            AnswerArray =  new ObservableCollection<string>() {"One", "Two", "Three", "Four" },
+                            CorrectAnswer = "Three"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 0, 2),
+                    NumQuestions = 3,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
                 });
             }
             else if (storyName.Equals("The Little Red Hen"))
@@ -58,7 +82,6 @@ namespace BrainyStories
             {
                 
             }
-
             return QuizTemp;
         }
     }

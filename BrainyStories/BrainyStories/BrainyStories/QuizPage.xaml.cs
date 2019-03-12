@@ -16,19 +16,72 @@ namespace BrainyStories
     {
         private Settings settingsPage;
         private int QuestionNum = 0;
+        private int QuestionsCorrect = 0;
+        private Quiz quiz;
 
-        public QuizPage(Quiz quiz)
+        public QuizPage(Quiz temp)
         {
             InitializeComponent();
+            temp.NumAttemptsQuiz++;
+            quiz = temp;
             settingsPage = new Settings();
             QuizTitle.Text = quiz.QuizName;
-            //QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
+            NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
+            QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
+            One.Text = quiz.Questions[QuestionNum].AnswerArray[0];
+            Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
+            Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
+            Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
+            PreviousButton.IsVisible = false;
         }
-    
-        async void CheckAnswer(object sender, EventArgs e)
+
+        private void PreviousQuestion(object sender, EventArgs e)
         {
-            //Button clicked = (Button)sender;
-            //if (clicked.)
+            if (QuestionNum > 0)
+            {
+                QuestionNum--;
+                QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
+                One.Text = quiz.Questions[QuestionNum].AnswerArray[0];
+                Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
+                Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
+                Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
+            }
+        }
+
+        private void NextQuestion(object sender, EventArgs e)
+        {
+            if (QuestionNum < quiz.NumQuestions)
+            {
+                QuestionNum++;
+                QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
+                One.Text = quiz.Questions[QuestionNum].AnswerArray[0];
+                Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
+                Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
+                Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
+            }
+            if (QuestionNum > 0)
+            {
+                PreviousButton.IsVisible = true;
+            }
+            if (QuestionNum == quiz.NumQuestions)
+            {
+                // call end of quiz
+            }
+        }
+
+        private void CheckAnswer(object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            if (clicked.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
+                clicked.BackgroundColor = Color.Green;
+                QuestionsCorrect++;
+                // something with rewards / score
+            } else
+            {
+                clicked.BackgroundColor = Color.Red;
+            }
+            quiz.NumAttempts[QuestionNum]++;
+            NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
         }
 
         // Navbar methods

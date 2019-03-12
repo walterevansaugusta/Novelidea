@@ -28,18 +28,63 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
-            <Label x:Name="QuizTitle"
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="QuizTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+                <Label x:Name="NumCorrect"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
             <Label x:Name="QuestionTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Button Text="Question 1"
+            <Button x:Name="One"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
-                    VerticalOptions="Center"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
                     Clicked="CheckAnswer"/>
+            <Button  x:Name="Two"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="CheckAnswer"/>
+            <Button  x:Name="Three"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="CheckAnswer"/>
+            <Button  x:Name="Four"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="CheckAnswer"/>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name ="PreviousButton"
+                    Text= "Previous"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="PreviousQuestion"/>
+                <Button x:Name ="NextButton"
+                    Text= "Next"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"
+                    Clicked="NextQuestion"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
