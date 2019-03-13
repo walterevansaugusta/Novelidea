@@ -350,7 +350,7 @@ namespace BrainyStories {
                 },
                     AudioClip = "S1_TLATM_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse"),
-                    Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse")
+                    Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse") //COPY PASTE INTO OTHERS TO GENERATE QUIZZES
                 };
             }
             else if (storyName.Equals("The Little Red Hen"))
