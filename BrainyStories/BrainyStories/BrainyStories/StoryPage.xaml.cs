@@ -148,7 +148,7 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
-                quizNum = 0;
+                quizNum = -1;
                 for (int i = 0; i < 1; i++) // CHANGE TO NUM OF QUIZZES
                 {
                     if (timeStamp.CompareTo(story.Quizzes[i].PlayTime) >= 0)
