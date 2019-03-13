@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Plugin.SimpleAudioPlayer;
 using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace BrainyStories
@@ -17,6 +18,12 @@ namespace BrainyStories
         private ISimpleAudioPlayer player;
         private Settings settingsPage;
         private int quizNum = -1;
+
+        private bool fullScreen = false;
+
+        View oldContent = null;
+
+        private PinchGestureRecognizer pinchGesture = new PinchGestureRecognizer();
 
         public StoryPage (Story story)
 		{
@@ -37,8 +44,7 @@ namespace BrainyStories
                 BackgroundColor = Color.Green,
                 IsVisible = false
             };
-            SizeRequest HRequest = Measure(100,100);
-            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0, 0, 0)], HeightRequest = 150, Aspect = Aspect.AspectFit };
+            
             Label displayLabel = new Label
             {
                 Text = "0:00",
@@ -48,9 +54,28 @@ namespace BrainyStories
                 Maximum = story.Duration.Seconds + (story.Duration.Minutes * 60),
                 Minimum = 0,
                 Value = 0,
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                HeightRequest = 50 // Controls size of area that can grab the slider
             };
-
+            Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0, 0, 0)], HeightRequest = 150 };
+            var tapGestureRecognizer = new TapGestureRecognizer();
+            tapGestureRecognizer.Tapped += (s, e) => {
+                if (!fullScreen)
+                {
+                    Content = storyImage;
+                    fullScreen = true;
+                } else
+                {
+                    if (oldContent != null)
+                    {
+                        Content = oldContent;
+                        storyImage.HeightRequest = 150;
+                        fullScreen = false;
+                    } 
+                }
+                
+            };
+            storyImage.GestureRecognizers.Add(tapGestureRecognizer);
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load(story.AudioClip);
             bool audioFromTimer = false;
@@ -123,24 +148,31 @@ namespace BrainyStories
                     }
                 }
                 storyImage.Source = story.PictureCues[savedTime];
-                //storyImage.HeightRequest = 200;
-                for (int i = 0; i < 1; i++)
+                quizNum = -1;
+                for (int i = 0; i < 1; i++) // CHANGE TO NUM OF QUIZZES
+                {
+                    if (timeStamp.CompareTo(story.Quizzes[i].PlayTime) >= 0)
+                    {
+                        quizNum++;
+                    }
+                } 
+                for (int i = 0; i < 1; i++) // CHANGE NUM OF QUIZZES
                 {
                     if (timeStamp.Equals(story.Quizzes[i].PlayTime))
                     {
                         player.Pause();
                         QuizButton.IsVisible = true;
                         playAudio = false;
-                        quizNum++;
+                        button.IsVisible = false;
+                        button2.IsVisible = true;
+                        Content = oldContent;
+                        storyImage.HeightRequest = 150;
+                        fullScreen = false;
                     }
                 }
                 audioFromTimer = false;
             };
 
-            
-
-            Title = "Basic Slider Code";
-            //Padding = new Thickness(10, 10);
             StackLayout audio = new StackLayout
             {
                 Orientation = StackOrientation.Horizontal,
@@ -156,15 +188,7 @@ namespace BrainyStories
             TopStack.Children.Add(storyImage);
             TopStack.Children.Add(slider);
             TopStack.Children.Add(audio);
-            //Content = new StackLayout
-            //{
-            //    Children =
-            //    {
-            //        storyImage,
-            //        slider,
-            //        audio
-            //    }
-            //};
+            oldContent = Content;
         }
 
        protected void ChangePage(Story story)

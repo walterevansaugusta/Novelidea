@@ -39,7 +39,7 @@
             <Label x:Name="QuestionTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Grid x:Name="pageGrid" Padding="0,0,0,0" Margin="20,0,20,20">
+            <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
