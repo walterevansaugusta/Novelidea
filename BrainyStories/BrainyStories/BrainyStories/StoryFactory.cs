@@ -350,7 +350,7 @@ namespace BrainyStories {
                 },
                     AudioClip = "S1_TLATM_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse"),
-                    Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse") //COPY PASTE INTO OTHERS TO GENERATE QUIZZES
+                    Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse")
                 };
             }
             else if (storyName.Equals("The Little Red Hen"))
@@ -360,7 +360,7 @@ namespace BrainyStories {
                     Name = "The Little Red Hen",
                     Icon = "S2_LRH_1.jpg",
                     Appeal = AppealType.Animal,
-                    QuizNum = 4,
+                    QuizNum = 3,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 3, 14),
                     WordCount = 477,
@@ -377,7 +377,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 56), "S2_LRH_7.jpg" }
                 },
                     AudioClip = "S2_LRH_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Little Red Hen") 
                 };
             }
             else if (storyName.Equals("The Boy Who Cried Wolf"))
@@ -406,7 +407,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 43), "S3_TBWCW_9.jpg" }
                 },
                     AudioClip = "S3_BWCW_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Boy Who Cried Wolf")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Boy Who Cried Wolf"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Boy Who Cried Wolf") 
                 };
             }
             else if (storyName.Equals("The Elves and Shoemaker"))
@@ -416,7 +418,7 @@ namespace BrainyStories {
                     Name = "The Elves and Shoemaker",
                     Icon = "S4_TEATS_1.jpg",
                     Appeal = AppealType.General,
-                    QuizNum = 3,
+                    QuizNum = 4,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 6, 06),
                     WordCount = 830,
@@ -434,7 +436,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 4, 57), "S4_TEATS_8.jpg" }
                 },
                     AudioClip = "S4_TEATS_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Elves and the Shoemaker")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Elves and Shoemaker"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Elves and Shoemaker")
                 };
             }
             else if (storyName.Equals("The Three Little Pigs"))
@@ -467,7 +470,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 31), "S5_TLP_13.jpg" }
                 },
                     AudioClip = "S5_TLP_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Little Pigs")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Little Pigs"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Three Little Pigs")
                 };
             }
             else if (storyName.Equals("The Three Billy Goats Gruff"))
@@ -477,7 +481,7 @@ namespace BrainyStories {
                     Name = "The Three Billy Goats Gruff",
                     Icon = "S6_BGG_1.jpg",
                     Appeal = AppealType.Animal,
-                    QuizNum = 3, //TODO: DON'T KNOW HOW MANY QUIZZES
+                    QuizNum = 3,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 6, 38),
                     WordCount = 891,
