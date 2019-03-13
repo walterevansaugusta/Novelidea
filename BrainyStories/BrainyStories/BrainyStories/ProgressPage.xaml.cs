@@ -1,6 +1,7 @@
 ﻿using BrainyStories.Objects;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,7 +17,10 @@ namespace BrainyStories
         public ProgressPage()
         {
             InitializeComponent();
-            User.Stories.Add(new StoryFactory().generateStories().ToArray()[0]);
+            //BindingContext = new User()0;
+            Debug.Print(User.StoryCount.ToString());
+            User.StoriesRead.Add(new StoryFactory().generateStories().ToArray()[0]);
+            Debug.Print(User.StoryCount.ToString());
         }
 
         private void IndividualClicked(object sender, EventArgs e)
