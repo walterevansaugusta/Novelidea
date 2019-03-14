@@ -22,6 +22,7 @@ namespace BrainyStories
 
         public EndOfStory (Story story)
 		{
+            User.StoriesRead.Add(story);
             ListOfThinkAndDos = story.ThinkAndDos;
             ListOfQuizzes = story.Quizzes;
             InitializeComponent ();
