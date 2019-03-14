@@ -489,7 +489,7 @@ namespace BrainyStories
                             QuestionText = "Question 1: A cobbler is another name for a what?",
                             AnswerArray = new ObservableCollection<string>() { "a shoemaker", "a laundress", "a judge", "a hunter" },
                             AnswerSelected = new Dictionary<string, bool>() { { "a shoemaker", false }, { "a laundress", false }, { "a judge", false }, { "a hunter", false} },
-                            CorrectAnswer = "shoemaker"
+                            CorrectAnswer = "a shoemaker"
                         },
                         new Question()
                         {
