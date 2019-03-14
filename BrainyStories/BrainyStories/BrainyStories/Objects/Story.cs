@@ -5,6 +5,7 @@ using Xamarin.Forms;
 using BrainyStories.Objects;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 
 namespace BrainyStories
 {
@@ -49,11 +50,20 @@ namespace BrainyStories
         // Dictionary of cues for picture transition to pictures
         public Dictionary<TimeSpan, String> PictureCues { get; set; }
 
-        //Think and do list
-        public ObservableCollection<ThinkAndDo> ThinkAndDos { get; set; }
+        // Think and do list
+        public ObservableCollection<ThinkAndDo> ThinkAndDos { get; set; } = new ObservableCollection<ThinkAndDo>();
 
-        //Quiz list
-        public ObservableCollection<Quiz> Quizzes { get; set; }
+        // Number of think and do's that have been completed
+        public int NumCompletedThinkAndDos { get { return ThinkAndDos.Count(t => t.Completed); } }
+
+        // Quiz list
+        public ObservableCollection<Quiz> Quizzes { get; set; } = new ObservableCollection<Quiz>();
+
+        // Number of quizzes that have been completed
+        public int NumCompletedQuizzes { get { return Quizzes.Count(q => q.NumAttemptsQuiz > 0); } }
+
+        // Average score of completed quizzes, or 0 if there are no completed quizzes
+        public double QuizAvgScore { get { return NumCompletedQuizzes > 0 ? Quizzes.Average(q => q.Score) : 0; } }
 
         //String for audio file
         public String AudioClip { get; set; }

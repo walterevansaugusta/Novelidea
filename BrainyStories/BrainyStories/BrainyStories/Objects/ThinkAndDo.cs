@@ -5,6 +5,8 @@ using System.Text;
 namespace BrainyStories.Objects {
     public class ThinkAndDo {
 
+        public static String Icon { get; } = "ThinkAndDoIcon.png";
+
         //String for Name
         public String ThinkAndDoName { get; set; }
 
@@ -16,5 +18,7 @@ namespace BrainyStories.Objects {
 
         //String for audio file
         public TimeSpan Length { get; set; }
+
+        public bool Completed { get; set; } = false;
     }
 }

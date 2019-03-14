@@ -309,11 +309,11 @@ namespace BrainyStories {
             }
             for (int i = 0; i < quizNum; i++)
             {
-                images.Add( "QuizzesIcon.png");
+                images.Add(Quiz.Icon);
             }
             for (int i = 0; i < thinkAndDoNum; i++)
             {
-                images.Add("ThinkAndDoIcon.png");
+                images.Add(ThinkAndDo.Icon);
             }
             return images;
         }
