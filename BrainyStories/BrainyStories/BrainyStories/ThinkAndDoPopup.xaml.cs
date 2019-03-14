@@ -18,6 +18,7 @@ namespace BrainyStories
         {
             InitializeComponent();
             ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
+            thinkAndDo.Completed = true;
             Button button = new Button()
             {
                 Text = "Pause"
