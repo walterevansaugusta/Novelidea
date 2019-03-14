@@ -1507,6 +1507,8 @@ namespace BrainyStories
                     NumAttemptsQuiz = 0
                 });
             }
+
+            // Quizzes for The Gingerbread Man
             else if (storyName.Equals("The Gingerbread Man"))
             {
                 // Quiz 1
@@ -1809,13 +1811,613 @@ namespace BrainyStories
                     NumAttemptsQuiz = 0
                 });
             }
+
+            // Quizzes for Rumplestiltskin
             else if (storyName.Equals("Rumplestiltskin"))
             {
-                
+                // Quiz 1
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 1",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: What turned the big wooden wheel found in the mill?",
+                            AnswerArray =  new ObservableCollection<string>() { "a horse", "a cow", "water", "wind" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "a horse", false }, { "a cow", false }, { "water", false }, { "wind", false} },
+                            CorrectAnswer = "water"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The mill ground wheat into flour powder for people to cook and make their what?",
+                            AnswerArray =  new ObservableCollection<string>() { "tea", "bread", "pudding", "soup" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tea", false }, { "bread", false }, { "pudding", false }, { "soup", false} },
+                            CorrectAnswer = "bread"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3:The miller said his daughter could spin gold out of what?",
+                            AnswerArray =  new ObservableCollection<string>() { "straw", "cobwebs", "sticks", "ribbons" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "straw", false }, { "cobwebs", false }, { "sticks", false }, {"ribbons", false} },
+                            CorrectAnswer = "straw"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The miller bragged to whom that his daughter could spin gold?",
+                            AnswerArray =  new ObservableCollection<string>() { "robber", "hunter", "doctor", "king" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "robber", false }, { "hunter", false }, { "doctor", false }, {"king", false} },
+                            CorrectAnswer = "king"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: In the king’s chamber there was straw and a big wooden spinning what?",
+                            AnswerArray =  new ObservableCollection<string>() { "wheel", "top", "merry-go-round", "button" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wheel", false }, { "top", false }, { "merry-go-round", false }, {"button", false} },
+                            CorrectAnswer = "wheel"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 0, 32), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 2
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 2",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The king said if the girl didn’t spin straw into gold she would lose her what?",
+                            AnswerArray =  new ObservableCollection<string>() { "lamb", "pancakes", "hearing", "life" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "lamb", false }, { "pancakes", false }, { "hearing", false }, { "life", false} },
+                            CorrectAnswer = "life"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: It didn’t help when the girl said her father had only been what?",
+                            AnswerArray =  new ObservableCollection<string>() { "whistling", "rude", "bragging", "polite" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "whistling", false }, { "rude", false }, { "bragging", false }, { "polite", false} },
+                            CorrectAnswer = "bragging"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The girl promised to give the little man what if he helped her?",
+                            AnswerArray =  new ObservableCollection<string>() { "pie", "necklace", "pennies", "candlestick" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "pie", false }, { "necklace", false }, { "pennies", false }, {"candlestick", false} },
+                            CorrectAnswer = "necklace"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: While he worked the little man whistled and did what?",
+                            AnswerArray =  new ObservableCollection<string>() { "sing", "dance", "read", "tumble" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sing", false }, { "dance", false }, { "read", false }, {"tumble", false} },
+                            CorrectAnswer = "sing"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: What word rhymes with behold?",
+                            AnswerArray =  new ObservableCollection<string>() { "straw", "gold", "spin", "sillycat" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "straw", false }, { "gold", false }, { "spin", false }, {"sillycat", false} },
+                            CorrectAnswer = "gold"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 42), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 3
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 3",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Whose heart was greedy for gold?",
+                            AnswerArray =  new ObservableCollection<string>() { "king", "grandmother", "miller", "dwarf" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "king", false }, { "grandmother", false }, { "miller", false }, { "dwarf", false} },
+                            CorrectAnswer = "king"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: What did the girl promise the dwarf man the second time?",
+                            AnswerArray =  new ObservableCollection<string>() { "candy", "toys", "bees", "ring" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "candy", false }, { "toys", false }, { "bees", false }, { "ring", false} },
+                            CorrectAnswer = "ring"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The king said if the girl spun more gold he would make her what?",
+                            AnswerArray =  new ObservableCollection<string>() { "judge", "queen", "doctor", "dancer" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "judge", false }, { "queen", false }, { "doctor", false }, {"dancer", false} },
+                            CorrectAnswer = "queen"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The third time what does the girl say she has left to give the dwarf man?",
+                            AnswerArray =  new ObservableCollection<string>() { "boat", "robot", "nothing", "marionette" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "boat", false }, { "robot", false }, { "nothing", false }, {"marionette", false} },
+                            CorrectAnswer = "nothing"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The dwarf man says the girl must give him her first little what?",
+                            AnswerArray =  new ObservableCollection<string>() { "kitten", "puppy", "child", "doll" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "kitten", false }, { "puppy", false }, { "child", false }, {"doll", false} },
+                            CorrectAnswer = "child"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 3, 20), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 4
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 4",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The miller’s daughter really did become what?",
+                            AnswerArray =  new ObservableCollection<string>() { "judge", "doctor", "queen", "dancer" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "judge", false }, { "doctor", false }, { "queen", false }, { "dancer", false} },
+                            CorrectAnswer = "queen"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: When her first child was born, the girl forgot the promise she made to what person?",
+                            AnswerArray =  new ObservableCollection<string>() { "dwarf", "king", "miller", "grandmother" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "dwarf", false }, { "king", false }, { "miller", false }, {"grandmother", false} },
+                            CorrectAnswer = "dwarf"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: When the dwarf man came back how did the girl feel?",
+                            AnswerArray =  new ObservableCollection<string>() { "cold", "hungry", "proud", "sad" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cold", false }, { "hungry", false }, { "proud", false }, {"sad", false} },
+                            CorrectAnswer = "sad"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The dwarf man gave the girl how many days to wait?",
+                            AnswerArray =  new ObservableCollection<string>() { "3", "6", "9", "12" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "3", false }, { "6", false }, { "9", false }, {"12", false} },
+                            CorrectAnswer = "3"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The dwarf man said she could keep the child if she could tell the dwarf man his what?",
+                            AnswerArray =  new ObservableCollection<string>() { "story", "rhyme", "pets", "name" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "story", false }, { "rhyme", false }, { "pets", false }, {"name", false} },
+                            CorrectAnswer = "name"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 4, 52), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 5
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 5",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Which time did the queen guess the names Timothy, Ichabod, Benjamin, Jeremiah?",
+                            AnswerArray =  new ObservableCollection<string>() { "first", "third", "last", "never" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "first", false }, { "third", false }, { "last", false }, { "never", false} },
+                            CorrectAnswer = "first"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Which time did the queen guess the names Bowlegs, Numbskull, Goofball?",
+                            AnswerArray =  new ObservableCollection<string>() { "first", "second", "last", "never" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "first", false }, { "second", false }, { "last", false }, { "never", false} },
+                            CorrectAnswer = "second"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The messenger saw a man in front of a little what that was made of thorn sticks and branches?",
+                            AnswerArray =  new ObservableCollection<string>() { "see-saw", "gate", "hut", "tower" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "see-saw", false }, { "gate", false }, { "hut", false }, {"tower", false} },
+                            CorrectAnswer = "hut"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The dwarf man was dancing round about a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "bicycle", "clown", "fire", "grasshopper" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bicycle", false }, { "clown", false }, { "fire", false }, {"grasshopper", false} },
+                            CorrectAnswer = "fire"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The dwarf man sang that his name was what?",
+                            AnswerArray =  new ObservableCollection<string>() { "Sillycat", "Rumplestiltskin", "Grumpybear", "Kertyschoo" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Sillycat", false }, { "Rumplestiltskin", false }, { "Grumpybear", false }, {"Kertyschoo", false} },
+                            CorrectAnswer = "Rumplestiltskin"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 6, 22), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 6
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "Rumplestiltskin Quiz 6",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: When the dwarf man came the third time the girl sat on her what?",
+                            AnswerArray =  new ObservableCollection<string>() { "bed", "blanket", "throne", "tricycle" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bed", false }, { "blanket", false }, { "throne", false }, { "tricycle", false} },
+                            CorrectAnswer = "throne"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: On the last day the queen’s first guess was?",
+                            AnswerArray =  new ObservableCollection<string>() { "Sunil", "Luis", "Khalid", "John" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Sunil", false }, { "Luis", false }, { "Khalid", false }, { "John", false} },
+                            CorrectAnswer = "John"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Rumplestiltskin said what kind of person told the girl his name?",
+                            AnswerArray =  new ObservableCollection<string>() { "laundress", "witch", "mermaid", "fairy" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "laundress", false }, { "witch", false }, { "mermaid", false }, {"fairy", false} },
+                            CorrectAnswer = "witch"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Rumplestiltskin slammed what part of his body deep into the floor?",
+                            AnswerArray =  new ObservableCollection<string>() { "nose", "tongue", "foot", "elbow" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "nose", false }, { "tongue", false }, { "foot", false }, {"elbow", false} },
+                            CorrectAnswer = "foot"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Who in the story disappeared and was never seen again?",
+                            AnswerArray =  new ObservableCollection<string>() { "king", "Rumplestiltskin", "queen", "baby" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "king", false }, { "Rumplestiltskin", false }, { "queen", false }, {"baby", false} },
+                            CorrectAnswer = "Rumplestiltskin"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 7, 34), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
             }
+
+            // Quizzes for the Little Red Riding Hood
             else if (storyName.Equals("Little Red Riding Hood"))
             {
-                
+                // Quiz 1
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 1",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Who gave the little girl a red cape and hood?",
+                            AnswerArray =  new ObservableCollection<string>() { "wolf", "grandmother", "pixie", "elf" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wolf", false }, { "grandmother", false }, { "pixie", false }, { "elf", false} },
+                            CorrectAnswer = "grandmother"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Her mother asked the girl to take the grandmother some milk and a piece of what?",
+                            AnswerArray =  new ObservableCollection<string>() { "cake", "pumpkin", "cheese", "ribbon" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cake", false }, { "pumpkin", false }, { "cheese", false }, { "ribbon", false} },
+                            CorrectAnswer = "cake"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The grandmother was feeling what?",
+                            AnswerArray =  new ObservableCollection<string>() { "ticklish", "clumsy", "sick", "forgetful" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "ticklish", false }, { "clumsy", false }, { "sick", false }, {"forgetful", false} },
+                            CorrectAnswer = "sick"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The mother told the girl not to run off the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "bridge", "ice", "waterfall", "path" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bridge", false }, { "ice", false }, { "waterfall", false }, {"path", false} },
+                            CorrectAnswer = "path"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The little girl promised her mother to be what?",
+                            AnswerArray =  new ObservableCollection<string>() { "careful", "rude", "funny", "quiet" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "careful", false }, { "rude", false }, { "funny", false }, {"quiet", false} },
+                            CorrectAnswer = "careful"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 0, 32), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 2
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 2",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Little Red Riding Hood met the wolf when she entered the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "town", "barn", "wood", "playground" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "town", false }, { "barn", false }, { "wood", false }, { "playground", false} },
+                            CorrectAnswer = "wood"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Little Red Riding Hood wasn’t afraid of the wolf because she didn’t know the wolf was what?",
+                            AnswerArray =  new ObservableCollection<string>() { "funny", "bored", "sweet", "wicked" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "funny", false }, { "bored", false }, { "sweet", false }, { "wicked", false} },
+                            CorrectAnswer = "wicked"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The grandmother’s house stands near three large what?",
+                            AnswerArray =  new ObservableCollection<string>() { "trees", "swings", "puddles", "ditches" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "trees", false }, { "swings", false }, { "puddles", false }, {"ditches", false} },
+                            CorrectAnswer = "trees"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The wolf thought who would be especially delicious?",
+                            AnswerArray =  new ObservableCollection<string>() { "grandmother", "cat", "Red Riding Hood", "huntsman" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandmother", false }, { "cat", false }, { "Red Riding Hood", false }, {"huntsman", false} },
+                            CorrectAnswer = "Red Riding Hood"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The wolf decided he must be very crafty and what?",
+                            AnswerArray =  new ObservableCollection<string>() { "simple", "sweet", "rude", "sneaky" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "simple", false }, { "sweet", false }, { "rude", false }, {"sneaky", false} },
+                            CorrectAnswer = "sneaky"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 3, 00), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 3
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 3",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The wolf told Little Red Riding Hood to look at the pretty what?",
+                            AnswerArray =  new ObservableCollection<string>() { "flowers", "balloon", "moon", "necklace" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "flowers", false }, { "balloon", false }, { "moon", false }, { "necklace", false} },
+                            CorrectAnswer = "flowers"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The wolf told Little Red Riding Hood what animals were singing sweetly?",
+                            AnswerArray =  new ObservableCollection<string>() { "alligators", "giraffes", "birds", "worms" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "alligators", false }, { "giraffes", false }, { "birds", false }, { "worms", false} },
+                            CorrectAnswer = "birds"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Little Red Riding Hood decided to gather what for her mother?",
+                            AnswerArray =  new ObservableCollection<string>() { "plums", "flowers", "blueberries", "bees" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "plums", false }, { "flowers", false }, { "blueberries", false }, {"bees", false} },
+                            CorrectAnswer = "flowers"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Little Red Riding Hood ran off the what into the woods?",
+                            AnswerArray =  new ObservableCollection<string>() { "mountain", "playground", "path", "stepladder" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "mountain", false }, { "playground", false }, { "path", false }, {"stepladder", false} },
+                            CorrectAnswer = "path"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The wolf told the grandmother that he was what person?",
+                            AnswerArray =  new ObservableCollection<string>() { "wolf", "king", "huntsman", "Red Riding Hood" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wolf", false }, { "king", false }, { "huntsman", false }, {"Red Riding Hood", false} },
+                            CorrectAnswer = "Red Riding Hood"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 4, 13), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 4
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 4",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Who did the wolf first devour and eat up completely?",
+                            AnswerArray =  new ObservableCollection<string>() { "grandmother", "cat", "queen", "huntsman" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandmother", false }, { "cat", false }, { "queen", false }, { "huntsman", false} },
+                            CorrectAnswer = "grandmother"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The curtains went completely around the grandmother’s what?",
+                            AnswerArray =  new ObservableCollection<string>() { "table", "bed", "oven", "chimney" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "table", false }, { "bed", false }, { "oven", false }, { "chimney", false} },
+                            CorrectAnswer = "bed"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The wolf put on the grandmother’s cap and what?",
+                            AnswerArray =  new ObservableCollection<string>() { "backpack", "sunglasses", "mittens", "nightgown" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "backpack", false }, { "sunglasses", false }, { "mittens", false }, {"nightgown", false} },
+                            CorrectAnswer = "nightgown"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Little Red Riding Hood was surprised to find the cottage-door what?",
+                            AnswerArray =  new ObservableCollection<string>() { "wet", "painted", "open", "whistling" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wet", false }, { "painted", false }, { "open", false }, {"whistling", false} },
+                            CorrectAnswer = "open"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Little Red Riding Hood first said grandmother had big what?",
+                            AnswerArray =  new ObservableCollection<string>() { "whiskers", "paws", "ears", "horns" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "whiskers", false }, { "paws", false }, { "ears", false }, {"horns", false} },
+                            CorrectAnswer = "ears"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 5
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 5",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: After ears, Little Red Riding Hood next said grandmother had big what?",
+                            AnswerArray =  new ObservableCollection<string>() { "whiskers", "legs", "eyes", "flippers" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "whiskers", false }, { "legs", false }, { "eyes", false }, {"flippers", false} },
+                            CorrectAnswer = "eyes"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The wolf said that his big hairy hands were all the better to do what with?",
+                            AnswerArray =  new ObservableCollection<string>() { "hug", "scratch", "tease", "trick" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "hug", false }, { "scratch", false }, { "tease", false }, { "trick", false} },
+                            CorrectAnswer = "hug"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: After hands,  Little Red Riding Hood next said grandmother had a big what?",
+                            AnswerArray =  new ObservableCollection<string>() { "tummy", "tail", "rump", "mouth" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tummy", false }, { "tail", false }, { "rump", false }, {"mouth", false} },
+                            CorrectAnswer = "mouth"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The wolf went to sleep and began to make what noise?",
+                            AnswerArray =  new ObservableCollection<string>() { "whistle", "cry", "snore", "burp" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "whistle", false }, { "cry", false }, { "snore", false }, {"burp", false} },
+                            CorrectAnswer = "snore"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Who found the wolf sleeping in grandmother’s bed?",
+                            AnswerArray =  new ObservableCollection<string>() { "judge", "huntsman", "grandfather", "queen" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "judge", false }, { "huntsman", false }, { "grandfather", false }, {"queen", false} },
+                            CorrectAnswer = "huntsman"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 6, 50), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 6
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Little Red Riding Hood Quiz 6",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: What did the Huntsman have but not use to kill the wolf?",
+                            AnswerArray =  new ObservableCollection<string>() { "rope", "gun", "knife", "stone" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "rope", false }, { "gun", false }, { "knife", false }, {"stone", false} },
+                            CorrectAnswer = "gun"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The Huntsman used the grandmother’s what to cut open the wolf?",
+                            AnswerArray =  new ObservableCollection<string>() { "scissors", "clippers", "fingernails", "saw" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "scissors", false }, { "clippers", false }, { "fingernails", false }, { "saw", false} },
+                            CorrectAnswer = "scissors"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Little Red Riding Hood fetched great what to put in the wolf’s belly?",
+                            AnswerArray =  new ObservableCollection<string>() { "cucumbers", "jellyfish", "stones", "onions" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cucumbers", false }, { "jellyfish", false }, { "stones", false }, {"onions", false} },
+                            CorrectAnswer = "stones"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: When the Huntsman didn’t just shoot the wolf, but thought maybe someone might be saved inside the wolf’s tummy, the Huntsman was being what?",
+                            AnswerArray =  new ObservableCollection<string>() { "cranky", "forgetful", "clumsy", "smart" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cranky", false }, { "forgetful", false }, { "clumsy", false }, {"smart", false} },
+                            CorrectAnswer = "smart"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Little Red Riding Hood got into trouble because she disobeyed her mother and left the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "garden", "playground", "bridge", "path" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "garden", false }, { "playground", false }, { "bridge", false }, {"path", false} },
+                            CorrectAnswer = "path"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 8, 34), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
             }
             return QuizTemp;
         }
