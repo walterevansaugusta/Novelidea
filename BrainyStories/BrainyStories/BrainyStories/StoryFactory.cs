@@ -505,7 +505,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 30), "S6_BGG_14.jpg" }
                 },
                     AudioClip = "S6_BGG_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Billy Goats Gruff")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Billy Goats Gruff"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Three Billy Goats Gruff")
                 };
             }
             else if (storyName.Equals("The Tale of Peter Rabbit"))
@@ -550,7 +551,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 25), "S7_PR_25.jpg" }
                 },
                     AudioClip = "S7_PR_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Tale of Peter Rabbit")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Tale of Peter Rabbit"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Tale of Peter Rabbit")
                 };
             }
             else if (storyName.Equals("The Gingerbread Man"))
@@ -581,7 +583,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 7, 23), "S8_TGM_11.jpg" }
                 },
                     AudioClip = "S8_TGM_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Gingerbread Man")
                 };
             }
             else if (storyName.Equals("Rumplestiltskin"))
@@ -620,7 +623,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 8, 06), "S9_R_19.jpg" }
                 },
                     AudioClip = "S9_R_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin"),
+                    Quizzes = quizFactory.GenerateQuizzes("Rumplestiltskin")
                 };
             }
             else if (storyName.Equals("Little Red Riding Hood"))
@@ -656,7 +660,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 8, 34), "S10_LRRH_16.jpg" }
                 },
                     AudioClip = "S9_R_Story.mp3", //TODO: NEED TO GET STORY 10 (LRRH) AUDIO
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood"),
+                    Quizzes = quizFactory.GenerateQuizzes("Little Red Riding Hood")
                 };
             }
             else if (storyName.Equals("If A Shoe Wanted to be Car"))

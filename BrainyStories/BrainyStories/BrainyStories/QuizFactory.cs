@@ -61,7 +61,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 0, 49), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -111,7 +111,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 1, 02), // TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -161,7 +161,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 2, 30), // TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
             }
@@ -215,7 +215,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 0, 24), // TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -265,7 +265,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 0, 55), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -315,7 +315,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 1, 36), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
             }
@@ -369,7 +369,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 0, 34), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -419,7 +419,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 2, 59), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -469,7 +469,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 3, 43), //TODO: might need to change time
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
             }
@@ -699,7 +699,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 1, 05), //TODO: might need to change time
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -756,7 +756,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 2, 19), //TODO: might need to change time
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -813,7 +813,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 3, 12), //TODO: might need to change time
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -870,7 +870,7 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 5, 58), //TODO: might need to change time
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
 
@@ -927,21 +927,887 @@ namespace BrainyStories
                     PlayTime = new TimeSpan(0, 6, 11), //TODO: might need to change time
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0, 0, 0, 0},
                     NumAttemptsQuiz = 0
                 });
             }
             else if (storyName.Equals("The Three Billy Goats Gruff"))
             {
-                
+                // Quiz 1
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Three Billy Goats Gruff Quiz 1",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The goats lived first in a pasture of alfalfa what?",
+                            AnswerArray = new ObservableCollection<string>() { "straw", "grass", "bushes", "cat-tails" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "straw", false }, { "grass", false }, { "bushes", false }, { "cat-tails", false} },
+                            CorrectAnswer = "grass"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The goats wanted to go to a meadow with delicious green what?",
+                            AnswerArray =  new ObservableCollection<string>() { "clover", "oats", "wheat", "lettuce" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "clover", false }, { "oats", false }, { "wheat", false }, { "lettuce", false} },
+                            CorrectAnswer = "clover"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Between the hill of alfalfa and the green meadow what was there to walk on?",
+                            AnswerArray =  new ObservableCollection<string>() { "a tree", "a puddle", "a stone", "a bridge" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "a tree", false }, { "a puddle", false }, { "a stone", false }, {"a bridge", false} },
+                            CorrectAnswer = "a bridge"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Under the bridge was a mischievous what?",
+                            AnswerArray =  new ObservableCollection<string>() { "chimp", "alligator", "troll", "girl" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "chimp", false }, { "alligator", false }, { "troll", false }, {"girl", false} },
+                            CorrectAnswer = "troll"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Which Billy Goat Gruff was the first one to cross the bridge?",
+                            AnswerArray =  new ObservableCollection<string>() { "Little", "Middle-sized", "Big", "None" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, {"triangles", false} },
+                            CorrectAnswer = "Little"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: Billy Goat Gruff made the clip-clop sound with his what?",
+                            AnswerArray =  new ObservableCollection<string>() { "horns", "nose", "hoofs", "tail" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "horns", false }, { "nose", false }, { "hoofs", false }, {"tail", false} },
+                            CorrectAnswer = "hoofs"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 30), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 2
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Three Billy Goats Gruff Quiz 2",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The first part of the troll Little Billy Goat Gruff saw was the troll’s crooked, bumpy what?",
+                            AnswerArray = new ObservableCollection<string>() { "nose", "finger", "toes", "tongue" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "nose", false }, { "finger", false }, { "toes", false }, { "tongues", false} },
+                            CorrectAnswer = "finger"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The troll’s long hairy nose was what color?",
+                            AnswerArray =  new ObservableCollection<string>() { "red", "yellow", "blue", "green" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "red", false }, { "yellow", false }, { "blue", false }, { "green", false} },
+                            CorrectAnswer = "green"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The troll’s dirty black what smelled terribly foul?",
+                            AnswerArray =  new ObservableCollection<string>() { "teeth", "hair", "feet", "ears" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "teeth", false }, { "hair", false }, { "feet", false }, {"ears", false} },
+                            CorrectAnswer = "teeth"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Little Billy Goat Gruff says the troll should not eat him because he is so what?",
+                            AnswerArray =  new ObservableCollection<string>() { "sour", "wet", "crunchy", "small" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sour", false }, { "wet", false }, { "crunchy", false }, {"small", false} },
+                            CorrectAnswer = "small"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Little Billy Goat Gruff tells the troll to wait for which Billy Goat Gruff?",
+                            AnswerArray =  new ObservableCollection<string>() { "Momma", "Middle-sized", "Big", "Poppa" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Momma", false }, { "Middle-sized", false }, { "Big", false }, {"Poppa", false} },
+                            CorrectAnswer = "Middle-sized"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: When he speaks to the troll Little Billy Goat Gruff’s behavior is what?",
+                            AnswerArray =  new ObservableCollection<string>() { "angry", "funny", "polite", "wild" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "angry", false }, { "funny", false }, { "polite", false }, {"wild", false} },
+                            CorrectAnswer = "polite"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 2, 30), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 3
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Three Billy Goats Gruff Quiz 3",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Little Billy Goat Gruff tells the troll that his brother is much what?",
+                            AnswerArray = new ObservableCollection<string>() { "sweeter", "nicer", "bigger", "friendlier" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sweeter", false }, { "nicer", false }, { "bigger", false }, { "friendlier", false} },
+                            CorrectAnswer = "bigger"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The troll agrees to eat Little Billy Goat Gruff when?",
+                            AnswerArray =  new ObservableCollection<string>() { "now", "later", "never", "Christmas" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "now", false }, { "later", false }, { "never", false }, { "Christmas", false} },
+                            CorrectAnswer = "later"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Which Billy Goat Gruff was the second Billy Goat Gruff to cross the bridge?",
+                            AnswerArray =  new ObservableCollection<string>() { "Little", "Big", "Poppa", "Middle-sized" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Big", false }, { "Poppa", false }, {"Middle-sized", false} },
+                            CorrectAnswer = "Middle-sized"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The troll had three long black hairs growing out of a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "mole", "ear", "toe", "nose" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "mole", false }, { "ear", false }, { "toe", false }, {"nose", false} },
+                            CorrectAnswer = "mole"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The troll had big floppy what that made a shadow on the bridge?",
+                            AnswerArray =  new ObservableCollection<string>() { "toenails", "eyes", "ears", "fingers" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "toenails", false }, { "eyes", false }, { "ears", false }, {"fingers", false} },
+                            CorrectAnswer = "ears"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: The troll slobbered spit on what?",
+                            AnswerArray =  new ObservableCollection<string>() { "tree", "bridge", "waterfall", "dunebuggy" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tree", false }, { "bridge", false }, { "waterfall", false }, {"dunebuggy", false} },
+                            CorrectAnswer = "bridge"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 3, 30), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 4
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Three Billy Goats Gruff Quiz 4",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Middle-size Billy Goat Gruff tells the troll to wait for him to get what?",
+                            AnswerArray = new ObservableCollection<string>() { "sweeter", "nicer", "tastier", "bigger" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sweeter", false }, { "nicer", false }, { "tastier", false }, { "bigger", false} },
+                            CorrectAnswer = "bigger"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Middle-size Billy Goat Gruff says the troll should eat which Billy Goat Gruff now?",
+                            AnswerArray =  new ObservableCollection<string>() { "Little", "Middle-sized", "Big", "none" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, { "none", false} },
+                            CorrectAnswer = "Big"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: What color was the troll’s face?",
+                            AnswerArray =  new ObservableCollection<string>() { "blue", "green", "orange", "yellow" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "blue", false }, { "green", false }, { "orange", false }, {"yellow", false} },
+                            CorrectAnswer = "green"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: What color were the troll’s eyes?",
+                            AnswerArray =  new ObservableCollection<string>() { "red", "blue", "brown", "yellow" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "red", false }, { "blue", false }, { "brown", false }, {"yellow", false} },
+                            CorrectAnswer = "red"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Which Billy Goat Gruff was the last Billy Goat Gruff to cross the bridge?",
+                            AnswerArray =  new ObservableCollection<string>() { "Poppa", "Momma", "Middle-sized", "Big" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Poppa", false }, { "Momma", false }, { "Middle-sized", false }, {"Big", false} },
+                            CorrectAnswer = "Big"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: Big Billy Goat Gruff says he is which brother?",
+                            AnswerArray =  new ObservableCollection<string>() { "youngest", "middle", "eldest", "sweetest" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "youngest", false }, { "middle", false }, { "eldest", false }, {"sweetest", false} },
+                            CorrectAnswer = "eldest"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 4, 30), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 5
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Three Billy Goats Gruff Quiz 5",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The troll says he intends to do what to Big Billy Goat Gruff?",
+                            AnswerArray = new ObservableCollection<string>() { "scold", "eat", "kiss", "hug" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "scold", false }, { "eat", false }, { "kiss", false }, { "hug", false} },
+                            CorrectAnswer = "eat"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: What part of the troll curled in circles and scratched lines on the bridge?",
+                            AnswerArray =  new ObservableCollection<string>() { "toenails", "horn", "nose", "knees" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "toenails", false }, { "horn", false }, { "nose", false }, { "knees", false} },
+                            CorrectAnswer = "toenails"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Nasty weeds grew from dirt deep in the troll’s what?",
+                            AnswerArray =  new ObservableCollection<string>() { "ears", "nose", "tummy-button", "mustache" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "ears", false }, { "nose", false }, { "tummy-button", false }, {"mustache", false} },
+                            CorrectAnswer = "tummy-button"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: When the troll said he’d eat Big Billy Goat Gruff and his brothers what did Big Billy Goat Gruff say?",
+                            AnswerArray =  new ObservableCollection<string>() { "yikes", "help", "wow", "nothing" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "yikes", false }, { "help", false }, { "wow", false }, {"nothing", false} },
+                            CorrectAnswer = "nothing"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Big Billy Goat Gruff hit the troll with his curvy what?",
+                            AnswerArray =  new ObservableCollection<string>() { "tongue", "horns", "hoofs", "tail" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tongue", false }, { "horns", false }, { "hoofs", false }, {"tail", false} },
+                            CorrectAnswer = "horns"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: Big Billy Goat Gruff blasted the troll to what?",
+                            AnswerArray =  new ObservableCollection<string>() { "smithereens", "perdition", "Timbuktu", "tomorrow" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "smithereens", false }, { "perdition", false }, { "Timbuktu", false }, {"tomorrow", false} },
+                            CorrectAnswer = "smithereens"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
             }
+
+            // Quizzes for The Tale of Peter Rabbit
             else if (storyName.Equals("The Tale of Peter Rabbit"))
             {
-                
+                // Quiz 1
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Tale of Peter Tabbit Quiz 1",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Peter’s sisters were named Flopsy, Mopsy, and what?",
+                            AnswerArray = new ObservableCollection<string>() { "Thumper", "Etticoat", "Cottontail", "Pixie" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Thumper", false }, { "Etticoat", false }, { "Cottontail", false }, { "Pixie", false} },
+                            CorrectAnswer = "Cottontail"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Their mother told them not to go into Mr. McGregor’s what?",
+                            AnswerArray =  new ObservableCollection<string>() { "haystack", "garden", "firetruck", "kayak" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "haystack", false }, { "garden", false }, { "firetruck", false }, { "kayak", false} },
+                            CorrectAnswer = "garden"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Their mother told them that Mrs. McGregor put their father into a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "pie", "tent", "wheelbarrow", "basket" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "pie", false }, { "tent", false }, { "wheelbarrow", false }, {"basket", false} },
+                            CorrectAnswer = "pie"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: At the baker’s their mother bought a loaf of what color bread?",
+                            AnswerArray =  new ObservableCollection<string>() { "red", "yellow", "orange", "brown" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "red", false }, { "yellow", false }, { "orange", false }, {"brown", false} },
+                            CorrectAnswer = "brown"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: In the picture Peter’s mother carries a basket and a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "balloon", "clock", "umbrella", "frog" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "balloon", false }, { "clock", false }, { "umbrella", false }, {"frog", false} },
+                            CorrectAnswer = "umbrella"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: Peter’s good little sisters went down the lane to gather what?",
+                            AnswerArray =  new ObservableCollection<string>() { "worms", "blackberries", "eggs", "flowers" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "worms", false }, { "blackberries", false }, { "eggs", false }, {"flowers", false} },
+                            CorrectAnswer = "blackberries"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 01), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 2
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Tale of Peter Tabbit Quiz 2",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Peter went to Mr. McGregor’s and squeezed under the what?",
+                            AnswerArray = new ObservableCollection<string>() { "wheelbarrow", "bulldozer", "gate", "elephant" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wheelbarrow", false }, { "bulldozer", false }, { "gate", false }, { "elephant", false} },
+                            CorrectAnswer = "gate"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: First Peter ate some what and some French Beans?",
+                            AnswerArray =  new ObservableCollection<string>() { "lettuce", "watermelon", "onions", "bacon" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "lettuce", false }, { "watermelon", false }, { "onions", false }, { "bacon", false} },
+                            CorrectAnswer = "lettuce"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: In the picture what sits on a shovel handle and looks down at Peter eating a carrot?",
+                            AnswerArray =  new ObservableCollection<string>() { "lizard", "bird", "chimp", "octopus" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "lizard", false }, { "bird", false }, { "chimp", false }, {"octopus", false} },
+                            CorrectAnswer = "bird"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Peter went to look for some parsley leaves because he felt what?",
+                            AnswerArray =  new ObservableCollection<string>() { "thirsty", "forgetful", "sick", "clumsy" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "thirsty", false }, { "forgetful", false }, { "sick", false }, {"clumsy", false} },
+                            CorrectAnswer = "sick"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Mr. McGregor waved a rake and called Peter a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "friend", "sillycat", "grumpybear", "thief" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "friend", false }, { "sillycat", false }, { "grumpybear", false }, {"thief", false} },
+                            CorrectAnswer = "thief"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: What did Peter lose among the cabbages and potatoes?",
+                            AnswerArray =  new ObservableCollection<string>() { "shoes", "skateboard", "hat", "rocket" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "shoes", false }, { "skateboard", false }, { "hat", false }, {"rocket", false} },
+                            CorrectAnswer = "shoes"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 45), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 3
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Tale of Peter Tabbit Quiz 3",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: What color was Peter’s jacket?",
+                            AnswerArray = new ObservableCollection<string>() { "red", "yellow", "blue", "brown" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "red", false }, { "yellow", false }, { "blue", false }, { "brown", false} },
+                            CorrectAnswer = "blue"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Peter’s sobs were heard by some friendly what?",
+                            AnswerArray =  new ObservableCollection<string>() { "pigs", "sparrows", "bones", "spiders" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "pigs", false }, { "sparrows", false }, { "bones", false }, { "spiders", false} },
+                            CorrectAnswer = "sparrows"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Peter jumped into a can which had what in it?",
+                            AnswerArray =  new ObservableCollection<string>() { "water", "straw", "cobwebs", "ice" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "water", false }, { "straw", false }, { "cobwebs", false }, {"ice", false} },
+                            CorrectAnswer = "water"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: In the picture what part of Peter sticks out of the watering can?",
+                            AnswerArray =  new ObservableCollection<string>() { "nose", "paws", "tail", "ears" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "nose", false }, { "paws", false }, { "tail", false }, {"ears", false} },
+                            CorrectAnswer = "ears"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Mr. McGregor thought Peter might be hiding under a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "cup", "flower-pot", "wheelbarrow", "giraffe" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cup", false }, { "flower-pot", false }, { "wheelbarrow", false }, {"giraffe", false} },
+                            CorrectAnswer = "flower-pot"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: What sound did Peter make when he sneezed?",
+                            AnswerArray =  new ObservableCollection<string>() { "dickery", "jiggety", "kertyschoo", "burp" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "dickery", false }, { "jiggety", false }, { "kertyschoo", false }, {"burp", false} },
+                            CorrectAnswer = "kertyschoo"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 3, 17), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 4
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Tale of Peter Tabbit Quiz 4",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: What animal did Peter see carrying peas and beans to her family in the wood?",
+                            AnswerArray = new ObservableCollection<string>() { "tiger", "panda", "turtle", "mouse" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tiger", false }, { "panda", false }, { "turtle", false }, { "mouse", false} },
+                            CorrectAnswer = "mouse"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: When the mouse with the pea didn’t help him Peter began to do what?",
+                            AnswerArray =  new ObservableCollection<string>() { "skip", "cry", "snort", "yell" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "skip", false }, { "cry", false }, { "snort", false }, { "yell", false} },
+                            CorrectAnswer = "cry"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: What white animal was staring at some goldfish?",
+                            AnswerArray =  new ObservableCollection<string>() { "cat", "spider", "calf", "squirrel" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cat", false }, { "spider", false }, { "calf", false }, {"squirrel", false} },
+                            CorrectAnswer = "cat"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: What did Peter hear that made the noise:  scr-r-ritch, scratch, scratch, scritch?",
+                            AnswerArray =  new ObservableCollection<string>() { "turtle", "fish", "hoe", "pixie" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "turtle", false }, { "fish", false }, { "hoe", false }, {"pixie", false} },
+                            CorrectAnswer = "hoe"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Peter climbed on what and peeped over to see Mr. McGregor?",
+                            AnswerArray =  new ObservableCollection<string>() { "calf", "hippo", "wheelbarrow", "refrigerator" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "calf", false }, { "hippo", false }, { "wheelbarrow", false }, {"refrigerator", false} },
+                            CorrectAnswer = "wheelbarrow"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: Beyond Mr. McGregor Peter saw the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "broom", "gate", "boat", "guitar" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "broom", false }, { "gate", false }, { "boat", false }, {"guitar", false} },
+                            CorrectAnswer = "gate"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 4, 42), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 5
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Tale of Peter Tabbit Quiz 5",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Peter ran fast as he could along a straight walk behind some blackcurrant what?",
+                            AnswerArray = new ObservableCollection<string>() { "bushes", "pies", "dishes", "umbrellas" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bushes", false }, { "pies", false }, { "dishes", false }, { "mouse", false} },
+                            CorrectAnswer = "bushes"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Mr. McGregor hung up the little jacket and shoes to frighten whom?",
+                            AnswerArray =  new ObservableCollection<string>() { "jellyfish", "giraffes", "blackbirds", "pelicans" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "jellyfish", false }, { "giraffes", false }, { "blackbirds", false }, { "pelicans", false} },
+                            CorrectAnswer = "blackbirds"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: In the evening Peter’s mother made him go to what?",
+                            AnswerArray =  new ObservableCollection<string>() { "the doctor", "bed", "a judge", "dance" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "the doctor", false }, { "bed", false }, { "a judge", false }, {"dance", false} },
+                            CorrectAnswer = "bed"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: His mother made Peter take a dose of camomile what?",
+                            AnswerArray =  new ObservableCollection<string>() { "water", "soup", "grass", "tea" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "water", false }, { "soup", false }, { "grass", false }, {"tea", false} },
+                            CorrectAnswer = "tea"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5:  Flopsy, Mopsy and Cottontail had bread and milk and what for supper?",
+                            AnswerArray =  new ObservableCollection<string>() { "lemons", "plums", "blackberries", "apricots" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "lemons", false }, { "plums", false }, { "blackberries", false }, {"apricots", false} },
+                            CorrectAnswer = "blackberries"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 6: When Peter had to take a dose of camomile instead of getting milk and blackberries for supper he probably felt what?",
+                            AnswerArray =  new ObservableCollection<string>() { "sorry", "happy", "frightened", "proud" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sorry", false }, { "happy", false }, { "frightened", false }, {"proud", false} },
+                            CorrectAnswer = "sorry"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 6, 25), //TODO: might need to change time
+                    NumQuestions = 6,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
             }
             else if (storyName.Equals("The Gingerbread Man"))
             {
-               
+                // Quiz 1
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 1",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Who baked the Gingerbread Man?",
+                            AnswerArray = new ObservableCollection<string>() { "grandfather", "grandmother", "piper", "mouse" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandfather", false }, { "grandmother", false }, { "piper", false }, { "mouse", false} },
+                            CorrectAnswer = "grandmother"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The Gingerbread Man had raisins for what?",
+                            AnswerArray =  new ObservableCollection<string>() { "hands", "mouth", "eyes", "toes" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "hands", false }, { "mouth", false }, { "eyes", false }, { "toes", false} },
+                            CorrectAnswer = "eyes"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: A mischievous pixie sprinkled magic pixie dust in the can that held the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "bacon", "ginger", "pudding", "grasshopper" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bacon", false }, { "ginger", false }, { "pudding", false }, {"grasshopper", false} },
+                            CorrectAnswer = "ginger"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The Gingerbread Man says, “You can’t do what to me”?",
+                            AnswerArray =  new ObservableCollection<string>() { "help", "catch", "lie", "scold" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "help", false }, { "catch", false }, { "lie", false }, {"scold", false} },
+                            CorrectAnswer = "catch"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Who first asks, “Please, let me have a nibble?”",
+                            AnswerArray =  new ObservableCollection<string>() { "grandfather", "lion", "calf", "T-Rex" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandfather", false }, { "lion", false }, { "calf", false }, {"T-Rex", false} },
+                            CorrectAnswer = "grandfather"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 07), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 2
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 2",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: Who was just behind the grandfather chasing the Gingerbread Man?",
+                            AnswerArray = new ObservableCollection<string>() { "hog", "grandmother", "fisherman", "policewoman" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "hog", false }, { "grandmother", false }, { "fisherman", false }, { "policewoman", false} },
+                            CorrectAnswer = "grandmother"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: Who swatted at the Gingerbread Man and asked for one quick lick?",
+                            AnswerArray =  new ObservableCollection<string>() { "judge", "sheep", "cat", "hippo" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "judge", false }, { "sheep", false }, { "cat", false }, { "hippo", false} },
+                            CorrectAnswer = "cat"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The Gingerbread Man called the cat whisker-what?",
+                            AnswerArray =  new ObservableCollection<string>() { "face", "tail", "toes", "tummy" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "face", false }, { "tail", false }, { "toes", false }, {"tummy", false} },
+                            CorrectAnswer = "face"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The Gingerbread Man leapt and landed square in the middle of whose back?",
+                            AnswerArray =  new ObservableCollection<string>() { "squirrel", "clown", "dog", "plumber" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "squirrel", false }, { "clown", false }, { "dog", false }, {"plumber", false} },
+                            CorrectAnswer = "dog"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: What was the dog doing before the Gingerbread Man ran past?",
+                            AnswerArray =  new ObservableCollection<string>() { "dancing", "washing", "tumbling", "sleeping" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "dancing", false }, { "washing", false }, { "tumbling", false }, {"sleeping", false} },
+                            CorrectAnswer = "sleeping"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 1, 47), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 3
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 3",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The Gingerbread Man calls the dog a flea-bitten bag of what?",
+                            AnswerArray = new ObservableCollection<string>() { "eggs", "balloons", "bones", "straw" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "eggs", false }, { "balloons", false }, { "bones", false }, { "straw", false} },
+                            CorrectAnswer = "bones"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The Gingerbread Man made what kind of sound with his tongue and lips?",
+                            AnswerArray =  new ObservableCollection<string>() { "sweet", "rude", "polite", "sad" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sweet", false }, { "rude", false }, { "polite", false }, { "sad", false} },
+                            CorrectAnswer = "rude"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The Gingerbread Man says the dog is even slower than the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "cat", "rabbit", "calf", "rhinoceros" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "cat", false }, { "rabbit", false }, { "calf", false }, {"rhinoceros", false} },
+                            CorrectAnswer = "cat"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: At the barn what was drowsing and chewing its cud?",
+                            AnswerArray =  new ObservableCollection<string>() { "spider", "turtle", "cow", "zebra" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "spider", false }, { "turtle", false }, { "cow", false }, {"zebra", false} },
+                            CorrectAnswer = "cow"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: What animal is grazing in the pasture and gets called hay-breath?",
+                            AnswerArray =  new ObservableCollection<string>() { "sheep", "horse", "lion", "rattlesnake" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sheep", false }, { "horse", false }, { "lion", false }, {"rattlesnake", false} },
+                            CorrectAnswer = "horse"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 3, 27), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 4
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 4",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: What boy does the Gingerbread Man call goofy-looking and flat-footed?",
+                            AnswerArray = new ObservableCollection<string>() { "blacksmith", "cobbler", "shepherd", "munchkin" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "blacksmith", false }, { "cobbler", false }, { "shepherd", false }, { "munchkin", false} },
+                            CorrectAnswer = "shepherd"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The Gingerbread Man halted when he came to a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "playground", "circuis", "tunnel", "river" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "playground", false }, { "circuis", false }, { "tunnel", false }, { "river", false} },
+                            CorrectAnswer = "river"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The Gingerbread Man knew he couldn’t do what?",
+                            AnswerArray =  new ObservableCollection<string>() { "skip", "swim", "see-saw", "spell" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "skip", false }, { "swim", false }, { "see-saw", false }, {"spell", false} },
+                            CorrectAnswer = "swim"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: What animal did the Gingerbread Man see by a blackberry bush?",
+                            AnswerArray =  new ObservableCollection<string>() { "crocodile", "fox", "beaver", "robin" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "crocodile", false }, { "fox", false }, { "beaver", false }, {"robin", false} },
+                            CorrectAnswer = "fox"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The Gingerbread Man thought about racing to look for a what?",
+                            AnswerArray =  new ObservableCollection<string>() { "wheelbarrow", "oven", "bridge", "garden" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "wheelbarrow", false }, { "oven", false }, { "bridge", false }, {"garden", false} },
+                            CorrectAnswer = "bridge"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 4, 55), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 5
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 5",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The fox said he’d just dined on a fine fat what?",
+                            AnswerArray = new ObservableCollection<string>() { "bone", "rabbit", "taco", "sandwich" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "bone", false }, { "rabbit", false }, { "taco", false }, { "sandwich", false} },
+                            CorrectAnswer = "rabbit"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The fox said for the Gingerbread Man to hop on the fox’s what?",
+                            AnswerArray =  new ObservableCollection<string>() { "tail", "shoulder", "rump", "paw" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tail", false }, { "shoulder", false }, { "rump", false }, { "paw", false} },
+                            CorrectAnswer = "tail"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: The fox said he would do what to cross the river?",
+                            AnswerArray =  new ObservableCollection<string>() { "skate", "swim", "sail", "jump" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "skate", false }, { "swim", false }, { "sail", false }, {"jump", false} },
+                            CorrectAnswer = "swim"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: The fox said he would lift the Gingerbread Man above the what?",
+                            AnswerArray =  new ObservableCollection<string>() { "boat", "stone", "water", "bridge" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "boat", false }, { "stone", false }, { "water", false }, {"bridge", false} },
+                            CorrectAnswer = "water"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: The Gingerbread Man told the fox, no what?",
+                            AnswerArray =  new ObservableCollection<string>() { "money", "crying", "dancing", "tricks" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "money", false }, { "crying", false }, { "dancing", false }, {"tricks", false} },
+                            CorrectAnswer = "tricks"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
+
+                // Quiz 6
+                QuizTemp.Add(new Quiz()
+                {
+                    QuizName = "The Gingerbread Man Quiz 6",
+                    Score = 0,
+                    Questions = new ObservableCollection<Question>()
+                    {
+                        new Question()
+                        {
+                            QuestionText = "Question 1: The fox said hop on his back because what was getting wet and sinking?",
+                            AnswerArray =  new ObservableCollection<string>() { "tail", "shoulder", "whiskers", "leg" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tail", false }, { "shoulder", false }, { "whiskers", false }, { "leg", false} },
+                            CorrectAnswer = "tail"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 2: The fox told the Gingerbread Man to hop on the tip of his what?",
+                            AnswerArray =  new ObservableCollection<string>() { "ear", "nose", "rump", "paw" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "ear", false }, { "nose", false }, { "rump", false }, { "paw", false} },
+                            CorrectAnswer = "nose"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 3: Who was rude and impolite to almost everybody else in the story?",
+                            AnswerArray =  new ObservableCollection<string>() { "dog", "grandmother", "cow", "Gingerbead Man" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "dog", false }, { "grandmother", false }, { "cow", false }, {"Gingerbread Man", false} },
+                            CorrectAnswer = "Gingerbread Man"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 4: Who was quicker than everyone else in the story?",
+                            AnswerArray =  new ObservableCollection<string>() { "grandfather", "fox", "cat", "Gingerbread Man" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandfather", false }, { "fox", false }, { "cat", false }, {"Gingerbread Man", false} },
+                            CorrectAnswer = "fox"
+                        },
+                        new Question()
+                        {
+                            QuestionText = "Question 5: Who was the trickiest one of all in the story?",
+                            AnswerArray =  new ObservableCollection<string>() { "horse", "Gingerbread Man", "fox", "cat" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "horse", false }, { "Gingerbread Man", false }, { "fox", false }, {"cat", false} },
+                            CorrectAnswer = "fox"
+                        }
+                    },
+                    PlayTime = new TimeSpan(0, 7, 23), //TODO: might need to change time
+                    NumQuestions = 5,
+                    NumAttempts = new ObservableCollection<int>()
+                    { 0, 0, 0, 0, 0 },
+                    NumAttemptsQuiz = 0
+                });
             }
             else if (storyName.Equals("Rumplestiltskin"))
             {
