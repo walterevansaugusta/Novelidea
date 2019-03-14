@@ -360,7 +360,7 @@ namespace BrainyStories {
                     Name = "The Little Red Hen",
                     Icon = "S2_LRH_1.jpg",
                     Appeal = AppealType.Animal,
-                    QuizNum = 4,
+                    QuizNum = 3,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 3, 14),
                     WordCount = 477,
@@ -377,7 +377,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 56), "S2_LRH_7.jpg" }
                 },
                     AudioClip = "S2_LRH_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Little Red Hen") 
                 };
             }
             else if (storyName.Equals("The Boy Who Cried Wolf"))
@@ -406,7 +407,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 43), "S3_TBWCW_9.jpg" }
                 },
                     AudioClip = "S3_BWCW_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Boy Who Cried Wolf")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Boy Who Cried Wolf"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Boy Who Cried Wolf") 
                 };
             }
             else if (storyName.Equals("The Elves and Shoemaker"))
@@ -416,7 +418,7 @@ namespace BrainyStories {
                     Name = "The Elves and Shoemaker",
                     Icon = "S4_TEATS_1.jpg",
                     Appeal = AppealType.General,
-                    QuizNum = 3,
+                    QuizNum = 4,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 6, 06),
                     WordCount = 830,
@@ -434,7 +436,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 4, 57), "S4_TEATS_8.jpg" }
                 },
                     AudioClip = "S4_TEATS_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Elves and the Shoemaker")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Elves and Shoemaker"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Elves and Shoemaker")
                 };
             }
             else if (storyName.Equals("The Three Little Pigs"))
@@ -467,7 +470,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 31), "S5_TLP_13.jpg" }
                 },
                     AudioClip = "S5_TLP_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Little Pigs")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Little Pigs"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Three Little Pigs")
                 };
             }
             else if (storyName.Equals("The Three Billy Goats Gruff"))
@@ -477,7 +481,7 @@ namespace BrainyStories {
                     Name = "The Three Billy Goats Gruff",
                     Icon = "S6_BGG_1.jpg",
                     Appeal = AppealType.Animal,
-                    QuizNum = 3, //TODO: DON'T KNOW HOW MANY QUIZZES
+                    QuizNum = 5,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 6, 38),
                     WordCount = 891,
@@ -501,7 +505,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 30), "S6_BGG_14.jpg" }
                 },
                     AudioClip = "S6_BGG_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Three Billy Goats Gruff")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Billy Goats Gruff"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Three Billy Goats Gruff")
                 };
             }
             else if (storyName.Equals("The Tale of Peter Rabbit"))
@@ -546,7 +551,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 6, 25), "S7_PR_25.jpg" }
                 },
                     AudioClip = "S7_PR_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Tale of Peter Rabbit")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Tale of Peter Rabbit"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Tale of Peter Rabbit")
                 };
             }
             else if (storyName.Equals("The Gingerbread Man"))
@@ -556,7 +562,7 @@ namespace BrainyStories {
                     Name = "The Gingerbread Man",
                     Icon = "S8_TGM_1.jpg",
                     Appeal = AppealType.General,
-                    QuizNum = 5,
+                    QuizNum = 6,
                     ThinkDoNum = 1,
                     Duration = new TimeSpan(0, 7, 39),
                     WordCount = 1095,
@@ -577,7 +583,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 7, 23), "S8_TGM_11.jpg" }
                 },
                     AudioClip = "S8_TGM_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man"),
+                    Quizzes = quizFactory.GenerateQuizzes("The Gingerbread Man")
                 };
             }
             else if (storyName.Equals("Rumplestiltskin"))
@@ -616,7 +623,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 8, 06), "S9_R_19.jpg" }
                 },
                     AudioClip = "S9_R_Story.mp3",
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin"),
+                    Quizzes = quizFactory.GenerateQuizzes("Rumplestiltskin")
                 };
             }
             else if (storyName.Equals("Little Red Riding Hood"))
@@ -652,7 +660,8 @@ namespace BrainyStories {
                    { new TimeSpan(0, 8, 34), "S10_LRRH_16.jpg" }
                 },
                     AudioClip = "S9_R_Story.mp3", //TODO: NEED TO GET STORY 10 (LRRH) AUDIO
-                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood")
+                    ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood"),
+                    Quizzes = quizFactory.GenerateQuizzes("Little Red Riding Hood")
                 };
             }
             else if (storyName.Equals("If A Shoe Wanted to be Car"))
@@ -663,7 +672,7 @@ namespace BrainyStories {
                     Icon = "I1_IASW_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 1, 47),
                     WordCount = 212,
                     Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
@@ -686,7 +695,7 @@ namespace BrainyStories {
                     Icon = "I2_DYPYL_1.jpg",
                     Appeal = AppealType.Male,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 1, 48),
                     WordCount = 206,
                     Description = "Imagine swinging as high as trees, birds, clouds, or even higher, what it might feel like, what you might see.",
@@ -711,7 +720,7 @@ namespace BrainyStories {
                     Icon = "I3_TUDW_1.jpg",
                     Appeal = AppealType.Female,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 1, 59),
                     WordCount = 248,
                     Description = "Imagine wandering into a world where everything is upside down and backwards.",
@@ -734,6 +743,8 @@ namespace BrainyStories {
                     Name = "The Special One-Eye Blink",
                     Icon = "I4_TSOEB_1.jpg",
                     Appeal = AppealType.Female,
+                    QuizNum = 0,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 06),
                     WordCount = 304,
                     Description = "Imagine blinking to become very tiny and what you might be able to do if you were very, very small.",
@@ -757,7 +768,7 @@ namespace BrainyStories {
                     Icon = "I5_IANA_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 32),
                     WordCount = 399,
                     Description = "Imagine what you’d say if a little angel asked your advice on how to be a tiny bit mischievous.",
@@ -781,7 +792,7 @@ namespace BrainyStories {
                     Icon = "I6_DTBAK_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 40),
                     WordCount = 326,
                     Description = "Imagine what it might be like to be a kitten.",
@@ -810,7 +821,7 @@ namespace BrainyStories {
                     Icon = "I7_NBTY_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 40),
                     WordCount = 352,
                     Description = "Always remember, nobody’s better than you.",
@@ -842,7 +853,7 @@ namespace BrainyStories {
                     Icon = "I8_IAPOD_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 45),
                     WordCount = 350,
                     Description = "Imagine some of the things you might help a sad, lonely, bored piece of dirt become.",
@@ -867,7 +878,7 @@ namespace BrainyStories {
                     Icon = "I9_IFP_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 3, 44),
                     WordCount = 396,
                     Description = "Imagine the kind of home fairies might create for themselves if they wanted.",
@@ -893,7 +904,7 @@ namespace BrainyStories {
                     Icon = "I10_DYLB_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 0,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 0,
                     Duration = new TimeSpan(0, 2, 30),
                     WordCount = 344,
                     Description = "Imagine blowing bubbles in a sink or bathtub.",
