@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainyStories.ProgressIndividualPage"
+             xmlns:local="clr-namespace:BrainyStories.Objects"
+             Title="Individual">
+    <ContentPage.Content>
+        <ListView x:Name="individualLayout"
+                          ItemsSource="{x:Static local:User.StoriesRead}"
+                          SelectionMode="None"
+                          HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal"
+                                     HorizontalOptions="FillAndExpand">
+                            <Image Source="{Binding Icon, Mode=OneWay}"
+                                   HeightRequest="100"
+                                   HorizontalOptions="Start"/>
+                            <StackLayout Orientation="Vertical"
+                                             x:Name="verticalStackLayout"
+                                         HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Name, Mode=OneWay}"
+                                            FontAttributes="Bold"
+                                       FontSize="25"
+                                       HorizontalOptions="Center"
+                                       HorizontalTextAlignment="Center"/>
+                                <Label HorizontalOptions="Center"
+                                       FontSize="18">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding NumCompletedQuizzes, StringFormat='\{0} out of'}" />
+                                            <Span Text="{Binding QuizNum, StringFormat=' \{0} quizzes'}" />
+                                            <Span Text="{Binding QuizAvgScore, StringFormat=' with average score {0}'}" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+
+                                <Label HorizontalOptions="Center"
+                                       FontSize="18">
+                                    <Label.FormattedText>
+                                        <FormattedString>
+                                            <Span Text="{Binding NumCompletedThinkAndDos, StringFormat='\{0} out of'}" />
+                                            <Span Text="{Binding ThinkDoNum, StringFormat=' \{0}'}" />
+                                            <Span Text=" Think &amp; Do's" />
+                                        </FormattedString>
+                                    </Label.FormattedText>
+                                </Label>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>
