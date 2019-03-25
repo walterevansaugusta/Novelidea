@@ -11,12 +11,12 @@ using Xamarin.Forms.Xaml;
 
 namespace BrainyStories
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ProgressPage : TabbedPage
-    {
-        public ProgressPage()
-        {
-            InitializeComponent();
-        }
-    }
+	[XamlCompilation(XamlCompilationOptions.Compile)]
+	public partial class ProgressIndividualPage : ContentPage
+	{
+		public ProgressIndividualPage ()
+		{
+			InitializeComponent ();
+		}
+	}
 }

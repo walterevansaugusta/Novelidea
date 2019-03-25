@@ -86,6 +86,7 @@
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
                     VerticalOptions="Center"
+                    Clicked="ProgressClicked"
                     Grid.Row="2"
                     Grid.Column="2"
                     Grid.ColumnSpan="1"

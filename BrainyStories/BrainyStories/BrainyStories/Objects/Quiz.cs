@@ -20,6 +20,7 @@ namespace BrainyStories.Objects {
 
     }
     public class Quiz {
+        public static string Icon { get; } = "QuizzesIcon.png";
 
         // The name of th quiz
         public string QuizName { get; set; }
