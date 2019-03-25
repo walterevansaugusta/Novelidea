@@ -57,5 +57,10 @@ namespace BrainyStories {
         {
             await Navigation.PushAsync(new ProgressPage());
         }
+
+        async void RewardsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RewardsPage());
+        }
     }
 }

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BrainyStories.RewardsPage">
+    <ContentPage.Content>
+        <!--<StackLayout x:Name="VerticalLayout"
+                     Orientation="Vertical">
+            <StackLayout x:Name="GoldList"
+                         Orientation="Horizontal">
+            </StackLayout>
+            <StackLayout x:Name="SilverList"
+                         Orientation="Horizontal">
+            </StackLayout>
+            <StackLayout x:Name="BronzeList"
+                         Orientation="Horizontal">
+            </StackLayout>
+        </StackLayout>-->
+        <Grid x:Name="medalGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackLayout x:Name="GoldList"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         Orientation="Horizontal"/>
+            <StackLayout x:Name="SilverList"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         Orientation="Horizontal"/>
+            <StackLayout x:Name="BronzeList"
+                         Grid.Row="2"
+                         Grid.Column="0"
+                         Orientation="Horizontal"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -18,6 +18,7 @@ namespace BrainyStories
         private int QuestionNum = 0;
         private int QuestionsCorrect = 0;
         private Quiz quiz;
+        private User user;
 
         public QuizPage(Quiz temp)
         {
@@ -101,17 +102,26 @@ namespace BrainyStories
         private void CheckAnswer(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
+            quiz.NumAttempts[QuestionNum]++;
             if (clicked.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
                 clicked.BackgroundColor = Color.Green;
                 QuestionsCorrect++;
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
-                // something with rewards / score
+                if (quiz.NumAttempts[QuestionNum] == 1)
+                {
+                    user.rewardsRecieved["Gold"]++;
+                } else if (quiz.NumAttempts[QuestionNum] == 2)
+                {
+                    user.rewardsRecieved["Silver"]++;
+                } else
+                {
+                    user.rewardsRecieved["Bronze"]++;
+                }
             } else
             {
                 clicked.BackgroundColor = Color.Red;
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
             }
-            quiz.NumAttempts[QuestionNum]++;
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
         }
 
