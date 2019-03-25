@@ -80,7 +80,8 @@
                     Grid.Column="0"
                     Grid.ColumnSpan="1"
                     Image="Rewards.png"
-                    ContentLayout="Left"/>
+                    ContentLayout="Left"
+                    Clicked="RewardsClicked"/>
             <Button Text="Progress"
                     FontSize="12"
                     TextColor="White"
