@@ -25,6 +25,9 @@ namespace BrainyStories.Objects {
         // The name of th quiz
         public string QuizName { get; set; }
 
+        //String for Associated Story
+        public String AssociatedImage { get; set; }
+
         // the score for the quiz
         public int Score { get; set; }
 

@@ -98,6 +98,7 @@
                     TextColor="White"
                     BackgroundColor="#6F2DBD"
                     VerticalOptions="Center"
+                    Clicked="QuizzesClicked"
                     Grid.Row="2"
                     Grid.Column="1"
                     Grid.ColumnSpan="1"

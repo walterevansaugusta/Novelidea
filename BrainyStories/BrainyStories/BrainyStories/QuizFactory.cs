@@ -19,6 +19,7 @@ namespace BrainyStories
                QuizTemp.Add( new Quiz()
                 {
                     QuizName = "The Lion and the Mouse Quiz 1",
+                    AssociatedImage = "S1_LATM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -69,6 +70,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Lion and the Mouse Quiz 2",
+                    AssociatedImage = "S1_LATM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -119,6 +121,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Lion and the Mouse Quiz 3",
+                    AssociatedImage = "S1_LATM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -173,6 +176,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 1",
+                    AssociatedImage = "S2_LRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -223,6 +227,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 2",
+                    AssociatedImage = "S2_LRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -273,6 +278,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 3",
+                    AssociatedImage = "S2_LRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -327,6 +333,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Boy Who Cried Wolf Quiz 1",
+                    AssociatedImage = "S3_TBWCW_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -377,6 +384,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Boy Who Cried Wolf Quiz 2",
+                    AssociatedImage = "S3_TBWCW_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -427,6 +435,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Boy Who Cried Wolf Quiz 3",
+                    AssociatedImage = "S3_TBWCW_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -481,6 +490,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Elves and the Shoemaker Quiz 1",
+                    AssociatedImage = "S4_TEATS_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -524,6 +534,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Elves and the Shoemaker Quiz 2",
+                    AssociatedImage = "S4_TEATS_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -567,6 +578,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Elves and the Shoemaker Quiz 3",
+                    AssociatedImage = "S4_TEATS_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -610,6 +622,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Elves and the Shoemaker Quiz 4",
+                    AssociatedImage = "S4_TEATS_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -650,6 +663,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 1",
+                    AssociatedImage = "S5_TLP_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -707,6 +721,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 2",
+                    AssociatedImage = "S5_TLP_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -764,6 +779,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 3",
+                    AssociatedImage = "S5_TLP_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -821,6 +837,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 4",
+                    AssociatedImage = "S5_TLP_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -878,6 +895,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 5",
+                    AssociatedImage = "S5_TLP_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -937,6 +955,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Billy Goats Gruff Quiz 1",
+                    AssociatedImage = "S6_BGG_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -994,6 +1013,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Billy Goats Gruff Quiz 2",
+                    AssociatedImage = "S6_BGG_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1051,6 +1071,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Billy Goats Gruff Quiz 3",
+                    AssociatedImage = "S6_BGG_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1108,6 +1129,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Billy Goats Gruff Quiz 4",
+                    AssociatedImage = "S6_BGG_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1165,6 +1187,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Billy Goats Gruff Quiz 5",
+                    AssociatedImage = "S6_BGG_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1226,6 +1249,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 1",
+                    AssociatedImage = "S7_PR_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1283,6 +1307,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 2",
+                    AssociatedImage = "S7_PR_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1340,6 +1365,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 3",
+                    AssociatedImage = "S7_PR_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1397,6 +1423,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 4",
+                    AssociatedImage = "S7_PR_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1454,6 +1481,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 5",
+                    AssociatedImage = "S7_PR_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1515,6 +1543,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 1",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1565,6 +1594,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 2",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1615,6 +1645,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 3",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1665,6 +1696,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 4",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1715,6 +1747,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 5",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1765,6 +1798,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Gingerbread Man Quiz 6",
+                    AssociatedImage = "S8_TGM_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1819,6 +1853,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 1",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1869,6 +1904,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 2",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1919,6 +1955,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 3",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1969,6 +2006,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 4",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2019,6 +2057,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 5",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2069,6 +2108,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "Rumplestiltskin Quiz 6",
+                    AssociatedImage = "S9_R_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2123,6 +2163,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 1",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2173,6 +2214,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 2",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2223,6 +2265,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 3",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2273,6 +2316,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 4",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2323,6 +2367,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 5",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -2373,6 +2418,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Riding Hood Quiz 6",
+                    AssociatedImage = "S10_LRRH_1.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
