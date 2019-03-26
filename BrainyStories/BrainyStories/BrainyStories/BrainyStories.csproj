@@ -16,6 +16,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="QuizList.xaml.cs">
+      <DependentUpon>QuizList.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ProgressPage.xaml.cs">
       <DependentUpon>ProgressPage.xaml</DependentUpon>
     </Compile>
@@ -23,6 +26,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="EndOfStory.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="QuizList.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="ProgressIndividualPage.xaml">

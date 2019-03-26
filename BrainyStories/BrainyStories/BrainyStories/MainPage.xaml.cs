@@ -25,17 +25,25 @@ namespace BrainyStories {
             await Navigation.PushAsync(new TableOfContents(true));
         }
 
-        // Stories TOC
+        // Stories Table of Contents Page Button
         // Argument: True = Imagines, False = Stories
         async void StoriesClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TableOfContents(false));
         }
         
+        // Think and Do List Page Button
         async void ThinkAndDoClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ThinkAndDoList());
         }
+
+        // Quiz List Page Button
+        async void QuizzesClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new QuizList());
+        }
+
         // Navbar methods
         async void BackClicked(object sender, EventArgs e)
         {
