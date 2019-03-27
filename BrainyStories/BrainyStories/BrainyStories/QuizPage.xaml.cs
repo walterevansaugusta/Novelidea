@@ -34,6 +34,7 @@ namespace BrainyStories
             Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
             Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
             PreviousButton.IsVisible = false;
+            user = User.Instance;
         }
 
         private void PreviousQuestion(object sender, EventArgs e)
@@ -109,13 +110,13 @@ namespace BrainyStories
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
                 if (quiz.NumAttempts[QuestionNum] == 1)
                 {
-                    user.rewardsRecieved["Gold"]++;
+                    user.RewardsRecieved["Gold"]++;
                 } else if (quiz.NumAttempts[QuestionNum] == 2)
                 {
-                    user.rewardsRecieved["Silver"]++;
+                    user.RewardsRecieved["Silver"]++;
                 } else
                 {
-                    user.rewardsRecieved["Bronze"]++;
+                    user.RewardsRecieved["Bronze"]++;
                 }
             } else
             {

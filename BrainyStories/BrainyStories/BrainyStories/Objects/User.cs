@@ -2,25 +2,40 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace BrainyStories.Objects
 {
     class User
     {
-        public string name { get; } = "Your child";
-        public int storiesCompleted { get; } = 12;
-        public int quizzesCompleted { get; } = 10;
-        public int thinkAndDosCompleted { get; } = 23;
-        public string lastStory { get; } = "The Lion and the Mouse";
-        public int lastQuizScore { get; } = 80;
-        public Dictionary<String, int> rewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 3 }, { "Silver", 8 }, { "Bronze", 55 } };
-        public static string Name { get; } = "Your child";
-        public static List<Story> StoriesRead { get; set; } = new List<Story>();
-        public static List<Quiz> QuizzesCompleted { get; set; } = new List<Quiz>();
-        public static List<ThinkAndDo> ThinkAndDosCompleted { get; set; } = new List<ThinkAndDo>();
+        private static User INSTANCE = null;
+        private User()
+        { }
+        public static User Instance {
+            get {
+                if (INSTANCE == null)
+                    INSTANCE = new User();
+                return INSTANCE;
+            }
+        }
 
-        public static int StoryCount { get { return StoriesRead.Count; } }
-        public static int QuizCount { get { return QuizzesCompleted.Count; } }
-        public static int ThinkAndDoCount { get { return ThinkAndDosCompleted.Count; } }
+
+        public Dictionary<String, int> RewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 3 }, { "Silver", 8 }, { "Bronze", 55 } };
+        public string Name { get; } = "Your child";
+        public List<Story> StoriesRead { get; set; } = new List<Story>();
+        public List<Quiz> QuizzesCompleted { get; set; } = new List<Quiz>();
+        public List<ThinkAndDo> ThinkAndDosCompleted { get; set; } = new List<ThinkAndDo>();
+
+        public int StoryCount { get { return StoriesRead.Count; } }
+        public int QuizCount { get { return QuizzesCompleted.Count; } }
+        public int ThinkAndDoCount { get { return ThinkAndDosCompleted.Count; } }
+
+        public void SaveToDisk()
+        {
+            string output = JsonConvert.SerializeObject(this);
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
+            File.WriteAllText(fileName, output);
+        }
     }
 }
