@@ -37,7 +37,7 @@ namespace BrainyStories {
             storyListTemp.Add(new Story
             {
                 Name = "The Little Red Hen",
-                Icon = "S2_LRH_1.jpg",
+                Icon = "S2_LRH_0.jpg",
                 Appeal = AppealType.Animal,
                 QuizNum = 4,
                 ThinkDoNum = 1,
@@ -82,7 +82,7 @@ namespace BrainyStories {
             storyListTemp.Add(new Story
             {
                 Name = "The Three Little Pigs",
-                Icon = "S5_TLP_1.jpg",
+                Icon = "S5_TLP_0.jpg",
                 Appeal = AppealType.Animal,
                 QuizNum = 5,
                 ThinkDoNum = 1,
@@ -112,7 +112,7 @@ namespace BrainyStories {
             storyListTemp.Add(new Story
             {
                 Name = "The Tale of Peter Rabbit",
-                Icon = "S7_PR_1.jpg",
+                Icon = "S7_PR_0.jpg",
                 Appeal = AppealType.Animal,
                 QuizNum = 5,
                 ThinkDoNum = 1,
