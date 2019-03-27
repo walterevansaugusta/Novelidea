@@ -176,7 +176,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 1",
-                    AssociatedImage = "S2_LRH_1.jpg",
+                    AssociatedImage = "S2_LRH_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -227,7 +227,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 2",
-                    AssociatedImage = "S2_LRH_1.jpg",
+                    AssociatedImage = "S2_LRH_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -278,7 +278,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Little Red Hen Quiz 3",
-                    AssociatedImage = "S2_LRH_1.jpg",
+                    AssociatedImage = "S2_LRH_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -663,7 +663,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 1",
-                    AssociatedImage = "S5_TLP_1.jpg",
+                    AssociatedImage = "S5_TLP_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -721,7 +721,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 2",
-                    AssociatedImage = "S5_TLP_1.jpg",
+                    AssociatedImage = "S5_TLP_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -779,7 +779,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 3",
-                    AssociatedImage = "S5_TLP_1.jpg",
+                    AssociatedImage = "S5_TLP_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -837,7 +837,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 4",
-                    AssociatedImage = "S5_TLP_1.jpg",
+                    AssociatedImage = "S5_TLP_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -895,7 +895,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Three Little Pigs Quiz 5",
-                    AssociatedImage = "S5_TLP_1.jpg",
+                    AssociatedImage = "S5_TLP_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -949,6 +949,8 @@ namespace BrainyStories
                     NumAttemptsQuiz = 0
                 });
             }
+
+            // Quizzes for The Three Billy Goats Gruff
             else if (storyName.Equals("The Three Billy Goats Gruff"))
             {
                 // Quiz 1
@@ -1249,7 +1251,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 1",
-                    AssociatedImage = "S7_PR_1.jpg",
+                    AssociatedImage = "S7_PR_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1307,7 +1309,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 2",
-                    AssociatedImage = "S7_PR_1.jpg",
+                    AssociatedImage = "S7_PR_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1365,7 +1367,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 3",
-                    AssociatedImage = "S7_PR_1.jpg",
+                    AssociatedImage = "S7_PR_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1423,7 +1425,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 4",
-                    AssociatedImage = "S7_PR_1.jpg",
+                    AssociatedImage = "S7_PR_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
@@ -1481,7 +1483,7 @@ namespace BrainyStories
                 QuizTemp.Add(new Quiz()
                 {
                     QuizName = "The Tale of Peter Tabbit Quiz 5",
-                    AssociatedImage = "S7_PR_1.jpg",
+                    AssociatedImage = "S7_PR_0.jpg",
                     Score = 0,
                     Questions = new ObservableCollection<Question>()
                     {
