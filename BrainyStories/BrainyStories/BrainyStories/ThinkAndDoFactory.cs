@@ -31,7 +31,7 @@ namespace BrainyStories
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Little Red Hen Think And Do 1",
-                AssociatedImage = "S2_LRH_1.jpg",
+                AssociatedImage = "S2_LRH_0.jpg",
                 ThinkAndDoAudioClip = "S2_LRH_TAD1.mp3",
                 Length = new TimeSpan(0, 0, 29)
             });
@@ -69,14 +69,14 @@ namespace BrainyStories
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Three Little Pigs Think And Do 1",
-                AssociatedImage = "S5_TLP_1.jpg",
+                AssociatedImage = "S5_TLP_0.jpg",
                 ThinkAndDoAudioClip = "S5_TLP_TAD1.mp3",
                 Length = new TimeSpan(0, 0, 34)
             });
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Three Little Pigs Think And Do 2",
-                AssociatedImage = "S5_TLP_1.jpg",
+                AssociatedImage = "S5_TLP_0.jpg",
                 ThinkAndDoAudioClip = "S5_TLP_TAD2.mp3",
                 Length = new TimeSpan(0, 0, 51)
             });
@@ -99,14 +99,14 @@ namespace BrainyStories
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Tales of Peter Rabbit Think And Do 1",
-                AssociatedImage = "S7_PR_1.jpg",
+                AssociatedImage = "S7_PR_0.jpg",
                 ThinkAndDoAudioClip = "S7_PR_TAD1.mp3",
                 Length = new TimeSpan(0, 0, 20)
             });
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Tales of Peter Rabbit Think And Do 2",
-                AssociatedImage = "S7_PR_1.jpg",
+                AssociatedImage = "S7_PR_0.jpg",
                 ThinkAndDoAudioClip = "S7_PR_TAD2.mp3",
                 Length = new TimeSpan(0, 0, 34)
             });
