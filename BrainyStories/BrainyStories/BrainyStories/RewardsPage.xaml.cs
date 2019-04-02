@@ -44,6 +44,8 @@ namespace BrainyStories {
                 Image bronzeCoin = new Image() { Source = "Female.png" };
                 BronzeList.Children.Add(bronzeCoin);
             }
+
+
         }
     }
 }
