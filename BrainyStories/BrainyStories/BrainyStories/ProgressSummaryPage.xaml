@@ -23,7 +23,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout x:Name="introLayout" VerticalOptions="FillAndExpand">
-            <Label Text="{Binding local:User.Instance.Name, StringFormat='\{0} has completed'}" />
+            <Label Text="{Binding Name, StringFormat='\{0} has completed'}" />
             <Grid VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -34,9 +34,9 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding Source=local:User.StoryCount}" Grid.Row="0" Grid.Column="0" Style="{StaticResource completedNum}" />
-                <Label Text="{Binding Source=local:User.QuizCount}" Grid.Row="0" Grid.Column="1" Style="{StaticResource completedNum}" />
-                <Label Text="{Binding Source=local:User.ThinkAndDoCount}" Grid.Row="0" Grid.Column="2" Style="{StaticResource completedNum}" />
+                <Label Text="{Binding StoryCount}" Grid.Row="0" Grid.Column="0" Style="{StaticResource completedNum}" />
+                <Label Text="{Binding QuizCount}" Grid.Row="0" Grid.Column="1" Style="{StaticResource completedNum}" />
+                <Label Text="{Binding ThinkAndDoCount}" Grid.Row="0" Grid.Column="2" Style="{StaticResource completedNum}" />
                 <Label Text="Stories" Grid.Row="1" Grid.Column="0" Style="{StaticResource completedLabel}" />
                 <Label Text="Quizzes" Grid.Row="1" Grid.Column="1" Style="{StaticResource completedLabel}" />
                 <Label Text="Think &amp; Do's" Grid.Row="1" Grid.Column="2" Style="{StaticResource completedLabel}" />

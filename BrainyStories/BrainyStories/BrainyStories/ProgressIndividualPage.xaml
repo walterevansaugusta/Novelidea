@@ -6,7 +6,7 @@
              Title="Individual">
     <ContentPage.Content>
         <ListView x:Name="individualLayout"
-                          ItemsSource="{Binding local:User.Instance.StoriesRead}"
+                          ItemsSource="{Binding StoriesRead}"
                           SelectionMode="None"
                           HasUnevenRows="True">
             <ListView.ItemTemplate>

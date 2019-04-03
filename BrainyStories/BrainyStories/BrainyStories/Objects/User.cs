@@ -9,9 +9,19 @@ namespace BrainyStories.Objects
 {
     class User
     {
+        [JsonIgnore]
         private static User INSTANCE = null;
         private User()
         { }
+        [JsonConstructor]
+        public User(Dictionary<String,int> RewardsRecieved, string Name, List<Story> StoriesRead, List<Quiz> QuizzesCompleted, List<ThinkAndDo> ThinkAndDosCompleted)
+        {
+            this.RewardsRecieved = RewardsRecieved;
+            this.Name = Name;
+            this.StoriesRead = StoriesRead;
+            this.QuizzesCompleted = QuizzesCompleted;
+            this.ThinkAndDosCompleted = ThinkAndDosCompleted;
+        }
         public static User Instance {
             get {
                 if (INSTANCE == null)
@@ -36,6 +46,16 @@ namespace BrainyStories.Objects
             string output = JsonConvert.SerializeObject(this);
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
             File.WriteAllText(fileName, output);
+        }
+
+        public void LoadFromDisk()
+        {
+            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
+            if(File.Exists(fileName))
+            {
+                string input = File.ReadAllText(fileName);
+                INSTANCE = JsonConvert.DeserializeObject<User>(input);
+            }
         }
     }
 }

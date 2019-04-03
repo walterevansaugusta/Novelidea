@@ -14,6 +14,7 @@ namespace BrainyStories {
         public RewardsPage()
         {
             InitializeComponent();
+            Objects.User.Instance.LoadFromDisk();
             User user = User.Instance;
             int numOfBronzeCoins = user.RewardsRecieved["Bronze"];
             int numOfSilverCoins = user.RewardsRecieved["Silver"] + (numOfBronzeCoins / 5);
