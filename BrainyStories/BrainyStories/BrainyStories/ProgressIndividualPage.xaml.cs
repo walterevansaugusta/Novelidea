@@ -16,7 +16,8 @@ namespace BrainyStories
 	{
 		public ProgressIndividualPage ()
 		{
-            InitializeComponent ();
-        }
-    }
+			InitializeComponent ();
+            BindingContext = User.Instance;
+		}
+	}
 }
