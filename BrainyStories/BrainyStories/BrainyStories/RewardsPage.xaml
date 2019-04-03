@@ -3,20 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.RewardsPage">
     <ContentPage.Content>
-        <!--<StackLayout x:Name="VerticalLayout"
-                     Orientation="Vertical">
-            <StackLayout x:Name="GoldList"
-                         Orientation="Horizontal">
-            </StackLayout>
-            <StackLayout x:Name="SilverList"
-                         Orientation="Horizontal">
-            </StackLayout>
-            <StackLayout x:Name="BronzeList"
-                         Orientation="Horizontal">
-            </StackLayout>
-        </StackLayout>-->
         <Grid x:Name="medalGrid">
             <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -36,6 +25,23 @@
                          Grid.Row="2"
                          Grid.Column="0"
                          Orientation="Horizontal"/>
+            <StackLayout x:Name="MedalKey"
+                         Grid.Row="3"
+                         Grid.Column="0"
+                         Orientation="Horizontal">
+                <Label Text="1" VerticalTextAlignment="Center"/>
+                <Image Source="General.png"/>
+                <Label Text="= 5" VerticalTextAlignment="Center"/>
+                <Image Source="Animal.png"/>
+                <Label Text="          1" VerticalTextAlignment="Center"/>
+                <Image Source="Animal.png"/>
+                <Label Text="= 5" VerticalTextAlignment="Center"/>
+                <Image Source="Male.png"/>
+                <Label Text="          1" VerticalTextAlignment="Center"/>
+                <Image Source="Male.png"/>
+                <Label Text="= 5" VerticalTextAlignment="Center"/>
+                <Image Source="Female.png"/>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>
