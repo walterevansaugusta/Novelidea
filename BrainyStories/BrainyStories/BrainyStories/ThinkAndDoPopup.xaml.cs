@@ -18,7 +18,6 @@ namespace BrainyStories
         {
             InitializeComponent();
             ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
-            thinkAndDo.Completed = true;
             Button button = new Button()
             {
                 Text = "Pause"
@@ -37,7 +36,8 @@ namespace BrainyStories
                 Maximum = thinkAndDo.Length.Seconds + (thinkAndDo.Length.Minutes * 60),
                 Minimum = 0,
                 Value = 0,
-                HorizontalOptions = LayoutOptions.FillAndExpand
+                HorizontalOptions = LayoutOptions.FillAndExpand,
+                HeightRequest = 50 // Controls size of area that can grab the slider
             };
            
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
@@ -87,6 +87,11 @@ namespace BrainyStories
                 displayLabel.Text = String.Format("{0}:{1}", minutes, second);
                 var timeStamp = new TimeSpan(0, minutes, seconds);
                 audioFromTimer = false;
+                if (timeStamp.Equals(thinkAndDo.Length))
+                {
+                    thinkAndDo.Completed = true;
+                    User.ThinkAndDosCompleted.Add(thinkAndDo);
+                }
             };
             StackLayout audio = new StackLayout
             {

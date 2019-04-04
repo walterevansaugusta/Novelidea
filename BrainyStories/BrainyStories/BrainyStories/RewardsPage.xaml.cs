@@ -14,10 +14,10 @@ namespace BrainyStories {
         public RewardsPage()
         {
             InitializeComponent();
-            User user = new User();
-            int numOfBronzeCoins = user.rewardsRecieved["Bronze"];
-            int numOfSilverCoins = user.rewardsRecieved["Silver"] + (numOfBronzeCoins / 5);
-            int numOfGoldCoins = user.rewardsRecieved["Gold"] + (numOfSilverCoins / 5);
+            //User user = new User();
+            int numOfBronzeCoins = User.rewardsRecieved["Bronze"];
+            int numOfSilverCoins = User.rewardsRecieved["Silver"] + (numOfBronzeCoins / 5);
+            int numOfGoldCoins = User.rewardsRecieved["Gold"] + (numOfSilverCoins / 5);
             int numOfBags = numOfGoldCoins / 5;
             numOfBronzeCoins = numOfBronzeCoins % 5;
             numOfSilverCoins = numOfSilverCoins % 5;

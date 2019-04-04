@@ -39,6 +39,13 @@
                 <Label Text="Rewards: List of all rewards that have been collected from completed activities" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
                 <Label Text="Quizzes: List of all Quizzes that can be taken associated with stories" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
                 <Label Text="Progress: Information about child's progress in the application" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
+                <Button Text="Return"
+                    FontSize="12"
+                    TextColor="White"
+                    BackgroundColor="#6F2DBD"
+                    VerticalOptions="Center"
+                    Clicked="OnClose"
+                    ContentLayout="Left"/>
             </StackLayout>
         </StackLayout>
     </ScrollView>

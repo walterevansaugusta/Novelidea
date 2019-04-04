@@ -32,21 +32,29 @@
                    HorizontalTextAlignment="Center"
                    TextColor="BlueViolet"
                    FontAttributes="Bold"/>
-            <!--<ListView SeparatorVisibility="None"
+            <ListView SeparatorVisibility="None"
+                      VerticalOptions ="Start"
+                      HasUnevenRows="True"
                       ItemTapped="OnQuizTapped"
                       x:Name="BindQuizList">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <ViewCell.View>
-                                <StackLayout>
-                                    <Label Text ="Quizzes"/>
+                                <StackLayout Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source ="Quizzes.png"
+                                               HeightRequest="100"/>
+                                        <Label Text ="{Binding QuizName}"
+                                               VerticalOptions="Center"
+                                               FontSize="20"/>
+                                    </StackLayout>
                                 </StackLayout>
                             </ViewCell.View>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
-            </ListView>-->
+            </ListView>
             <!--<Button Text="Back To Table of Contents"
                     Clicked="BackToTOC"/>-->
             <ListView SeparatorVisibility="None"
