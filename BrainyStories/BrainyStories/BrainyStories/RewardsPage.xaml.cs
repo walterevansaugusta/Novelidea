@@ -24,24 +24,24 @@ namespace BrainyStories {
             numOfGoldCoins = numOfGoldCoins % 5;
             for (int i = 0; i < numOfBags; i++)
             {
-                Image bag = new Image() { Source = "General.png" };
+                Image bag = new Image() { Source = "Gem.png" };
                 GoldList.Children.Add(bag);
             }
             for (int i = 0; i < numOfGoldCoins; i++)
             {
-                Image goldCoin = new Image() { Source = "Animal.png" };
+                Image goldCoin = new Image() { Source = "Bank.png" };
                 GoldList.Children.Add(goldCoin);
             }
 
             for (int i = 0; i < numOfSilverCoins; i++)
             {
-                Image silverCoin = new Image() { Source = "Male.png" };
+                Image silverCoin = new Image() { Source = "Coins.png" };
                 SilverList.Children.Add(silverCoin);
             }
 
             for (int i = 0; i < numOfBronzeCoins; i++)
             {
-                Image bronzeCoin = new Image() { Source = "Female.png" };
+                Image bronzeCoin = new Image() { Source = "Coin.png" };
                 BronzeList.Children.Add(bronzeCoin);
             }
 
