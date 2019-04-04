@@ -13,6 +13,8 @@ namespace BrainyStories
         public ObservableCollection<ThinkAndDo> generateThinkAndDos()
         {
             ThinkAndDoListTemp = new ObservableCollection<ThinkAndDo>();
+
+            // The Lion and the Mouse Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Lion and the Mouse Think And Do 1",
@@ -28,6 +30,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 55)
             });
 
+            // The Little Red Hen Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Little Red Hen Think And Do 1",
@@ -36,6 +39,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 29)
             });
 
+            // The Boy Who Cried Wolf Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Boy Who Cried Wolf Think And Do 1",
@@ -51,6 +55,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 27)
             });
 
+            // The Elves and the Shoemaker Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Elves and the Shoemaker Think And Do 1",
@@ -66,6 +71,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 16)
             });
 
+            // The Three Little Pigs Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Three Little Pigs Think And Do 1",
@@ -81,6 +87,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 51)
             });
 
+            // The Three Billy Goats Gruff Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Three Billy Goats Gruff Think And Do 1",
@@ -96,6 +103,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 22)
             });
 
+            // The Tale of Peter Rabbit Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Tales of Peter Rabbit Think And Do 1",
@@ -111,6 +119,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 34)
             });
 
+            // The Gingerbread Man Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "The Gingerbread Man Think And Do 1",
@@ -126,6 +135,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 29)
             });
 
+            // Rumplestiltskin Think and Dos 
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "Rumplestiltskin Think And Do 1",
@@ -141,6 +151,7 @@ namespace BrainyStories
                 Length = new TimeSpan(0, 0, 27)
             });
 
+            // Little Red Riding Hood Think and Dos
             ThinkAndDoListTemp.Add(new ThinkAndDo
             {
                 ThinkAndDoName = "Little Red Riding Hood Think And Do 1",
