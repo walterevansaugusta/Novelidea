@@ -59,7 +59,7 @@ namespace BrainyStories
                             CorrectAnswer = "afraid"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 49), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 0, 49), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -110,7 +110,7 @@ namespace BrainyStories
                             CorrectAnswer = "favor"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 02), // TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 35), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -161,7 +161,7 @@ namespace BrainyStories
                             CorrectAnswer = "friendly"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 2, 30), // TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 51), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -216,7 +216,7 @@ namespace BrainyStories
                             CorrectAnswer = "dog"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 24), // TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 0, 55),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -267,7 +267,7 @@ namespace BrainyStories
                             CorrectAnswer = "mill"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 55), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 06),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -318,7 +318,7 @@ namespace BrainyStories
                             CorrectAnswer = "work"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 36), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 14),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -373,7 +373,7 @@ namespace BrainyStories
                             CorrectAnswer = "ashamed"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 34), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 21), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -424,7 +424,7 @@ namespace BrainyStories
                             CorrectAnswer = "nobody"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 2, 59), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 37), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -475,7 +475,7 @@ namespace BrainyStories
                             CorrectAnswer = "disappointed"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 43), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 4, 37), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -523,7 +523,7 @@ namespace BrainyStories
                             CorrectAnswer = "shoes"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 40), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 41), 
                     NumQuestions = 4,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0 },
@@ -567,7 +567,7 @@ namespace BrainyStories
                             CorrectAnswer = "shoes"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 33), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 33), 
                     NumQuestions = 4,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0 },
@@ -611,7 +611,7 @@ namespace BrainyStories
                             CorrectAnswer = "his wife"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 00), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 4, 57),
                     NumQuestions = 4,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0 },
@@ -648,7 +648,7 @@ namespace BrainyStories
                             CorrectAnswer = "good"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 57), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 06), 
                     NumQuestions = 4,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0 },
@@ -710,7 +710,7 @@ namespace BrainyStories
                             CorrectAnswer = "none"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 05), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 07),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -768,7 +768,7 @@ namespace BrainyStories
                             CorrectAnswer = "none"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 2, 19), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 20), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -826,7 +826,7 @@ namespace BrainyStories
                             CorrectAnswer = "blow"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 12), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 58),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -884,7 +884,7 @@ namespace BrainyStories
                             CorrectAnswer = "spoon"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 5, 58), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 4, 49),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -942,7 +942,7 @@ namespace BrainyStories
                             CorrectAnswer = "smart"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 11), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 34), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -1004,7 +1004,7 @@ namespace BrainyStories
                             CorrectAnswer = "hoofs"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 18),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1062,7 +1062,7 @@ namespace BrainyStories
                             CorrectAnswer = "polite"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 2, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 43), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1120,7 +1120,7 @@ namespace BrainyStories
                             CorrectAnswer = "bridge"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 53),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1178,7 +1178,7 @@ namespace BrainyStories
                             CorrectAnswer = "eldest"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 5, 18), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1236,7 +1236,7 @@ namespace BrainyStories
                             CorrectAnswer = "smithereens"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 38), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1298,7 +1298,7 @@ namespace BrainyStories
                             CorrectAnswer = "blackberries"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 01), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 10),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1356,7 +1356,7 @@ namespace BrainyStories
                             CorrectAnswer = "shoes"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 45), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 13),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1414,7 +1414,7 @@ namespace BrainyStories
                             CorrectAnswer = "kertyschoo"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 17), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 53),
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1472,7 +1472,7 @@ namespace BrainyStories
                             CorrectAnswer = "gate"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 42), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 5, 54), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1530,7 +1530,7 @@ namespace BrainyStories
                             CorrectAnswer = "sorry"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 25), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 7, 35), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1585,7 +1585,7 @@ namespace BrainyStories
                             CorrectAnswer = "grandfather"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 07), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 13), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1636,7 +1636,7 @@ namespace BrainyStories
                             CorrectAnswer = "sleeping"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 47), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 03),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1687,7 +1687,7 @@ namespace BrainyStories
                             CorrectAnswer = "horse"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 27), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 51),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1738,7 +1738,7 @@ namespace BrainyStories
                             CorrectAnswer = "bridge"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 55), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 4, 50), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1789,7 +1789,7 @@ namespace BrainyStories
                             CorrectAnswer = "tricks"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 5, 48),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1840,7 +1840,7 @@ namespace BrainyStories
                             CorrectAnswer = "fox"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 7, 23), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 55),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1895,7 +1895,7 @@ namespace BrainyStories
                             CorrectAnswer = "wheel"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 32), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 09),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1946,7 +1946,7 @@ namespace BrainyStories
                             CorrectAnswer = "gold"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 1, 42), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 29), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -1997,7 +1997,7 @@ namespace BrainyStories
                             CorrectAnswer = "child"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 20), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 58),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2048,7 +2048,7 @@ namespace BrainyStories
                             CorrectAnswer = "name"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 52), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 5, 13), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2099,7 +2099,7 @@ namespace BrainyStories
                             CorrectAnswer = "Rumplestiltskin"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 22), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 40),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2150,7 +2150,7 @@ namespace BrainyStories
                             CorrectAnswer = "Rumplestiltskin"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 7, 34), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 8, 18), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2205,7 +2205,7 @@ namespace BrainyStories
                             CorrectAnswer = "careful"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 0, 32), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 1, 11), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2256,7 +2256,7 @@ namespace BrainyStories
                             CorrectAnswer = "sneaky"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 00), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 2, 30), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2307,7 +2307,7 @@ namespace BrainyStories
                             CorrectAnswer = "Red Riding Hood"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 13), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 3, 58), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2358,7 +2358,7 @@ namespace BrainyStories
                             CorrectAnswer = "ears"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 5, 30), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 5, 24),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2409,7 +2409,7 @@ namespace BrainyStories
                             CorrectAnswer = "huntsman"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 50), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 6, 33), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2460,7 +2460,7 @@ namespace BrainyStories
                             CorrectAnswer = "path"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 8, 34), //TODO: might need to change time
+                    PlayTime = new TimeSpan(0, 8, 08),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
