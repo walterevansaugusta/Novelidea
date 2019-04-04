@@ -29,9 +29,9 @@
                                        FontSize="18">
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span Text="{Binding NumCompletedQuizzes, StringFormat='\{0} out of'}" />
-                                            <Span Text="{Binding QuizNum, StringFormat=' \{0} quizzes'}" />
-                                            <Span Text="{Binding QuizAvgScore, StringFormat=' with average score {0}'}" />
+                                            <Span Text="{Binding NumCompletedQuizzes, StringFormat='\{0} out of', Mode=TwoWay}" />
+                                            <Span Text="{Binding QuizNum, StringFormat=' \{0} quizzes', Mode=TwoWay}" />
+                                            <Span Text="{Binding QuizAvgScore, StringFormat=' with average score {0}', Mode=TwoWay}" />
                                         </FormattedString>
                                     </Label.FormattedText>
                                 </Label>
@@ -40,8 +40,8 @@
                                        FontSize="18">
                                     <Label.FormattedText>
                                         <FormattedString>
-                                            <Span Text="{Binding NumCompletedThinkAndDos, StringFormat='\{0} out of'}" />
-                                            <Span Text="{Binding ThinkDoNum, StringFormat=' \{0}'}" />
+                                            <Span Text="{Binding NumCompletedThinkAndDos, StringFormat='\{0} out of',  Mode=TwoWay}" />
+                                            <Span Text="{Binding ThinkDoNum, StringFormat=' \{0}',  Mode=TwoWay}" />
                                             <Span Text=" Think &amp; Do's" />
                                         </FormattedString>
                                     </Label.FormattedText>

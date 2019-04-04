@@ -114,7 +114,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="NextQuestion"/>
                 <Button x:Name ="BackToStory"
-                    Text= "Back To Story"
+                    Text= "Exit"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6F2DBD"

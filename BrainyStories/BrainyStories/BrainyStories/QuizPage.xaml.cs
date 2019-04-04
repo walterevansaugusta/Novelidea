@@ -18,13 +18,20 @@ namespace BrainyStories
         private int QuestionNum = 0;
         private int QuestionsCorrect = 0;
         private Quiz quiz;
-        private User user;
+        private int[] scoreCalculation;
 
         public QuizPage(Quiz temp)
         {
+            
             InitializeComponent();
-            temp.NumAttemptsQuiz++;
+            
             quiz = temp;
+            temp.NumAttemptsQuiz++;
+            scoreCalculation = new int[quiz.NumQuestions];
+            for (int i = 0; i < quiz.NumQuestions; i++)
+            {
+                scoreCalculation[i] = 4;
+            }
             settingsPage = new Settings();
             QuizTitle.Text = quiz.QuizName;
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
@@ -107,15 +114,16 @@ namespace BrainyStories
                 clicked.BackgroundColor = Color.Green;
                 QuestionsCorrect++;
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
+                scoreCalculation[QuestionNum] = quiz.NumAttempts[QuestionNum];
                 if (quiz.NumAttempts[QuestionNum] == 1)
                 {
-                    user.rewardsRecieved["Gold"]++;
+                    User.rewardsRecieved["Gold"]++;
                 } else if (quiz.NumAttempts[QuestionNum] == 2)
                 {
-                    user.rewardsRecieved["Silver"]++;
+                    User.rewardsRecieved["Silver"]++;
                 } else
                 {
-                    user.rewardsRecieved["Bronze"]++;
+                    User.rewardsRecieved["Bronze"]++;
                 }
             } else
             {
@@ -123,6 +131,42 @@ namespace BrainyStories
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
             }
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
+            bool quizCompleted = true;
+            for (int i = 0; i <quiz.NumQuestions; i++)
+            {
+                if (quiz.NumAttempts[i] < 1)
+                {
+                    quizCompleted = false;
+                }
+            }
+            if (quizCompleted)
+            {
+                User.QuizzesCompleted.Add(quiz);
+            }
+            CalculateScore();
+        }
+
+        private void CalculateScore()
+        {
+            quiz.Score = 0;
+            for (int i = 0; i < quiz.NumQuestions; i++)
+            {
+                int numAttempts = scoreCalculation[i];
+                switch(numAttempts)
+                {
+                    case 1:
+                        quiz.Score += 100 / quiz.NumQuestions;
+                        break;
+                    case 2:
+                        quiz.Score += (100 / quiz.NumQuestions) / 2;
+                        break;
+                    case 3:
+                        quiz.Score += (100 / quiz.NumQuestions) / 3;
+                        break;
+                    default:
+                        break;
+                }
+            }
         }
 
         private void ColorChange()

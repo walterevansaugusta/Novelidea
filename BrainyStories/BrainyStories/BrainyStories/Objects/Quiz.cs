@@ -29,7 +29,7 @@ namespace BrainyStories.Objects {
         public String AssociatedImage { get; set; }
 
         // the score for the quiz
-        public int Score { get; set; }
+        public double Score { get; set; }
 
         // the list of questions
         public ObservableCollection<Question> Questions { get; set; }

@@ -27,7 +27,7 @@ namespace BrainyStories
             ListOfQuizzes = story.Quizzes;
             InitializeComponent ();
             BindThinkAndDoList.ItemsSource = ListOfThinkAndDos;
-            //BindQuizList.ItemsSource = ListOfQuizzes;
+            BindQuizList.ItemsSource = ListOfQuizzes;
             settingsPage = new Settings();
         }
 
@@ -41,7 +41,9 @@ namespace BrainyStories
 
         async void OnQuizTapped(object sender, ItemTappedEventArgs e)
         {
-            //TO-DO in sprint 4
+            ListView view = (ListView)sender;
+            var quiz = (Quiz)view.SelectedItem;
+            await Navigation.PushAsync(new QuizPage(quiz));
         }
 
         // Navbar methods
