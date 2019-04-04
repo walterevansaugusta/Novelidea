@@ -1,11 +1,11 @@
 # NovelIdea
-A children's app where children can read or listen to stories and increase their reading comprehension skills \n
-Stories taken from hearatale.org
+- A children's app where children can read or listen to stories and increase their reading comprehension skills.
+- Stories taken from hearatale.org
 # Critical Files to Review (for JD editors)
-- all important files are in Novelidea/BrainyStories/BrainyStories/BrainyStories/ \n
-- front end files are the .xaml files \n
-- back end files are the .xaml.cs and the .cs files \n
-- ignore the BrainyStories.csproj (it is auto generated) \n
+- all important files are in Novelidea/BrainyStories/BrainyStories/BrainyStories/ 
+- front end files are the .xaml files
+- back end files are the .xaml.cs and the .cs files 
+- ignore the BrainyStories.csproj (it is auto generated)
 - each .xaml.cs is associated with the corresponding .xaml file (they will have the same name)
 # Basic Navigation Flow
 - Main Page.xaml
