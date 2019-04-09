@@ -1,7 +1,9 @@
 ﻿using BrainyStories.Objects;
+using Plugin.SimpleAudioPlayer;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,8 +19,13 @@ namespace BrainyStories
         private Settings settingsPage;
         private int QuestionNum = 0;
         private int QuestionsCorrect = 0;
+        private bool[] NumButtonPressed = { false, false, false, false };
+        private bool[] NumButtonDoublePressed = { false, false, false, false };
+        private Button PreviousAnswerSelected = new Button() { Text = "" };
         private Quiz quiz;
         private int[] scoreCalculation;
+        private ISimpleAudioPlayer player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
+        private int tapCount = 0;
 
         public QuizPage(Quiz temp)
         {
@@ -41,6 +48,15 @@ namespace BrainyStories
             Three.Text = quiz.Questions[QuestionNum].AnswerArray[2];
             Four.Text = quiz.Questions[QuestionNum].AnswerArray[3];
             PreviousButton.IsVisible = false;
+            try
+            {
+                player.Load(quiz.Questions[QuestionNum].Audio);
+                player.Play();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(quiz.Questions[QuestionNum].Audio + " does not exist!");
+            }
         }
 
         private void PreviousQuestion(object sender, EventArgs e)
@@ -48,6 +64,15 @@ namespace BrainyStories
             if (QuestionNum > 0)
             {
                 QuestionNum--;
+                try
+                {
+                    player.Load(quiz.Questions[QuestionNum].Audio);
+                    player.Play();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(quiz.Questions[QuestionNum].Audio + " does not exist!");
+                }
                 QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
                 One.Text = quiz.Questions[QuestionNum].AnswerArray[0];
                 Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
@@ -81,6 +106,15 @@ namespace BrainyStories
             if (QuestionNum < quiz.NumQuestions - 1)
             {
                 QuestionNum++;
+                try
+                {
+                    player.Load(quiz.Questions[QuestionNum].Audio);
+                    player.Play();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(quiz.Questions[QuestionNum].Audio + " does not exist!");
+                }
                 QuestionTitle.Text = quiz.Questions[QuestionNum].QuestionText;
                 One.Text = quiz.Questions[QuestionNum].AnswerArray[0];
                 Two.Text = quiz.Questions[QuestionNum].AnswerArray[1];
@@ -106,12 +140,43 @@ namespace BrainyStories
             }
         }
 
+        private void PlayAudio (object sender, EventArgs e)
+        {
+            Button clicked = (Button)sender;
+            String answer = clicked.Text;
+            String audioFile = clicked.Text + ".mp3";
+            try
+            {
+                player.Load(audioFile);
+                player.Play();
+            } catch (Exception ex)
+            {
+                Console.WriteLine(audioFile + " does not exist!");
+            }
+        }
+
+        private void ClickOrPlay(object Sender, EventArgs e)
+        {
+            if (!PreviousAnswerSelected.Text.Equals((Sender as Button).Text))
+            {
+                if (!(PreviousAnswerSelected.BackgroundColor == Color.Red || PreviousAnswerSelected.BackgroundColor == Color.Green))
+                {
+                    PreviousAnswerSelected.BackgroundColor = Color.FromHex("#6F2DBD");
+                }
+            }
+            PreviousAnswerSelected = (Sender as Button);
+            PlayAudio(Sender, e);
+            Submit.IsVisible = true;
+            (Sender as Button).BackgroundColor = Color.FromHex("#965ed9");
+        }
+
+
         private void CheckAnswer(object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
             quiz.NumAttempts[QuestionNum]++;
-            if (clicked.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
-                clicked.BackgroundColor = Color.Green;
+            if (PreviousAnswerSelected.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
+                PreviousAnswerSelected.BackgroundColor = Color.Green;
                 QuestionsCorrect++;
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
                 scoreCalculation[QuestionNum] = quiz.NumAttempts[QuestionNum];
@@ -127,7 +192,7 @@ namespace BrainyStories
                 }
             } else
             {
-                clicked.BackgroundColor = Color.Red;
+                PreviousAnswerSelected.BackgroundColor = Color.Red;
                 quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
             }
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
@@ -141,7 +206,10 @@ namespace BrainyStories
             }
             if (quizCompleted)
             {
-                User.QuizzesCompleted.Add(quiz);
+                if(!User.QuizzesCompleted.Contains(quiz))
+                {
+                    User.QuizzesCompleted.Add(quiz);
+                }
             }
             CalculateScore();
         }
@@ -195,6 +263,7 @@ namespace BrainyStories
         // Navbar methods
         async void BackClicked(object sender, EventArgs e)
         {
+            player.Stop();
             await App.Current.MainPage.Navigation.PopAsync();
         }
 

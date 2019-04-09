@@ -15,7 +15,7 @@ namespace BrainyStories.Objects
         public int thinkAndDosCompleted { get; } = 23;
         public string lastStory { get; } = "The Lion and the Mouse";
         public int lastQuizScore { get; } = 80;
-        public static Dictionary<String, int> rewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 3 }, { "Silver", 8 }, { "Bronze", 55 } };
+        public static Dictionary<String, int> rewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 0 }, { "Silver", 0 }, { "Bronze", 0 } };
         public static string Name { get; } = "Your child";
         public static ObservableCollection<Story> StoriesRead { get; set; } = new ObservableCollection<Story>();
         public static ObservableCollection<Quiz> QuizzesCompleted { get; set; } = new ObservableCollection<Quiz>();

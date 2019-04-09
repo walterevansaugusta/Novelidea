@@ -18,6 +18,9 @@ namespace BrainyStories.Objects {
         //the index of the correct answer in the array
         public String CorrectAnswer { get; set; }
 
+        // The question audio file
+        public String Audio { get; set; }
+
     }
     public class Quiz {
         public static string Icon { get; } = "QuizzesIcon.png";
