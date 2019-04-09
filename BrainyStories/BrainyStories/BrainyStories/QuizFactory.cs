@@ -709,9 +709,9 @@ namespace BrainyStories
                         }
                     },
                     PlayTime = new TimeSpan(0, 6, 06), 
-                    NumQuestions = 4,
+                    NumQuestions = 3,
                     NumAttempts = new ObservableCollection<int>()
-                    { 0, 0, 0, 0 },
+                    { 0, 0, 0 },
                     NumAttemptsQuiz = 0
                 });
             }
@@ -1087,7 +1087,7 @@ namespace BrainyStories
                         {
                             QuestionText = "Question 5: Which Billy Goat Gruff was the first one to cross the bridge?",
                             AnswerArray =  new ObservableCollection<string>() { "Little", "Middle-sized", "Big", "None" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, {"triangles", false} },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, {"None", false} },
                             CorrectAnswer = "Little",
                             Audio = "SQ_6_5.mp3"
                         },

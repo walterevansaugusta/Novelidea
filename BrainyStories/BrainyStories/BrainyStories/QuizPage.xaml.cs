@@ -143,7 +143,7 @@ namespace BrainyStories
         private void PlayAudio (object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
-            String answer = clicked.Text;
+            String answer = clicked.Text.ToLower();
             String audioFile = clicked.Text + ".mp3";
             try
             {
