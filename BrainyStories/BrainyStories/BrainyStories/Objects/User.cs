@@ -6,6 +6,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.IO;
 using Newtonsoft.Json;
+using System.Collections.ObjectModel;
 
 namespace BrainyStories.Objects
 {
@@ -16,7 +17,7 @@ namespace BrainyStories.Objects
         private User()
         { }
         [JsonConstructor]
-        public User(Dictionary<String,int> RewardsRecieved, string Name, List<Story> StoriesRead, List<Quiz> QuizzesCompleted, List<ThinkAndDo> ThinkAndDosCompleted)
+        public User(Dictionary<String,int> RewardsRecieved, string Name, ObservableCollection<Story> StoriesRead, ObservableCollection<Quiz> QuizzesCompleted, ObservableCollection<ThinkAndDo> ThinkAndDosCompleted)
         {
             this.RewardsRecieved = RewardsRecieved;
             this.Name = Name;
@@ -45,19 +46,19 @@ namespace BrainyStories.Objects
 
         public void SaveToDisk()
         {
-            string output = JsonConvert.SerializeObject(this);
+            /*string output = JsonConvert.SerializeObject(this);
             string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
-            File.WriteAllText(fileName, output);
+            File.WriteAllText(fileName, output);*/
         }
 
         public void LoadFromDisk()
         {
-            string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
+            /*string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "save.json");
             if(File.Exists(fileName))
             {
                 string input = File.ReadAllText(fileName);
                 INSTANCE = JsonConvert.DeserializeObject<User>(input);
-            }
+            }*/
         }
     }
 }
