@@ -1130,9 +1130,6 @@
     <AndroidAsset Include="Assets\coffee.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\coins.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\cold.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -1217,10 +1214,10 @@
     <AndroidAsset Include="Assets\drink.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Duck.mp3" />
+    <AndroidAsset Include="Assets\duck.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Ducks.mp3" />
+    <AndroidAsset Include="Assets\ducks.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\dune buggy.mp3" />
@@ -1292,9 +1289,6 @@
     <AndroidAsset Include="Assets\fight.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\finger.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\fingers.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -1313,7 +1307,7 @@
     <AndroidAsset Include="Assets\fisherman.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\flowerpot.mp3" />
+    <AndroidAsset Include="Assets\flower-pot.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\foot.mp3" />
@@ -1352,7 +1346,7 @@
     <AndroidAsset Include="Assets\grasshopper.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Grumpybear.mp3" />
+    <AndroidAsset Include="Assets\grumpybear.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\hat.mp3" />
@@ -1388,7 +1382,7 @@
     <AndroidAsset Include="Assets\kayak.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Kertyshoo.mp3" />
+    <AndroidAsset Include="Assets\kertyshoo.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\king.mp3" />
@@ -1490,9 +1484,6 @@
     <AndroidAsset Include="Assets\quiet.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\rabbit.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\read.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -1508,16 +1499,10 @@
     <AndroidAsset Include="Assets\saw.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Scalawag.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\scratch.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\seagulls.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\see-saw %28crop for see-saw%29.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\sheep.mp3" />
@@ -1574,9 +1559,6 @@
     <AndroidAsset Include="Assets\straw.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\strawberries.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="Assets\sunglasses.mp3" />
   </ItemGroup>
   <ItemGroup>
@@ -1631,7 +1613,7 @@
     <AndroidAsset Include="Assets\tumble.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\tummy button.mp3" />
+    <AndroidAsset Include="Assets\tummy-button.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\tummy.mp3" />
@@ -1661,7 +1643,7 @@
     <AndroidAsset Include="Assets\wild.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Wind.mp3" />
+    <AndroidAsset Include="Assets\wind.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\wolf.mp3" />
@@ -1676,7 +1658,7 @@
     <AndroidAsset Include="Assets\work.mp3" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Yawn.mp3" />
+    <AndroidAsset Include="Assets\yawn.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\yellow.mp3" />

@@ -82,8 +82,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 1: The lion said he was the great what of beasts?",
-                            AnswerArray = new ObservableCollection<string>() { "Sillicat", "King", "Uncle", "Grumpybear" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Sillicat", false }, { "King", false }, { "Uncle", false }, { "Grumpybear", false} },
+                            AnswerArray = new ObservableCollection<string>() { "Sillycat", "King", "Uncle", "grumpybear" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Sillycat", false }, { "King", false }, { "Uncle", false }, { "grumpybear", false} },
                             CorrectAnswer = "King",
                             Audio = "SQ_1_6.mp3"
                         },
@@ -890,8 +890,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 5: The first pig answers, not by the WHAT of my chinny chin chin?",
-                            AnswerArray =  new ObservableCollection<string>() { "earlobe", "toenails", "hair", "horns" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "earlobe", false }, { "toenails", false }, { "hair", false }, {"horns", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "earlobes", "toenails", "hair", "horns" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "earlobes", false }, { "toenails", false }, { "hair", false }, {"horns", false} },
                             CorrectAnswer = "hair",
                             Audio = "SQ_5_17.mp3"
                         },
@@ -1086,9 +1086,9 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 5: Which Billy Goat Gruff was the first one to cross the bridge?",
-                            AnswerArray =  new ObservableCollection<string>() { "Little", "Middle-sized", "Big", "None" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, {"None", false} },
-                            CorrectAnswer = "Little",
+                            AnswerArray =  new ObservableCollection<string>() { "little", "Middle-sized", "big", "None" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "little", false }, { "Middle-sized", false }, { "big", false }, {"None", false} },
+                            CorrectAnswer = "little",
                             Audio = "SQ_6_5.mp3"
                         },
                         new Question()
@@ -1150,8 +1150,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 5: Little Billy Goat Gruff tells the troll to wait for which Billy Goat Gruff?",
-                            AnswerArray =  new ObservableCollection<string>() { "Momma", "Middle-sized", "Big", "Poppa" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Momma", false }, { "Middle-sized", false }, { "Big", false }, {"Poppa", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "Momma", "Middle-sized", "big", "Poppa" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Momma", false }, { "Middle-sized", false }, { "big", false }, {"Poppa", false} },
                             CorrectAnswer = "Middle-sized",
                             Audio = "SQ_6_11.mp3"
                         },
@@ -1198,8 +1198,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 3: Which Billy Goat Gruff was the second Billy Goat Gruff to cross the bridge?",
-                            AnswerArray =  new ObservableCollection<string>() { "Little", "Big", "Poppa", "Middle-sized" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Big", false }, { "Poppa", false }, {"Middle-sized", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "little", "big", "Poppa", "Middle-sized" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "little", false }, { "big", false }, { "Poppa", false }, {"Middle-sized", false} },
                             CorrectAnswer = "Middle-sized",
                             Audio = "SQ_6_15.mp3"
                         },
@@ -1222,8 +1222,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 6: The troll slobbered spit on what?",
-                            AnswerArray =  new ObservableCollection<string>() { "tree", "bridge", "waterfall", "dunebuggy" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "tree", false }, { "bridge", false }, { "waterfall", false }, {"dunebuggy", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "tree", "bridge", "waterfall", "dune buggy" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "tree", false }, { "bridge", false }, { "waterfall", false }, {"dune buggy", false} },
                             CorrectAnswer = "bridge",
                             Audio = "SQ_6_18.mp3"
                         }
@@ -1254,9 +1254,9 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 2: Middle-size Billy Goat Gruff says the troll should eat which Billy Goat Gruff now?",
-                            AnswerArray =  new ObservableCollection<string>() { "Little", "Middle-sized", "Big", "none" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Little", false }, { "Middle-sized", false }, { "Big", false }, { "none", false} },
-                            CorrectAnswer = "Big",
+                            AnswerArray =  new ObservableCollection<string>() { "little", "Middle-sized", "big", "none" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "little", false }, { "Middle-sized", false }, { "big", false }, { "none", false} },
+                            CorrectAnswer = "big",
                             Audio = "SQ_6_20.mp3"
                         },
                         new Question()
@@ -1278,9 +1278,9 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 5: Which Billy Goat Gruff was the last Billy Goat Gruff to cross the bridge?",
-                            AnswerArray =  new ObservableCollection<string>() { "Poppa", "Momma", "Middle-sized", "Big" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "Poppa", false }, { "Momma", false }, { "Middle-sized", false }, {"Big", false} },
-                            CorrectAnswer = "Big",
+                            AnswerArray =  new ObservableCollection<string>() { "Poppa", "Momma", "Middle-sized", "big" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "Poppa", false }, { "Momma", false }, { "Middle-sized", false }, {"big", false} },
+                            CorrectAnswer = "big",
                             Audio = "SQ_6_23.mp3"
                         },
                         new Question()
@@ -1650,8 +1650,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 3: In the evening Peter’s mother made him go to what?",
-                            AnswerArray =  new ObservableCollection<string>() { "the doctor", "bed", "judge", "dance" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "the doctor", false }, { "bed", false }, { "judge", false }, {"dance", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "doctor", "bed", "judge", "dance" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "doctor", false }, { "bed", false }, { "judge", false }, {"dance", false} },
                             CorrectAnswer = "bed",
                             Audio = "SQ_7_27.mp3"
                         },
@@ -1878,8 +1878,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 2: The Gingerbread Man halted when he came to a what?",
-                            AnswerArray =  new ObservableCollection<string>() { "playground", "circuis", "tunnel", "river" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "playground", false }, { "circuis", false }, { "tunnel", false }, { "river", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "playground", "circus", "tunnel", "river" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "playground", false }, { "circus", false }, { "tunnel", false }, { "river", false} },
                             CorrectAnswer = "river",
                             Audio = "SQ_8_17.mp3"
                         },
@@ -1998,24 +1998,24 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 3: Who was rude and impolite to almost everybody else in the story?",
-                            AnswerArray =  new ObservableCollection<string>() { "dog", "grandmother", "cow", "Gingerbead Man" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "dog", false }, { "grandmother", false }, { "cow", false }, {"Gingerbread Man", false} },
-                            CorrectAnswer = "Gingerbread Man",
-                            Audio = "SQ_8_28.mp3"
-                        },
-                        new Question()
-                        {
-                            QuestionText = "Question 4: Who was quicker than everyone else in the story?",
-                            AnswerArray =  new ObservableCollection<string>() { "grandfather", "fox", "cat", "Gingerbread Man" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "grandfather", false }, { "fox", false }, { "cat", false }, {"Gingerbread Man", false} },
-                            CorrectAnswer = "fox",
+                            AnswerArray =  new ObservableCollection<string>() { "dog", "grandmother", "cow", "gingerbread man" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "dog", false }, { "grandmother", false }, { "cow", false }, {"gingerbread man", false} },
+                            CorrectAnswer = "gingerbread man",
                             Audio = "SQ_8_29.mp3"
                         },
                         new Question()
                         {
+                            QuestionText = "Question 4: Who was quicker than everyone else in the story?",
+                            AnswerArray =  new ObservableCollection<string>() { "grandfather", "fox", "cat", "gingerbread man" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "grandfather", false }, { "fox", false }, { "cat", false }, {"gingerbread man", false} },
+                            CorrectAnswer = "fox",
+                            Audio = "SQ_8_28.mp3"
+                        },
+                        new Question()
+                        {
                             QuestionText = "Question 5: Who was the trickiest one of all in the story?",
-                            AnswerArray =  new ObservableCollection<string>() { "horse", "Gingerbread Man", "fox", "cat" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "horse", false }, { "Gingerbread Man", false }, { "fox", false }, {"cat", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "horse", "gingerbread man", "fox", "cat" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "horse", false }, { "gingerbread man", false }, { "fox", false }, {"cat", false} },
                             CorrectAnswer = "fox",
                             Audio = "SQ_8_30.mp3"
                         }
@@ -2298,8 +2298,8 @@ namespace BrainyStories
                         new Question()
                         {
                             QuestionText = "Question 5: The dwarf man sang that his name was what?",
-                            AnswerArray =  new ObservableCollection<string>() { "sillycat", "Rumplestiltskin", "Grumpybear", "Kertyschoo" },
-                            AnswerSelected = new Dictionary<string, bool>() { { "sillycat", false }, { "Rumplestiltskin", false }, { "Grumpybear", false }, {"Kertyschoo", false} },
+                            AnswerArray =  new ObservableCollection<string>() { "sillycat", "Rumplestiltskin", "grumpybear", "kertyschoo" },
+                            AnswerSelected = new Dictionary<string, bool>() { { "sillycat", false }, { "Rumplestiltskin", false }, { "grumpybear", false }, {"kertyschoo", false} },
                             CorrectAnswer = "Rumplestiltskin",
                             Audio = "SQ_9_25.mp3"
                         }
