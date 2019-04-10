@@ -110,7 +110,14 @@ namespace BrainyStories
                 if (slider.Value == story.Duration.Seconds + (story.Duration.Minutes * 60))
                 {
                     player.Stop();
-                    ChangePage(story); 
+                    if (story.QuizNum > 0)
+                    {
+                        ChangePage(story);
+                    } else
+                    {
+                       GoBack();
+                    }
+                    
                     return false;
                 }
 
@@ -215,7 +222,12 @@ namespace BrainyStories
         {
             Navigation.PushAsync(new EndOfStory(story));
         }
-  
+
+        async void GoBack()
+        {
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
+           
         protected override bool OnBackButtonPressed()
         {
             player.Stop();

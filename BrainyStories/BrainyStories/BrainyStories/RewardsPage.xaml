@@ -30,24 +30,27 @@
                          Grid.Row="3"
                          Grid.Column="0"
                          Orientation="Horizontal">
-
-                <!-- 5 Piggy Bank gets 1 Gem -->
-                <Label Text="1" VerticalTextAlignment="Center"/>
-                <Image Source="Gem.png"/>
-                <Label Text="= 5" VerticalTextAlignment="Center"/>
-                <Image Source="Bank.png"/>
+                <!-- 5 Coins gets 1 Coin Pile -->
+                <Label Text="          5" VerticalTextAlignment="Center"/>
+                <Image Source="Coin.png"/>
+                <Label Text="= 1" VerticalTextAlignment="Center"/>
+                <Image Source="Coins.png"/>
 
                 <!-- 5 Coin Piles gets 1 Piggy Bank -->
-                <Label Text="          1" VerticalTextAlignment="Center"/>
+                <Label Text="          5" VerticalTextAlignment="Center"/>
+                <Image Source="Coins.png"/>
+                <Label Text="= 1" VerticalTextAlignment="Center"/>
                 <Image Source="Bank.png"/>
-                <Label Text="= 5" VerticalTextAlignment="Center"/>
-                <Image Source="Coins.png"/>
                 
-                <!-- 5 Coins gets 1 Coin Pile -->
-                <Label Text="          1" VerticalTextAlignment="Center"/>
-                <Image Source="Coins.png"/>
-                <Label Text="= 5" VerticalTextAlignment="Center"/>
-                <Image Source="Coin.png"/>
+                <!-- 5 Piggy Bank gets 1 Gem -->
+                <Label Text="          5" VerticalTextAlignment="Center"/>
+                <Image Source="Bank.png"/>
+                <Label Text="= 1" VerticalTextAlignment="Center"/>
+                <Image Source="Gem.png"/>
+
+                
+                
+                
             </StackLayout>
         </Grid>
     </ContentPage.Content>

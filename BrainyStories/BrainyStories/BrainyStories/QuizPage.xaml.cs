@@ -173,12 +173,11 @@ namespace BrainyStories
 
         private void CheckAnswer(object sender, EventArgs e)
         {
-            Button clicked = (Button)sender;
             quiz.NumAttempts[QuestionNum]++;
             if (PreviousAnswerSelected.Text.Equals(quiz.Questions[QuestionNum].CorrectAnswer)) {
                 PreviousAnswerSelected.BackgroundColor = Color.Green;
                 QuestionsCorrect++;
-                quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
+                quiz.Questions[QuestionNum].AnswerSelected[PreviousAnswerSelected.Text] = true;
                 scoreCalculation[QuestionNum] = quiz.NumAttempts[QuestionNum];
                 if (quiz.NumAttempts[QuestionNum] == 1)
                 {
@@ -193,7 +192,7 @@ namespace BrainyStories
             } else
             {
                 PreviousAnswerSelected.BackgroundColor = Color.Red;
-                quiz.Questions[QuestionNum].AnswerSelected[clicked.Text] = true;
+                quiz.Questions[QuestionNum].AnswerSelected[PreviousAnswerSelected.Text] = true;
             }
             NumCorrect.Text = "Questions Correct: " + QuestionsCorrect;
             bool quizCompleted = true;
