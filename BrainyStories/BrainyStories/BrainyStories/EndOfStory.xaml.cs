@@ -18,16 +18,22 @@ namespace BrainyStories
         private Settings settingsPage;
 
         public ObservableCollection<ThinkAndDo> ListOfThinkAndDos;
-        public ObservableCollection<Quiz> ListOfQuizzes;
+        Quiz last;
 
         public EndOfStory (Story story)
 		{
             User.StoriesRead.Add(story);
             ListOfThinkAndDos = story.ThinkAndDos;
-            ListOfQuizzes = story.Quizzes;
+            last = story.Quizzes[story.QuizNum - 1];
             InitializeComponent ();
             BindThinkAndDoList.ItemsSource = ListOfThinkAndDos;
-            BindQuizList.ItemsSource = ListOfQuizzes;
+            Label displayLabel = new Label
+            {
+                Text = last.QuizName,
+                VerticalOptions = LayoutOptions.Center,
+                FontSize = 20
+            };
+            LastQuiz.Children.Add(displayLabel);
             settingsPage = new Settings();
         }
 
@@ -39,11 +45,9 @@ namespace BrainyStories
             await PopupNavigation.Instance.PushAsync(pop);
         }
 
-        async void OnQuizTapped(object sender, ItemTappedEventArgs e)
+        async void OnQuizTapped(object sender, EventArgs e)
         {
-            ListView view = (ListView)sender;
-            var quiz = (Quiz)view.SelectedItem;
-            await Navigation.PushAsync(new QuizPage(quiz));
+            await Navigation.PushAsync(new QuizPage(last));
         }
 
         // Navbar methods

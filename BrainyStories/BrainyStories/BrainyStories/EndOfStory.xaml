@@ -32,29 +32,16 @@
                    HorizontalTextAlignment="Center"
                    TextColor="BlueViolet"
                    FontAttributes="Bold"/>
-            <ListView SeparatorVisibility="None"
-                      VerticalOptions ="Start"
-                      HasUnevenRows="True"
-                      ItemTapped="OnQuizTapped"
-                      x:Name="BindQuizList">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <ViewCell.View>
-                                <StackLayout Orientation="Vertical">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Image Source ="Quizzes.png"
-                                               HeightRequest="100"/>
-                                        <Label Text ="{Binding QuizName}"
-                                               VerticalOptions="Center"
-                                               FontSize="20"/>
-                                    </StackLayout>
-                                </StackLayout>
-                            </ViewCell.View>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+            <StackLayout Orientation="Vertical">
+                <StackLayout x:Name="LastQuiz"
+                    Orientation="Horizontal">
+                    <Image Source ="Quizzes.png"
+                           HeightRequest="100"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnQuizTapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </StackLayout>
             <!--<Button Text="Back To Table of Contents"
                     Clicked="BackToTOC"/>-->
             <ListView SeparatorVisibility="None"
