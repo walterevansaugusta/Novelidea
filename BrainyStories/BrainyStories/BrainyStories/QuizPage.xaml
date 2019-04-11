@@ -60,7 +60,8 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    Clicked="CheckAnswer"/>
+                    Clicked="ClickOrPlay">
+                </Button>
                 <Button x:Name="Two"
                     FontSize="12"
                     TextColor="White"
@@ -70,7 +71,7 @@
                     Grid.ColumnSpan="2"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
-                    Clicked="CheckAnswer"/>
+                    Clicked="ClickOrPlay"/>
                 <Button x:Name="Three"
                     FontSize="12"
                     TextColor="White"
@@ -80,7 +81,7 @@
                     Grid.ColumnSpan="2"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
-                    Clicked="CheckAnswer"/>
+                    Clicked="ClickOrPlay"/>
                 <Button x:Name="Four"
                     FontSize="12"
                     TextColor="White"
@@ -90,33 +91,27 @@
                     Grid.ColumnSpan="2"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
-                    Clicked="CheckAnswer"/>
-                <Button x:Name ="PreviousButton"
-                    Text= "Previous"
-                    FontSize="12"
-                    TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    Clicked= "ClickOrPlay"/>
+                <ImageButton x:Name ="PreviousButton"
+                    Source="Previous.png"
+                    BackgroundColor="Transparent"
                     Grid.Row="3"
                     Grid.Column="0"
                     Grid.ColumnSpan="1"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
                     Clicked="PreviousQuestion"/>
-                <Button x:Name ="NextButton"
-                    Text= "Next"
-                    FontSize="12"
-                    TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                <ImageButton x:Name ="NextButton"
+                   Source="Next.png"
+                    BackgroundColor="Transparent"
                     Grid.Row="3"
                     Grid.Column="3"
                     Grid.ColumnSpan="1"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
                     Clicked="NextQuestion"/>
-                <Button x:Name ="BackToStory"
-                    Text= "Exit"
-                    FontSize="12"
-                    TextColor="White"
+                <ImageButton x:Name ="BackToStory"
+                    Source="ClassicStories.png"
                     BackgroundColor="#6F2DBD"
                     Grid.Row="3"
                     Grid.Column="3"
@@ -125,6 +120,16 @@
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
                     Clicked="BackClicked"/>
+                <ImageButton x:Name="Submit"
+                    Source="Submit.png"
+                    BackgroundColor="Transparent"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Grid.ColumnSpan="2"
+                    IsVisible="false"
+                    VerticalOptions="FillAndExpand" 
+                    HorizontalOptions="FillAndExpand"
+                    Clicked="CheckAnswer"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>

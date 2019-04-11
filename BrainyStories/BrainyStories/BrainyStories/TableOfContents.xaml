@@ -72,8 +72,9 @@
                                                 Rotation="270"
                                                 SeparatorVisibility="None"
                                                 RowHeight="20"
-                                                SelectionMode="None">
-                                        <ListView.ItemTemplate>
+                                                SelectionMode="None"
+                                                IsEnabled="false">
+                                        <ListView.ItemTemplate IsEnabled="false">
                                             <DataTemplate>
                                                 <ViewCell>
                                                     <ViewCell.View>

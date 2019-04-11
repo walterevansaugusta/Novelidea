@@ -29,14 +29,31 @@ namespace BrainyStories
 		{
 			InitializeComponent();
             settingsPage = new Settings();
-            Button button = new Button()
+            ImageButton button = new ImageButton()
             {
-                Text = "Pause"
+                Source = "pause.png",
+                HeightRequest = 40,
+                BorderColor = Color.Transparent,
+                BackgroundColor = Color.Transparent,
+                Margin = 20
             };
-            Button button2 = new Button()
+           ImageButton button2 = new ImageButton()
             {
-                Text = "Play",
-                IsVisible = false
+                Source = "play.png",
+                IsVisible = false,
+                HeightRequest = 40,
+                BorderColor = Color.Transparent,
+                BackgroundColor = Color.Transparent,
+                Margin = 20
+           };
+            ImageButton Expand = new ImageButton()
+            {
+                Source = "expand.png",
+                HorizontalOptions = LayoutOptions.EndAndExpand,
+                HeightRequest = 40,
+                BorderColor = Color.Transparent,
+                BackgroundColor = Color.Transparent,
+                Margin = 20
             };
             Button QuizButton = new Button()
             {
@@ -48,6 +65,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = "0:00",
+                Margin = 20
             };
             Slider slider = new Slider
             {
@@ -60,22 +78,23 @@ namespace BrainyStories
             Image storyImage = new Image() { Source = story.PictureCues[new TimeSpan(0, 0, 0)], HeightRequest = 150 };
             var tapGestureRecognizer = new TapGestureRecognizer();
             tapGestureRecognizer.Tapped += (s, e) => {
+                if (oldContent != null)
+                {
+                    Content = oldContent;
+                    storyImage.HeightRequest = 150;
+                    fullScreen = false;
+                }
+            };
+            storyImage.GestureRecognizers.Add(tapGestureRecognizer);
+            
+            Expand.Clicked += (sender, args) =>
+            {
                 if (!fullScreen)
                 {
                     Content = storyImage;
                     fullScreen = true;
-                } else
-                {
-                    if (oldContent != null)
-                    {
-                        Content = oldContent;
-                        storyImage.HeightRequest = 150;
-                        fullScreen = false;
-                    } 
                 }
-                
-            };
-            storyImage.GestureRecognizers.Add(tapGestureRecognizer);
+            };   
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
             player.Load(story.AudioClip);
             bool audioFromTimer = false;
@@ -91,7 +110,14 @@ namespace BrainyStories
                 if (slider.Value == story.Duration.Seconds + (story.Duration.Minutes * 60))
                 {
                     player.Stop();
-                    ChangePage(story); 
+                    if (story.QuizNum > 0)
+                    {
+                        ChangePage(story);
+                    } else
+                    {
+                       GoBack();
+                    }
+                    
                     return false;
                 }
 
@@ -181,7 +207,8 @@ namespace BrainyStories
                     button,
                     button2,
                     displayLabel,
-                    QuizButton
+                    QuizButton,
+                    Expand
                 }
             };
 
@@ -195,7 +222,12 @@ namespace BrainyStories
         {
             Navigation.PushAsync(new EndOfStory(story));
         }
-  
+
+        async void GoBack()
+        {
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
+           
         protected override bool OnBackButtonPressed()
         {
             player.Stop();
