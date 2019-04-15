@@ -1,3 +1,4 @@
+using BrainyStories.Objects;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -43,9 +44,9 @@ namespace BrainyStories
             {
                 return;
             }
+            User user = User.Instance;
             var story = (Story)view.SelectedItem;
             view.SelectedItem = null;
-            story = storyFact.playedStory(story.Name);
             await Navigation.PushAsync(new StoryPage(story));  
         }
 

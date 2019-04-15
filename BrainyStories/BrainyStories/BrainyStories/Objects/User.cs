@@ -7,6 +7,7 @@ using System.Text;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.ObjectModel;
+using System.Linq;
 
 namespace BrainyStories.Objects
 {
@@ -17,13 +18,11 @@ namespace BrainyStories.Objects
         private User()
         { }
         [JsonConstructor]
-        public User(Dictionary<String,int> RewardsRecieved, string Name, ObservableCollection<Story> StoriesRead, ObservableCollection<Quiz> QuizzesCompleted, ObservableCollection<ThinkAndDo> ThinkAndDosCompleted)
+        public User(Dictionary<String,int> RewardsRecieved, string Name, ObservableCollection<Story> StoriesRead)
         {
             this.RewardsRecieved = RewardsRecieved;
             this.Name = Name;
             this.StoriesRead = StoriesRead;
-            this.QuizzesCompleted = QuizzesCompleted;
-            this.ThinkAndDosCompleted = ThinkAndDosCompleted;
         }
         public static User Instance {
             get {
@@ -37,8 +36,8 @@ namespace BrainyStories.Objects
         public Dictionary<String, int> RewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 3 }, { "Silver", 8 }, { "Bronze", 55 } };
         public string Name { get; } = "Your child";
         public ObservableCollection<Story> StoriesRead { get; set; } = new ObservableCollection<Story>();
-        public ObservableCollection<Quiz> QuizzesCompleted { get; set; } = new ObservableCollection<Quiz>();
-        public ObservableCollection<ThinkAndDo> ThinkAndDosCompleted { get; set; } = new ObservableCollection<ThinkAndDo>();
+        public ObservableCollection<Quiz> QuizzesCompleted { get { return new ObservableCollection<Quiz>(StoriesRead.SelectMany(s=> s.Quizzes.Where(q => q.NumAttemptsQuiz > 0))); } }
+        public ObservableCollection<ThinkAndDo> ThinkAndDosCompleted { get { return new ObservableCollection<ThinkAndDo>(StoriesRead.SelectMany(s => s.ThinkAndDos.Where(t => t.Completed))); } }
 
         public int StoryCount { get { return StoriesRead.Count; } }
         public int QuizCount { get { return QuizzesCompleted.Count; } }

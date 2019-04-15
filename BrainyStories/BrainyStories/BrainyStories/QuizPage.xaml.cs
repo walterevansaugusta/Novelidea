@@ -205,13 +205,6 @@ namespace BrainyStories
                     quizCompleted = false;
                 }
             }
-            if (quizCompleted)
-            {
-                if(!User.Instance.QuizzesCompleted.Contains(quiz))
-                {
-                    User.Instance.QuizzesCompleted.Add(quiz);
-                }
-            }
             CalculateScore();
         }
 
