@@ -4,23 +4,53 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace BrainyStories {
 
 
     public class StoryFactory {
+        public static Thread GenerateStoriesThread;
 
-        private ThinkAndDoFactory thinkAndDoFactory = new ThinkAndDoFactory();
-        private QuizFactory quizFactory = new QuizFactory();
+        public static void GenerateAll()
+        {
+            var watch = Stopwatch.StartNew();
+            StoryFactory storyFactory = new StoryFactory();
+            stories = storyFactory.generateStories();
+            imagines = storyFactory.generateImagines();
+            watch.Stop();
+            Debug.WriteLine("GenerateStoriesThread completed in " + watch.ElapsedMilliseconds + "ms");
+        }
+
+        public static ObservableCollection<Story> Stories {
+            get {
+                if (GenerateStoriesThread.IsAlive)
+                    GenerateStoriesThread.Join();
+                return stories;
+            }
+        }
+        public static ObservableCollection<Story> Imagines {
+            get {
+                if (GenerateStoriesThread.IsAlive)
+                {
+                    Debug.WriteLine("Waiting on story generation to finish...");
+                    GenerateStoriesThread.Join();
+                }
+                return stories;
+            }
+        }
 
         private static ObservableCollection<Story> stories;
         private static ObservableCollection<Story> imagines;
 
+        private ThinkAndDoFactory thinkAndDoFactory = new ThinkAndDoFactory();
+        private QuizFactory quizFactory = new QuizFactory();
+
         //MANUAL LIST OF STORIES
-        public ObservableCollection<Story> generateStories()
+        private ObservableCollection<Story> generateStories()
         {
             thinkAndDoFactory.generateThinkAndDos();
-            ObservableCollection<Story> storyListTemp = new ObservableCollection<Story>();
 
             if (stories == null)
             {
@@ -362,7 +392,7 @@ namespace BrainyStories {
 
 
         //MANUAL LIST OF IMAGINES 
-        public ObservableCollection<Story> generateImagines()
+        private ObservableCollection<Story> generateImagines()
         {
             if (imagines == null)
             {
