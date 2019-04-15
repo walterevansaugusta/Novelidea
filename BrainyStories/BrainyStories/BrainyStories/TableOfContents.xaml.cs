@@ -1,3 +1,4 @@
+using BrainyStories.Objects;
 using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
@@ -16,8 +17,6 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TableOfContents : ContentPage
 	{
-        StoryFactory storyFact = new StoryFactory();
-
         private Settings settingsPage;
 
         public TableOfContents (bool imagines)
@@ -25,11 +24,11 @@ namespace BrainyStories
             NavigationPage.SetHasNavigationBar(this, false);
             if (imagines)
             {
-                Story.ListOfStories = storyFact.generateImagines();
+                Story.ListOfStories = StoryFactory.Imagines;
             }
             else
             {
-                Story.ListOfStories = storyFact.generateStories();
+                Story.ListOfStories = StoryFactory.Stories;
             }
             InitializeComponent();
             listView.SelectedItem = null;
@@ -43,9 +42,9 @@ namespace BrainyStories
             {
                 return;
             }
+            User user = User.Instance;
             var story = (Story)view.SelectedItem;
             view.SelectedItem = null;
-            story = storyFact.playedStory(story.Name);
             await Navigation.PushAsync(new StoryPage(story));  
         }
 

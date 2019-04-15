@@ -24,7 +24,7 @@ namespace BrainyStories
 
         public QuizList()
         {
-            ListOfStories = factoryStories.generateStories();
+            ListOfStories = StoryFactory.Stories;
             for (int i = 0; i < ListOfStories.Count; i++)
             {
                 ObservableCollection<Quiz> returnQuizzes = factory.GenerateQuizzes(ListOfStories.ElementAt(i).Name);

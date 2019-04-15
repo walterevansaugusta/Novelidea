@@ -90,7 +90,6 @@ namespace BrainyStories
                 if (timeStamp.Equals(thinkAndDo.Length))
                 {
                     thinkAndDo.Completed = true;
-                    User.ThinkAndDosCompleted.Add(thinkAndDo);
                 }
             };
             StackLayout audio = new StackLayout

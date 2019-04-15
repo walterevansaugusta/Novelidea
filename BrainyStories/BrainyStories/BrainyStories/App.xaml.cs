@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Threading;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace BrainyStories {
@@ -12,6 +13,9 @@ namespace BrainyStories {
 
         protected override void OnStart() {
             // Handle when your app starts
+            StoryFactory.GenerateStoriesThread = new Thread(new ThreadStart(StoryFactory.GenerateAll));
+            StoryFactory.GenerateStoriesThread.IsBackground = true;
+            StoryFactory.GenerateStoriesThread.Start();
         }
 
         protected override void OnSleep() {

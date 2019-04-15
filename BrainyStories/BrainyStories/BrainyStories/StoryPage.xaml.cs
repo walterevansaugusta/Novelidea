@@ -9,6 +9,7 @@ using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
+using BrainyStories.Objects;
 
 namespace BrainyStories
 {

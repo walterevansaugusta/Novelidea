@@ -4,329 +4,59 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
 using Xamarin.Forms;
+using System.Threading;
+using System.Diagnostics;
 
 namespace BrainyStories {
 
 
     public class StoryFactory {
+        public static Thread GenerateStoriesThread;
+
+        public static void GenerateAll()
+        {
+            var watch = Stopwatch.StartNew();
+            StoryFactory storyFactory = new StoryFactory();
+            stories = storyFactory.generateStories();
+            imagines = storyFactory.generateImagines();
+            watch.Stop();
+            Debug.WriteLine("GenerateStoriesThread completed in " + watch.ElapsedMilliseconds + "ms");
+        }
+
+        public static ObservableCollection<Story> Stories {
+            get {
+                if (GenerateStoriesThread.IsAlive)
+                    GenerateStoriesThread.Join();
+                return stories;
+            }
+        }
+        public static ObservableCollection<Story> Imagines {
+            get {
+                if (GenerateStoriesThread.IsAlive)
+                {
+                    Debug.WriteLine("Waiting on story generation to finish...");
+                    GenerateStoriesThread.Join();
+                }
+                return stories;
+            }
+        }
+
+        private static ObservableCollection<Story> stories;
+        private static ObservableCollection<Story> imagines;
 
         private ThinkAndDoFactory thinkAndDoFactory = new ThinkAndDoFactory();
         private QuizFactory quizFactory = new QuizFactory();
 
         //MANUAL LIST OF STORIES
-        public ObservableCollection<Story> generateStories()
+        private ObservableCollection<Story> generateStories()
         {
-            ObservableCollection<Story> storyListTemp = new ObservableCollection<Story>();
+            thinkAndDoFactory.generateThinkAndDos();
 
-            //STORY 1
-            storyListTemp.Add(new Story
+            if (stories == null)
             {
-                Name = "The Lion and the Mouse",
-                Icon = "S1_LATM_1.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 3,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 2, 51),
-                WordCount = 395,
-                Description = "A lion releases a mouse, believing it’s too small and weak ever to return the favor, " +
-                    "but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
-                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal),
-            });
-
-            //STORY 2
-            storyListTemp.Add(new Story
-            {
-                Name = "The Little Red Hen",
-                Icon = "S2_LRH_0.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 3,
-                ThinkDoNum = 1,
-                Duration = new TimeSpan(0, 3, 14),
-                WordCount = 477,
-                Description = "Lazy animals refuse to help the hen plant the seed, harvest the grain, or bake the " +
-                    "bread, so the hen refuses to share the baked bread with the lazy animals.",
-                ListOfIcons = CreateStoryActivitiesStack(4, 1, AppealType.Animal)
-            });
-
-            //STORY 3
-            storyListTemp.Add(new Story
-            {
-                Name = "The Boy Who Cried Wolf",
-                Icon = "S3_TBWCW_1.jpg",
-                Appeal = AppealType.Male,
-                QuizNum = 3,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 4, 37),
-                WordCount = 722,
-                Description = "Bored watching over the sheep, a boy causes excitement by lying that a wolf " +
-                    "threatens; when a real wolf attacks, the people think the boy’s lying and won’t come to help him.",
-                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Male)
-            });
-
-            //STORY 4
-            storyListTemp.Add(new Story
-            {
-                Name = "The Elves and Shoemaker",
-                Icon = "S4_TEATS_1.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 4,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 6, 06),
-                WordCount = 830,
-                Description = "By secretly making shoes, two elves save a poor shoemaker and his wife; " +
-                    "the man and wife make clothes to reward the elves, who leave when their help is no longer needed.",
-                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal)
-            });
-
-            //STORY 5
-            storyListTemp.Add(new Story
-            {
-                Name = "The Three Little Pigs",
-                Icon = "S5_TLP_0.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 5,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 6, 34),
-                WordCount = 986,
-                Description = "Two pigs squander their money and build shabby houses; their smarter brother " +
-                    "saves and works hard to build a brick house which protects them all from the big bad wolf.",
-                ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal)
-            });
-
-            //STORY 6
-            storyListTemp.Add(new Story
-            {
-                Name = "The Three Billy Goats Gruff",
-                Icon = "S6_BGG_1.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 5, 
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 6, 38),
-                WordCount = 891,
-                Description = "Two billy goats trick a mean troll into waiting for their brother; " +
-                    "with his horns the big brother knocks the troll off the bridge.",
-                ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal)
-            });
-
-            //STORY 7
-            storyListTemp.Add(new Story
-            {
-                Name = "The Tale of Peter Rabbit",
-                Icon = "S7_PR_0.jpg",
-                Appeal = AppealType.Animal,
-                QuizNum = 5,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 7, 29),
-                WordCount = 933,
-                Description = "Peter disobeys his mother and enters Mr. MacGregor’s garden, where he is almost " +
-                    "captured and put into a pie; Peter escapes and returns to his mother who scolds him.",
-                ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal)
-            });
-
-            //STORY 8
-            storyListTemp.Add(new Story
-            {
-                Name = "The Gingerbread Man",
-                Icon = "S8_TGM_1.jpg",
-                Appeal = AppealType.General,
-                QuizNum = 6,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 7, 39),
-                WordCount = 1095,
-                Description = "The Gingerbread Man speaks rudely, brags, and outruns all the people " +
-                    "and animals until the fox’s help, is tricked and swallowed.",
-                ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.General)
-            });
-
-            //STORY 9
-            storyListTemp.Add(new Story
-            {
-                Name = "Rumplestiltskin",
-                Icon = "S9_R_1.jpg",
-                Appeal = AppealType.Female,
-                QuizNum = 6,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 8, 18),
-                WordCount = 1344,
-                Description = "A cruel man spins straw into gold to save a girl’s life, demanding her " +
-                    "first child in payment; when she’s queen she saves her child by learning the man’s secret name.",
-                ListOfIcons = CreateStoryActivitiesStack(6, 1, AppealType.Female)
-            });
-
-            //STORY 10
-            storyListTemp.Add(new Story
-            {
-                Name = "Little Red Riding Hood",
-                Icon = "S10_LRRH_1.jpg",
-                Appeal = AppealType.Female,
-                QuizNum = 6,
-                ThinkDoNum = 2,
-                Duration = new TimeSpan(0, 8, 47),
-                WordCount = 1243,
-                Description = "A girl speaks to a wolf and leaves the proper path; the wolf swallows the grandmother" +
-                              " and girl, but a huntsman kills the wolf, opens the wolf’s belly, and rescues both of them.",
-                ListOfIcons = CreateStoryActivitiesStack(6, 1, AppealType.Female)
-            });
-
-            return storyListTemp;
-        }
-        //END OF STORIES
-
-
-        //MANUAL LIST OF IMAGINES 
-        public ObservableCollection<Story> generateImagines()
-        {
-            ObservableCollection<Story> imaginesListTemp = new ObservableCollection<Story>();
-
-            //IMAGINE 1
-            imaginesListTemp.Add(new Story
-            {
-                Name = "If A Shoe Wanted to be Car",
-                Icon = "I1_IASW_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 1, 47),
-                WordCount = 212,
-                Description = "Imagine a shoe wanting to be like a car, and what a child might find in the home to help.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 2
-            imaginesListTemp.Add(new Story
-            {
-                Name = "Do you pump your legs when you swing?",
-                Icon = "I2_DYPYL_1.jpg",
-                Appeal = AppealType.Male,
-                Duration = new TimeSpan(0, 1, 48),
-                WordCount = 206,
-                Description = "Imagine swinging as high as trees, birds, clouds, or even higher, what it might feel like, what you might see.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 3
-            imaginesListTemp.Add(new Story
-            {
-                Name = "Upside Down Windows",
-                Icon = "I3_TUDW_1.jpg",
-                Appeal = AppealType.Female,
-                Duration = new TimeSpan(0, 1, 59),
-                WordCount = 248,
-                Description = "Imagine wandering into a world where everything is upside down and backwards.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 4
-            imaginesListTemp.Add(new Story
-            {
-                Name = "The Special One-Eye Blink",
-                Icon = "I4_TSOEB_1.jpg",
-                Appeal = AppealType.Female,
-                Duration = new TimeSpan(0, 2, 06),
-                WordCount = 304,
-                Description = "Imagine blinking to become very tiny and what you might be able to do if you were very, very small.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 5
-            imaginesListTemp.Add(new Story
-            {
-                Name = "If a Naughty Angel",
-                Icon = "I5_IANA_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 2, 32),
-                WordCount = 399,
-                Description = "Imagine what you’d say if a little angel asked your advice on how to be a tiny bit mischievous.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 6
-            imaginesListTemp.Add(new Story
-            {
-                Name = "If You Decide to be a Kitten",
-                Icon = "I6_DTBAK_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 2, 40),
-                WordCount = 326,
-                Description = "Imagine what it might be like to be a kitten.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 7
-            imaginesListTemp.Add(new Story
-            {
-                Name = "Nobody's Better than You",
-                Icon = "I7_NBTY_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 2, 40),
-                WordCount = 352,
-                Description = "Always remember, nobody’s better than you.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 8
-            imaginesListTemp.Add(new Story
-            {
-                Name = "If a Piece of Dirt...",
-                Icon = "I8_IAPOD_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 2, 45),
-                WordCount = 350,
-                Description = "Imagine some of the things you might help a sad, lonely, bored piece of dirt become.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 9
-            imaginesListTemp.Add(new Story
-            {
-                Name = "The Imaginary Fairy Palace",
-                Icon = "I9_IFP_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 3, 44),
-                WordCount = 396,
-                Description = "Imagine the kind of home fairies might create for themselves if they wanted.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            //IMAGINE 10
-            imaginesListTemp.Add(new Story
-            {
-                Name = "Do You Like Bubbles",
-                Icon = "I10_DYLB_1.jpg",
-                Appeal = AppealType.General,
-                Duration = new TimeSpan(0, 2, 30),
-                WordCount = 344,
-                Description = "Imagine blowing bubbles in a sink or bathtub.",
-                ListOfIcons = CreateStoryActivitiesStack(0, 0, null)
-            });
-
-            return imaginesListTemp;
-        }
-        private ObservableCollection<String> CreateStoryActivitiesStack(int quizNum, int thinkAndDoNum, AppealType type)
-        {
-            ObservableCollection<String> images = new ObservableCollection<String>();
-            if (type != null)
-            {
-                images.Add(type.Value);
-            }
-            for (int i = 0; i < quizNum; i++)
-            {
-                images.Add(Quiz.Icon);
-            }
-            for (int i = 0; i < thinkAndDoNum; i++)
-            {
-                images.Add(ThinkAndDo.Icon);
-            }
-            return images;
-        }
-
-        public Story playedStory(String storyName)
-        {
-            Story chosen = new Story();
-            ObservableCollection<ThinkAndDo> ThinkAndDoTemp = new ObservableCollection<ThinkAndDo>();
-            ThinkAndDoTemp = thinkAndDoFactory.generateThinkAndDos();
-
-            if (storyName.Equals("The Lion and the Mouse"))
-            {
-                chosen = new Story
+                stories = new ObservableCollection<Story>();
+                //STORY 1
+                stories.Add(new Story
                 {
                     Name = "The Lion and the Mouse",
                     Icon = "S1_LATM_1.jpg",
@@ -336,7 +66,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 2, 51),
                     WordCount = 395,
                     Description = "A lion releases a mouse, believing it’s too small and weak ever to return the favor, " +
-                    "but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
+                        "but when the lion is trapped in a net the mouse gnaws the threads and releases the lion.",
                     ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S1_LATM_1.jpg" },
@@ -351,11 +81,10 @@ namespace BrainyStories {
                     AudioClip = "S1_TLATM_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Lion and the Mouse"),
                     Quizzes = quizFactory.GenerateQuizzes("The Lion and the Mouse")
-                };
-            }
-            else if (storyName.Equals("The Little Red Hen"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 2
+                stories.Add(new Story
                 {
                     Name = "The Little Red Hen",
                     Icon = "S2_LRH_1.jpg",
@@ -365,7 +94,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 3, 14),
                     WordCount = 477,
                     Description = "Lazy animals refuse to help the hen plant the seed, harvest the grain, or bake the " +
-                    "bread, so the hen refuses to share the baked bread with the lazy animals.",
+                        "bread, so the hen refuses to share the baked bread with the lazy animals.",
                     ListOfIcons = CreateStoryActivitiesStack(4, 1, AppealType.Animal),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S2_LRH_1.jpg" },
@@ -378,12 +107,11 @@ namespace BrainyStories {
                 },
                     AudioClip = "S2_LRH_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Hen"),
-                    Quizzes = quizFactory.GenerateQuizzes("The Little Red Hen") 
-                };
-            }
-            else if (storyName.Equals("The Boy Who Cried Wolf"))
-            {
-                chosen = new Story
+                    Quizzes = quizFactory.GenerateQuizzes("The Little Red Hen")
+                });
+
+                //STORY 3
+                stories.Add(new Story
                 {
                     Name = "The Boy Who Cried Wolf",
                     Icon = "S3_TBWCW_1.jpg",
@@ -393,7 +121,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 4, 37),
                     WordCount = 722,
                     Description = "Bored watching over the sheep, a boy causes excitement by lying that a wolf " +
-                    "threatens; when a real wolf attacks, the people think the boy’s lying and won’t come to help him.",
+                        "threatens; when a real wolf attacks, the people think the boy’s lying and won’t come to help him.",
                     ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Male),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S3_TBWCW_1.jpg" },
@@ -408,12 +136,11 @@ namespace BrainyStories {
                 },
                     AudioClip = "S3_BWCW_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Boy Who Cried Wolf"),
-                    Quizzes = quizFactory.GenerateQuizzes("The Boy Who Cried Wolf") 
-                };
-            }
-            else if (storyName.Equals("The Elves and Shoemaker"))
-            {
-                chosen = new Story
+                    Quizzes = quizFactory.GenerateQuizzes("The Boy Who Cried Wolf")
+                });
+
+                //STORY 4
+                stories.Add(new Story
                 {
                     Name = "The Elves and Shoemaker",
                     Icon = "S4_TEATS_1.jpg",
@@ -423,7 +150,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 6, 06),
                     WordCount = 830,
                     Description = "By secretly making shoes, two elves save a poor shoemaker and his wife; " +
-                    "the man and wife make clothes to reward the elves, who leave when their help is no longer needed.",
+                        "the man and wife make clothes to reward the elves, who leave when their help is no longer needed.",
                     ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.General),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S4_TEATS_1.jpg" },
@@ -438,11 +165,10 @@ namespace BrainyStories {
                     AudioClip = "S4_TEATS_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Elves and Shoemaker"),
                     Quizzes = quizFactory.GenerateQuizzes("The Elves and Shoemaker")
-                };
-            }
-            else if (storyName.Equals("The Three Little Pigs"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 5
+                stories.Add(new Story
                 {
                     Name = "The Three Little Pigs",
                     Icon = "S5_TLP_1.jpg",
@@ -452,7 +178,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 6, 34),
                     WordCount = 986,
                     Description = "Two pigs squander their money and build shabby houses; their smarter brother " +
-                     "saves and works hard to build a brick house which protects them all from the big bad wolf.",
+                         "saves and works hard to build a brick house which protects them all from the big bad wolf.",
                     ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S5_TLP_1.jpg" }, //TODO: TRANSITIONS ARE WRONG FOR STORY 5
@@ -472,11 +198,10 @@ namespace BrainyStories {
                     AudioClip = "S5_TLP_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Little Pigs"),
                     Quizzes = quizFactory.GenerateQuizzes("The Three Little Pigs")
-                };
-            }
-            else if (storyName.Equals("The Three Billy Goats Gruff"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 6
+                stories.Add(new Story
                 {
                     Name = "The Three Billy Goats Gruff",
                     Icon = "S6_BGG_1.jpg",
@@ -486,7 +211,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 6, 38),
                     WordCount = 891,
                     Description = "Two billy goats trick a mean troll into waiting for their brother; " +
-                    "with his horns the big brother knocks the troll off the bridge.",
+                        "with his horns the big brother knocks the troll off the bridge.",
                     ListOfIcons = CreateStoryActivitiesStack(3, 1, AppealType.Animal),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S6_BGG_1.jpg" }, //TODO: TRANSITIONS ARE WRONG FOR STORY 6
@@ -507,11 +232,10 @@ namespace BrainyStories {
                     AudioClip = "S6_BGG_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Three Billy Goats Gruff"),
                     Quizzes = quizFactory.GenerateQuizzes("The Three Billy Goats Gruff")
-                };
-            }
-            else if (storyName.Equals("The Tale of Peter Rabbit"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 7
+                stories.Add(new Story
                 {
                     Name = "The Tale of Peter Rabbit",
                     Icon = "S7_PR_1.jpg",
@@ -521,7 +245,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 7, 29),
                     WordCount = 933,
                     Description = "Peter disobeys his mother and enters Mr. MacGregor’s garden, where he is almost " +
-                    "captured and put into a pie; Peter escapes and returns to his mother who scolds him.",
+                        "captured and put into a pie; Peter escapes and returns to his mother who scolds him.",
                     ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.Animal),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S7_PR_1.jpg" },
@@ -553,11 +277,10 @@ namespace BrainyStories {
                     AudioClip = "S7_PR_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Tale of Peter Rabbit"),
                     Quizzes = quizFactory.GenerateQuizzes("The Tale of Peter Rabbit")
-                };
-            }
-            else if (storyName.Equals("The Gingerbread Man"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 8
+                stories.Add(new Story
                 {
                     Name = "The Gingerbread Man",
                     Icon = "S8_TGM_1.jpg",
@@ -567,7 +290,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 7, 39),
                     WordCount = 1095,
                     Description = "The Gingerbread Man speaks rudely, brags, and outruns all the people " +
-                    "and animals until the fox’s help, is tricked and swallowed.",
+                        "and animals until the fox’s help, is tricked and swallowed.",
                     ListOfIcons = CreateStoryActivitiesStack(5, 1, AppealType.General),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S8_TGM_1.jpg" },
@@ -585,11 +308,10 @@ namespace BrainyStories {
                     AudioClip = "S8_TGM_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("The Gingerbread Man"),
                     Quizzes = quizFactory.GenerateQuizzes("The Gingerbread Man")
-                };
-            }
-            else if (storyName.Equals("Rumplestiltskin"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 9
+                stories.Add(new Story
                 {
                     Name = "Rumplestiltskin",
                     Icon = "S9_R_1.jpg",
@@ -599,7 +321,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 8, 18),
                     WordCount = 1344,
                     Description = "A cruel man spins straw into gold to save a girl’s life, demanding her " +
-                    "first child in payment; when she’s queen she saves her child by learning the man’s secret name.",
+                        "first child in payment; when she’s queen she saves her child by learning the man’s secret name.",
                     ListOfIcons = CreateStoryActivitiesStack(6, 1, AppealType.Female),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S9_R_1.jpg" },
@@ -625,11 +347,10 @@ namespace BrainyStories {
                     AudioClip = "S9_R_Story.mp3",
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Rumplestiltskin"),
                     Quizzes = quizFactory.GenerateQuizzes("Rumplestiltskin")
-                };
-            }
-            else if (storyName.Equals("Little Red Riding Hood"))
-            {
-                chosen = new Story
+                });
+
+                //STORY 10
+                stories.Add(new Story
                 {
                     Name = "Little Red Riding Hood",
                     Icon = "S10_LRRH_1.jpg",
@@ -639,7 +360,7 @@ namespace BrainyStories {
                     Duration = new TimeSpan(0, 8, 47),
                     WordCount = 1243,
                     Description = "A girl speaks to a wolf and leaves the proper path; the wolf swallows the grandmother" +
-                              " and girl, but a huntsman kills the wolf, opens the wolf’s belly, and rescues both of them.",
+                                  " and girl, but a huntsman kills the wolf, opens the wolf’s belly, and rescues both of them.",
                     ListOfIcons = CreateStoryActivitiesStack(6, 1, AppealType.Female),
                     PictureCues = new Dictionary<TimeSpan, string> {
                    { new TimeSpan(0, 0, 0), "S10_LRRH_1.jpg" },
@@ -662,11 +383,22 @@ namespace BrainyStories {
                     AudioClip = "S9_R_Story.mp3", //TODO: NEED TO GET STORY 10 (LRRH) AUDIO
                     ThinkAndDos = thinkAndDoFactory.StoryThinkAndDos("Little Red Riding Hood"),
                     Quizzes = quizFactory.GenerateQuizzes("Little Red Riding Hood")
-                };
+                });
             }
-            else if (storyName.Equals("If A Shoe Wanted to be Car"))
+
+            return stories;
+        }
+        //END OF STORIES
+
+
+        //MANUAL LIST OF IMAGINES 
+        private ObservableCollection<Story> generateImagines()
+        {
+            if (imagines == null)
             {
-                chosen = new Story
+                imagines = new ObservableCollection<Story>();
+                //IMAGINE 1
+                imagines.Add(new Story
                 {
                     Name = "If A Shoe Wanted to be Car",
                     Icon = "I1_IASW_1.jpg",
@@ -685,11 +417,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 26), "I1_IASW_5.jpg" }
                 },
                     AudioClip = "I1_IAS_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("Do you pump your legs when you swing?"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 2
+                imagines.Add(new Story
                 {
                     Name = "Do you pump your legs when you swing?",
                     Icon = "I2_DYPYL_1.jpg",
@@ -710,11 +441,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 38), "I2_DYPYL_7.jpg" },
                 },
                     AudioClip = "I2_DYPYL_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("Upside Down Windows"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 3
+                imagines.Add(new Story
                 {
                     Name = "Upside Down Windows",
                     Icon = "I3_TUDW_1.jpg",
@@ -734,11 +464,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 1, 48), "I3_TUDW_6.jpg" }
                 },
                     AudioClip = "I3_UW_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("The Special One-Eye Blink"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 4
+                imagines.Add(new Story
                 {
                     Name = "The Special One-Eye Blink",
                     Icon = "I4_TSOEB_1.jpg",
@@ -758,11 +487,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 12), "I5_IANA_6.jpg" }
                     },
                     AudioClip = "I5_IANA_IG.mp3",
-                };
-            }
-            else if (storyName.Equals("If a Naughty Angel"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 5
+                imagines.Add(new Story
                 {
                     Name = "If a Naughty Angel",
                     Icon = "I5_IANA_1.jpg",
@@ -782,11 +510,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 12), "I5_IANA_6.jpg" }
                 },
                     AudioClip = "I5_IANA_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("If You Decide to be a Kitten"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 6
+                imagines.Add(new Story
                 {
                     Name = "If You Decide to be a Kitten",
                     Icon = "I6_DTBAK_1.jpg",
@@ -811,11 +538,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 20), "I6_DTBAK_11.jpg" }
                 },
                     AudioClip = "I6_DTBK_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("Nobody's Better than You"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 7
+                imagines.Add(new Story
                 {
                     Name = "Nobody's Better than You",
                     Icon = "I7_NBTY_1.jpg",
@@ -843,11 +569,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 20), "I7_NBTY_14.jpg" }
                 },
                     AudioClip = "I7_NBTY_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("If a Piece of Dirt..."))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 8
+                imagines.Add(new Story
                 {
                     Name = "If a Piece of Dirt...",
                     Icon = "I8_IAPOD_1.jpg",
@@ -868,11 +593,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 16), "I8_IAPOD_7.jpg" }
                 },
                     AudioClip = "I8_IAPOD_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("The Imaginary Fairy Palace"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 9
+                imagines.Add(new Story
                 {
                     Name = "The Imaginary Fairy Palace",
                     Icon = "I9_IFP_1.jpg",
@@ -894,11 +618,10 @@ namespace BrainyStories {
                    { new TimeSpan(0, 3, 32), "I9_IFP_1.jpg" } //TODO: check images for imagine 9
                 },
                     AudioClip = "I9_IFP_IG.mp3"
-                };
-            }
-            else if (storyName.Equals("Do You Like Bubbles"))
-            {
-                chosen = new Story
+                });
+
+                //IMAGINE 10
+                imagines.Add(new Story
                 {
                     Name = "Do You Like Bubbles",
                     Icon = "I10_DYLB_1.jpg",
@@ -921,9 +644,27 @@ namespace BrainyStories {
                    { new TimeSpan(0, 2, 20), "I10_DYLB_9.jpg" }  //TODO: not enough images
                 },
                     AudioClip = "I1_IAS_IG.mp3" //TODO: NEED TO CHANGE TO IMAGINES 10 AUDIO
-                };
+                });
             }
-            return chosen;
+
+            return imagines;
+        }
+        private ObservableCollection<String> CreateStoryActivitiesStack(int quizNum, int thinkAndDoNum, AppealType type)
+        {
+            ObservableCollection<String> images = new ObservableCollection<String>();
+            if (type != null)
+            {
+                images.Add(type.Value);
+            }
+            for (int i = 0; i < quizNum; i++)
+            {
+                images.Add(Quiz.Icon);
+            }
+            for (int i = 0; i < thinkAndDoNum; i++)
+            {
+                images.Add(ThinkAndDo.Icon);
+            }
+            return images;
         }
     }
     //END OF IMAGINES

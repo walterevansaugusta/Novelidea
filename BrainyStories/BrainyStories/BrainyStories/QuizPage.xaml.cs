@@ -26,6 +26,7 @@ namespace BrainyStories
         private int[] scoreCalculation;
         private ISimpleAudioPlayer player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
         private int tapCount = 0;
+        private User user;
 
         public QuizPage(Quiz temp)
         {
@@ -57,6 +58,7 @@ namespace BrainyStories
             {
                 Console.WriteLine(quiz.Questions[QuestionNum].Audio + " does not exist!");
             }
+            user = User.Instance;
         }
 
         private void PreviousQuestion(object sender, EventArgs e)
@@ -181,13 +183,13 @@ namespace BrainyStories
                 scoreCalculation[QuestionNum] = quiz.NumAttempts[QuestionNum];
                 if (quiz.NumAttempts[QuestionNum] == 1)
                 {
-                    User.rewardsRecieved["Gold"]++;
+                    user.RewardsRecieved["Gold"]++;
                 } else if (quiz.NumAttempts[QuestionNum] == 2)
                 {
-                    User.rewardsRecieved["Silver"]++;
+                    user.RewardsRecieved["Silver"]++;
                 } else
                 {
-                    User.rewardsRecieved["Bronze"]++;
+                    user.RewardsRecieved["Bronze"]++;
                 }
             } else
             {
@@ -201,13 +203,6 @@ namespace BrainyStories
                 if (quiz.NumAttempts[i] < 1)
                 {
                     quizCompleted = false;
-                }
-            }
-            if (quizCompleted)
-            {
-                if(!User.QuizzesCompleted.Contains(quiz))
-                {
-                    User.QuizzesCompleted.Add(quiz);
                 }
             }
             CalculateScore();
