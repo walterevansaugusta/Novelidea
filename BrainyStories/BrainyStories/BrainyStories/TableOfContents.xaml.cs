@@ -17,8 +17,6 @@ namespace BrainyStories
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class TableOfContents : ContentPage
 	{
-        StoryFactory storyFact = new StoryFactory();
-
         private Settings settingsPage;
 
         public TableOfContents (bool imagines)
@@ -26,11 +24,11 @@ namespace BrainyStories
             NavigationPage.SetHasNavigationBar(this, false);
             if (imagines)
             {
-                Story.ListOfStories = storyFact.generateImagines();
+                Story.ListOfStories = StoryFactory.Imagines;
             }
             else
             {
-                Story.ListOfStories = storyFact.generateStories();
+                Story.ListOfStories = StoryFactory.Stories;
             }
             InitializeComponent();
             listView.SelectedItem = null;
