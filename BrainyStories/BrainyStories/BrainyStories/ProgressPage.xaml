@@ -4,7 +4,6 @@
             x:Class="BrainyStories.ProgressPage"
             xmlns:brainystories="clr-namespace:BrainyStories">
   <!--Pages can be added as references or inline-->
-    <brainystories:ProgressSummaryPage />
-    <brainystories:ProgressIndividualPage />
-    <brainystories:ProgressOverallPage />
+    <brainystories:ProgressSummaryPage/>
+    <brainystories:ProgressIndividualPage/>
 </TabbedPage>
