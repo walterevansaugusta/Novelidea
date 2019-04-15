@@ -29,7 +29,7 @@
                          BorderColor ="Transparent"
                          BackgroundColor="Transparent"/>
         </StackLayout>
-        <Label Text="Brainy Stories"
+        <!--<Label Text="Brainy Stories"
                    FontFamily="{StaticResource Curly}"
                    FontSize="40"
                    VerticalOptions="Center"
@@ -37,7 +37,15 @@
                    Grid.Row="0"
                    Grid.Column="0"
                    Grid.ColumnSpan="3"
-                   Margin="0,0,0,0"/>
+                   Margin="0,0,0,0"/>-->
+        
+        <Image Source="logo.png"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Grid.Row="0"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"/>
+        
         <Grid x:Name="pageGrid" BackgroundColor="#9FDFBB" Padding="0,0,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
