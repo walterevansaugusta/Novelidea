@@ -4,10 +4,6 @@
              x:Class="BrainyStories.App">
     <Application.Resources>
         <ResourceDictionary>
-            <OnPlatform x:TypeArguments="x:String" x:Key="Curly">
-                <On Platform="Android" Value="Curly.otf#Curly" />
-                <On Platform="iOS" Value="Curly" />
-            </OnPlatform>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
