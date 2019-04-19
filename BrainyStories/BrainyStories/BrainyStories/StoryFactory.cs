@@ -654,9 +654,9 @@ namespace BrainyStories {
 
             return imagines;
         }
-        private ObservableCollection<String> CreateStoryActivitiesStack(int quizNum, int thinkAndDoNum, AppealType type)
+        private ICollection<String> CreateStoryActivitiesStack(int quizNum, int thinkAndDoNum, AppealType type)
         {
-            ObservableCollection<String> images = new ObservableCollection<String>();
+            ICollection<String> images = new List<String>();
             if (type != null)
             {
                 images.Add(type.Value);
