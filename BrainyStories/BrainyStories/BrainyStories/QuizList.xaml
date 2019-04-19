@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.QuizList"
              NavigationPage.HasNavigationBar="false"
-             BackgroundColor="#A9FFF7">
+             BackgroundColor="#White">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
@@ -11,7 +11,7 @@
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
-                  BackgroundColor ="White">
+                  BackgroundColor ="#A9FFF7">
                 <ImageButton HorizontalOptions="Start"
                         Source="BackButton.png"
                         Clicked ="BackClicked"
