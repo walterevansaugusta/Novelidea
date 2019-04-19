@@ -72,6 +72,6 @@ namespace BrainyStories
         public static ObservableCollection<Story> ListOfStories { get; set; }
 
         //List of Icon Images
-        public ObservableCollection<String> ListOfIcons { get; set; }
+        public ICollection<String> ListOfIcons { get; set; }
     }
 }
