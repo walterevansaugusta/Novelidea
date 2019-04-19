@@ -80,7 +80,7 @@ namespace BrainyStories
         // Static Observable Collection of stories used for data binding
         public static ObservableCollection<Story> ListOfStories { get; set; }
 
-        // Observable Collection of Icons for the stories
-        public ObservableCollection<String> ListOfIcons { get; set; }
+        //List of Icon Images
+        public ICollection<String> ListOfIcons { get; set; }
     }
 }
