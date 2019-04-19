@@ -1,12 +1,35 @@
 # NovelIdea
 - A children's app where children can read or listen to stories and increase their reading comprehension skills.
 - Stories taken from hearatale.org
-# Critical Files to Review (for JD editors)
-- all important files are in Novelidea/BrainyStories/BrainyStories/BrainyStories/ 
-- front end files are the .xaml files
-- back end files are the .xaml.cs and the .cs files 
-- ignore the BrainyStories.csproj (it is auto generated)
-- each .xaml.cs is associated with the corresponding .xaml file (they will have the same name)
+
+Release Notes Brainy Stories 1.0
+    NEW FEATURES
+        Ability to read and listen to children’s stories
+        Ability to take quizzes based on the readings
+        Ability to do short activities for each stories
+        A rewards system for getting quiz questions correct
+        A progress page that tracks different data throughout the app
+    BUG FIXES
+        This is the first release
+    KNOWN BUGS
+        On the iOS build, some of the audio tracks do not play but others do play. This is not an issue for android.
+        The app does not persist between sessions.
+
+Install Guide Brainy Stories 1.0
+    PREREQUISITES
+        For hardware, an Android or iOS device is required. For software, Android 5.0 at minimum is required.
+    DEPENDENT LIBRARIES THAT MUSTS BE INSTALLED
+        None since it is a mobile app.
+    DOWNLOAD INSTRUCTIONS
+        Download like a normal app from either the Google Play Store, Amazon Store, or Apple App Store.
+    INSTALLATION OF ACTUAL APPLICATION
+        Nothing is required other than downloading from the appropriate store.
+    RUNNING APPLICATION
+        Nothing is required other than clicking on the app.
+    TROUBLESHOOTING
+        There are not any expected errors that should occur while the user is running the app.
+
+
 # Basic Navigation Flow
 - Main Page.xaml
     - TableOfContents.xaml
