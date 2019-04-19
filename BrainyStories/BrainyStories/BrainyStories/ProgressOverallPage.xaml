@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.ProgressOverallPage"
              xmlns:local="clr-namespace:BrainyStories.Objects"
-             Title="Overall">
+             Title="Overall"
+             BackgroundColor="#A9FFF7">
     <ContentPage.Content>
         <StackLayout>
             <Label Text="Overall Stuff" />

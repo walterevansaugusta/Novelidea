@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.QuizPage"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                  VerticalOptions="StartAndExpand"
@@ -11,7 +12,7 @@
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
-                  BackgroundColor ="Blue">
+                  BackgroundColor ="#A9FFF7">
                 <ImageButton HorizontalOptions="Start"
                         Source="BackButton.png"
                         Clicked ="BackClicked"
@@ -34,12 +35,13 @@
                 HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="NumCorrect"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand"
+               />
             </StackLayout>
             <Label x:Name="QuestionTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0">
+            <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
@@ -54,7 +56,7 @@
                 <Button x:Name="One"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="FillAndExpand" 
                     HorizontalOptions="FillAndExpand"
                     Grid.Row="1"
@@ -65,7 +67,7 @@
                 <Button x:Name="Two"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#6526DA"
                     Grid.Row="1"
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
@@ -75,7 +77,7 @@
                 <Button x:Name="Three"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#6526DA"
                     Grid.Row="2"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
@@ -85,7 +87,7 @@
                 <Button x:Name="Four"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#6526DA"
                     Grid.Row="2"
                     Grid.Column="2"
                     Grid.ColumnSpan="2"
@@ -112,7 +114,7 @@
                     Clicked="NextQuestion"/>
                 <ImageButton x:Name ="BackToStory"
                     Source="ClassicStories.png"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#6526DA"
                     Grid.Row="3"
                     Grid.Column="3"
                     Grid.ColumnSpan="1"

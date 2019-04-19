@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.RewardsPage"
-             Title="Rewards Page">
+             Title="Rewards Page"
+            >
     <ContentPage.Content>
         <Grid x:Name="medalGrid">
             <Grid.RowDefinitions>
