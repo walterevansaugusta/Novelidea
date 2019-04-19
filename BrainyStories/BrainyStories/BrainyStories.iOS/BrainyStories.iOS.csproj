@@ -28,6 +28,8 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: diamondlilly98@gmail.com (S5BM7F7ZD5)</CodesignKey>
+    <MtouchProfiling>true</MtouchProfiling>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -49,9 +51,13 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer: diamondlilly98@gmail.com (S5BM7F7ZD5)</CodesignKey>
+    <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignEntitlements>
+    </CodesignEntitlements>
+    <CodesignProvision />
+    <CodesignExtraArgs />
+    <CodesignResourceRules />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -90,6 +96,9 @@
     <CodesignKey>iPhone Distribution</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
+  </PropertyGroup>
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -103,1420 +112,1420 @@
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\ThinkAndDoIcon.imageset\ThinkAndDoIcon.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ThinkAndDoIcon.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ThinkAndDo.imageset\ThinkAndDo.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ThinkAndDo.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Submit.imageset\Submit.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Submit.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\SettingsButton.imageset\SettingsButton.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\SettingsButton.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_9.imageset\S9_R_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_8.imageset\S9_R_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_7.imageset\S9_R_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_6.imageset\S9_R_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_5.imageset\S9_R_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_4.imageset\S9_R_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_3.imageset\S9_R_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_2.imageset\S9_R_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_19.imageset\S9_R_19.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_19.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_18.imageset\S9_R_18.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_18.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_17.imageset\S9_R_17.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_17.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_16.imageset\S9_R_16.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_16.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_15.imageset\S9_R_15.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_15.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_14.imageset\S9_R_14.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_14.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_13.imageset\S9_R_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_12.imageset\S9_R_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_11.imageset\S9_R_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_10.imageset\S9_R_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_1.imageset\S9_R_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S9_R_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_9.imageset\S8_TGM_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_8.imageset\S8_TGM_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_7.imageset\S8_TGM_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_6.imageset\S8_TGM_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_5.imageset\S8_TGM_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_4.imageset\S8_TGM_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_3.imageset\S8_TGM_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_2.imageset\S8_TGM_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_11.imageset\S8_TGM_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_10.imageset\S8_TGM_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_1.imageset\S8_TGM_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S8_TGM_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_9.imageset\S7_PR_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_8.imageset\S7_PR_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_7.imageset\S7_PR_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_6.imageset\S7_PR_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_5.imageset\S7_PR_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_4.imageset\S7_PR_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_3.imageset\S7_PR_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_25.imageset\S7_PR_25.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_25.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_24.imageset\S7_PR_24.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_24.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_23.imageset\S7_PR_23.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_23.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_22.imageset\S7_PR_22.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_22.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_21.imageset\S7_PR_21.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_21.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_20.imageset\S7_PR_20.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_20.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_2.imageset\S7_PR_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_19.imageset\S7_PR_19.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_19.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_18.imageset\S7_PR_18.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_18.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_17.imageset\S7_PR_17.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_17.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_16.imageset\S7_PR_16.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_16.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_15.imageset\S7_PR_15.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_15.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_14.imageset\S7_PR_14.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_14.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_13.imageset\S7_PR_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_12.imageset\S7_PR_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_11.imageset\S7_PR_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_10.imageset\S7_PR_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_1.imageset\S7_PR_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_0.imageset\S7_PR_0.JPG">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S7_PR_0.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_9.imageset\S6_BGG_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_8.imageset\S6_BGG_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_7.imageset\S6_BGG_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_6.imageset\S6_BGG_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_5.imageset\S6_BGG_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_4.imageset\S6_BGG_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_3.imageset\S6_BGG_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_2.imageset\S6_BGG_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_14.imageset\S6_BGG_14.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_14.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_13.imageset\S6_BGG_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_12.imageset\S6_BGG_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_11.imageset\S6_BGG_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_10.imageset\S6_BGG_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_1.imageset\S6_BGG_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S6_BGG_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_9.imageset\S5_TLP_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_8.imageset\S5_TLP_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_7.imageset\S5_TLP_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_6.imageset\S5_TLP_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_5.imageset\S5_TLP_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_4.imageset\S5_TLP_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_3.imageset\S5_TLP_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_2.imageset\S5_TLP_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_13.imageset\S5_TLP_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_12.imageset\S5_TLP_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_11.imageset\S5_TLP_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_10.imageset\S5_TLP_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_1.imageset\S5_TLP_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_0.imageset\S5_TLP_0.JPG">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S5_TLP_0.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_8.imageset\S4_TEATS_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_7.imageset\S4_TEATS_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_6.imageset\S4_TEATS_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_5.imageset\S4_TEATS_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_4.imageset\S4_TEATS_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_3.imageset\S4_TEATS_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_2.imageset\S4_TEATS_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_1.imageset\S4_TEATS_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S4_TEATS_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_9.imageset\S3_TBWCW_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_8.imageset\S3_TBWCW_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_7.imageset\S3_TBWCW_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_6.imageset\S3_TBWCW_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_5.imageset\S3_TBWCW_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_4.imageset\S3_TBWCW_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_3.imageset\S3_TBWCW_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_2.imageset\S3_TBWCW_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_1.imageset\S3_TBWCW_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S3_TBWCW_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_7.imageset\S2_LRH_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_6.imageset\S2_LRH_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_5.imageset\S2_LRH_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_4.imageset\S2_LRH_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_3.imageset\S2_LRH_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_2.imageset\S2_LRH_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_1.imageset\S2_LRH_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_0.imageset\S2_LRH_0.JPG">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S2_LRH_0.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_8.imageset\S1_LATM_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_7.imageset\S1_LATM_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_6.imageset\S1_LATM_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_5.imageset\S1_LATM_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_4.imageset\S1_LATM_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_3.imageset\S1_LATM_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_2.imageset\S1_LATM_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_1.imageset\S1_LATM_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S1_LATM_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_9.imageset\S10_LRRH_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_8.imageset\S10_LRRH_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_7.imageset\S10_LRRH_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_6.imageset\S10_LRRH_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_5.imageset\S10_LRRH_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_4.imageset\S10_LRRH_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_3.imageset\S10_LRRH_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_2.imageset\S10_LRRH_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_16.imageset\S10_LRRH_16.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_16.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_15.imageset\S10_LRRH_15.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_15.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_14.imageset\S10_LRRH_14.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_14.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_13.imageset\S10_LRRH_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_12.imageset\S10_LRRH_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_11.imageset\S10_LRRH_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_10.imageset\S10_LRRH_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_1.imageset\S10_LRRH_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\S10_LRRH_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Rewards.imageset\Rewards.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Rewards.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\QuizzesIcon.imageset\QuizzesIcon.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\QuizzesIcon.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Quizzes.imageset\Quizzes.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Quizzes.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Progress.imageset\Progress.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Progress.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Previous.imageset\Previous.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Previous.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\play.imageset\play.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\play.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\pause.imageset\pause.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\pause.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Next.imageset\Next.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Next.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Male.imageset\Male.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Male.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Imagines.imageset\Imagines.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Imagines.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_7.imageset\I9_IFP_7.JPG">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_6.imageset\I9_IFP_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_5.imageset\I9_IFP_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_4.imageset\I9_IFP_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_3.imageset\I9_IFP_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_2.imageset\I9_IFP_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_1.imageset\I9_IFP_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I9_IFP_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_7.imageset\I8_IAPOD_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_6.imageset\I8_IAPOD_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_5.imageset\I8_IAPOD_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_4.imageset\I8_IAPOD_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_3.imageset\I8_IAPOD_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_2.imageset\I8_IAPOD_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_1.imageset\I8_IAPOD_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I8_IAPOD_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_9.imageset\I7_NBTY_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_8.imageset\I7_NBTY_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_7.imageset\I7_NBTY_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_6.imageset\I7_NBTY_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_5.imageset\I7_NBTY_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_4.imageset\I7_NBTY_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_3.imageset\I7_NBTY_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_2.imageset\I7_NBTY_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_14.imageset\I7_NBTY_14.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_14.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_13.imageset\I7_NBTY_13.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_13.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_12.imageset\I7_NBTY_12.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_12.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_11.imageset\I7_NBTY_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_10.imageset\I7_NBTY_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_1.imageset\I7_NBTY_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I7_NBTY_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_9.imageset\I6_DTBAK_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_8.imageset\I6_DTBAK_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_7.imageset\I6_DTBAK_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_6.imageset\I6_DTBAK_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_5.imageset\I6_DTBAK_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_4.imageset\I6_DTBAK_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_3.imageset\I6_DTBAK_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_2.imageset\I6_DTBAK_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_11.imageset\I6_DTBAK_11.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_11.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_10.imageset\I6_DTBAK_10.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_10.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_1.imageset\I6_DTBAK_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I6_DTBAK_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_6.imageset\I5_IANA_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_5.imageset\I5_IANA_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_4.imageset\I5_IANA_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_3.imageset\I5_IANA_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_2.imageset\I5_IANA_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_1.imageset\I5_IANA_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I5_IANA_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_7.imageset\I4_TSOEB_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_6.imageset\I4_TSOEB_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_5.imageset\I4_TSOEB_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_4.imageset\I4_TSOEB_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_3.imageset\I4_TSOEB_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_2.imageset\I4_TSOEB_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_1.imageset\I4_TSOEB_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I4_TSOEB_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_6.imageset\I3_TUDW_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_5.imageset\I3_TUDW_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_4.imageset\I3_TUDW_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_3.imageset\I3_TUDW_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_2.imageset\I3_TUDW_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_1.imageset\I3_TUDW_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I3_TUDW_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_7.imageset\I2_DYPYL_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_6.imageset\I2_DYPYL_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_5.imageset\I2_DYPYL_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_4.imageset\I2_DYPYL_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_3.imageset\I2_DYPYL_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_2.imageset\I2_DYPYL_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_1.imageset\I2_DYPYL_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I2_DYPYL_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_5.imageset\I1_IASW_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_4.imageset\I1_IASW_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_3.imageset\I1_IASW_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_2.imageset\I1_IASW_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_1.imageset\I1_IASW_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I1_IASW_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_9.imageset\I10_DYLB_9.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_9.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_8.imageset\I10_DYLB_8.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_8.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_7.imageset\I10_DYLB_7.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_7.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_6.imageset\I10_DYLB_6.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_6.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_5.imageset\I10_DYLB_5.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_5.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_4.imageset\I10_DYLB_4.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_4.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_3.imageset\I10_DYLB_3.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_3.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_2.imageset\I10_DYLB_2.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_2.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_1.imageset\I10_DYLB_1.jpg">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\I10_DYLB_1.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Home.imageset\Home.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Home.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\General.imageset\General.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\General.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Gem.imageset\Gem.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Gem.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Female.imageset\Female.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Female.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\expand.imageset\expand.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\expand.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Coins.imageset\Coins.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Coins.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Coin.imageset\Coin.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Coin.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ClassicStories.imageset\ClassicStories.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\ClassicStories.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Bank.imageset\Bank.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Bank.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\BackButton.imageset\BackButton.png">
-       <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\BackButton.imageset\Contents.json">
-        <Visible>false</Visible>
+      <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Animal.imageset\Animal.png">
        <Visible>false</Visible>
@@ -3172,5 +3181,716 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\zebra.mp3" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Animal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\BackButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ClassicStories.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Coins.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Female.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Gem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\General.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I1_IASW_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I1_IASW_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I1_IASW_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I1_IASW_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I1_IASW_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I2_DYPYL_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I3_TUDW_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I4_TSOEB_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I5_IANA_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I6_DTBAK_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I7_NBTY_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I8_IAPOD_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I9_IFP_7.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\I10_DYLB_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Imagines.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Male.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\pause.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\play.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Progress.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Quizzes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\QuizzesIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Rewards.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S1_LATM_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_0.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S2_LRH_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S3_TBWCW_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S4_TEATS_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_0.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S5_TLP_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S6_BGG_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_0.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_20.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_21.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_22.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_23.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_24.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S7_PR_25.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S8_TGM_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_17.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_18.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S9_R_19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_7.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_8.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_9.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_10.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_15.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\S10_LRRH_16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\SettingsButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Submit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ThinkAndDo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\ThinkAndDoIcon.png" />
   </ItemGroup>
 </Project>

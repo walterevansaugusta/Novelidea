@@ -76,23 +76,17 @@
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
                                                HorizontalTextAlignment="End" FontFamily="{StaticResource Comic}"/>
                                     </StackLayout>
-                                    <ListView ItemsSource="{Binding ListOfIcons}"
-                                                Rotation="270"
-                                                SeparatorVisibility="None"
-                                                RowHeight="20"
-                                                SelectionMode="None"
-                                                IsEnabled="false">
-                                        <ListView.ItemTemplate IsEnabled="false">
+                                    <local:BindableStackLayout ItemsSource="{Binding ListOfIcons}"
+                                                               Orientation="Horizontal">
+                                        <local:BindableStackLayout.ItemDataTemplate>
                                             <DataTemplate>
-                                                <ViewCell>
-                                                    <ViewCell.View>
-                                                        <Image Source ="{Binding .}"
-                                                                Rotation="90"/>
-                                                    </ViewCell.View>
-                                                </ViewCell>
+                                                <StackLayout>
+                                                    <Image Source ="{Binding .}"
+                                                       Rotation="90"/>
+                                                </StackLayout>                                                
                                             </DataTemplate>
-                                        </ListView.ItemTemplate>
-                                    </ListView>
+                                        </local:BindableStackLayout.ItemDataTemplate>
+                                    </local:BindableStackLayout>
                                 </StackLayout>
                             </StackLayout>
                         </ViewCell.View>
