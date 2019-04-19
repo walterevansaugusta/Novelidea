@@ -83,7 +83,6 @@ namespace BrainyStories
             settingsPage = new Settings();
         }
 
-        // Launchs a StoryPage for the selected story
         async void OnItemTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
@@ -98,21 +97,19 @@ namespace BrainyStories
         }
 
         // Navbar methods
-        // Returns to the previous page
         async void BackClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
-        // Returns to the Home page
         async void HomeClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
 
-        // Launches a settings popup
         async void SettingsClicked(object sender, EventArgs e)
         {
+
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
     }
