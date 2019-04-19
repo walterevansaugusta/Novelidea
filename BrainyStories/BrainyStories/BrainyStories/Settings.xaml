@@ -9,7 +9,7 @@
             <StackLayout BackgroundColor="White" Padding="0, 10, 0, 0" Spacing="2">
                 <!--<Label Text="BrainyStories Help Page:" TextColor="Gray" FontSize="20" HorizontalOptions="Center" TextDecorations="Underline">
                         </Label>-->
-                <Label Text="Appeal Key Meanings:" TextColor="Gray" FontSize="14" HorizontalOptions="Center" TextDecorations="Underline"></Label>
+                <Label Text="Appeal Key Meanings:" TextColor="Black" FontSize="14" HorizontalOptions="Center" TextDecorations="Underline"></Label>
                 <StackLayout Spacing="0">
                     <StackLayout Orientation="Horizontal" Margin="5,0,5,0">
                         <Image Source="General.png"/>
@@ -42,7 +42,7 @@
                 <Button Text="Return"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#6F2DBD"
+                    BackgroundColor="#A9FFF7"
                     VerticalOptions="Center"
                     Clicked="OnClose"
                     ContentLayout="Left"/>

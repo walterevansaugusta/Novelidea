@@ -10,7 +10,7 @@
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
-                  BackgroundColor ="Blue">
+                  BackgroundColor ="#B8E1FF">
                 <ImageButton HorizontalOptions="Start"
                         Source="BackButton.png"
                         Clicked ="BackClicked"
@@ -30,7 +30,7 @@
             <Label Text ="You've Completed the Story!!"
                    FontSize="32"
                    HorizontalTextAlignment="Center"
-                   TextColor="BlueViolet"
+                   TextColor="#BCB6FF"
                    FontAttributes="Bold"/>
             <StackLayout Orientation="Vertical">
                 <StackLayout x:Name="LastQuiz"

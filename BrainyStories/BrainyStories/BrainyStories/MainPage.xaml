@@ -6,11 +6,11 @@
     <StackLayout Orientation="Vertical"
                  Spacing="5"
                  VerticalOptions="FillAndExpand"
-                 BackgroundColor="#FFBF69">
+                 BackgroundColor="#A9FFF7">
         <StackLayout VerticalOptions="Start"
                      HorizontalOptions="FillAndExpand"
                      Orientation="Horizontal"
-                     BackgroundColor ="#6369D1">
+                     BackgroundColor ="#A9FFF7">
             <ImageButton HorizontalOptions="Start"
                          Source="BackButton.png"
                          Clicked ="BackClicked"
@@ -40,7 +40,7 @@
                    Margin="0,0,0,0"/>-->
 
 
-        <Grid x:Name="pageGrid" BackgroundColor="#FFBF69" Padding="5,5,5,5">
+        <Grid x:Name="pageGrid" BackgroundColor="#A9FFF7" Padding="5,5,5,5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -61,7 +61,7 @@
             <Button Text="Imagines"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="ImaginesClicked"
                     Grid.Row="1"
@@ -72,7 +72,7 @@
             <Button Text="Classic Stories"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="StoriesClicked"
                     Grid.Row="1"
@@ -83,7 +83,7 @@
             <Button Text="Rewards"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Grid.Row="2"
                     Grid.Column="0"
@@ -94,7 +94,7 @@
             <Button Text="Progress"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="ProgressClicked"
                     Grid.Row="2"
@@ -105,7 +105,7 @@
             <Button Text="Quizzes"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="QuizzesClicked"
                     Grid.Row="2"
@@ -116,7 +116,7 @@
             <Button Text="Think and Do"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#2EC4B6"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="ThinkAndDoClicked"
                     Grid.Row="1"

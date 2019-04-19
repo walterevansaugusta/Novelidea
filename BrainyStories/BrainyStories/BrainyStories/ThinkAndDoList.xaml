@@ -10,7 +10,7 @@
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
-                  BackgroundColor ="Blue">
+                  BackgroundColor ="#A9FFF7">
                 <ImageButton HorizontalOptions="Start"
                         Source="BackButton.png"
                         Clicked ="BackClicked"
