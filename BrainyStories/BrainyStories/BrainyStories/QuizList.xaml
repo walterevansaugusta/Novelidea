@@ -8,6 +8,7 @@
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
                    CompressedLayout.IsHeadless="True">
+            <!--<Start of Navigation Bar/>-->
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -28,12 +29,14 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
+            <!--<End of Navigation Bar/>-->
             <ListView SeparatorVisibility="None"
                       HasUnevenRows="True"
                       VerticalOptions ="FillAndExpand"
                       HorizontalOptions="FillAndExpand"
                       ItemTapped="OnItemTapped"
                       x:Name="BindList">
+                <!--<List of all Quizzes/>-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -43,7 +46,6 @@
                                     <Image Source="{Binding AssociatedImage}"
                                            HeightRequest="150"/>
                                     <StackLayout Padding="2">
-                                        <!--<Label Text ="{Binding AssociatedStory}"/>-->
                                         <Label Text ="{Binding QuizName}"/>
                                         <Label Text ="{Binding NumQuestions}"/>
                                     </StackLayout>

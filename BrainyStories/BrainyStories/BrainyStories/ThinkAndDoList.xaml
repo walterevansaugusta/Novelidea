@@ -7,6 +7,7 @@
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
                    CompressedLayout.IsHeadless="True">
+            <!--<Start of Navigation Bar/>-->
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -27,12 +28,14 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
+            <!--<End of Navigation Bar/>-->
             <ListView SeparatorVisibility="None"
                       HasUnevenRows="True"
                       VerticalOptions ="FillAndExpand"
                       HorizontalOptions="FillAndExpand"
                       ItemTapped="OnItemTapped"
                       x:Name="BindList">
+                <!--<List of all ThinkAndDos/>-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

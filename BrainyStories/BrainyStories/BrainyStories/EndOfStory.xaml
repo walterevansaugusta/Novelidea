@@ -7,6 +7,7 @@
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
                    CompressedLayout.IsHeadless="True">
+            <!--<Start of Navigation Bar/>-->
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -27,11 +28,13 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
+            <!--<End of Navigation Bar/>-->
             <Label Text ="You've Completed the Story!!"
                    FontSize="32"
                    HorizontalTextAlignment="Center"
                    TextColor="#BCB6FF"
                    FontAttributes="Bold"/>
+            <!--<Last Quiz of the story/>-->
             <StackLayout Orientation="Vertical">
                 <StackLayout x:Name="LastQuiz"
                     Orientation="Horizontal">
@@ -42,8 +45,7 @@
                     </StackLayout.GestureRecognizers>
                 </StackLayout>
             </StackLayout>
-            <!--<Button Text="Back To Table of Contents"
-                    Clicked="BackToTOC"/>-->
+            <!--<List of associated ThinkAndDos/>-->
             <ListView SeparatorVisibility="None"
                       VerticalOptions ="Start"
                       HasUnevenRows="True"

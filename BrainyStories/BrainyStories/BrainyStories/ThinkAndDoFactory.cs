@@ -6,6 +6,7 @@ using System.Text;
 
 namespace BrainyStories
 {
+   // Class that generates all associated ThinkAndDos
     public class ThinkAndDoFactory
     {
         private ObservableCollection<ThinkAndDo> ThinkAndDoListTemp;

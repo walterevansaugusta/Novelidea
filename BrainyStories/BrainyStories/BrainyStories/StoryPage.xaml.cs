@@ -14,6 +14,8 @@ using BrainyStories.Objects;
 namespace BrainyStories
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    // Class for the page that displays the selected story
 	public partial class StoryPage : ContentPage
 	{
         private ISimpleAudioPlayer player;
@@ -218,17 +220,20 @@ namespace BrainyStories
             TopStack.Children.Add(audio);
             oldContent = Content;
         }
-
+    
+       // Goes to the end of story page
        protected void ChangePage(Story story)
         {
             Navigation.PushAsync(new EndOfStory(story));
         }
 
+        // Returns to the previous page
         async void GoBack()
         {
             await App.Current.MainPage.Navigation.PopAsync();
         }
-           
+        
+        // Returns to the previous page
         protected override bool OnBackButtonPressed()
         {
             player.Stop();
@@ -236,18 +241,21 @@ namespace BrainyStories
         }
 
         // Navbar methods
+        // Returns to the previous page
         async void BackClicked(object sender, EventArgs e)
         {
             player.Stop();
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
+        // Returns to the Home page
         async void HomeClicked(object sender, EventArgs e)
         {
             player.Stop();
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
 
+        // Launches a settings popup
         async void SettingsClicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(settingsPage);

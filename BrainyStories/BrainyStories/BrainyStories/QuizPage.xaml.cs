@@ -14,6 +14,8 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    // Class for the quiz page
     public partial class QuizPage : ContentPage
     {
         private Settings settingsPage;
@@ -61,6 +63,7 @@ namespace BrainyStories
             user = User.Instance;
         }
 
+        // Handles if the previous button is clicked
         private void PreviousQuestion(object sender, EventArgs e)
         {
             if (QuestionNum > 0)
@@ -103,6 +106,7 @@ namespace BrainyStories
 
         }
 
+        // Handles if the next button is clicked
         private void NextQuestion(object sender, EventArgs e)
         {
             if (QuestionNum < quiz.NumQuestions - 1)
@@ -142,6 +146,7 @@ namespace BrainyStories
             }
         }
 
+        // Plays the audio of the question clicked
         private void PlayAudio (object sender, EventArgs e)
         {
             Button clicked = (Button)sender;
@@ -157,6 +162,7 @@ namespace BrainyStories
             }
         }
 
+        // Determines if the button has been clicked most previously
         private void ClickOrPlay(object Sender, EventArgs e)
         {
             if (!PreviousAnswerSelected.Text.Equals((Sender as Button).Text))
@@ -172,7 +178,7 @@ namespace BrainyStories
             (Sender as Button).BackgroundColor = Color.FromHex("#965ed9");
         }
 
-
+        // checks the sumbitted answer
         private void CheckAnswer(object sender, EventArgs e)
         {
             quiz.NumAttempts[QuestionNum]++;
@@ -208,6 +214,7 @@ namespace BrainyStories
             CalculateScore();
         }
 
+        // Calculates the current score of the quiz
         private void CalculateScore()
         {
             quiz.Score = 0;
@@ -231,6 +238,7 @@ namespace BrainyStories
             }
         }
 
+        // Handles the color change for correct or incorrect answers
         private void ColorChange()
         {
             Button[] buttonArray = { One, Two, Three, Four };
@@ -255,17 +263,20 @@ namespace BrainyStories
         }
 
         // Navbar methods
+        // Returns to the previous page
         async void BackClicked(object sender, EventArgs e)
         {
             player.Stop();
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
+        // Returns to the Home page
         async void HomeClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
 
+        // Launches a settings popup
         async void SettingsClicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(settingsPage);

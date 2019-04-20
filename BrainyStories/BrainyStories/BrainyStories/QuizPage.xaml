@@ -2,13 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.QuizPage"
-             NavigationPage.HasNavigationBar="false"
-             >
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                  VerticalOptions="StartAndExpand"
                  CompressedLayout.IsHeadless="True"
                  x:Name="TopStack">
+            <!--<Start of Navigation Bar/>-->
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -29,18 +29,19 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
             </StackLayout>
+            <!--<End of Navigation Bar/>-->
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="QuizTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="NumCorrect"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand"
-               />
+                HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
             <Label x:Name="QuestionTitle"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <!--<Four Answer Buttons as well as the next, previous, and check answer buttons/>-->
             <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0" >
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

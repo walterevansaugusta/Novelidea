@@ -10,6 +10,8 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    // Class for the ThinkAndDo popups
     public partial class ThinkAndDoPopup : PopupPage
     {
         private ISimpleAudioPlayer player;
@@ -106,18 +108,21 @@ namespace BrainyStories
             TopStack.Children.Add(audio);
         }
 
+        // Returns to previous page when back button is selected
         protected override bool OnBackButtonPressed()
         {
             player.Stop();
             return false;
         }
 
+        // Returns to the previous page when an area outside the popup is clicked
         private void OnCloseButtonTapped(object sender, EventArgs e)
         {
             player.Stop();
             CloseAllPopup();
         }
 
+        // Returns to the previous page when an area outside the popup is clicked
         protected override bool OnBackgroundClicked()
         {
             player.Stop();
@@ -125,6 +130,7 @@ namespace BrainyStories
             return false;
         }
 
+        // Returns to the previous page when an area outside the popup is clicked
         private async void CloseAllPopup()
         {
             await PopupNavigation.Instance.PopAsync();

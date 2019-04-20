@@ -7,6 +7,7 @@
                  VerticalOptions="StartAndExpand"
                  CompressedLayout.IsHeadless="True"
                  x:Name="TopStack">
+        <!--<Start of Navigation Bar/>-->
         <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -26,6 +27,7 @@
                         Clicked ="SettingsClicked"
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
+            <!--<End of Navigation Bar/>-->
         </StackLayout>
     </StackLayout>
 </ContentPage>

@@ -8,6 +8,7 @@
       <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
                    CompressedLayout.IsHeadless="True">
+        <!--<Start of Navigation Bar/>-->
         <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
@@ -28,10 +29,12 @@
                         BorderColor ="Transparent"
                         BackgroundColor="Transparent"/>
         </StackLayout>
+        <!--<End of Navigation Bar/>-->
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
                      HorizontalOptions="StartAndExpand"
                      Margin="10,0,10,5">
+            <!--<Appeal Key bar/>-->
             <Image Source="General.png"
                    HorizontalOptions="FillAndExpand"/>
             <Label Text= "General"/>
@@ -45,6 +48,7 @@
                    HorizontalOptions="FillAndExpand"/>
             <Label Text= "Male"/>
         </StackLayout>
+        <!--<Data bound list of all stories / imagines/>-->
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
                   HasUnevenRows="True"

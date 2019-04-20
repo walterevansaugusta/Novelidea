@@ -10,6 +10,8 @@ using Xamarin.Forms.Xaml;
 
 namespace BrainyStories {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+
+    // Class for the rewards page
     public partial class RewardsPage : ContentPage {
         public RewardsPage()
         {
@@ -45,8 +47,26 @@ namespace BrainyStories {
                 Image bronzeCoin = new Image() { Source = "Coin.png" };
                 BronzeList.Children.Add(bronzeCoin);
             }
+           
+        }
 
+        // Navbar methods
+        // Returns to the previous page
+        async void BackClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
 
+        // Returns to the Home page
+        async void HomeClicked(object sender, EventArgs e)
+        {
+            await App.Current.MainPage.Navigation.PopToRootAsync();
+        }
+
+        // Launches a settings popup
+        async void SettingsClicked(object sender, EventArgs e)
+        {
+            await PopupNavigation.Instance.PushAsync(settingsPage);
         }
     }
 }

@@ -9,10 +9,12 @@ using System.Diagnostics;
 
 namespace BrainyStories {
 
-
+    // Class for generating all story objectds
     public class StoryFactory {
+
         public static Thread GenerateStoriesThread;
 
+        // Thread to create all stories on app start up
         public static void GenerateAll()
         {
             var watch = Stopwatch.StartNew();
@@ -23,6 +25,7 @@ namespace BrainyStories {
             Debug.WriteLine("GenerateStoriesThread completed in " + watch.ElapsedMilliseconds + "ms");
         }
 
+        // Creates all classic stories
         public static ObservableCollection<Story> Stories {
             get {
                 if (GenerateStoriesThread.IsAlive)
@@ -30,6 +33,8 @@ namespace BrainyStories {
                 return stories;
             }
         }
+
+        // Creates all imagines
         public static ObservableCollection<Story> Imagines {
             get {
                 if (GenerateStoriesThread.IsAlive)

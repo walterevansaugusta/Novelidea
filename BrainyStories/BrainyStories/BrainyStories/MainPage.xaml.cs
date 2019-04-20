@@ -43,32 +43,39 @@ namespace BrainyStories {
         {
             await Navigation.PushAsync(new QuizList());
         }
+        
+        // Progress Page Button
+        async void ProgressClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProgressPage());
+        }
+
+        // Rewards Page button
+        async void RewardsClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RewardsPage());
+        }
 
         // Navbar methods
+        // Returns to the previous page
         async void BackClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
+        // Returns to the Home page
         async void HomeClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
 
+        // Returns to the Home page
         async void SettingsClicked(object sender, EventArgs e)
         {
 
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
 
-        async void ProgressClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new ProgressPage());
-        }
-
-        async void RewardsClicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new RewardsPage());
-        }
+       
     }
 }

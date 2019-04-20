@@ -6,8 +6,10 @@ using System.Text;
 
 namespace BrainyStories
 {
+    // Class for the creation of story quizzes
     public class QuizFactory
     {
+        // Generates all quizzes
         public ObservableCollection<Quiz> GenerateQuizzes(String storyName)
         {
             ObservableCollection<Quiz> QuizTemp = new ObservableCollection<Quiz>();

@@ -3,9 +3,34 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.RewardsPage"
              Title="Rewards Page"
-            >
+             NavigationPage.HasNavigationBar="false">
     <ContentPage.Content>
-        <Grid x:Name="medalGrid">
+        <StackLayout Orientation="Vertical"
+                   VerticalOptions="FillAndExpand"
+                   CompressedLayout.IsHeadless="True">
+            <!--<Start of Navigation Bar/>-->
+            <StackLayout VerticalOptions="Start"
+                  HorizontalOptions="FillAndExpand"
+                  Orientation="Horizontal"
+                  BackgroundColor ="#B8E1FF">
+                <ImageButton HorizontalOptions="Start"
+                        Source="BackButton.png"
+                        Clicked ="BackClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="Start"
+                        Source="Home.png"
+                        Clicked ="HomeClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+                <ImageButton HorizontalOptions="LayoutOptions.EndAndExpand"
+                        Source="SettingsButton.png"
+                        Clicked ="SettingsClicked"
+                        BorderColor ="Transparent"
+                        BackgroundColor="Transparent"/>
+            </StackLayout>
+            <!--<End of Navigation Bar/>-->
+            <Grid x:Name="medalGrid">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -15,44 +40,42 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <StackLayout x:Name="GoldList"
-                         Grid.Row="0"
-                         Grid.Column="0"
-                         Orientation="Horizontal"/>
-            <StackLayout x:Name="SilverList"
-                         Grid.Row="1"
-                         Grid.Column="0"
-                         Orientation="Horizontal"/>
-            <StackLayout x:Name="BronzeList"
-                         Grid.Row="2"
-                         Grid.Column="0"
-                         Orientation="Horizontal"/>
-            <StackLayout x:Name="MedalKey"
-                         Grid.Row="3"
-                         Grid.Column="0"
-                         Orientation="Horizontal">
-                <!-- 5 Coins gets 1 Coin Pile -->
-                <Label Text="          5" VerticalTextAlignment="Center"/>
-                <Image Source="Coin.png"/>
-                <Label Text="= 1" VerticalTextAlignment="Center"/>
-                <Image Source="Coins.png"/>
+                <!--<Shows earned Rewards/>-->
+                <StackLayout x:Name="GoldList"
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                Orientation="Horizontal"/>
+                <StackLayout x:Name="SilverList"
+                                Grid.Row="1"
+                                Grid.Column="0"
+                                Orientation="Horizontal"/>
+                <StackLayout x:Name="BronzeList"
+                                Grid.Row="2"
+                                Grid.Column="0"
+                                Orientation="Horizontal"/>
+                <StackLayout x:Name="MedalKey"
+                                Grid.Row="3"
+                                Grid.Column="0"
+                                Orientation="Horizontal">
+                    <!-- 5 Coins gets 1 Coin Pile -->
+                    <Label Text="          5" VerticalTextAlignment="Center"/>
+                    <Image Source="Coin.png"/>
+                    <Label Text="= 1" VerticalTextAlignment="Center"/>
+                    <Image Source="Coins.png"/>
 
-                <!-- 5 Coin Piles gets 1 Piggy Bank -->
-                <Label Text="          5" VerticalTextAlignment="Center"/>
-                <Image Source="Coins.png"/>
-                <Label Text="= 1" VerticalTextAlignment="Center"/>
-                <Image Source="Bank.png"/>
-                
-                <!-- 5 Piggy Bank gets 1 Gem -->
-                <Label Text="          5" VerticalTextAlignment="Center"/>
-                <Image Source="Bank.png"/>
-                <Label Text="= 1" VerticalTextAlignment="Center"/>
-                <Image Source="Gem.png"/>
+                    <!-- 5 Coin Piles gets 1 Piggy Bank -->
+                    <Label Text="          5" VerticalTextAlignment="Center"/>
+                    <Image Source="Coins.png"/>
+                    <Label Text="= 1" VerticalTextAlignment="Center"/>
+                    <Image Source="Bank.png"/>
 
-                
-                
-                
-            </StackLayout>
-        </Grid>
+                    <!-- 5 Piggy Bank gets 1 Gem -->
+                    <Label Text="          5" VerticalTextAlignment="Center"/>
+                    <Image Source="Bank.png"/>
+                    <Label Text="= 1" VerticalTextAlignment="Center"/>
+                    <Image Source="Gem.png"/>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

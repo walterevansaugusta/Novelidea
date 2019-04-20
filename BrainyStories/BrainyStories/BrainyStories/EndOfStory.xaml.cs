@@ -13,6 +13,8 @@ using Xamarin.Forms.Xaml;
 namespace BrainyStories
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
+
+    // Class for the page at the end of a completed classic story
 	public partial class EndOfStory : ContentPage
 	{
         private Settings settingsPage;
@@ -38,6 +40,7 @@ namespace BrainyStories
             settingsPage = new Settings();
         }
 
+        // Launches a ThinkAndDo popup for selected activity
         async void OnTaskTapped(object sender, ItemTappedEventArgs e)
         {
             ListView view = (ListView)sender;
@@ -46,32 +49,30 @@ namespace BrainyStories
             await PopupNavigation.Instance.PushAsync(pop);
         }
 
+        // Launches a quiz page for selected quiz
         async void OnQuizTapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new QuizPage(last));
         }
 
         // Navbar methods
+        // Returns to the previous page
         async void BackClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopAsync();
         }
 
+        // Returns to the Home page
         async void HomeClicked(object sender, EventArgs e)
         {
             await App.Current.MainPage.Navigation.PopToRootAsync();
         }
 
+        // Launches a settings popup
         async void SettingsClicked(object sender, EventArgs e)
         {
-
             await PopupNavigation.Instance.PushAsync(settingsPage);
         }
-
-        //async void BackToTOC(object sender, EventArgs e)
-        //{
-
-        //}
 
     }
 }

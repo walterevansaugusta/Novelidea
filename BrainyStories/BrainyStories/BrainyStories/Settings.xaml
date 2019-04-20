@@ -5,10 +5,9 @@
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              x:Class="BrainyStories.Settings">
     <ScrollView>
+        <!--<Appeal Key Explanation/>-->
         <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
             <StackLayout BackgroundColor="White" Padding="0, 10, 0, 0" Spacing="2">
-                <!--<Label Text="BrainyStories Help Page:" TextColor="Gray" FontSize="20" HorizontalOptions="Center" TextDecorations="Underline">
-                        </Label>-->
                 <Label Text="Appeal Key Meanings:" TextColor="Black" FontSize="14" HorizontalOptions="Center" TextDecorations="Underline"></Label>
                 <StackLayout Spacing="0">
                     <StackLayout Orientation="Horizontal" Margin="5,0,5,0">
@@ -32,6 +31,7 @@
                                    FontSize="10"/>
                     </StackLayout>
                 </StackLayout>
+                <!--<Short app tutorial/>-->
                 <Label Text="Main Page Navigation:" TextColor="Gray" FontSize="14" TextDecorations="Underline" Margin="5,0,5,0" HorizontalOptions="Center"></Label>
                 <Label Text="Imagines: Short stories" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
                 <Label Text="Classic Stories: Longer, more complex stories" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
@@ -39,6 +39,7 @@
                 <Label Text="Rewards: List of all rewards that have been collected from completed activities" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
                 <Label Text="Quizzes: List of all Quizzes that can be taken associated with stories" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
                 <Label Text="Progress: Information about child's progress in the application" TextColor="Gray" FontSize="14" Margin="5,0,5,0"></Label>
+                <!--<Return Button/>-->
                 <Button Text="Return"
                     FontSize="12"
                     TextColor="White"
