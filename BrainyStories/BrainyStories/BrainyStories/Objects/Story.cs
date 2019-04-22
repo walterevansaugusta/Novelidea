@@ -72,7 +72,7 @@ namespace BrainyStories
         public int NumCompletedQuizzes { get { return Quizzes.Count(q => q.NumAttemptsQuiz > 0); } }
 
         // Double for the average score of completed quizzes, or 0 if there are no completed quizzes
-        public double QuizAvgScore { get { return NumCompletedQuizzes > 0 ? Quizzes.Average(q => q.Score) : 0; } }
+        public int QuizAvgScore { get { return NumCompletedQuizzes > 0 ? (int)Math.Round(Quizzes.Where(q => q.NumAttemptsQuiz > 0).Average(q => q.Score), 0) : 0; } }
 
         //String for audio file
         public String AudioClip { get; set; }
