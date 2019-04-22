@@ -17,6 +17,7 @@ namespace BrainyStories
 		public ProgressIndividualPage ()
 		{
 			InitializeComponent ();
+            // Set the binding context for this page to the User singleton instance, so that stats come from that User
             BindingContext = User.Instance;
 		}
 	}

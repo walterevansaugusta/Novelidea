@@ -5,6 +5,12 @@
             xmlns:brainystories="clr-namespace:BrainyStories"
             BackgroundColor="White">
   <!--Pages can be added as references or inline-->
+    
+    <!-- Page with broad summary information -->
     <brainystories:ProgressSummaryPage/>
+    
+    <!-- Page with information for each individual story -->
     <brainystories:ProgressIndividualPage/>
+    
+    <!-- Anoother page may be added here in the future containing overall statistics (ie. books read over time, quiz scores over time) -->
 </TabbedPage>
