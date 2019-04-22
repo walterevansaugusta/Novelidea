@@ -17,7 +17,6 @@ namespace BrainyStories
         public ProgressPage()
         {
             InitializeComponent();
-            User.Instance.SaveToDisk();
         }
     }
 }
