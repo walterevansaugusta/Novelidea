@@ -3899,4 +3899,7 @@
   <ItemGroup>
     <EmbeddedResource Include="Resources\ThinkAndDoIcon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
+  </ItemGroup>
 </Project>
