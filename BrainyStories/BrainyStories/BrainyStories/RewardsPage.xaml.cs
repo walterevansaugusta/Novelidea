@@ -1,4 +1,5 @@
 ﻿using BrainyStories.Objects;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,11 @@ namespace BrainyStories {
 
     // Class for the rewards page
     public partial class RewardsPage : ContentPage {
+        Settings settingsPage;
         public RewardsPage()
         {
             InitializeComponent();
+            settingsPage = new Settings();
             Objects.User.Instance.LoadFromDisk();
             User user = User.Instance;
             int numOfBronzeCoins = user.RewardsRecieved["Bronze"];

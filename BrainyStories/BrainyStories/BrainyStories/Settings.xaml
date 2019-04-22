@@ -43,7 +43,7 @@
                 <Button Text="Return"
                     FontSize="12"
                     TextColor="White"
-                    BackgroundColor="#A9FFF7"
+                    BackgroundColor="#6526DA"
                     VerticalOptions="Center"
                     Clicked="OnClose"
                     ContentLayout="Left"/>
