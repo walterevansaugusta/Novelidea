@@ -108,12 +108,6 @@
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\Curly.otf" />
-    <BundleResource Include="Resources\progress2 - Copy.png~" />
-    <BundleResource Include="Resources\progress2.png~" />
-    <BundleResource Include="Resources\quizzes3 - Copy.png~" />
-    <BundleResource Include="Resources\quizzes3.png~" />
-    <BundleResource Include="Resources\quizzes4.png~" />
-    <BundleResource Include="Resources\rewards2.png~" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\ThinkAndDoIcon.imageset\ThinkAndDoIcon.png">
@@ -3891,5 +3885,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\ThinkAndDoIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\logo.png" />
   </ItemGroup>
 </Project>
