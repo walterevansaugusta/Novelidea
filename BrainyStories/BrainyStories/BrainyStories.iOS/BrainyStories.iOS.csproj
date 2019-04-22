@@ -986,6 +986,12 @@
     <ImageAsset Include="Assets.xcassets\Male.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo.imageset\logo.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\logo.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Assets.xcassets\Imagines.imageset\Imagines.png">
       <Visible>false</Visible>
     </ImageAsset>
