@@ -64,6 +64,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="One"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -75,6 +76,7 @@
                     Clicked="ClickOrPlay">
                 </Button>
                 <Button x:Name="Two"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -85,6 +87,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="ClickOrPlay"/>
                 <Button x:Name="Three"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -95,6 +98,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="ClickOrPlay"/>
                 <Button x:Name="Four"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"

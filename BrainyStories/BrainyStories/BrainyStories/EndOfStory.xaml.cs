@@ -33,6 +33,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = last.QuizName,
+                FontFamily = "Comic",
                 VerticalOptions = LayoutOptions.Center,
                 FontSize = 20
             };

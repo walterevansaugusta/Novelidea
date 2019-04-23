@@ -37,16 +37,16 @@
             <!--<Appeal Key bar/>-->
             <Image Source="General.png"
                    HorizontalOptions="FillAndExpand"/>
-            <Label Text= "General"/>
+            <Label Text= "General" FontFamily="{StaticResource Comic}"/>
             <Image Source="Animal.png"
                    HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Animal"/>
+            <Label Text= "Animal" FontFamily="{StaticResource Comic}"/>
             <Image Source="Female.png"
                    HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Female"/>
+            <Label Text= "Female" FontFamily="{StaticResource Comic}"/>
             <Image Source="Male.png"
                    HorizontalOptions="FillAndExpand"/>
-            <Label Text= "Male"/>
+            <Label Text= "Male" FontFamily="{StaticResource Comic}"/>
         </StackLayout>
         <!--<Data bound list of all stories / imagines/>-->
         <ListView x:Name="listView"
@@ -65,12 +65,13 @@
                                 <StackLayout Orientation="Vertical"
                                              x:Name="verticalStackLayout">
                                     <Label Text="{Binding Name, Mode=OneWay}"
-                                       FontAttributes="Bold"/>
+                                       FontAttributes="Bold"
+                                       FontFamily="{StaticResource Comic}"/>
                                     <Label Text="{Binding Description, Mode=OneWay}"/>
                                     <StackLayout Orientation="Horizontal">
-                                        <Label Text="{Binding Duration, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}"/>
+                                        <Label Text="{Binding Duration, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}" FontFamily="{StaticResource Comic}"/>
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
-                                               HorizontalTextAlignment="End"/>
+                                               HorizontalTextAlignment="End" FontFamily="{StaticResource Comic}"/>
                                     </StackLayout>
                                     <ListView ItemsSource="{Binding ListOfIcons}"
                                                 Rotation="270"

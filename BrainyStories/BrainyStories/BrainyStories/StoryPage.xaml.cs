@@ -62,6 +62,7 @@ namespace BrainyStories
             Button QuizButton = new Button()
             {
                 Text = "Quiz",
+                FontFamily = "ComicSansMS",
                 BackgroundColor = Color.Green,
                 IsVisible = false
             };
@@ -69,6 +70,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = "0:00",
+                FontFamily = "ComicSansMS",
                 Margin = 20
             };
             Slider slider = new Slider
