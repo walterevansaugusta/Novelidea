@@ -32,15 +32,24 @@
             <!--<End of Navigation Bar/>-->
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="QuizTitle"
+                       FontFamily="{StaticResource Comic}"
+                       FontAttributes="Bold"
+                       FontSize="16"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="NumCorrect"
+                       FontFamily="{StaticResource Comic}"
+                       FontAttributes="Bold"
+                       FontSize="16"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
             <Label x:Name="QuestionTitle"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   FontFamily="{StaticResource Comic}"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
             <!--<Four Answer Buttons as well as the next, previous, and check answer buttons/>-->
             <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0" >
                 <Grid.RowDefinitions>

@@ -178,7 +178,7 @@ namespace BrainyStories
                             Audio = "SQ_1_15.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 2, 51), 
+                    PlayTime = new TimeSpan(0, 2, 50), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -350,7 +350,7 @@ namespace BrainyStories
                             Audio = "SQ_2_15.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 3, 14),
+                    PlayTime = new TimeSpan(0, 3, 13),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -522,7 +522,7 @@ namespace BrainyStories
                             Audio = "SQ_3_15.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 4, 37), 
+                    PlayTime = new TimeSpan(0, 4, 36), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0},
@@ -710,7 +710,7 @@ namespace BrainyStories
                             Audio = "SQ_4_15.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 06), 
+                    PlayTime = new TimeSpan(0, 6, 05), 
                     NumQuestions = 3,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0 },
@@ -1034,7 +1034,7 @@ namespace BrainyStories
                             Audio = "SQ_5_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 34), 
+                    PlayTime = new TimeSpan(0, 6, 33), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0},
@@ -1358,7 +1358,7 @@ namespace BrainyStories
                             Audio = "SQ_6_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 38), 
+                    PlayTime = new TimeSpan(0, 6, 37), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -1682,7 +1682,7 @@ namespace BrainyStories
                             Audio = "SQ_7_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 7, 35), 
+                    PlayTime = new TimeSpan(0, 7, 34), 
                     NumQuestions = 6,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0, 0 },
@@ -2022,7 +2022,7 @@ namespace BrainyStories
                             Audio = "SQ_8_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 6, 55),
+                    PlayTime = new TimeSpan(0, 6, 54),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2362,7 +2362,7 @@ namespace BrainyStories
                             Audio = "SQ_9_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 8, 18), 
+                    PlayTime = new TimeSpan(0, 8, 17), 
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
@@ -2702,7 +2702,7 @@ namespace BrainyStories
                             Audio = "SQ_10_30.mp3"
                         }
                     },
-                    PlayTime = new TimeSpan(0, 8, 08),
+                    PlayTime = new TimeSpan(0, 8, 07),
                     NumQuestions = 5,
                     NumAttempts = new ObservableCollection<int>()
                     { 0, 0, 0, 0, 0 },
