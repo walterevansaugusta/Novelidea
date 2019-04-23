@@ -4,10 +4,10 @@
              x:Class="BrainyStories.ProgressSummaryPage"
              xmlns:local="clr-namespace:BrainyStories.Objects"
              Title="Summary"
-             BackgroundColor="White">
+             BackgroundColor="#A9FFF7">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <Style x:Key="completedNum" TargetType="Label">
+            <Style x:Key="completedNum" TargetType="Label" >
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="FontSize" Value="50" />
                 <Setter Property="TextColor" Value="Black" />
@@ -24,7 +24,7 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout x:Name="introLayout" VerticalOptions="FillAndExpand">
-            <Label Text="{Binding Name, StringFormat='\{0} has completed'}" />
+            <Label Text="{Binding Name, StringFormat='\{0} has completed'}" FontFamily="{StaticResource Comic}"/>
             <Grid VerticalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
@@ -35,12 +35,12 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label Text="{Binding StoryCount}" Grid.Row="0" Grid.Column="0" Style="{StaticResource completedNum}" />
-                <Label Text="{Binding QuizCount}" Grid.Row="0" Grid.Column="1" Style="{StaticResource completedNum}" />
-                <Label Text="{Binding ThinkAndDoCount}" Grid.Row="0" Grid.Column="2" Style="{StaticResource completedNum}" />
-                <Label Text="Stories" Grid.Row="1" Grid.Column="0" Style="{StaticResource completedLabel}" />
-                <Label Text="Quizzes" Grid.Row="1" Grid.Column="1" Style="{StaticResource completedLabel}" />
-                <Label Text="Think &amp; Do's" Grid.Row="1" Grid.Column="2" Style="{StaticResource completedLabel}" />
+                <Label Text="{Binding StoryCount}" Grid.Row="0" Grid.Column="0" Style="{StaticResource completedNum}" FontFamily="{StaticResource Comic}" />
+                <Label Text="{Binding QuizCount}" Grid.Row="0" Grid.Column="1" Style="{StaticResource completedNum}" FontFamily="{StaticResource Comic}" />
+                <Label Text="{Binding ThinkAndDoCount}" Grid.Row="0" Grid.Column="2" Style="{StaticResource completedNum}" FontFamily="{StaticResource Comic}" />
+                <Label Text="Stories" Grid.Row="1" Grid.Column="0" Style="{StaticResource completedLabel}" FontFamily="{StaticResource Comic}" />
+                <Label Text="Quizzes" Grid.Row="1" Grid.Column="1" Style="{StaticResource completedLabel}" FontFamily="{StaticResource Comic}" />
+                <Label Text="Think &amp; Do's" Grid.Row="1" Grid.Column="2" Style="{StaticResource completedLabel}" FontFamily="{StaticResource Comic}" />
             </Grid>
         </StackLayout>
     </ContentPage.Content>

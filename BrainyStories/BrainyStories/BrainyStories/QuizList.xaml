@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.QuizList"
              NavigationPage.HasNavigationBar="false"
-             BackgroundColor="#White">
+             BackgroundColor="#A9FFF7">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
@@ -46,8 +46,8 @@
                                     <Image Source="{Binding AssociatedImage}"
                                            HeightRequest="150"/>
                                     <StackLayout Padding="2">
-                                        <Label Text ="{Binding QuizName}"/>
-                                        <Label Text ="{Binding NumQuestions}"/>
+                                        <Label Text ="{Binding QuizName}" FontFamily="{StaticResource Comic}"/>
+                                        <Label Text ="{Binding NumQuestions}" FontFamily="{StaticResource Comic}"/>
                                     </StackLayout>
                                 </StackLayout>
                             </ViewCell.View>

@@ -33,6 +33,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = last.QuizName,
+                FontFamily = Device.RuntimePlatform == Device.Android ? "Comic.ttf#Comic" : "Comic",
                 VerticalOptions = LayoutOptions.Center,
                 FontSize = 20
             };

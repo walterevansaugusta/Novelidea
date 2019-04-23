@@ -52,6 +52,7 @@
                Grid.ColumnSpan="3"/>
             <!--<Six home page buttons/>-->
             <Button Text="Imagines"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -63,6 +64,7 @@
                     Image = "Imagines.png"
                     ContentLayout="Left"/>
             <Button Text="Classic Stories"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -74,6 +76,7 @@
                     Image="ClassicStories.png"
                     ContentLayout="Left"/>
             <Button Text="Rewards"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -85,6 +88,7 @@
                     ContentLayout="Left"
                     Clicked="RewardsClicked"/>
             <Button Text="Progress"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -96,6 +100,7 @@
                     Image="Progress.png"
                     ContentLayout="Left"/>
             <Button Text="Quizzes"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -107,6 +112,7 @@
                     Image="Quizzes.png"
                     ContentLayout="Left"/>
             <Button Text="Think and Do"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"

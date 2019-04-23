@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.QuizPage"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#A9FFF7">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                  VerticalOptions="StartAndExpand"
@@ -32,15 +33,24 @@
             <!--<End of Navigation Bar/>-->
             <StackLayout Orientation="Horizontal">
                 <Label x:Name="QuizTitle"
+                       FontFamily="{StaticResource Comic}"
+                       FontAttributes="Bold"
+                       FontSize="16"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
                 <Label x:Name="NumCorrect"
+                       FontFamily="{StaticResource Comic}"
+                       FontAttributes="Bold"
+                       FontSize="16"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand"/>
             </StackLayout>
             <Label x:Name="QuestionTitle"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                   FontFamily="{StaticResource Comic}"
+                   FontAttributes="Bold"
+                   FontSize="16"
+                   VerticalOptions="CenterAndExpand" 
+                   HorizontalOptions="CenterAndExpand" />
             <!--<Four Answer Buttons as well as the next, previous, and check answer buttons/>-->
             <Grid x:Name="pageGrid" Padding="10,0,10,0" Margin="0,0,0,0" >
                 <Grid.RowDefinitions>
@@ -55,6 +65,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <Button x:Name="One"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -66,6 +77,7 @@
                     Clicked="ClickOrPlay">
                 </Button>
                 <Button x:Name="Two"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -76,6 +88,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="ClickOrPlay"/>
                 <Button x:Name="Three"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"
@@ -86,6 +99,7 @@
                     HorizontalOptions="FillAndExpand"
                     Clicked="ClickOrPlay"/>
                 <Button x:Name="Four"
+                    FontFamily="{StaticResource Comic}"
                     FontSize="12"
                     TextColor="White"
                     BackgroundColor="#6526DA"

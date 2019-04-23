@@ -38,7 +38,7 @@ namespace BrainyStories.Objects
         }
 
         // Dictionary for the users recieved rewards
-        public Dictionary<String, int> RewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 3 }, { "Silver", 8 }, { "Bronze", 55 } };
+        public Dictionary<String, int> RewardsRecieved { get; } = new Dictionary<String, int>() { { "Gold", 0 }, { "Silver", 0 }, { "Bronze", 0 } };
 
         // String for the name of the user Can be customized for the user
         public string Name { get; } = "Your child";

@@ -22,11 +22,13 @@
                                          HorizontalOptions="FillAndExpand">
                                 <Label Text="{Binding Name, Mode=OneWay}"
                                             FontAttributes="Bold"
+                                       FontFamily="{StaticResource Comic}"
                                        FontSize="25"
                                        HorizontalOptions="Center"
                                        HorizontalTextAlignment="Center"/>
                                 <Label HorizontalOptions="Center"
-                                       FontSize="18">
+                                       FontSize="18"
+                                       FontFamily="{StaticResource Comic}">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="{Binding NumCompletedQuizzes, StringFormat='\{0} out of', Mode=TwoWay}" />
@@ -37,7 +39,8 @@
                                 </Label>
 
                                 <Label HorizontalOptions="Center"
-                                       FontSize="18">
+                                       FontSize="18"
+                                       FontFamily="{StaticResource Comic}">
                                     <Label.FormattedText>
                                         <FormattedString>
                                             <Span Text="{Binding NumCompletedThinkAndDos, StringFormat='\{0} out of',  Mode=TwoWay}" />

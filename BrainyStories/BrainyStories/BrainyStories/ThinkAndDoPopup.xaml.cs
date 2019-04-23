@@ -20,18 +20,21 @@ namespace BrainyStories
         {
             InitializeComponent();
             ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
-            Button button = new Button()
+            ImageButton button = new ImageButton()
             {
-                Text = "Pause"
+                Source = "pause.png",
+                BackgroundColor = Color.Transparent
             };
-            Button button2 = new Button()
+            ImageButton button2 = new ImageButton()
             {
-                Text = "Play",
-                IsVisible = false
+                Source = "play.png",
+                IsVisible = false,
+                BackgroundColor = Color.Transparent
             };
             Label displayLabel = new Label
             {
                 Text = "0:00",
+                TextColor = Color.White
             };
             Slider slider = new Slider
             {

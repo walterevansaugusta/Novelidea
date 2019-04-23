@@ -42,7 +42,7 @@ namespace BrainyStories {
                     Debug.WriteLine("Waiting on story generation to finish...");
                     GenerateStoriesThread.Join();
                 }
-                return stories;
+                return imagines;
             }
         }
 

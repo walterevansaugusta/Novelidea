@@ -29,6 +29,7 @@ namespace BrainyStories
         private ISimpleAudioPlayer player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
         private int tapCount = 0;
         private User user;
+        private string audio = null;
 
         public QuizPage(Quiz temp)
         {
@@ -61,6 +62,11 @@ namespace BrainyStories
                 Console.WriteLine(quiz.Questions[QuestionNum].Audio + " does not exist!");
             }
             user = User.Instance;
+        }
+
+        public QuizPage(Quiz temp, string audioClip) : this(temp)
+        {
+            audio = audioClip;
         }
 
         // Handles if the previous button is clicked
@@ -267,6 +273,10 @@ namespace BrainyStories
         async void BackClicked(object sender, EventArgs e)
         {
             player.Stop();
+            if (audio != null)
+            {
+                player.Load(audio);
+            }
             await App.Current.MainPage.Navigation.PopAsync();
         }
 

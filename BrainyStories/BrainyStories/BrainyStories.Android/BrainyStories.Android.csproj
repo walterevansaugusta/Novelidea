@@ -78,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Curly.otf" />
+    <AndroidAsset Include="Assets\Comic.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

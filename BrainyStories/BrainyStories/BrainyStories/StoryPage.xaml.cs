@@ -27,6 +27,7 @@ namespace BrainyStories
         View oldContent = null;
 
         private PinchGestureRecognizer pinchGesture = new PinchGestureRecognizer();
+        private static TimeSpan timeStamp = new TimeSpan(0, 0, 0);
 
         public StoryPage (Story story)
 		{
@@ -58,9 +59,9 @@ namespace BrainyStories
                 BackgroundColor = Color.Transparent,
                 Margin = 20
             };
-            Button QuizButton = new Button()
+            ImageButton QuizButton = new ImageButton()
             {
-                Text = "Quiz",
+                Source = "Quizzes.png",
                 BackgroundColor = Color.Green,
                 IsVisible = false
             };
@@ -68,6 +69,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = "0:00",
+                FontFamily = Device.RuntimePlatform == Device.Android ? "Comic.ttf#Comic" : "Comic",
                 Margin = 20
             };
             Slider slider = new Slider
@@ -135,14 +137,16 @@ namespace BrainyStories
             };
             button2.Clicked += (sender, args) =>
             {
+                player.Seek(timeStamp.TotalSeconds);
                 player.Play();
+
                 playAudio = true;
                 button.IsVisible = true;
                 button2.IsVisible = false;
             };
             QuizButton.Clicked += (sender, args) =>
             {
-                Navigation.PushAsync(new QuizPage(story.Quizzes[quizNum]));
+                Navigation.PushAsync(new QuizPage(story.Quizzes[quizNum], story.AudioClip));
                 QuizButton.IsVisible = false;
                 button.IsVisible = false;
                 button2.IsVisible = true;
@@ -165,7 +169,7 @@ namespace BrainyStories
                     second = '0' + seconds.ToString();
                 }
                 displayLabel.Text = String.Format("{0}:{1}", minutes, second);
-                var timeStamp = new TimeSpan(0, minutes, seconds);
+                timeStamp = new TimeSpan(0, minutes, seconds);
                 var savedTime = new TimeSpan(0, 0, 0);
                 foreach (TimeSpan key in story.PictureCues.Keys) {
                     if (key.TotalSeconds < args.NewValue)

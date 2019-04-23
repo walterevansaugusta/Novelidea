@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.EndOfStory"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#A9FFF7">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
@@ -30,6 +31,7 @@
             </StackLayout>
             <!--<End of Navigation Bar/>-->
             <Label Text ="You've Completed the Story!!"
+                   FontFamily="{StaticResource Comic}"
                    FontSize="32"
                    HorizontalTextAlignment="Center"
                    TextColor="#BCB6FF"
@@ -60,6 +62,7 @@
                                         <Image Source ="ThinkAndDo.png"
                                                HeightRequest="100"/>
                                         <Label Text ="{Binding ThinkAndDoName}"
+                                               FontFamily="{StaticResource Comic}"
                                                VerticalOptions="Center"
                                                FontSize="20"/>
                                     </StackLayout>
