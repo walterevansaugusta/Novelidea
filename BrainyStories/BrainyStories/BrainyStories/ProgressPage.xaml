@@ -3,7 +3,7 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
             x:Class="BrainyStories.ProgressPage"
             xmlns:brainystories="clr-namespace:BrainyStories"
-            BackgroundColor="White">
+            BackgroundColor="#A9FFF7">
   <!--Pages can be added as references or inline-->
     
     <!-- Page with broad summary information -->

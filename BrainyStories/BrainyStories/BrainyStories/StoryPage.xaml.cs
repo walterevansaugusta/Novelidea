@@ -59,10 +59,9 @@ namespace BrainyStories
                 BackgroundColor = Color.Transparent,
                 Margin = 20
             };
-            Button QuizButton = new Button()
+            ImageButton QuizButton = new ImageButton()
             {
-                Text = "Quiz",
-                FontFamily = "ComicSansMS",
+                Source = "Quizzes.png",
                 BackgroundColor = Color.Green,
                 IsVisible = false
             };
@@ -70,7 +69,7 @@ namespace BrainyStories
             Label displayLabel = new Label
             {
                 Text = "0:00",
-                FontFamily = "ComicSansMS",
+                FontFamily = Device.RuntimePlatform == Device.Android ? "Comic.ttf#Comic" : "Comic",
                 Margin = 20
             };
             Slider slider = new Slider

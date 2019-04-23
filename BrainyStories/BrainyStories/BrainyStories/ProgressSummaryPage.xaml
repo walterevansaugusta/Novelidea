@@ -4,7 +4,7 @@
              x:Class="BrainyStories.ProgressSummaryPage"
              xmlns:local="clr-namespace:BrainyStories.Objects"
              Title="Summary"
-             BackgroundColor="White">
+             BackgroundColor="#A9FFF7">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="completedNum" TargetType="Label" >

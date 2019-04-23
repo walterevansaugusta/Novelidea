@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BrainyStories.RewardsPage"
              Title="Rewards Page"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#A9FFF7">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"

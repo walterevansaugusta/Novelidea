@@ -4,7 +4,8 @@
              xmlns:local="clr-namespace:BrainyStories"
              x:Class="BrainyStories.TableOfContents"
              x:Name="MyPage"
-             NavigationPage.HasNavigationBar="false">
+             NavigationPage.HasNavigationBar="false"
+             BackgroundColor="#A9FFF7">
       <StackLayout Orientation="Vertical"
                    VerticalOptions="FillAndExpand"
                    CompressedLayout.IsHeadless="True">
@@ -32,8 +33,9 @@
         <!--<End of Navigation Bar/>-->
         <StackLayout x:Name="appealKeyStackLayout"
                      Orientation ="Horizontal"
-                     HorizontalOptions="StartAndExpand"
-                     Margin="10,0,10,5">
+                     HorizontalOptions="CenterAndExpand"
+                     Margin="10,0,10,5"
+                     BackgroundColor="#A9FFF7">
             <!--<Appeal Key bar/>-->
             <Image Source="General.png"
                    HorizontalOptions="FillAndExpand"/>
@@ -52,7 +54,8 @@
         <ListView x:Name="listView"
                   ItemsSource="{x:Static local:Story.ListOfStories}"
                   HasUnevenRows="True"
-                  ItemSelected="OnItemTapped">
+                  ItemSelected="OnItemTapped"
+                  BackgroundColor="#A9FFF7">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -67,7 +70,7 @@
                                     <Label Text="{Binding Name, Mode=OneWay}"
                                        FontAttributes="Bold"
                                        FontFamily="{StaticResource Comic}"/>
-                                    <Label Text="{Binding Description, Mode=OneWay}"/>
+                                    <Label Text="{Binding Description, Mode=OneWay}" FontFamily="{StaticResource Comic}"/>
                                     <StackLayout Orientation="Horizontal">
                                         <Label Text="{Binding Duration, Mode=OneWay, StringFormat='{}{0:mm}:{0:ss}'}" FontFamily="{StaticResource Comic}"/>
                                         <Label Text="{Binding WordCount, Mode=OneWay, StringFormat='{0} words'}"
