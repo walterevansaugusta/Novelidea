@@ -67,7 +67,7 @@ namespace BrainyStories {
                     Icon = "S1_LATM_1.jpg",
                     Appeal = AppealType.Animal,
                     QuizNum = 3,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 2, 51),
                     WordCount = 395,
                     Description = "A lion releases a mouse, believing it’s too small and weak ever to return the favor, " +
@@ -122,7 +122,7 @@ namespace BrainyStories {
                     Icon = "S3_TBWCW_1.jpg",
                     Appeal = AppealType.Male,
                     QuizNum = 3,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 4, 37),
                     WordCount = 722,
                     Description = "Bored watching over the sheep, a boy causes excitement by lying that a wolf " +
@@ -151,7 +151,7 @@ namespace BrainyStories {
                     Icon = "S4_TEATS_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 4,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 6, 06),
                     WordCount = 830,
                     Description = "By secretly making shoes, two elves save a poor shoemaker and his wife; " +
@@ -179,7 +179,7 @@ namespace BrainyStories {
                     Icon = "S5_TLP_1.jpg",
                     Appeal = AppealType.Animal,
                     QuizNum = 5,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 6, 34),
                     WordCount = 986,
                     Description = "Two pigs squander their money and build shabby houses; their smarter brother " +
@@ -212,7 +212,7 @@ namespace BrainyStories {
                     Icon = "S6_BGG_1.jpg",
                     Appeal = AppealType.Animal,
                     QuizNum = 5,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 6, 38),
                     WordCount = 891,
                     Description = "Two billy goats trick a mean troll into waiting for their brother; " +
@@ -246,7 +246,7 @@ namespace BrainyStories {
                     Icon = "S7_PR_1.jpg",
                     Appeal = AppealType.Animal,
                     QuizNum = 5,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 7, 29),
                     WordCount = 933,
                     Description = "Peter disobeys his mother and enters Mr. MacGregor’s garden, where he is almost " +
@@ -291,7 +291,7 @@ namespace BrainyStories {
                     Icon = "S8_TGM_1.jpg",
                     Appeal = AppealType.General,
                     QuizNum = 6,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 7, 39),
                     WordCount = 1095,
                     Description = "The Gingerbread Man speaks rudely, brags, and outruns all the people " +
@@ -322,7 +322,7 @@ namespace BrainyStories {
                     Icon = "S9_R_1.jpg",
                     Appeal = AppealType.Female,
                     QuizNum = 6,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 8, 18),
                     WordCount = 1344,
                     Description = "A cruel man spins straw into gold to save a girl’s life, demanding her " +
@@ -361,7 +361,7 @@ namespace BrainyStories {
                     Icon = "S10_LRRH_1.jpg",
                     Appeal = AppealType.Female,
                     QuizNum = 6,
-                    ThinkDoNum = 1,
+                    ThinkDoNum = 2,
                     Duration = new TimeSpan(0, 8, 47),
                     WordCount = 1243,
                     Description = "A girl speaks to a wolf and leaves the proper path; the wolf swallows the grandmother" +
