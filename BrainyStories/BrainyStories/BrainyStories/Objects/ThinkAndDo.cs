@@ -24,5 +24,7 @@ namespace BrainyStories.Objects {
 
         // Boolean of if the ThinkAndDo was completed or not
         public bool Completed { get; set; } = false;
+
+        public String Text { get; set; }
     }
 }

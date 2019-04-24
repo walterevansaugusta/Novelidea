@@ -20,6 +20,7 @@ namespace BrainyStories
         {
             InitializeComponent();
             ThinkAndDoTitle.Text = thinkAndDo.ThinkAndDoName;
+            ThinkAndDoText.Text = thinkAndDo.Text;
             ImageButton button = new ImageButton()
             {
                 Source = "pause.png",
@@ -43,6 +44,16 @@ namespace BrainyStories
                 Value = 0,
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HeightRequest = 50 // Controls size of area that can grab the slider
+            };
+            Button closeButton = new Button
+            {
+                Text = "Close",
+                HorizontalOptions = LayoutOptions.Center
+            };
+            closeButton.Clicked += async (sender, args) =>
+            {
+                player.Stop();
+                await PopupNavigation.Instance.PopAsync();
             };
            
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
@@ -104,9 +115,11 @@ namespace BrainyStories
                 {
                     button,
                     button2,
-                    displayLabel
+                    displayLabel,
+                    closeButton
                 }
             };
+
             TopStack.Children.Add(slider);
             TopStack.Children.Add(audio);
         }
@@ -138,5 +151,6 @@ namespace BrainyStories
         {
             await PopupNavigation.Instance.PopAsync();
         }
+
     }
 }
