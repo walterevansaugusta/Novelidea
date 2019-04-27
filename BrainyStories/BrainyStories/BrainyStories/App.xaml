@@ -5,8 +5,8 @@
     <Application.Resources>
         <ResourceDictionary>
             <OnPlatform x:TypeArguments="x:String" x:Key="Comic">
-                <On Platform="Android" Value="Comic.ttf#Comic" />
-                <On Platform="iOS" Value="Comic"/>
+                <On Platform="Android" Value="COMIC.ttf#COMIC" />
+                <On Platform="iOS" Value="COMIC"/>
             </OnPlatform>
         </ResourceDictionary>
     </Application.Resources>
