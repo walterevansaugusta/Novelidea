@@ -13,7 +13,7 @@
             <StackLayout VerticalOptions="Start"
                   HorizontalOptions="FillAndExpand"
                   Orientation="Horizontal"
-                  BackgroundColor ="#B8E1FF">
+                  BackgroundColor ="#A9FFF7">
                 <ImageButton HorizontalOptions="Start"
                         Source="BackButton.png"
                         Clicked ="BackClicked"
@@ -31,52 +31,56 @@
                         BackgroundColor="Transparent"/>
             </StackLayout>
             <!--<End of Navigation Bar/>-->
-            <Grid x:Name="medalGrid">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-                <!--<Shows earned Rewards/>-->
-                <StackLayout x:Name="GoldList"
-                                Grid.Row="0"
-                                Grid.Column="0"
-                                Orientation="Horizontal"/>
-                <StackLayout x:Name="SilverList"
-                                Grid.Row="1"
-                                Grid.Column="0"
-                                Orientation="Horizontal"/>
-                <StackLayout x:Name="BronzeList"
-                                Grid.Row="2"
-                                Grid.Column="0"
-                                Orientation="Horizontal"/>
-                <StackLayout x:Name="MedalKey"
-                                Grid.Row="3"
-                                Grid.Column="0"
-                                Orientation="Horizontal">
-                    <!-- 5 Coins gets 1 Coin Pile -->
-                    <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Coin.png"/>
-                    <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Coins.png"/>
+            <ScrollView>
+                <StackLayout>
+                    <!--<Shows earned Rewards/>-->
+                    <StackLayout x:Name="BankList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout x:Name="CarList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout x:Name="BagList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout x:Name="StackList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout x:Name="GoldList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout x:Name="SilverList"
+                                 Orientation="Horizontal"/>
+                    <StackLayout Orientation="Horizontal">
+                        <!-- 2 Silver Coins gets 1 Gold Coin -->
+                        <Label Text="          2" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="SilverCoin.png"/>
+                        <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="GoldCoin.png"/>
 
-                    <!-- 5 Coin Piles gets 1 Piggy Bank -->
-                    <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Coins.png"/>
-                    <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Bank.png"/>
+                        <!-- 5 Gold Coins gets 1 Gold Stack -->
+                        <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="GoldCoin.png"/>
+                        <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="GoldStack.png"/>
 
-                    <!-- 5 Piggy Bank gets 1 Gem -->
-                    <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Bank.png"/>
-                    <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
-                    <Image Source="Gem.png"/>
+                        <!-- 5 Gold Stacks gets 1 Money Bag -->
+                        <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="GoldStack.png"/>
+                        <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="MoneyBag.png"/>
+                    </StackLayout>
+                    
+                    <StackLayout Orientation="Horizontal">
+                        <!-- 5 Money Bags gets 1 Armored Car -->
+                        <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="MoneyBag.png"/>
+                        <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="ArmoredCar.png"/>
+
+                        <!-- 5 Armored Cars gets 1 Bank -->
+                        <Label Text="          5" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="ArmoredCar.png"/>
+                        <Label Text="= 1" VerticalTextAlignment="Center" FontFamily="{StaticResource Comic}"/>
+                        <Image Source="Bank.png"/>
+                    </StackLayout>
                 </StackLayout>
-            </Grid>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

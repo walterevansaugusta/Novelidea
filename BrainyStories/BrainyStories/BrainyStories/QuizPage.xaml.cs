@@ -199,9 +199,6 @@ namespace BrainyStories
                 } else if (quiz.NumAttempts[QuestionNum] == 2)
                 {
                     user.RewardsRecieved["Silver"]++;
-                } else
-                {
-                    user.RewardsRecieved["Bronze"]++;
                 }
             } else
             {

@@ -20,34 +20,47 @@ namespace BrainyStories {
             InitializeComponent();
             settingsPage = new Settings();
             User user = User.Instance;
-            int numOfBronzeCoins = user.RewardsRecieved["Bronze"];
-            int numOfSilverCoins = user.RewardsRecieved["Silver"] + (numOfBronzeCoins / 5);
-            int numOfGoldCoins = user.RewardsRecieved["Gold"] + (numOfSilverCoins / 5);
-            int numOfBags = numOfGoldCoins / 5;
-            numOfBronzeCoins = numOfBronzeCoins % 5;
-            numOfSilverCoins = numOfSilverCoins % 5;
+            int numOfSilverCoins = user.RewardsRecieved["Silver"];
+            int numOfGoldCoins = user.RewardsRecieved["Gold"] + (numOfSilverCoins / 2);
+            int numOfStacks = numOfGoldCoins / 5;
+            int numOfBags = numOfStacks / 5;
+            int numOfArmoredCars = numOfBags / 5;
+            int numOfBanks = numOfArmoredCars / 5;
+            numOfSilverCoins = numOfSilverCoins % 2;
             numOfGoldCoins = numOfGoldCoins % 5;
+            numOfStacks = numOfStacks % 5;
+            numOfBags = numOfBags % 5;
+            numOfArmoredCars = numOfArmoredCars % 5;
+            for (int i = 0; i < numOfBanks; i++)
+            {
+                Image bank = new Image() { Source = "Bank.png" };
+                BankList.Children.Add(bank);
+            }
+            for (int i = 0; i < numOfArmoredCars; i++)
+            {
+                Image car = new Image() { Source = "ArmoredCar.png" };
+                CarList.Children.Add(car);
+            }
             for (int i = 0; i < numOfBags; i++)
             {
-                Image bag = new Image() { Source = "Gem.png" };
-                GoldList.Children.Add(bag);
+                Image bag = new Image() { Source = "MoneyBag.png" };
+                BagList.Children.Add(bag);
+            }
+            for (int i = 0; i < numOfStacks; i++)
+            {
+                Image stack = new Image();
+                stack.Source = "GoldStack.png";
+                StackList.Children.Add(stack);
             }
             for (int i = 0; i < numOfGoldCoins; i++)
             {
-                Image goldCoin = new Image() { Source = "Bank.png" };
+                Image goldCoin = new Image() { Source = "GoldCoin.png" };
                 GoldList.Children.Add(goldCoin);
             }
-
             for (int i = 0; i < numOfSilverCoins; i++)
             {
-                Image silverCoin = new Image() { Source = "Coins.png" };
+                Image silverCoin = new Image() { Source = "SilverCoin.png" };
                 SilverList.Children.Add(silverCoin);
-            }
-
-            for (int i = 0; i < numOfBronzeCoins; i++)
-            {
-                Image bronzeCoin = new Image() { Source = "Coin.png" };
-                BronzeList.Children.Add(bronzeCoin);
             }
            
         }

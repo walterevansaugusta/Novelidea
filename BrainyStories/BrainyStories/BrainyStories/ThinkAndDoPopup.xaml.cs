@@ -45,15 +45,15 @@ namespace BrainyStories
                 HorizontalOptions = LayoutOptions.FillAndExpand,
                 HeightRequest = 50 // Controls size of area that can grab the slider
             };
-            Button closeButton = new Button
+            ImageButton close = new ImageButton()
             {
-                Text = "Close",
-                HorizontalOptions = LayoutOptions.Center
+                Source = "CloseButton",
+                BackgroundColor = Color.Transparent
             };
-            closeButton.Clicked += async (sender, args) =>
+            close.Clicked += (sender, args) =>
             {
                 player.Stop();
-                await PopupNavigation.Instance.PopAsync();
+                CloseAllPopup();
             };
            
             player = Plugin.SimpleAudioPlayer.CrossSimpleAudioPlayer.Current;
@@ -116,7 +116,7 @@ namespace BrainyStories
                     button,
                     button2,
                     displayLabel,
-                    closeButton
+                    close
                 }
             };
 
@@ -151,6 +151,6 @@ namespace BrainyStories
         {
             await PopupNavigation.Instance.PopAsync();
         }
-
+  
     }
 }
